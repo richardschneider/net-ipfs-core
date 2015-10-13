@@ -6,7 +6,7 @@ using System.Text;
 namespace Ipfs
 {
     /// <summary>
-    ///   A codec for IPFS Base58.
+    ///   A codec for IPFS Base-58.
     /// </summary>
     /// <remarks>
     ///   <para>
