@@ -20,5 +20,17 @@ namespace Ipfs
         {
             Assert.AreEqual("this is a test", Encoding.UTF8.GetString(Base58.Decode("jo91waLQA1NNeBmZKUF")));
         }
+
+        /// <summary>
+        ///    C# version of base58Test in <see href="https://github.com/ipfs/java-ipfs-api/blob/master/test/org/ipfs/Test.java"/>
+        /// </summary>
+        [TestMethod]
+        public void Java()
+        {
+            String input = "QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB";
+            byte[] output = Base58.Decode(input);
+            String encoded = Base58.Encode(output);
+            Assert.AreEqual(input, encoded);
+        }
     }
 }

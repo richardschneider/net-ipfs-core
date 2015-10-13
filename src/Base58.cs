@@ -14,7 +14,7 @@ namespace Ipfs
     ///   is <see href="https://github.com/adamcaudill/Base58Check/issues/2">not working</see>, so for now its a copy-and-paste.
     ///   </para>
     ///   <para>
-    ///   This codec uses the BitCoin alphabet <b>not Facebook</b>.
+    ///   This codec uses the BitCoin alphabet <b>not Flickr's</b>.
     ///   </para>
     /// </remarks>
     public static class Base58
