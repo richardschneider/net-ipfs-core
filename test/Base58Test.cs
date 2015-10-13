@@ -13,12 +13,14 @@ namespace Ipfs
         public void Encode()
         {
             Assert.AreEqual("jo91waLQA1NNeBmZKUF", Base58.Encode(Encoding.UTF8.GetBytes("this is a test")));
+            Assert.AreEqual("jo91waLQA1NNeBmZKUF", Encoding.UTF8.GetBytes("this is a test").ToBase58());
         }
 
         [TestMethod]
         public void Decode()
         {
             Assert.AreEqual("this is a test", Encoding.UTF8.GetString(Base58.Decode("jo91waLQA1NNeBmZKUF")));
+            Assert.AreEqual("this is a test", Encoding.UTF8.GetString("jo91waLQA1NNeBmZKUF".FromBase58()));
         }
 
         /// <summary>

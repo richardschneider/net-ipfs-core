@@ -35,6 +35,21 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Converts an array of 8-bit unsigned integers to its equivalent string representation that is 
+        ///   encoded with base-58 digits.
+        /// </summary>
+        /// <param name="bytes">
+        ///   An array of 8-bit unsigned integers.
+        /// </param>
+        /// <returns>
+        ///   The string representation, in base 58, of the contents of <paramref name="bytes"/>.
+        /// </returns>
+        public static string ToBase58(this byte[] bytes)
+        {
+            return Encode(bytes);
+        }
+
+        /// <summary>
         ///   Converts the specified <see cref="string"/>, which encodes binary data as base 58 digits, 
         ///   to an equivalent 8-bit unsigned integer array.
         /// </summary>
@@ -47,6 +62,21 @@ namespace Ipfs
         public static byte[] Decode(string s)
         {
             return Base58Check.Base58CheckEncoding.DecodePlain(s);
+        }
+
+        /// <summary>
+        ///   Converts the specified <see cref="string"/>, which encodes binary data as base 58 digits, 
+        ///   to an equivalent 8-bit unsigned integer array.
+        /// </summary>
+        /// <param name="s">
+        ///   The base 58 string to convert.
+        /// </param>
+        /// <returns>
+        ///   An array of 8-bit unsigned integers that is equivalent to <paramref name="s"/>.
+        /// </returns>
+        public static byte[] FromBase58(this string s)
+        {
+            return Decode(s);
         }
     }
 }
