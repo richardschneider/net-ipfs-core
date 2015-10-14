@@ -129,6 +129,11 @@ namespace Ipfs
         public const string DefaultAlgorithmName = "sha2-256";
 
         /// <summary>
+        ///   Occurs when an unknown hashing algorithm number is parsed.
+        /// </summary>
+        public static EventHandler<UnknownHashingAlgorithmEventArgs> UnknownHashingAlgorithm;
+
+        /// <summary>
         ///   Creates a new instance of the <see cref="MultiHash"/> class with the
         ///   specified <see cref="HashingAlgorithm">Algorithm name</see> and <see cref="Digest"/> value.
         /// </summary>
@@ -169,6 +174,15 @@ namespace Ipfs
         ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Number"/>,
         ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
+        ///   <note>
+        ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
+        ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
+        ///   <see cref="Matches">matching</see> nor <see cref="ComputeHash">computing a hash</see>.
+        ///   <para>
+        ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
+        ///   the hashing algorithm is unknown.
+        ///   </para>
+        ///   </note>
         /// </remarks>
         /// <seealso cref="Write"/>
         public MultiHash(Stream stream)
@@ -183,6 +197,17 @@ namespace Ipfs
         /// <param name="s">
         ///   A <see cref="Base58"/> encoded <b>MultiHash</b>.
         /// </param>
+        /// <remarks>
+        ///   <note>
+        ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
+        ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
+        ///   <see cref="Matches">matching</see> nor <see cref="ComputeHash">computing a hash</see>.
+        ///   <para>
+        ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
+        ///   the hashing algorithm is unknown.
+        ///   </para>
+        ///   </note>
+        /// </remarks>
         /// <seealso cref="ToBase58"/>
         public MultiHash(string s)
         {
@@ -232,9 +257,14 @@ namespace Ipfs
 
             Algorithm = HashingAlgorithm.Numbers[number];
             if (Algorithm == null)
+            {
                 Algorithm = HashingAlgorithm.Define("ipfs-" + number, number, digestSize);
+                RaiseUnknownHashingAlgorithm(Algorithm);
+            }
             else if (digestSize != Algorithm.DigestSize)
-                throw new InvalidDataException("The digest size is wrong.");
+            {
+                throw new InvalidDataException(string.Format("The digest size {0} is wrong for {1}; it should be {2}.", digestSize, Algorithm.Name, Algorithm.DigestSize));
+            }
 
             Digest = new byte[digestSize];
             stream.Read(Digest, 0, Digest.Length);
@@ -278,6 +308,16 @@ namespace Ipfs
             return true;
         }
 
+        void RaiseUnknownHashingAlgorithm(HashingAlgorithm algorithm)
+        {
+            var handler = UnknownHashingAlgorithm;
+            if (handler != null)
+            {
+                var args = new UnknownHashingAlgorithmEventArgs { Algorithm = algorithm };
+                handler(this, args);
+            }
+        }
+
         public static MultiHash ComputeHash(byte[] data, string algorithmName = DefaultAlgorithmName)
         {
             if (algorithmName == null)
@@ -307,6 +347,17 @@ namespace Ipfs
             throw new NotImplementedException();
         }
 
-        
+    }
+
+    /// <summary>
+    ///   Provides data for the unknown hashing algorithm event.
+    /// </summary>
+    public class UnknownHashingAlgorithmEventArgs : EventArgs
+    {
+        /// <summary>
+        ///   The <see cref="Ipfs.MultiHash.HashingAlgorithm"/> that is defined for the
+        ///   unknown hashing number.
+        /// </summary>
+        public Ipfs.MultiHash.HashingAlgorithm Algorithm { get; set; }
     }
 }

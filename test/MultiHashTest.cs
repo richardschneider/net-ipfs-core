@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Ipfs
 {
@@ -24,6 +25,39 @@ namespace Ipfs
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiHash(null, new byte[0]));
             ExceptionAssert.Throws<ArgumentException>(() => new MultiHash("", new byte[0]));
             ExceptionAssert.Throws<ArgumentException>(() => new MultiHash("md5", new byte[0]));
+        }
+
+        [TestMethod]
+        public void Parsing_Unknown_Hash_Number()
+        {
+            MultiHash.HashingAlgorithm unknown = null;
+            EventHandler<UnknownHashingAlgorithmEventArgs> unknownHandler = (s, e) => { unknown = e.Algorithm; };
+            var ms = new MemoryStream(new byte[] { 0x01, 0x02, 0x0a, 0x0b });
+            MultiHash.UnknownHashingAlgorithm += unknownHandler;
+            try
+            {
+                var mh = new MultiHash(ms);
+                Assert.AreEqual("ipfs-1", mh.Algorithm.Name);
+                Assert.AreEqual(1, mh.Algorithm.Number);
+                Assert.AreEqual(2, mh.Algorithm.DigestSize);
+                Assert.AreEqual(0xa, mh.Digest[0]);
+                Assert.AreEqual(0xb, mh.Digest[1]);
+                Assert.IsNotNull(unknown, "unknown handler not called");
+                Assert.AreEqual("ipfs-1", unknown.Name);
+                Assert.AreEqual(1, unknown.Number);
+                Assert.AreEqual(2, unknown.DigestSize);
+            }
+            finally
+            {
+                MultiHash.UnknownHashingAlgorithm -= unknownHandler;
+            }
+        }
+
+        [TestMethod]
+        public void Parsing_Wrong_Digest_Size()
+        {
+            var ms = new MemoryStream(new byte[] { 0x11, 0x02, 0x0a, 0x0b });
+            ExceptionAssert.Throws<InvalidDataException>(() => new MultiHash(ms));
         }
 
         [TestMethod]
