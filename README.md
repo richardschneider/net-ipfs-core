@@ -1,4 +1,4 @@
-# net-ipfs-core ![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)
+# net-ipfs-core [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core)
 
 The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
 
