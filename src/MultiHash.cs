@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Security.Cryptography;
+using Common.Logging;
 
 namespace Ipfs
 {
-    /// <summary>
+    /// <summary> 
     ///   A protocol for differentiating outputs from various well-established cryptographic hash functions, 
     ///   addressing size + encoding considerations.
     /// </summary>
     /// <seealso href="https://github.com/jbenet/multihash"/>
     public class MultiHash
     {
+        static readonly ILog log = LogManager.GetLogger<MultiHash>();
+
         /// <summary>
         ///   Metadata on an IPFS hashing algorithm.
         /// </summary>
@@ -310,6 +313,9 @@ namespace Ipfs
 
         void RaiseUnknownHashingAlgorithm(HashingAlgorithm algorithm)
         {
+            if (log.IsWarnEnabled)
+                log.WarnFormat("Unknown hashing algorithm number 0x{0:x2}.", algorithm.Number);
+ 
             var handler = UnknownHashingAlgorithm;
             if (handler != null)
             {
