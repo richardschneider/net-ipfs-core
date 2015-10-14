@@ -311,6 +311,31 @@ namespace Ipfs
             return true;
         }
 
+        /// <summary>
+        ///   Determines if the stream data matches the hash.
+        /// </summary>
+        /// <param name="data">
+        ///   The <see cref="Stream"/> containing the data to check.
+        /// </param>
+        /// <returns>
+        ///   <b>true</b> if the data matches the <see cref="MultiHash"/>; otherwise, <b>false</b>.
+        /// </returns>
+        /// <remarks>
+        ///   <b>Matches</b> is used to ensure data integrity.
+        /// </remarks>
+        public bool Matches(Stream data)
+        {
+            var digest = Algorithm.Hasher().ComputeHash(data);
+            if (Digest.Length != digest.Length)
+                return false;
+            for (int i = digest.Length - 1; 0 <= i; --i)
+            {
+                if (digest[i] != Digest[i])
+                    return false;
+            }
+            return true;
+        }
+
         void RaiseUnknownHashingAlgorithm(HashingAlgorithm algorithm)
         {
             if (log.IsWarnEnabled)
@@ -350,7 +375,8 @@ namespace Ipfs
             if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out a))
                 throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
 
-            throw new NotImplementedException();
+            var digest = a.Hasher().ComputeHash(data);
+            return new MultiHash(algorithmName, digest);
         }
 
     }

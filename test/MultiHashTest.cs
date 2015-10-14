@@ -87,6 +87,16 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Compute_Hash_Stream()
+        {
+            var hello = new MemoryStream(Encoding.UTF8.GetBytes("Hello, world."));
+            hello.Position = 0;
+            var mh = MultiHash.ComputeHash(hello);
+            Assert.AreEqual(MultiHash.DefaultAlgorithmName, mh.Algorithm.Name);
+            Assert.IsNotNull(mh.Digest);
+        }
+
+        [TestMethod]
         public void Compute_Not_Implemented_Hash_Array()
         {
             MultiHash.HashingAlgorithm.Define("not-implemented", 0x0F, 32);
@@ -104,5 +114,19 @@ namespace Ipfs
             Assert.IsFalse(mh.Matches(hello1));
         }
 
+        [TestMethod]
+        public void Matches_Stream()
+        {
+            var hello = new MemoryStream(Encoding.UTF8.GetBytes("Hello, world."));
+            var hello1 = new MemoryStream(Encoding.UTF8.GetBytes("Hello, world"));
+            hello.Position = 0;
+            var mh = MultiHash.ComputeHash(hello);
+
+            hello.Position = 0;
+            Assert.IsTrue(mh.Matches(hello));
+
+            hello1.Position = 0;
+            Assert.IsFalse(mh.Matches(hello1));
+        }
     }
 }
