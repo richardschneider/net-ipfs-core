@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base58Test.cs" />
+    <Compile Include="ExceptionAssert.cs" />
     <Compile Include="MultiHashTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,9 @@
       <Project>{6401AF07-B7F2-4664-86AA-FAD99F82DFAD}</Project>
       <Name>IpfsCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

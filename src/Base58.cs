@@ -10,6 +10,10 @@ namespace Ipfs
     /// </summary>
     /// <remarks>
     ///   <para>
+    ///   A codec for Base-58, <see cref="Encode"/> and <see cref="Decode."/>.  Adds the extension method <see cref="ToBase58"/>
+    ///   to encode a byte array and <see cref="FromBase58"/> to decode a Base-58 string.
+    ///   </para>
+    ///   <para>
     ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.  However, its NuGet package
     ///   is <see href="https://github.com/adamcaudill/Base58Check/issues/2">not working</see>, so for now its a copy-and-paste.
     ///   </para>

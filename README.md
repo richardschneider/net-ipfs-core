@@ -4,6 +4,8 @@ The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary Fi
 
 ## MultiHash
 
+All hashes in IPFS are encoded with [multihash](https://github.com/jbenet/multihash/), a self-describing hash format. The actual hash function used depends on security requirements. The cryptosystem of IPFS is upgradeable, meaning that as hash functions are broken, networks can shift to stronger hashes. There is no free lunch, as objects may need to be rehashed, or links duplicated. But ensuring that tools built do not assume a pre-defined length of hash digest means tools that work with today's hash functions will also work with tomorrows longer hash functions too.
+
 ## MultiAddress
 
 ## Base58
