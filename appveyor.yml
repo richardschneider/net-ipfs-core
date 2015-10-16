@@ -5,19 +5,20 @@ pull_requests:
   do_not_increment_build_number: true
 shallow_clone: true
 assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{GitVersion_NuGetVersion}'
+  patch: false
 nuget:
   account_feed: true
   project_feed: true
   disable_publish_on_pr: true
 before_build:
-  - cmd: nuget restore
-  - ps: gitversion /l console /output buildserver
+  - nuget restore
+  - ps: gitversion /l console /output buildserver /updateAssemblyInfo
   - cmd: echo "%GitVersion_NuGetVersion%"
 build:
-  publish_nuget: true
+  publish_nuget: false
   verbosity: minimal
+
+after_build:
+  - cmd: ECHO nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+  - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+  - cmd: appveyor PushArtifact "src.%GitVersion_NuGetVersion%.nupkg"
