@@ -10,7 +10,7 @@ assembly_info:
   file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
-  assembly_informational_version: 0.2.0-build{version}
+  assembly_informational_version: 0.2.0-build{build}
 nuget:
   account_feed: true
   project_feed: true
