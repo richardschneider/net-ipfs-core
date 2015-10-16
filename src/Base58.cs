@@ -10,7 +10,7 @@ namespace Ipfs
     /// </summary>
     /// <remarks>
     ///   <para>
-    ///   A codec for Base-58, <see cref="Encode"/> and <see cref="Decode."/>.  Adds the extension method <see cref="ToBase58"/>
+    ///   A codec for Base-58, <see cref="Encode"/> and <see cref="Decode"/>.  Adds the extension method <see cref="ToBase58"/>
     ///   to encode a byte array and <see cref="FromBase58"/> to decode a Base-58 string.
     ///   </para>
     ///   <para>

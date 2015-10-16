@@ -77,6 +77,10 @@ namespace Ipfs
             /// <param name="digestSize">
             ///   The size, in bytes, of the digest value.
             /// </param>
+            /// <param name="hasher">
+            ///   A <c>Func</c> that a <see cref="HashAlgorithm"/>.  If not specified, then a <c>Func</c> is created to
+            ///   return a <see cref="NotImplementedException"/>.
+            /// </param>
             /// <returns>
             ///   A new <see cref="HashingAlgorithm"/>.
             /// </returns>
@@ -127,7 +131,7 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   The default hasing algorithm is "sha2-256".
+        ///   The default hashing algorithm is "sha2-256".
         /// </summary>
         public const string DefaultAlgorithmName = "sha2-256";
 
@@ -180,7 +184,7 @@ namespace Ipfs
         ///   <note>
         ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
         ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
-        ///   <see cref="Matches">matching</see> nor <see cref="ComputeHash">computing a hash</see>.
+        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
         ///   the hashing algorithm is unknown.
@@ -204,7 +208,7 @@ namespace Ipfs
         ///   <note>
         ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
         ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
-        ///   <see cref="Matches">matching</see> nor <see cref="ComputeHash">computing a hash</see>.
+        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
         ///   the hashing algorithm is unknown.
@@ -349,6 +353,18 @@ namespace Ipfs
             }
         }
 
+        /// <summary>
+        ///   Generate the multihash for the specified data. 
+        /// </summary>
+        /// <param name="data">
+        ///   The <see cref="Stream"/> containing the data to hash.
+        /// </param>
+        /// <param name="algorithmName">
+        ///   The name of the hashing algorithm to use; defaults to <see cref="DefaultAlgorithmName"/>.
+        /// </param>
+        /// <returns>
+        ///   A <see cref="MultiHash"/> for the <paramref name="data"/>.
+        /// </returns>
         public static MultiHash ComputeHash(byte[] data, string algorithmName = DefaultAlgorithmName)
         {
             if (algorithmName == null)
@@ -364,6 +380,18 @@ namespace Ipfs
             return new MultiHash(algorithmName, digest);
         }
 
+        /// <summary>
+        ///   Generate the multihash for the specified data. 
+        /// </summary>
+        /// <param name="data">
+        ///   The <see cref="Stream"/> containing the data to hash.
+        /// </param>
+        /// <param name="algorithmName">
+        ///   The name of the hashing algorithm to use; defaults to <see cref="DefaultAlgorithmName"/>.
+        /// </param>
+        /// <returns>
+        ///   A <see cref="MultiHash"/> for the <paramref name="data"/>.
+        /// </returns>
         public static MultiHash ComputeHash(Stream data, string algorithmName = DefaultAlgorithmName)
         {
             if (algorithmName == null)
