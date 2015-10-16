@@ -4,7 +4,7 @@ The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary Fi
 
 ## Getting started
 
-Publishd releases of IPFS Core is available on [NuGet](https://www.nuget.org/packages/ipfs.log/).  To install, run the following command in the ([Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+Published releases of IPFS Core are available on [NuGet](https://www.nuget.org/packages/ipfs.core/).  To install, run the following command in the ([Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
     PM> Install-Package Ipfs.Core
     
