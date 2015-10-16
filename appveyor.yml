@@ -1,5 +1,4 @@
 version: 0.2.0.{build}
-nuget_version: 0.2.0-build{build}
 pull_requests:
   do_not_increment_build_number: true
 branches:
@@ -11,7 +10,7 @@ assembly_info:
   file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
-  assembly_informational_version: '{nuget_version}'
+  assembly_informational_version: 0.2.0-build{version}
 nuget:
   account_feed: true
   project_feed: true
