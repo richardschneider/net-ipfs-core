@@ -12,12 +12,18 @@ nuget:
 before_build:
   - nuget restore
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
-  - cmd: echo "%GitVersion_NuGetVersion%"
 build:
   publish_nuget: false
   verbosity: minimal
 
 after_build:
-  - cmd: ECHO nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
   - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
+
+# publish NuGet package on tag build
+deploy:
+- provider: NuGet
+  api_key:
+    secure: OdmGEj/l0K0ZPDmXAYx+fryCzV012eTrM29ALBuL0waxvwLvrufdDXiI+1iNhWEG
+  on:
+    appveyor_repo_tag: true
