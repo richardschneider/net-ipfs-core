@@ -22,4 +22,3 @@ build:
   verbosity: minimal
 artifacts:
 - path: src\bin\debug\IpfsCore.dll
-- path: /.*\.nupkg/
