@@ -1,24 +1,23 @@
 version: 0.2.0.{build}
+install:
+  - choco install gitversion.portable -pre -y
 pull_requests:
   do_not_increment_build_number: true
-branches:
-  only:
-  - master
 shallow_clone: true
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
-  assembly_informational_version: 0.2.0-build{build}
+  assembly_informational_version: '{GitVersion_NuGetVersion}'
 nuget:
   account_feed: true
   project_feed: true
   disable_publish_on_pr: true
 before_build:
-- cmd: nuget restore
+  - cmd: nuget restore
+  - ps: gitversion /l console /output buildserver
+  - cmd: echo "%GitVersion_NuGetVersion%"
 build:
   publish_nuget: true
   verbosity: minimal
-artifacts:
-- path: src\bin\debug\IpfsCore.dll
