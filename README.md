@@ -1,12 +1,24 @@
 # net-ipfs-core [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core)
 
-The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
+The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.) See the [wiki](https://github.com/richardschneider/net-ipfs-core/wiki) for more information.
 
-## MultiHash
+## Getting started
+
+Publishd releases of IPFS Core is available on [NuGet](https://www.nuget.org/packages/ipfs.log/).  To install, run the following command in the ([Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+
+    PM> Install-Package Ipfs.Core
+    
+For the latest build or older non-released builds see [Continuous Integration](https://github.com/richardschneider/net-ipfs-core/wiki/Continuous-Integration).
+
+## Major objects
+
+### MultiHash
 
 All hashes in IPFS are encoded with [multihash](https://github.com/jbenet/multihash/), a self-describing hash format. The actual hash function used depends on security requirements. The cryptosystem of IPFS is upgradeable, meaning that as hash functions are broken, networks can shift to stronger hashes. There is no free lunch, as objects may need to be rehashed, or links duplicated. But ensuring that tools built do not assume a pre-defined length of hash digest means tools that work with today's hash functions will also work with tomorrows longer hash functions too.
 
-## MultiAddress
+### MultiAddress
+
+*TODO*
 
 ## Base58
 
