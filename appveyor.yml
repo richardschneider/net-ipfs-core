@@ -1,0 +1,25 @@
+version: 0.1.{build}.0
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+shallow_clone: true
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: 0.1.0-beta{build}
+nuget:
+  account_feed: true
+  project_feed: true
+  disable_publish_on_pr: true
+before_build:
+- cmd: nuget restore
+build:
+  publish_nuget: true
+  verbosity: minimal
+artifacts:
+- path: src\bin\debug\IpfsCore.dll
+- path: /.*\.nupkg/
