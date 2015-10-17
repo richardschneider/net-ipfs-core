@@ -12,6 +12,9 @@ nuget:
 before_build:
   - nuget restore
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
+
+platform: Any CPU
+configuration: Release
 build:
   publish_nuget: false
   verbosity: minimal
