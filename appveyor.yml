@@ -15,7 +15,7 @@ nuget:
 
 before_build:
   - nuget restore
-  - ps: gitversion /l console /output buildserver /updateAssemblyInfo
+  - ps: gitversion /output buildserver /updateAssemblyInfo
 
 platform: Any CPU
 configuration: Release
@@ -31,7 +31,7 @@ after_build:
 
 after_test: 
 # Generate coverage report
-    - packages\OpenCover.4.6.210-rc\tools\OpenCover.Console.exe -register:user -filter:"+[Ipfs] -[*Test]*" -target:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\MSTest.exe" -targetargs:"/testcontainer:test//bin/Release/Ipfs.Core.Tests.dll" -output:coverage.xml
+    - packages\OpenCover.4.6.210-rc\tools\OpenCover.Console.exe -register:user -filter:"+[Ipfs]* -[*]*Test" -target:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\MSTest.exe" -targetargs:"/testcontainer:test//bin/Release/Ipfs.Core.Tests.dll" -output:coverage.xml
     - packages\coveralls.net.0.6.0\tools\csmacnz.coveralls.exe --opencover -i ./coverage.xml
 
 # publish NuGet package on tag build
