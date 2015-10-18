@@ -1,10 +1,14 @@
-# net-ipfs-core [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core) [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core) [![Coverage Status](https://coveralls.io/repos/richardschneider/net-ipfs-core/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-ipfs-core?branch=master)
+# net-ipfs-core [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core) [![Coverage Status](https://coveralls.io/repos/richardschneider/net-ipfs-core/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-ipfs-core?branch=master)
 
-The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.) See the [wiki](https://github.com/richardschneider/net-ipfs-core/wiki) for more information.
+The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
 
-## Getting started
+The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.
 
-Published releases of IPFS Core are available on [NuGet](https://www.nuget.org/packages/ipfs.core/).  To install, run the following command in the ([Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+More information is on the [wiki](https://github.com/richardschneider/net-ipfs-core/wiki).
+
+## Getting started [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
+
+Published releases of IPFS Core are available on [NuGet](https://www.nuget.org/packages/ipfs.core/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
     PM> Install-Package Ipfs.Core
     
