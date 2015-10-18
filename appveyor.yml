@@ -32,7 +32,7 @@ after_build:
 after_test: 
 # Generate coverage report
     - packages\OpenCover.4.6.210-rc\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\MSTest.exe" -targetargs:"/testcontainer:test//bin/Release/Ipfs.Core.Tests.dll" -output:coverage.xml
-    - packages\coveralls.io.1.1.86\tools\coveralls.net.exe --opencover coverage.xml
+    - packages\coveralls.net.0.6.0\tools\csmacnz.coveralls.exe --opencover coverage.xml
 
 # publish NuGet package on tag build
 deploy:
