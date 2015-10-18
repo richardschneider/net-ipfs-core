@@ -22,7 +22,7 @@ configuration:
   - Debug
   - Release
 build:
-  project: IpfsTest.sln
+  project: IpfsCore.sln
   publish_nuget: false
   verbosity: minimal
 
