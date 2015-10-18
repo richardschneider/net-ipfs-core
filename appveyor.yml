@@ -18,8 +18,11 @@ before_build:
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
 platform: Any CPU
-configuration: Release
+configuration:
+  - Debug
+  - Release
 build:
+  project: IpfsTest.sln
   publish_nuget: false
   verbosity: minimal
 
