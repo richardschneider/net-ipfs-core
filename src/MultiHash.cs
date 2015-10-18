@@ -86,7 +86,7 @@ namespace Ipfs
             /// </returns>
             public static HashingAlgorithm Define(string name, byte number, byte digestSize, Func<HashAlgorithm> hasher = null)
             {
-                if (string.IsNullOrEmpty(name))
+                if (string.IsNullOrWhiteSpace(name))
                     throw new ArgumentNullException("name");
                 if (Names.ContainsKey(name))
                     throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is already defined.", name));

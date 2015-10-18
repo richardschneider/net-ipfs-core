@@ -34,5 +34,11 @@ namespace Ipfs
             String encoded = Base58.Encode(output);
             Assert.AreEqual(input, encoded);
         }
+
+        [TestMethod]
+        public void Decode_Bad()
+        {
+            ExceptionAssert.Throws<FormatException>(() =>  Base58.Decode("jo91waLQA1NNeBmZKUF=="));
+        }
     }
 }

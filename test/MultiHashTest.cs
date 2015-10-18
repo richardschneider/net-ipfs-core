@@ -38,6 +38,7 @@ namespace Ipfs
             {
                 var mh = new MultiHash(ms);
                 Assert.AreEqual("ipfs-1", mh.Algorithm.Name);
+                Assert.AreEqual("ipfs-1", mh.Algorithm.ToString());
                 Assert.AreEqual(1, mh.Algorithm.Number);
                 Assert.AreEqual(2, mh.Algorithm.DigestSize);
                 Assert.AreEqual(0xa, mh.Digest[0]);
@@ -112,6 +113,14 @@ namespace Ipfs
             var mh = MultiHash.ComputeHash(hello);
             Assert.IsTrue(mh.Matches(hello));
             Assert.IsFalse(mh.Matches(hello1));
+
+            var mh1 = MultiHash.ComputeHash(hello, "sha1");
+            Assert.IsTrue(mh1.Matches(hello));
+            Assert.IsFalse(mh1.Matches(hello1));
+
+            var mh2 = MultiHash.ComputeHash(hello, "sha2-512");
+            Assert.IsTrue(mh2.Matches(hello));
+            Assert.IsFalse(mh2.Matches(hello1));
         }
 
         [TestMethod]
@@ -128,5 +137,32 @@ namespace Ipfs
             hello1.Position = 0;
             Assert.IsFalse(mh.Matches(hello1));
         }
+
+        [TestMethod]
+        public void HashingAlgorithm_Bad_Name()
+        {
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define(null, 1, 1));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define("", 1, 1));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define("   ", 1, 1));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithm_Name_Already_Exists()
+        {
+            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Define("sha1", 0x11, 1));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithm_Number_Already_Exists()
+        {
+            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Define("sha1-x", 0x11, 1));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithms_Are_Enumerable()
+        {
+            Assert.IsTrue(5 <= MultiHash.HashingAlgorithm.All.Count());
+        }
+
     }
 }
