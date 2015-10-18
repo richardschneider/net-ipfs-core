@@ -40,5 +40,13 @@ namespace Ipfs
         {
             ExceptionAssert.Throws<FormatException>(() =>  Base58.Decode("jo91waLQA1NNeBmZKUF=="));
         }
+
+        [TestMethod]
+        public void Zero()
+        {
+            Assert.AreEqual("1111111", Base58.Encode(new byte[7]));
+            Assert.AreEqual(7, Base58.Decode("1111111").Length);
+            Assert.IsTrue(Base58.Decode("1111111").All(b => b == 0));
+        }
     }
 }
