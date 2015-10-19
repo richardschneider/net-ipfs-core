@@ -24,7 +24,10 @@ namespace Ipfs
             NetworkProtocol.Register<Ipv4NetworkProtocol>();
             NetworkProtocol.Register<Ipv6NetworkProtocol>();
             NetworkProtocol.Register<TcpNetworkProtocol>();
+            NetworkProtocol.Register<UdpNetworkProtocol>();
             NetworkProtocol.Register<IpfsNetworkProtocol>();
+            NetworkProtocol.Register<HttpNetworkProtocol>();
+            NetworkProtocol.Register<HttpsNetworkProtocol>();
         }
 
         /// <summary>
@@ -166,14 +169,30 @@ namespace Ipfs
 
     class TcpNetworkProtocol : NetworkProtocol
     {
-
         public override string Name { get { return "tcp"; } }
         public override int Code { get { return 6; } }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            try
+            {
+                UInt16.Parse(Value);
+            }
+            catch (Exception e)
+            {
+                throw new FormatException(string.Format("'{0}' is not a valid port number.", Value), e);
+            }
+        }
+    }
+
+    class UdpNetworkProtocol : TcpNetworkProtocol
+    {
+        public override string Name { get { return "udp"; } }
+        public override int Code { get { return 17; } }
     }
 
     class Ipv4NetworkProtocol : NetworkProtocol
     {
-
         public override string Name { get { return "ip4"; } }
         public override int Code { get { return 4; } }
     }
@@ -187,8 +206,21 @@ namespace Ipfs
 
     class IpfsNetworkProtocol : NetworkProtocol
     {
-
         public override string Name { get { return "ipfs"; } }
         public override int Code { get { return 421; } }
+    }
+
+    class HttpNetworkProtocol : NetworkProtocol
+    {
+        public override string Name { get { return "http"; } }
+        public override int Code { get { return 480; } }
+        public override void ReadValue(Stream stream) { }
+        public override void ReadValue(TextReader stream) { }
+    }
+
+    class HttpsNetworkProtocol : HttpNetworkProtocol
+    {
+        public override string Name { get { return "https"; } }
+        public override int Code { get { return 443; } }
     }
 }

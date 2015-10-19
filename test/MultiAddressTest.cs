@@ -65,6 +65,26 @@ namespace Ipfs
             Assert.AreEqual(a0.GetHashCode(), a1.GetHashCode());
             Assert.AreNotEqual(a0.GetHashCode(), b.GetHashCode());
         }
+
+        [TestMethod]
+        public void Bad_Port()
+        {
+            var tcp = new MultiAddress("/tcp/65535");
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/tcp/x"));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/tcp/65536"));
+
+            var udp = new MultiAddress("/udp/65535");
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/upd/x"));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/udp/65536"));
+        }
+
+        [TestMethod]
+        public void HttpNetworkProtocol()
+        {
+            var a = "/ip4/1.2.3.4/tcp/80/http";
+            var ma = new MultiAddress(a);
+            Assert.AreEqual(a, ma.ToString());
+        }
     }
 }
 
