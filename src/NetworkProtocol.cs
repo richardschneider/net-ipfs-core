@@ -28,6 +28,8 @@ namespace Ipfs
             NetworkProtocol.Register<IpfsNetworkProtocol>();
             NetworkProtocol.Register<HttpNetworkProtocol>();
             NetworkProtocol.Register<HttpsNetworkProtocol>();
+            NetworkProtocol.Register<DccpNetworkProtocol>();
+            NetworkProtocol.Register<SctpNetworkProtocol>();
         }
 
         /// <summary>
@@ -169,6 +171,7 @@ namespace Ipfs
 
     class TcpNetworkProtocol : NetworkProtocol
     {
+        public UInt16 Port { get; set; }
         public override string Name { get { return "tcp"; } }
         public override int Code { get { return 6; } }
         public override void ReadValue(TextReader stream)
@@ -176,7 +179,7 @@ namespace Ipfs
             base.ReadValue(stream);
             try
             {
-                UInt16.Parse(Value);
+                Port = UInt16.Parse(Value);
             }
             catch (Exception e)
             {
@@ -189,6 +192,18 @@ namespace Ipfs
     {
         public override string Name { get { return "udp"; } }
         public override int Code { get { return 17; } }
+    }
+
+    class DccpNetworkProtocol : TcpNetworkProtocol
+    {
+        public override string Name { get { return "dccp"; } }
+        public override int Code { get { return 33; } }
+    }
+
+    class SctpNetworkProtocol : TcpNetworkProtocol
+    {
+        public override string Name { get { return "sctp"; } }
+        public override int Code { get { return 132; } }
     }
 
     class Ipv4NetworkProtocol : NetworkProtocol
