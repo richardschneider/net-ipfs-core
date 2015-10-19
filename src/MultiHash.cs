@@ -91,7 +91,7 @@ namespace Ipfs
                 if (Names.ContainsKey(name))
                     throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is already defined.", name));
                 if (Numbers[number] != null)
-                    throw new ArgumentException(string.Format("The IPFS hashing algorithm number '{0}' is already defined.", number));
+                    throw new ArgumentException(string.Format("The IPFS hashing algorithm number 0x{0:x2} is already defined.", number));
                 if (hasher == null)
                     hasher = () => { throw new NotImplementedException(string.Format("The IPFS hashing algorithm '{0}' is not implemented.", name)); };
 
