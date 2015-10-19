@@ -27,16 +27,6 @@ namespace Ipfs
         }
 
         [TestMethod]
-        public void Protocols_In_Use()
-        {
-            var p = new MultiAddress(somewhere).Protocols.ToArray();
-            Assert.AreEqual(3, p.Length);
-            Assert.AreEqual("ip4", p[0]);
-            Assert.AreEqual("tcp", p[1]);
-            Assert.AreEqual("ipfs", p[2]);
-        }
-
-        [TestMethod]
         public new void ToString()
         {
             Assert.AreEqual(somewhere, new MultiAddress(somewhere).ToString());
