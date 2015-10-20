@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace Ipfs
 {
@@ -111,17 +112,23 @@ namespace Ipfs
         {
             var addresses = new[]
             {
-                "/ip4/1.2.3.4/tcp/4001/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC/foo/bar",
+                somewhere,
                 "/ip4/1.2.3.4/tcp/80/http",
-                "/ip6/::1/tcp/443/https",
-                "/ip6/::1/udp/8001",
-                "/ip6/::1/sctp/8001",
-                "/ip6/::1/dccp/8001",
+                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/tcp/443/https",
+                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/udp/8001",
+                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/sctp/8001",
+                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/dccp/8001",
             };
             foreach (var a in addresses)
             {
-                var ma = new MultiAddress(a);
-                Assert.AreEqual(a, ma.ToString());
+                var ma0 = new MultiAddress(a);
+                Assert.AreEqual(a, ma0.ToString());
+
+                var ms = new MemoryStream();
+                ma0.Write(ms);
+                ms.Position = 0;
+                var ma1 = new MultiAddress(ms);
+                Assert.AreEqual<MultiAddress>(ma0, ma1);
             }
         }
     }

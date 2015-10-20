@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography;
 using Common.Logging;
+using Google.ProtocolBuffers;
 
 namespace Ipfs
 {
@@ -191,8 +192,36 @@ namespace Ipfs
         ///   </para>
         ///   </note>
         /// </remarks>
-        /// <seealso cref="Write"/>
         public MultiHash(Stream stream)
+        {
+            Read(stream);
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="MultiHash"/> class from the
+        ///   specified <see cref="CodedInputStream"/>.
+        /// </summary>
+        /// <param name="stream">(
+        ///   A <see cref="CodedInputStream"/> containing the binary representation of the
+        ///   <b>MultiHash</b>.
+        /// </param>
+        /// <remarks>
+        ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
+        ///   <para>
+        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
+        ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   </para>
+        ///   <note>
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
+        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
+        ///   <para>
+        ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
+        ///   the hashing algorithm is unknown.
+        ///   </para>
+        ///   </note>
+        /// </remarks>
+        public MultiHash(CodedInputStream stream)
         {
             Read(stream);
         }
@@ -246,21 +275,43 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
-
-            stream.WriteByte(Algorithm.Code);
-            stream.WriteByte(Algorithm.DigestSize);
-            stream.Write(Digest, 0, Algorithm.DigestSize);
+            var cos = CodedOutputStream.CreateInstance(stream);
+            Write(cos);
+            cos.Flush();
         }
 
-        void Read(Stream stream)
+        /// <summary>
+        ///   Writes the binary representation to the specified <see cref="CodedOutputStream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="CodedOutputStream"/> to write to.
+        /// </param>
+        /// <remarks>
+        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
+        ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        /// </remarks>
+        public void Write(CodedOutputStream stream)
         {
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            byte code = (byte) stream.ReadByte();
-            byte digestSize = (byte) stream.ReadByte();
+            stream.WriteRawByte(Algorithm.Code);
+            stream.WriteRawByte(Algorithm.DigestSize);
+            stream.WriteRawBytes(Digest);
+        }
+
+        void Read(Stream stream)
+        {
+            Read(CodedInputStream.CreateInstance(stream));
+        }
+
+        void Read(CodedInputStream stream)
+        {
+            if (stream == null)
+                throw new ArgumentNullException("stream");
+
+            byte code = stream.ReadRawByte();
+            byte digestSize = stream.ReadRawByte();
 
             Algorithm = HashingAlgorithm.Codes[code];
             if (Algorithm == null)
@@ -273,8 +324,7 @@ namespace Ipfs
                 throw new InvalidDataException(string.Format("The digest size {0} is wrong for {1}; it should be {2}.", digestSize, Algorithm.Name, Algorithm.DigestSize));
             }
 
-            Digest = new byte[digestSize];
-            stream.Read(Digest, 0, Digest.Length);
+            Digest = stream.ReadRawBytes(digestSize);
         }
 
         /// <summary>

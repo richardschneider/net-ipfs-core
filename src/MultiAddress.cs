@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using Common.Logging;
+using Google.ProtocolBuffers;
 
 namespace Ipfs
 {
@@ -87,12 +88,26 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
+            var cos = CodedOutputStream.CreateInstance(stream);
+            Write(cos);
+            cos.Flush();
+        }
 
+        /// <summary>
+        ///   Writes the binary representation to the specified <see cref="CodedOutputStream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="CodedOutputStream"/> to write to.
+        /// </param>
+        /// <remarks>
+        ///   The binary representation is a sequence of <see cref="NetworkProtocol">network protocols</see>.
+        /// </remarks>
+        public void Write(CodedOutputStream stream)
+        {
             foreach (var protocol in Protocols)
             {
-                protocol.Write(stream);
+                stream.WriteUInt32NoTag(protocol.Code);
+                protocol.WriteValue(stream);
             }
         }
 
@@ -107,17 +122,16 @@ namespace Ipfs
         /// </remarks>
         public void Write(TextWriter stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
-
             foreach (var protocol in Protocols)
             {
-                protocol.Write(stream);
+                stream.Write('/');
+                stream.Write(protocol.Name);
+                protocol.WriteValue(stream);
             }
         }
 
         /// <summary>
-        ///   Reads the binary representation deom the specified <see cref="Stream"/>.
+        ///   Reads the binary representation of the the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The <see cref="Stream"/> to read from.
@@ -127,14 +141,29 @@ namespace Ipfs
         /// </remarks>
         void Read(Stream stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
+            Read(CodedInputStream.CreateInstance(stream));
+        }
 
+        /// <summary>
+        ///   Reads the binary representation of the specified <see cref="CodedInputStream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="CodedInputStream"/> to read from.
+        /// </param>
+        /// <remarks>
+        ///   The binary representation is a sequence of <see cref="NetworkProtocol">network protocols</see>.
+        /// </remarks>
+        void Read(CodedInputStream stream)
+        {
             Protocols.Clear();
-            int code;
-            while (-1 != (code = stream.ReadByte()))
+            while (!stream.IsAtEnd)
             {
-                NetworkProtocol p = null;
+                uint code = 0;
+                stream.ReadUInt32(ref code);
+                Type protocolType;
+                if (!NetworkProtocol.Codes.TryGetValue(code, out protocolType))
+                    throw new InvalidDataException(string.Format("The IPFS network protocol code '{0}' is unknown.", code));
+                var p = (NetworkProtocol)Activator.CreateInstance(protocolType);
                 p.ReadValue(stream);
                 Protocols.Add(p);
             }
