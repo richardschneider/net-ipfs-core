@@ -24,6 +24,10 @@ namespace Ipfs
             Assert.AreEqual("29087", a.Protocols[1].Value);
             Assert.AreEqual("ipfs", a.Protocols[2].Name);
             Assert.AreEqual("QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC", a.Protocols[2].Value);
+
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress((string)null));
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress(""));
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("   "));
         }
 
         [TestMethod]
@@ -38,6 +42,16 @@ namespace Ipfs
             var a0 = new MultiAddress(somewhere);
             var a1 = new MultiAddress(somewhere);
             var b = new MultiAddress(nowhere);
+            MultiAddress c = null;
+            MultiAddress d = null;
+
+            Assert.IsTrue(c == d);
+            Assert.IsFalse(c == b);
+            Assert.IsFalse(b == c);
+
+            Assert.IsFalse(c != d);
+            Assert.IsTrue(c != b);
+            Assert.IsTrue(b != c);
 
 #pragma warning disable 1718
             Assert.IsTrue(a0 == a0);
@@ -79,11 +93,36 @@ namespace Ipfs
         }
 
         [TestMethod]
-        public void HttpNetworkProtocol()
+        public void Bad_IPAddress()
         {
-            var a = "/ip4/1.2.3.4/tcp/80/http";
-            var ma = new MultiAddress(a);
-            Assert.AreEqual(a, ma.ToString());
+            var ipv4 = new MultiAddress("/ip4/127.0.0.1");
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip4/x"));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip4/127."));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip4/::1"));
+
+            var ipv6 = new MultiAddress("/ip6/::1");
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip6/x"));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip6/03:"));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/ip6/127.0.0.1"));
+        }
+
+        [TestMethod]
+        public void RoundTripping()
+        {
+            var addresses = new[]
+            {
+                "/ip4/1.2.3.4/tcp/4001/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC/foo/bar",
+                "/ip4/1.2.3.4/tcp/80/http",
+                "/ip6/::1/tcp/443/https",
+                "/ip6/::1/udp/8001",
+                "/ip6/::1/sctp/8001",
+                "/ip6/::1/dccp/8001",
+            };
+            foreach (var a in addresses)
+            {
+                var ma = new MultiAddress(a);
+                Assert.AreEqual(a, ma.ToString());
+            }
         }
     }
 }
