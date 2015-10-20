@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 
 namespace Ipfs
 {
@@ -115,7 +117,7 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   Reads the binary representation deom the specified <see cref="Stream"/>.
+        ///   Reads the binary representation from the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The <see cref="Stream"/> to read from.
@@ -206,34 +208,71 @@ namespace Ipfs
         public override int Code { get { return 132; } }
     }
 
-    class Ipv4NetworkProtocol : NetworkProtocol
+    abstract class IpNetworkProtocol : NetworkProtocol
+    {
+        public IPAddress Address { get; set; }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            try
+            {
+                Address = IPAddress.Parse(Value);
+            }
+            catch (Exception e)
+            {
+                throw new FormatException(string.Format("'{0}' is not a valid IP address.", Value), e);
+            }
+        }
+    }
+
+    class Ipv4NetworkProtocol : IpNetworkProtocol
     {
         public override string Name { get { return "ip4"; } }
         public override int Code { get { return 4; } }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            if (Address.AddressFamily != AddressFamily.InterNetwork)
+                throw new FormatException(string.Format("'{0}' is not a valid IPv4 address.", Value));
+        }
     }
 
-    class Ipv6NetworkProtocol : NetworkProtocol
+    class Ipv6NetworkProtocol : IpNetworkProtocol
     {
 
         public override string Name { get { return "ip6"; } }
         public override int Code { get { return 41; } }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            if (Address.AddressFamily != AddressFamily.InterNetworkV6)
+                throw new FormatException(string.Format("'{0}' is not a valid IPv6 address.", Value));
+        }
     }
 
     class IpfsNetworkProtocol : NetworkProtocol
     {
         public override string Name { get { return "ipfs"; } }
         public override int Code { get { return 421; } }
+        public override void ReadValue(TextReader stream)
+        {
+            Value = stream.ReadToEnd();
+        }
     }
 
-    class HttpNetworkProtocol : NetworkProtocol
+    abstract class ValuelessNetworkProtocol : NetworkProtocol
     {
-        public override string Name { get { return "http"; } }
-        public override int Code { get { return 480; } }
         public override void ReadValue(Stream stream) { }
         public override void ReadValue(TextReader stream) { }
     }
 
-    class HttpsNetworkProtocol : HttpNetworkProtocol
+    class HttpNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "http"; } }
+        public override int Code { get { return 480; } }
+    }
+
+    class HttpsNetworkProtocol : ValuelessNetworkProtocol
     {
         public override string Name { get { return "https"; } }
         public override int Code { get { return 443; } }
