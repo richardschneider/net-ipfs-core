@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base58Test.cs" />
+    <Compile Include="NetworkProtocolTest.cs" />
     <Compile Include="ExceptionAssert.cs" />
     <Compile Include="MultiAddressTest.cs" />
     <Compile Include="MultiHashTest.cs" />

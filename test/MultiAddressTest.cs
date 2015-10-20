@@ -32,6 +32,18 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Unknown_Protocol_Name()
+        {
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/foobar/123"));
+        }
+
+        [TestMethod]
+        public void Missing_Protocol_Name()
+        {
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("/"));
+        }
+
+        [TestMethod]
         public new void ToString()
         {
             Assert.AreEqual(somewhere, new MultiAddress(somewhere).ToString());

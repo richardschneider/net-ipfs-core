@@ -204,6 +204,9 @@ namespace Ipfs
                 p.ReadValue(stream);
                 Protocols.Add(p);
             }
+
+            if (Protocols.Count == 0)
+                throw new FormatException("The IFPS multiaddr has no protocol specified.");
         }
 
         /// <inheritdoc />
