@@ -220,6 +220,11 @@ namespace Ipfs
             Address = new IPAddress(a);
             Value = Address.ToString();
         }
+        public override void WriteValue(TextWriter stream)
+        {
+            stream.Write('/');
+            stream.Write(Address.ToString());
+        }
         public override void WriteValue(CodedOutputStream stream)
         {
             var ip = Address.GetAddressBytes();

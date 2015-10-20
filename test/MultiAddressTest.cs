@@ -114,20 +114,22 @@ namespace Ipfs
             {
                 somewhere,
                 "/ip4/1.2.3.4/tcp/80/http",
-                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/tcp/443/https",
-                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/udp/8001",
-                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/sctp/8001",
-                "/ip6/0000:0000:0000:0000:0000:0000:0.0.0.1/dccp/8001",
+                "/ip6/3ffe:1900:4545:3:200:f8ff:fe21:67cf/tcp/443/https",
+                "/ip6/3ffe:1900:4545:3:200:f8ff:fe21:67cf/udp/8001",
+                "/ip6/3ffe:1900:4545:3:200:f8ff:fe21:67cf/sctp/8001",
+                "/ip6/3ffe:1900:4545:3:200:f8ff:fe21:67cf/dccp/8001",
             };
             foreach (var a in addresses)
             {
                 var ma0 = new MultiAddress(a);
-                Assert.AreEqual(a, ma0.ToString());
 
                 var ms = new MemoryStream();
                 ma0.Write(ms);
                 ms.Position = 0;
                 var ma1 = new MultiAddress(ms);
+                Assert.AreEqual<MultiAddress>(ma0, ma1);
+
+                var ma2 = new MultiAddress(ma0.ToString());
                 Assert.AreEqual<MultiAddress>(ma0, ma1);
             }
         }
