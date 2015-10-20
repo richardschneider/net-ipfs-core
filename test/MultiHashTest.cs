@@ -39,13 +39,13 @@ namespace Ipfs
                 var mh = new MultiHash(ms);
                 Assert.AreEqual("ipfs-1", mh.Algorithm.Name);
                 Assert.AreEqual("ipfs-1", mh.Algorithm.ToString());
-                Assert.AreEqual(1, mh.Algorithm.Number);
+                Assert.AreEqual(1, mh.Algorithm.Code);
                 Assert.AreEqual(2, mh.Algorithm.DigestSize);
                 Assert.AreEqual(0xa, mh.Digest[0]);
                 Assert.AreEqual(0xb, mh.Digest[1]);
                 Assert.IsNotNull(unknown, "unknown handler not called");
                 Assert.AreEqual("ipfs-1", unknown.Name);
-                Assert.AreEqual(1, unknown.Number);
+                Assert.AreEqual(1, unknown.Code);
                 Assert.AreEqual(2, unknown.DigestSize);
             }
             finally
@@ -100,7 +100,7 @@ namespace Ipfs
         [TestMethod]
         public void Compute_Not_Implemented_Hash_Array()
         {
-            MultiHash.HashingAlgorithm.Define("not-implemented", 0x0F, 32);
+            MultiHash.HashingAlgorithm.Register("not-implemented", 0x0F, 32);
             var hello = Encoding.UTF8.GetBytes("Hello, world.");
             ExceptionAssert.Throws<NotImplementedException>(() => MultiHash.ComputeHash(hello, "not-implemented"));
         }
@@ -141,21 +141,21 @@ namespace Ipfs
         [TestMethod]
         public void HashingAlgorithm_Bad_Name()
         {
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define(null, 1, 1));
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define("", 1, 1));
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Define("   ", 1, 1));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register(null, 1, 1));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register("", 1, 1));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register("   ", 1, 1));
         }
 
         [TestMethod]
         public void HashingAlgorithm_Name_Already_Exists()
         {
-            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Define("sha1", 0x11, 1));
+            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Register("sha1", 0x11, 1));
         }
 
         [TestMethod]
         public void HashingAlgorithm_Number_Already_Exists()
         {
-            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Define("sha1-x", 0x11, 1));
+            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Register("sha1-x", 0x11, 1));
         }
 
         [TestMethod]

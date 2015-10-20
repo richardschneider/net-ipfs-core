@@ -23,7 +23,7 @@ namespace Ipfs
         public class HashingAlgorithm
         {
             internal static Dictionary<string, HashingAlgorithm> Names = new Dictionary<string, HashingAlgorithm>();
-            internal static HashingAlgorithm[] Numbers = new HashingAlgorithm[0x100];
+            internal static HashingAlgorithm[] Codes = new HashingAlgorithm[0x100];
 
             /// <summary>
             ///   The name of the algorithm.
@@ -37,7 +37,7 @@ namespace Ipfs
             ///   0x00-0x0f reserved for application specific functions. <br/>
             ///   0x10-0x3f reserved for SHA standard functions.
             /// </remarks>
-            public byte Number { get; private set; }
+            public byte Code { get; private set; }
 
             /// <summary>
             ///   The size, in bytes, of the digest value.
@@ -51,7 +51,7 @@ namespace Ipfs
             public Func<HashAlgorithm> Hasher { get; private set; }
 
             /// <summary>
-            ///   Use <see cref="Define"/> to create a new instance of a <see cref="HashingAlgorithm"/>.
+            ///   Use <see cref="Register"/> to create a new instance of a <see cref="HashingAlgorithm"/>.
             /// </summary>
             HashingAlgorithm()
             {
@@ -66,12 +66,12 @@ namespace Ipfs
             }
 
             /// <summary>
-            ///   Define a new IPFS hashing algorithm.
+            ///   Register a new IPFS hashing algorithm.
             /// </summary>
             /// <param name="name">
             ///   The name of the algorithm.
             /// </param>
-            /// <param name="number">
+            /// <param name="code">
             ///   The IPFS number assigned to the hashing algorithm.
             /// </param>
             /// <param name="digestSize">
@@ -84,26 +84,26 @@ namespace Ipfs
             /// <returns>
             ///   A new <see cref="HashingAlgorithm"/>.
             /// </returns>
-            public static HashingAlgorithm Define(string name, byte number, byte digestSize, Func<HashAlgorithm> hasher = null)
+            public static HashingAlgorithm Register(string name, byte code, byte digestSize, Func<HashAlgorithm> hasher = null)
             {
                 if (string.IsNullOrWhiteSpace(name))
                     throw new ArgumentNullException("name");
                 if (Names.ContainsKey(name))
                     throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is already defined.", name));
-                if (Numbers[number] != null)
-                    throw new ArgumentException(string.Format("The IPFS hashing algorithm number 0x{0:x2} is already defined.", number));
+                if (Codes[code] != null)
+                    throw new ArgumentException(string.Format("The IPFS hashing algorithm code 0x{0:x2} is already defined.", code));
                 if (hasher == null)
                     hasher = () => { throw new NotImplementedException(string.Format("The IPFS hashing algorithm '{0}' is not implemented.", name)); };
 
                 var a = new HashingAlgorithm
                 {
                     Name = name,
-                    Number = number,
+                    Code = code,
                     DigestSize = digestSize,
                     Hasher = hasher
                 };
                 Names[name] = a;
-                Numbers[number] = a;
+                Codes[code] = a;
 
                 return a;
             }
@@ -118,16 +118,16 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   Defines the standard hash algorithms for IPFS.
+        ///   Register the standard hash algorithms for IPFS.
         /// </summary>
         static MultiHash()
         {
-            HashingAlgorithm.Define("sha1", 0x11, 20, () => { return new SHA1Managed(); });
-            HashingAlgorithm.Define("sha2-256", 0x12, 32, () => { return new SHA256Managed(); });
-            HashingAlgorithm.Define("sha2-512", 0x13, 64, () => { return new SHA512Managed(); });
-            HashingAlgorithm.Define("sha3", 0x14, 64);
-            HashingAlgorithm.Define("blake2b", 0x40, 64);
-            HashingAlgorithm.Define("blake2s", 0x41, 32);
+            HashingAlgorithm.Register("sha1", 0x11, 20, () => { return new SHA1Managed(); });
+            HashingAlgorithm.Register("sha2-256", 0x12, 32, () => { return new SHA256Managed(); });
+            HashingAlgorithm.Register("sha2-512", 0x13, 64, () => { return new SHA512Managed(); });
+            HashingAlgorithm.Register("sha3", 0x14, 64);
+            HashingAlgorithm.Register("blake2b", 0x40, 64);
+            HashingAlgorithm.Register("blake2s", 0x41, 32);
         }
 
         /// <summary>
@@ -178,12 +178,12 @@ namespace Ipfs
         /// <remarks>
         ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
         ///   <para>
-        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Number"/>,
+        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
         ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
         ///   <note>
-        ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
-        ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
         ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
@@ -206,8 +206,8 @@ namespace Ipfs
         /// </param>
         /// <remarks>
         ///   <note>
-        ///   When an unknown <see cref="HashingAlgorithm.Number">hashing algorithm number</see> is encountered
-        ///   a new <see cref="HashingAlgorithm.Define"/> is defined.  This algorithm does not support
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
         ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
@@ -241,7 +241,7 @@ namespace Ipfs
         ///   The <see cref="Stream"/> to write to.
         /// </param>
         /// <remarks>
-        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Number"/>,
+        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
         ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         /// </remarks>
         public void Write(Stream stream)
@@ -249,7 +249,7 @@ namespace Ipfs
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            stream.WriteByte(Algorithm.Number);
+            stream.WriteByte(Algorithm.Code);
             stream.WriteByte(Algorithm.DigestSize);
             stream.Write(Digest, 0, Algorithm.DigestSize);
         }
@@ -259,13 +259,13 @@ namespace Ipfs
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            byte number = (byte) stream.ReadByte();
+            byte code = (byte) stream.ReadByte();
             byte digestSize = (byte) stream.ReadByte();
 
-            Algorithm = HashingAlgorithm.Numbers[number];
+            Algorithm = HashingAlgorithm.Codes[code];
             if (Algorithm == null)
             {
-                Algorithm = HashingAlgorithm.Define("ipfs-" + number, number, digestSize);
+                Algorithm = HashingAlgorithm.Register("ipfs-" + code, code, digestSize);
                 RaiseUnknownHashingAlgorithm(Algorithm);
             }
             else if (digestSize != Algorithm.DigestSize)
@@ -343,7 +343,7 @@ namespace Ipfs
         void RaiseUnknownHashingAlgorithm(HashingAlgorithm algorithm)
         {
             if (log.IsWarnEnabled)
-                log.WarnFormat("Unknown hashing algorithm number 0x{0:x2}.", algorithm.Number);
+                log.WarnFormat("Unknown hashing algorithm number 0x{0:x2}.", algorithm.Code);
  
             var handler = UnknownHashingAlgorithm;
             if (handler != null)
