@@ -76,6 +76,25 @@ namespace Ipfs
             Read(stream);
         }
 
+        /// <summary>
+        ///   Creates a new instance of the <see cref="MultiAddress"/> class from the
+        ///   specified byte array.
+        /// </summary>
+        /// <param name="buffer">(
+        ///   A byte array containing the binary representation of a
+        ///   <b>MultiAddress</b>.
+        /// </param>
+        /// <remarks>
+        ///   Reads the binary representation of <see cref="MultiAddress"/> from the <paramref name="buffer"/>.
+        ///   <para>
+        ///   The binary representation is a sequence of <see cref="NetworkProtocol">network protocols</see>.
+        ///   </para>
+        /// </remarks>
+        public MultiAddress(byte[] buffer)
+            : this()
+        {
+            Read(new MemoryStream(buffer, false));
+        }
 
         /// <summary>
         ///   Writes the binary representation to the specified <see cref="Stream"/>.
@@ -156,7 +175,7 @@ namespace Ipfs
         void Read(CodedInputStream stream)
         {
             Protocols.Clear();
-            while (!stream.IsAtEnd)
+            do
             {
                 uint code = 0;
                 stream.ReadUInt32(ref code);
@@ -166,7 +185,7 @@ namespace Ipfs
                 var p = (NetworkProtocol)Activator.CreateInstance(protocolType);
                 p.ReadValue(stream);
                 Protocols.Add(p);
-            }
+            } while (!stream.IsAtEnd);
         }
 
         /// <summary>
@@ -178,10 +197,8 @@ namespace Ipfs
         /// <remarks>
         ///   The string representation is a sequence of <see cref="NetworkProtocol">network protocols</see>.
         /// </remarks>
-        public void Read(TextReader stream)
+        void Read(TextReader stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
             if (stream.Read() != '/')
                 throw new FormatException("An IFPS multiaddr must start with '/'.");
 

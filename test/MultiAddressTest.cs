@@ -145,6 +145,26 @@ namespace Ipfs
                 Assert.AreEqual<MultiAddress>(ma0, ma1);
             }
         }
+
+        [TestMethod]
+        public void Reading_Invalid_Code()
+        {
+            ExceptionAssert.Throws<InvalidDataException>(() => new MultiAddress(new byte[] { 0x7F }));
+        }
+
+        [TestMethod]
+        public void Reading_Empty()
+        {
+            ExceptionAssert.Throws<Exception>(() => new MultiAddress(new byte[0]));
+        }
+
+        [TestMethod]
+        public void Reading_Invalid_Text()
+        {
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress((string)null));
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress(""));
+            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("  "));
+        }
     }
 }
 
