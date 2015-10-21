@@ -307,9 +307,6 @@ namespace Ipfs
 
         void Read(CodedInputStream stream)
         {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
-
             byte code = stream.ReadRawByte();
             byte digestSize = stream.ReadRawByte();
 
