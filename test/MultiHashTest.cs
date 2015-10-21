@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using Google.ProtocolBuffers;
 
 namespace Ipfs
 {
@@ -25,6 +26,13 @@ namespace Ipfs
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiHash(null, new byte[0]));
             ExceptionAssert.Throws<ArgumentException>(() => new MultiHash("", new byte[0]));
             ExceptionAssert.Throws<ArgumentException>(() => new MultiHash("md5", new byte[0]));
+        }
+
+        [TestMethod]
+        public void Write_Null_Stream()
+        {
+            var mh = new MultiHash("QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB");
+            ExceptionAssert.Throws<ArgumentNullException>(() => mh.Write((CodedOutputStream)null));
         }
 
         [TestMethod]

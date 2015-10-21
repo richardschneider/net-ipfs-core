@@ -247,7 +247,7 @@ namespace Ipfs
         /// <seealso cref="ToBase58"/>
         public MultiHash(string s)
         {
-            using (var ms = new MemoryStream(s.FromBase58()))
+            using (var ms = new MemoryStream(s.FromBase58(), false))
             {
                 Read(ms);
             }
