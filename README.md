@@ -22,7 +22,9 @@ All hashes in IPFS are encoded with [multihash](https://github.com/jbenet/multih
 
 ### MultiAddress
 
-A standard way to represent a networks address that supports [multiple network protocols](https://github.com/jbenet/multihash/). It is represented as a series of tuples, a protocol code and an optional value.  For example, an IPFS file at a sepcific address over ipv4 and tcp is "/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC".
+A standard way to represent a networks address that supports [multiple network protocols](https://github.com/jbenet/multihash/). It is represented as a series of tuples, a protocol code and an optional value.  For example, an IPFS file at a sepcific address over ipv4 and tcp is 
+
+    /ip4/10.1.10.10/tcp/80/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC
 
 ## Base58
 
