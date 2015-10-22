@@ -362,8 +362,6 @@ namespace Ipfs
         public bool Matches(byte[] data)
         {
             var digest = Algorithm.Hasher().ComputeHash(data);
-            if (Digest.Length != digest.Length)
-                return false;
             for (int i = digest.Length - 1; 0 <= i; --i)
             {
                 if (digest[i] != Digest[i])
@@ -387,8 +385,6 @@ namespace Ipfs
         public bool Matches(Stream data)
         {
             var digest = Algorithm.Hasher().ComputeHash(data);
-            if (Digest.Length != digest.Length)
-                return false;
             for (int i = digest.Length - 1; 0 <= i; --i)
             {
                 if (digest[i] != Digest[i])
