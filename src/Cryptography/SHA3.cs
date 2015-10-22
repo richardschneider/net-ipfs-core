@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SHA3
 {
-    public abstract class SHA3 :
+    abstract class SHA3 :
 #if PORTABLE
     IHashAlgorithm
 #else

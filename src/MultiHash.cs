@@ -116,6 +116,7 @@ namespace Ipfs
             {
                 get { return Names.Values; }
             }
+
         }
 
         /// <summary>
@@ -135,6 +136,15 @@ namespace Ipfs
         ///   The default hashing algorithm is "sha2-256".
         /// </summary>
         public const string DefaultAlgorithmName = "sha2-256";
+
+        /// <summary>
+        ///   Gets the <see cref="HashAlgorithm"/> with the specified IPFS multi-hash name.
+        /// </summary>
+        public static HashAlgorithm GetHashAlgorithm(string name = DefaultAlgorithmName)
+        {
+            return HashingAlgorithm.Names[name].Hasher();
+        }
+
 
         /// <summary>
         ///   Occurs when an unknown hashing algorithm number is parsed.

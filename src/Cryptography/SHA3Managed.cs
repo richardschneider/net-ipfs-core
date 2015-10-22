@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SHA3
 {
-    public partial class SHA3Managed : SHA3
+    partial class SHA3Managed : SHA3
     {
         public SHA3Managed(int hashBitLength)
             : base(hashBitLength)
