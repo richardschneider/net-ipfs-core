@@ -1,5 +1,5 @@
 # gitversion will change the version number
-version: {build}
+version: x-{build}
 
 environment:
   COVERALLS_REPO_TOKEN:
