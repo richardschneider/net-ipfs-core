@@ -58,14 +58,6 @@
       <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.555\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SHA3, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SHA3.0.9.2\lib\net40\SHA3.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SHA3Managed, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SHA3.0.9.2\lib\net40\SHA3Managed.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +66,9 @@
   <ItemGroup>
     <Compile Include="Base58.cs" />
     <Compile Include="Base58Check.cs" />
+    <Compile Include="HexString.cs" />
+    <Compile Include="Cryptography\SHA3.cs" />
+    <Compile Include="Cryptography\SHA3Managed.cs" />
     <Compile Include="MultiAddress.cs" />
     <Compile Include="MultiHash.cs" />
     <Compile Include="NetworkProtocol.cs" />

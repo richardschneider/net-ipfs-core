@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base58Test.cs" />
+    <Compile Include="Cryptography\SHA3ManagedTest.cs" />
+    <Compile Include="HexStringTest.cs" />
     <Compile Include="NetworkProtocolTest.cs" />
     <Compile Include="ExceptionAssert.cs" />
     <Compile Include="MultiAddressTest.cs" />
@@ -71,6 +73,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
