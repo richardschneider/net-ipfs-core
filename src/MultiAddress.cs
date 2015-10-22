@@ -272,7 +272,8 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   A sequence of <see cref="NetworkProtocol">network protocols</see>.
+        ///   A sequence of <see cref="NetworkProtocol">network protocols</see> that is readable
+        ///   to a human.
         /// </summary>
         public override string ToString()
         {
@@ -280,6 +281,24 @@ namespace Ipfs
             {
                 Write(s);
                 return s.ToString();
+            }
+        }
+
+        /// <summary>
+        ///   Returns the IPFS binary representation as a byte array.
+        /// </summary>
+        /// <returns>
+        ///   A byte array.
+        /// </returns>
+        /// <remarks>
+        ///   The binary representation is a sequence of <see cref="NetworkProtocol">network protocols</see>.
+        /// </remarks>
+        public byte[] ToArray()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                return ms.ToArray();
             }
         }
 

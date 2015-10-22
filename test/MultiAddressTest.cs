@@ -142,7 +142,10 @@ namespace Ipfs
                 Assert.AreEqual<MultiAddress>(ma0, ma1);
 
                 var ma2 = new MultiAddress(ma0.ToString());
-                Assert.AreEqual<MultiAddress>(ma0, ma1);
+                Assert.AreEqual<MultiAddress>(ma0, ma2);
+
+                var ma3 = new MultiAddress(ma0.ToArray());
+                Assert.AreEqual<MultiAddress>(ma0, ma3);
             }
         }
 
