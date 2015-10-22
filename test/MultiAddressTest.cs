@@ -164,6 +164,7 @@ namespace Ipfs
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress((string)null));
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress(""));
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("  "));
+            ExceptionAssert.Throws<FormatException>(() => new MultiAddress("tcp/80"));
         }
     }
 }

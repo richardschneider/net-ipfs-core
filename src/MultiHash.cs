@@ -424,17 +424,7 @@ namespace Ipfs
         /// </returns>
         public static MultiHash ComputeHash(byte[] data, string algorithmName = DefaultAlgorithmName)
         {
-            if (algorithmName == null)
-                throw new ArgumentNullException("algorithmName");
-            if (data == null || data.Length == 0)
-                throw new ArgumentNullException("data");
-
-            HashingAlgorithm a;
-            if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out a))
-                throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
-
-            var digest = a.Hasher().ComputeHash(data);
-            return new MultiHash(algorithmName, digest);
+            return new MultiHash(algorithmName, GetHashAlgorithm(algorithmName).ComputeHash(data));
         }
 
         /// <summary>
@@ -451,17 +441,7 @@ namespace Ipfs
         /// </returns>
         public static MultiHash ComputeHash(Stream data, string algorithmName = DefaultAlgorithmName)
         {
-            if (algorithmName == null)
-                throw new ArgumentNullException("algorithmName");
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            HashingAlgorithm a;
-            if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out a))
-                throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
-
-            var digest = a.Hasher().ComputeHash(data);
-            return new MultiHash(algorithmName, digest);
+            return new MultiHash(algorithmName, GetHashAlgorithm(algorithmName).ComputeHash(data));
         }
 
     }
