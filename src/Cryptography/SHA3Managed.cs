@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+#pragma warning disable 1591 // No XML documentation
+
 namespace SHA3
 {
     public partial class SHA3Managed : SHA3
