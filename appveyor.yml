@@ -4,10 +4,14 @@ version: x-{build}
 environment:
   COVERALLS_REPO_TOKEN:
     secure: j4sELCwhVRRjNXFVhjPZjdG4y2itz8jrExhlyDU/lTiLlRQ/P4brB69MGQRFBQae
+  snk_secret:
+    secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
 
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -pre -y
+  - nuget install secure-file -ExcludeVersion
+  - secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
 
 pull_requests:
   do_not_increment_build_number: true
