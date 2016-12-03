@@ -301,6 +301,18 @@ namespace Ipfs
             }
         }
 
+        /// <summary>
+        ///   Implicit casting of a <see cref="string"/> to a <see cref="MultiAddress"/>.
+        /// </summary>
+        /// <param name="s">The string representation of a <see cref="MultiAddress"/>.</param>
+        /// <returns>A new <see cref="MultiAddress"/>.</returns>
+        static public implicit operator MultiAddress(string s)
+        {
+            return new MultiAddress(s);
+        }
+
+
+
     }
 
 }

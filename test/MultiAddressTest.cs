@@ -169,6 +169,13 @@ namespace Ipfs
             ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("  "));
             ExceptionAssert.Throws<FormatException>(() => new MultiAddress("tcp/80"));
         }
+
+        [TestMethod]
+        public void Implicit_Conversion_From_String()
+        {
+            MultiAddress a = somewhere;
+            Assert.IsInstanceOfType(a, typeof(MultiAddress));
+        }
     }
 }
 
