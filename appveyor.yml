@@ -38,8 +38,8 @@ build:
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
-  - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
+  - cmd: if defined COVERALLS_REPO_TOKEN nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+  - cmd: if defined COVERALLS_REPO_TOKEN appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
 
 after_test: 
 # Generate coverage report
