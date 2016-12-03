@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using Common.Logging;
-using Google.ProtocolBuffers;
+using Google.Protobuf;
 
 namespace Ipfs
 {
@@ -107,7 +107,7 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            var cos = CodedOutputStream.CreateInstance(stream);
+            var cos = new CodedOutputStream(stream);
             Write(cos);
             cos.Flush();
         }
@@ -125,7 +125,7 @@ namespace Ipfs
         {
             foreach (var protocol in Protocols)
             {
-                stream.WriteUInt32NoTag(protocol.Code);
+                stream.WriteUInt32(protocol.Code);
                 protocol.WriteValue(stream);
             }
         }
@@ -160,7 +160,7 @@ namespace Ipfs
         /// </remarks>
         void Read(Stream stream)
         {
-            Read(CodedInputStream.CreateInstance(stream));
+            Read(new CodedInputStream(stream));
         }
 
         /// <summary>
@@ -177,8 +177,7 @@ namespace Ipfs
             Protocols.Clear();
             do
             {
-                uint code = 0;
-                stream.ReadUInt32(ref code);
+                uint code = stream.ReadUInt32();
                 Type protocolType;
                 if (!NetworkProtocol.Codes.TryGetValue(code, out protocolType))
                     throw new InvalidDataException(string.Format("The IPFS network protocol code '{0}' is unknown.", code));

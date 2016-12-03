@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography;
 using Common.Logging;
-using Google.ProtocolBuffers;
+using Google.Protobuf;
 
 namespace Ipfs
 {
@@ -285,7 +285,7 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            var cos = CodedOutputStream.CreateInstance(stream);
+            var cos = new CodedOutputStream(stream);
             Write(cos);
             cos.Flush();
         }
@@ -305,20 +305,20 @@ namespace Ipfs
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            stream.WriteRawByte(Algorithm.Code);
-            stream.WriteRawByte(Algorithm.DigestSize);
-            stream.WriteRawBytes(Digest);
+            stream.WriteRawTag(Algorithm.Code);
+            stream.WriteLength(Algorithm.DigestSize);
+            stream.WriteSomeBytes(Digest);
         }
 
         void Read(Stream stream)
         {
-            Read(CodedInputStream.CreateInstance(stream));
+            Read(new CodedInputStream(stream));
         }
 
         void Read(CodedInputStream stream)
         {
-            byte code = stream.ReadRawByte();
-            byte digestSize = stream.ReadRawByte();
+            byte code = (byte) stream.ReadTag();
+            byte digestSize = (byte) stream.ReadLength();
 
             Algorithm = HashingAlgorithm.Codes[code];
             if (Algorithm == null)
@@ -331,7 +331,7 @@ namespace Ipfs
                 throw new InvalidDataException(string.Format("The digest size {0} is wrong for {1}; it should be {2}.", digestSize, Algorithm.Name, Algorithm.DigestSize));
             }
 
-            Digest = stream.ReadRawBytes(digestSize);
+            Digest = stream.ReadSomeBytes(digestSize);
         }
 
         /// <summary>

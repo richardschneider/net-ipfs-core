@@ -6,7 +6,7 @@ using System.Text;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using Google.ProtocolBuffers;
+using Google.Protobuf;
 
 namespace Ipfs
 {
@@ -170,13 +170,12 @@ namespace Ipfs
         }
         public override void ReadValue(CodedInputStream stream)
         {
-            uint port = 0;
-            stream.ReadUInt32(ref port);
+            uint port = stream.ReadUInt32();
             Value = port.ToString();
         }
         public override void WriteValue(CodedOutputStream stream)
         {
-            stream.WriteUInt32NoTag(Port);
+            stream.WriteUInt32(Port);
         }
     }
 
@@ -215,8 +214,8 @@ namespace Ipfs
         }
         public override void ReadValue(CodedInputStream stream)
         {
-            var n = stream.ReadRawByte();
-            var a = stream.ReadRawBytes(n);
+            var n = stream.ReadLength();
+            var a = stream.ReadSomeBytes(n);
             Address = new IPAddress(a);
             Value = Address.ToString();
         }
@@ -228,8 +227,8 @@ namespace Ipfs
         public override void WriteValue(CodedOutputStream stream)
         {
             var ip = Address.GetAddressBytes();
-            stream.WriteRawByte((byte)ip.Length);
-            stream.WriteRawBytes(ip);
+            stream.WriteLength(ip.Length);
+            stream.WriteSomeBytes(ip);
         }
     }
 
