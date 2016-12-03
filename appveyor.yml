@@ -11,7 +11,7 @@ environment:
 install:
   - choco install gitversion.portable -pre -y
   - nuget install secure-file -ExcludeVersion
-  - secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
+  - if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
 
 pull_requests:
   do_not_increment_build_number: true
