@@ -183,9 +183,20 @@ namespace Ipfs
         [TestMethod]
         public void Wire_Formats()
         {
-            Assert.AreEqual(new MultiAddress("/ip4/127.0.0.1/udp/1234").ToArray().ToHexString(), "047f0000011104d2");
-            Assert.AreEqual(new MultiAddress("/ip4/127.0.0.1/udp/1234/ip4/127.0.0.1/tcp/4321").ToArray().ToHexString(), "047f0000011104d2047f0000010610e1");
+            Assert.AreEqual(
+                new MultiAddress("/ip4/127.0.0.1/udp/1234").ToArray().ToHexString(),
+                "047f0000011104d2");
+            Assert.AreEqual(
+                new MultiAddress("/ip4/127.0.0.1/udp/1234/ip4/127.0.0.1/tcp/4321").ToArray().ToHexString(),
+                "047f0000011104d2047f0000010610e1");
+            Assert.AreEqual(
+                new MultiAddress("/ip6/2001:8a0:7ac5:4201:3ac9:86ff:fe31:7095").ToArray().ToHexString(),
+                "29200108a07ac542013ac986fffe317095");
+            Assert.AreEqual(
+                new MultiAddress("/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC").ToArray().ToHexString(),
+                "a503221220d52ebb89d85b02a284948203a62ff28389c57c9f42beec4ec20db76a68911c0b");
         }
+
     }
 }
 

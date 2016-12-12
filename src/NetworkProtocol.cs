@@ -281,12 +281,15 @@ namespace Ipfs
         }
         public override void ReadValue(CodedInputStream stream)
         {
+            stream.ReadLength();
             MultiHash = new MultiHash(stream);
             Value = MultiHash.ToBase58();
         }
         public override void WriteValue(CodedOutputStream stream)
         {
-            MultiHash.Write(stream);
+            var bytes = MultiHash.ToArray();
+            stream.WriteLength(bytes.Length);
+            stream.WriteSomeBytes(bytes); 
         }
     }
 

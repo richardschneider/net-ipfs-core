@@ -348,6 +348,24 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Returns the IPFS binary representation as a byte array.
+        /// </summary>
+        /// <returns>
+        ///   A byte array.
+        /// </returns>
+        /// <remarks>
+        ///   The binary representation is a sequence of <see cref="MultiHash"/>.
+        /// </remarks>
+        public byte[] ToArray()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                return ms.ToArray();
+            }
+        }
+
+        /// <summary>
         ///   Determines if the data matches the hash.
         /// </summary>
         /// <param name="data">
