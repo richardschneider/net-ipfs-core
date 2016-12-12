@@ -35,6 +35,8 @@ namespace Ipfs
             NetworkProtocol.Register<SctpNetworkProtocol>();
             NetworkProtocol.Register<WsNetworkProtocol>();
             NetworkProtocol.Register<Libp2pWebrtcStarNetworkProtocol>();
+            NetworkProtocol.Register<UdtNetworkProtocol>();
+            NetworkProtocol.Register<UtpNetworkProtocol>();
         }
 
         /// <summary>
@@ -322,5 +324,17 @@ namespace Ipfs
     {
         public override string Name { get { return "libp2p-webrtc-star"; } }
         public override uint Code { get { return 275; } }
+    }
+
+    class UdtNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "udt"; } }
+        public override uint Code { get { return 301; } }
+    }
+
+    class UtpNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "utp"; } }
+        public override uint Code { get { return 302; } }
     }
 }
