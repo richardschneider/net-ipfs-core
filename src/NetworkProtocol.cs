@@ -170,12 +170,14 @@ namespace Ipfs
         }
         public override void ReadValue(CodedInputStream stream)
         {
-            uint port = stream.ReadUInt32();
-            Value = port.ToString();
+            var bytes = stream.ReadSomeBytes(2);
+            Port = (UInt16) IPAddress.NetworkToHostOrder(BitConverter.ToInt16(bytes, 0));
+            Value = Port.ToString();
         }
         public override void WriteValue(CodedOutputStream stream)
         {
-            stream.WriteUInt32(Port);
+            var bytes = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((Int16)Port));
+            stream.WriteSomeBytes(bytes);
         }
     }
 
@@ -212,13 +214,6 @@ namespace Ipfs
                 throw new FormatException(string.Format("'{0}' is not a valid IP address.", Value), e);
             }
         }
-        public override void ReadValue(CodedInputStream stream)
-        {
-            var n = stream.ReadLength();
-            var a = stream.ReadSomeBytes(n);
-            Address = new IPAddress(a);
-            Value = Address.ToString();
-        }
         public override void WriteValue(TextWriter stream)
         {
             stream.Write('/');
@@ -227,13 +222,14 @@ namespace Ipfs
         public override void WriteValue(CodedOutputStream stream)
         {
             var ip = Address.GetAddressBytes();
-            stream.WriteLength(ip.Length);
             stream.WriteSomeBytes(ip);
         }
     }
 
     class Ipv4NetworkProtocol : IpNetworkProtocol
     {
+        static int AddressSize = IPAddress.Any.GetAddressBytes().Length;
+
         public override string Name { get { return "ip4"; } }
         public override uint Code { get { return 4; } }
         public override void ReadValue(TextReader stream)
@@ -242,10 +238,19 @@ namespace Ipfs
             if (Address.AddressFamily != AddressFamily.InterNetwork)
                 throw new FormatException(string.Format("'{0}' is not a valid IPv4 address.", Value));
         }
+        public override void ReadValue(CodedInputStream stream)
+        {
+            var a = stream.ReadSomeBytes(AddressSize);
+            Address = new IPAddress(a);
+            Value = Address.ToString();
+        }
+
     }
 
     class Ipv6NetworkProtocol : IpNetworkProtocol
     {
+        static int AddressSize = IPAddress.IPv6Any.GetAddressBytes().Length;
+
         public override string Name { get { return "ip6"; } }
         public override uint Code { get { return 41; } }
         public override void ReadValue(TextReader stream)
@@ -253,6 +258,12 @@ namespace Ipfs
             base.ReadValue(stream);
             if (Address.AddressFamily != AddressFamily.InterNetworkV6)
                 throw new FormatException(string.Format("'{0}' is not a valid IPv6 address.", Value));
+        }
+        public override void ReadValue(CodedInputStream stream)
+        {
+            var a = stream.ReadSomeBytes(AddressSize);
+            Address = new IPAddress(a);
+            Value = Address.ToString();
         }
     }
 

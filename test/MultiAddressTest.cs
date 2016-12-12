@@ -176,6 +176,13 @@ namespace Ipfs
             MultiAddress a = somewhere;
             Assert.IsInstanceOfType(a, typeof(MultiAddress));
         }
+
+        [TestMethod]
+        public void Wire_Formats()
+        {
+            Assert.AreEqual(new MultiAddress("/ip4/127.0.0.1/udp/1234").ToArray().ToHexString(), "047f0000011104d2");
+            Assert.AreEqual(new MultiAddress("/ip4/127.0.0.1/udp/1234/ip4/127.0.0.1/tcp/4321").ToArray().ToHexString(), "047f0000011104d2047f0000010610e1");
+        }
     }
 }
 
