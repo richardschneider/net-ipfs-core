@@ -33,6 +33,8 @@ namespace Ipfs
             NetworkProtocol.Register<HttpsNetworkProtocol>();
             NetworkProtocol.Register<DccpNetworkProtocol>();
             NetworkProtocol.Register<SctpNetworkProtocol>();
+            NetworkProtocol.Register<WsNetworkProtocol>();
+            NetworkProtocol.Register<Libp2pWebrtcStarNetworkProtocol>();
         }
 
         /// <summary>
@@ -274,7 +276,7 @@ namespace Ipfs
         public override uint Code { get { return 421; } }
         public override void ReadValue(TextReader stream)
         {
-            Value = stream.ReadToEnd();
+            base.ReadValue(stream);
             MultiHash = new MultiHash(Value);
         }
         public override void ReadValue(CodedInputStream stream)
@@ -305,5 +307,17 @@ namespace Ipfs
     {
         public override string Name { get { return "https"; } }
         public override uint Code { get { return 443; } }
+    }
+
+    class WsNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "ws"; } }
+        public override uint Code { get { return 477; } }
+    }
+
+    class Libp2pWebrtcStarNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "libp2p-webrtc-star"; } }
+        public override uint Code { get { return 275; } }
     }
 }
