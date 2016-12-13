@@ -18,7 +18,7 @@ namespace Ipfs
             var mh = new MultiHash("sha1", new byte[20]);
             mh = new MultiHash("sha2-256", new byte[32]);
             mh = new MultiHash("sha2-512", new byte[64]);
-            mh = new MultiHash("sha3", new byte[64]);
+            mh = new MultiHash("sha3-512", new byte[64]);
         }
 
         [TestMethod]
@@ -131,7 +131,7 @@ namespace Ipfs
             Assert.IsTrue(mh2.Matches(hello));
             Assert.IsFalse(mh2.Matches(hello1));
 
-            var mh3 = MultiHash.ComputeHash(hello, "sha3");
+            var mh3 = MultiHash.ComputeHash(hello, "sha3-512");
             Assert.IsTrue(mh3.Matches(hello));
             Assert.IsFalse(mh3.Matches(hello1));
         }
@@ -175,6 +175,23 @@ namespace Ipfs
         public void HashingAlgorithms_Are_Enumerable()
         {
             Assert.IsTrue(5 <= MultiHash.HashingAlgorithm.All.Count());
+        }
+
+        [TestMethod]
+        public void Wire_Formats()
+        {
+            var hashes = new[]
+            {
+                "5drNu81uhrFLRiS4bxWgAkpydaLUPW", // sha1
+                "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4", // sha2_256
+                "8Vtkv2tdQ43bNGdWN9vNx9GVS9wrbXHk4ZW8kmucPmaYJwwedXir52kti9wJhcik4HehyqgLrQ1hBuirviLhxgRBNv", // sha2_512
+            };
+            var helloWorld = Encoding.UTF8.GetBytes("hello world");
+            foreach (var hash in hashes)
+            {
+                var mh = new MultiHash(hash);
+                Assert.IsTrue(mh.Matches(helloWorld), hash);
+            }
         }
 
     }
