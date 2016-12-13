@@ -63,6 +63,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base32.cs" />
     <Compile Include="Base58.cs" />
     <Compile Include="Base58Check.cs" />
     <Compile Include="HexString.cs" />

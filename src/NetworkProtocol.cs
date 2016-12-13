@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using Google.Protobuf;
+using System.Globalization;
 
 namespace Ipfs
 {
@@ -37,6 +38,7 @@ namespace Ipfs
             NetworkProtocol.Register<Libp2pWebrtcStarNetworkProtocol>();
             NetworkProtocol.Register<UdtNetworkProtocol>();
             NetworkProtocol.Register<UtpNetworkProtocol>();
+            NetworkProtocol.Register<OnionNetworkProtocol>();
         }
 
         /// <summary>
@@ -176,7 +178,7 @@ namespace Ipfs
         {
             var bytes = stream.ReadSomeBytes(2);
             Port = (UInt16) IPAddress.NetworkToHostOrder(BitConverter.ToInt16(bytes, 0));
-            Value = Port.ToString();
+            Value = Port.ToString(CultureInfo.InvariantCulture);
         }
         public override void WriteValue(CodedOutputStream stream)
         {
@@ -292,6 +294,47 @@ namespace Ipfs
             var bytes = MultiHash.ToArray();
             stream.WriteLength(bytes.Length);
             stream.WriteSomeBytes(bytes); 
+        }
+    }
+
+    class OnionNetworkProtocol : NetworkProtocol
+    {
+        public byte[] Address { get; private set; }
+        public UInt16 Port { get; private set; }
+        public override string Name { get { return "onion"; } }
+        public override uint Code { get { return 444; } }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            var parts = Value.Split(':');
+            if (parts.Length != 2)
+                throw new FormatException(string.Format("'{0}' is not a valid onion address, missing the port number.", Value));
+            if (parts[0].Length != 16)
+                throw new FormatException(string.Format("'{0}' is not a valid onion address.", Value));
+            try
+            {
+                Port = UInt16.Parse(parts[1]);
+            }
+            catch (Exception e)
+            {
+                throw new FormatException(string.Format("'{0}' is not a valid onion address, invalid port number.", Value), e);
+            }
+            if (Port < 1)
+                throw new FormatException(string.Format("'{0}' is not a valid onion address, invalid port number.", Value));
+            Address = parts[0].ToUpperInvariant().FromBase32();
+        }
+        public override void ReadValue(CodedInputStream stream)
+        {
+            Address = stream.ReadSomeBytes(10);
+            var bytes = stream.ReadSomeBytes(2);
+            Port = (UInt16)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(bytes, 0));
+            Value = Address.ToBase32().ToLowerInvariant() + ":" + Port.ToString(CultureInfo.InvariantCulture);
+        }
+        public override void WriteValue(CodedOutputStream stream)
+        {
+            stream.WriteSomeBytes(Address);
+            var bytes = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((Int16)Port));
+            stream.WriteSomeBytes(bytes);
         }
     }
 

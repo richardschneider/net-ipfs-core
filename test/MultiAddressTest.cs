@@ -120,6 +120,24 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Bad_Onion_MultiAdress()
+        {
+            var badCases = new string[]
+            {
+                "/onion/9imaq4ygg2iegci7:80",
+                "/onion/aaimaq4ygg2iegci7:80",
+                "/onion/timaq4ygg2iegci7:0",
+                "/onion/timaq4ygg2iegci7:-1",
+                "/onion/timaq4ygg2iegci7",
+                "/onion/timaq4ygg2iegci@:666",
+            };
+            foreach (var badCase in badCases)
+            {
+                ExceptionAssert.Throws<FormatException>(() => new MultiAddress(badCase));
+            }
+         }
+
+        [TestMethod]
         public void RoundTripping()
         {
             var addresses = new[]
@@ -135,6 +153,8 @@ namespace Ipfs
                 "/ip4/127.0.0.1/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC/tcp/1234",
                 "/ip4/1.2.3.4/tcp/80/udt",
                 "/ip4/1.2.3.4/tcp/80/utp",
+                "/onion/aaimaq4ygg2iegci:80",
+                "/onion/timaq4ygg2iegci7:80/http",
             };
             foreach (var a in addresses)
             {
@@ -200,6 +220,10 @@ namespace Ipfs
             Assert.AreEqual(
                 new MultiAddress("/ip4/127.0.0.1/udp/1234/utp").ToArray().ToHexString(),
                 "047f0000011104d2ae02");
+            Assert.AreEqual(
+               new MultiAddress("/onion/aaimaq4ygg2iegci:80").ToArray().ToHexString(),
+               "bc030010c0439831b48218480050");
+            // testString("/onion/aaimaq4ygg2iegci:80", "bc030010c0439831b48218480050")
         }
 
     }

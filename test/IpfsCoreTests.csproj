@@ -53,6 +53,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base32Test.cs" />
     <Compile Include="Base58Test.cs" />
     <Compile Include="Cryptography\SHA3ManagedTest.cs" />
     <Compile Include="HexStringTest.cs" />

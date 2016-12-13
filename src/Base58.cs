@@ -14,8 +14,8 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase58"/> to decode a Base-58 string.
     ///   </para>
     ///   <para>
-    ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.  However, its NuGet package
-    ///   is <see href="https://github.com/adamcaudill/Base58Check/issues/2">not working</see>, so for now its a copy-and-paste.
+    ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.  However, its assembly
+    ///   is <see href="https://github.com/adamcaudill/Base58Check/issues/5">not signed</see>, so for now its a copy-and-paste.
     ///   </para>
     ///   <para>
     ///   This codec uses the BitCoin alphabet <b>not Flickr's</b>.
@@ -25,8 +25,8 @@ namespace Ipfs
     {
         /// <summary>
         ///   Converts an array of 8-bit unsigned integers to its equivalent string representation that is 
-        ///   encoded with base-58 digits.
-        /// </summary>
+        ///   encoded with base-58 characters.
+        /// </summary>s
         /// <param name="bytes">
         ///   An array of 8-bit unsigned integers.
         /// </param>
