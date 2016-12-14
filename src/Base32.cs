@@ -14,8 +14,7 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase32"/> to decode a Base-32 string.
     ///   </para>
     ///   <para>
-    ///   Copied from <see href="https://github.com/kappa7194/base32"/>.  The nuget package
-    ///   is not used, because the assembly is not signed.
+    ///   A thin wrapper around <see href="https://github.com/kappa7194/base32"/>.
     ///   </para>
     /// </remarks>
     public static class Base32
@@ -37,42 +36,7 @@ namespace Ipfs
         /// </returns>
         public static string Encode(byte[] input)
         {
-            if (input.Length == 0)
-            {
-                return string.Empty;
-            }
-
-            var output = new char[(int)decimal.Ceiling((input.Length / (decimal)BitsInBlock)) * BitsInByte];
-            var position = 0;
-            byte workingByte = 0, remainingBits = BitsInBlock;
-
-            foreach (var currentByte in input)
-            {
-                workingByte = (byte)(workingByte | (currentByte >> (BitsInByte - remainingBits)));
-                output[position++] = Alphabet[workingByte];
-
-                if (remainingBits < BitsInByte - BitsInBlock)
-                {
-                    workingByte = (byte)((currentByte >> (BitsInByte - BitsInBlock - remainingBits)) & 31);
-                    output[position++] = Alphabet[workingByte];
-                    remainingBits += BitsInBlock;
-                }
-
-                remainingBits -= BitsInByte - BitsInBlock;
-                workingByte = (byte)((currentByte << remainingBits) & 31);
-            }
-
-            if (position != output.Length)
-            {
-                output[position++] = Alphabet[workingByte];
-            }
-
-            while (position < output.Length)
-            {
-                output[position++] = Padding;
-            }
-
-            return new string(output);
+            return Albireo.Base32.Base32.Encode(input);
         }
 
         /// <summary>
@@ -102,46 +66,7 @@ namespace Ipfs
         /// </returns>
         public static byte[] Decode(string input)
         {
-            if (string.IsNullOrEmpty(input))
-            {
-                return new byte[0];
-            }
-
-            input = input.TrimEnd(Padding);
-
-            var output = new byte[input.Length * BitsInBlock / BitsInByte];
-            var position = 0;
-            byte workingByte = 0, bitsRemaining = BitsInByte;
-
-            foreach (var currentChar in input.ToCharArray())
-            {
-                int mask;
-                int currentCharPosition;
-                currentCharPosition = Alphabet.IndexOf(currentChar);
-                if (currentCharPosition < 0)
-                {
-                    if (currentChar == Padding)
-                        currentCharPosition = 0;
-                    else
-                        throw new FormatException("Invalid base32 string");
-                }
-                if (bitsRemaining > BitsInBlock)
-                {
-                    mask = currentCharPosition << (bitsRemaining - BitsInBlock);
-                    workingByte = (byte)(workingByte | mask);
-                    bitsRemaining -= BitsInBlock;
-                }
-                else
-                {
-                    mask = currentCharPosition >> (BitsInBlock - bitsRemaining);
-                    workingByte = (byte)(workingByte | mask);
-                    output[position++] = workingByte;
-                    workingByte = unchecked((byte)(currentCharPosition << (BitsInByte - BitsInBlock + bitsRemaining)));
-                    bitsRemaining += BitsInByte - BitsInBlock;
-                }
-            }
-
-            return output;
+            return Albireo.Base32.Base32.Decode(input);
         }
 
         /// <summary>

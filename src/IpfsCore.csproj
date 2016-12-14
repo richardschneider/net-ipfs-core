@@ -45,6 +45,10 @@
     <AssemblyOriginatorKeyFile>ipfs.dev.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Albireo.Base32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Albireo.Base32.1.0.1.0\lib\portable-net40+sl50+wp80+win\Albireo.Base32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Base58Check, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Base58Check.0.2.0\lib\Net40\Base58Check.dll</HintPath>
       <Private>True</Private>

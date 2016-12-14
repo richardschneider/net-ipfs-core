@@ -133,7 +133,7 @@ namespace Ipfs
             };
             foreach (var badCase in badCases)
             {
-                ExceptionAssert.Throws<FormatException>(() => new MultiAddress(badCase));
+                ExceptionAssert.Throws<Exception>(() => new MultiAddress(badCase));
             }
          }
 
