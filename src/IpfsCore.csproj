@@ -45,6 +45,10 @@
     <AssemblyOriginatorKeyFile>ipfs.dev.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Base58Check, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Base58Check.0.2.0\lib\Net40\Base58Check.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
       <Private>True</Private>
@@ -65,7 +69,6 @@
   <ItemGroup>
     <Compile Include="Base32.cs" />
     <Compile Include="Base58.cs" />
-    <Compile Include="Base58Check.cs" />
     <Compile Include="HexString.cs" />
     <Compile Include="Cryptography\SHA3.cs" />
     <Compile Include="Cryptography\SHA3Managed.cs" />

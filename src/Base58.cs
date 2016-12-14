@@ -14,8 +14,7 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase58"/> to decode a Base-58 string.
     ///   </para>
     ///   <para>
-    ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.  However, its assembly
-    ///   is <see href="https://github.com/adamcaudill/Base58Check/issues/5">not signed</see>, so for now its a copy-and-paste.
+    ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.
     ///   </para>
     ///   <para>
     ///   This codec uses the BitCoin alphabet <b>not Flickr's</b>.
