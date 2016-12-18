@@ -194,5 +194,13 @@ namespace Ipfs
             }
         }
 
+        [TestMethod]
+        public void To_String_Is_Base58_Representation()
+        {
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            var mh = new MultiHash(hash);
+            Assert.AreEqual(hash, mh.ToString());
+        } 
+
     }
 }

@@ -19,7 +19,7 @@ namespace Ipfs
         static readonly ILog log = LogManager.GetLogger<MultiHash>();
 
         /// <summary>
-        ///   Metadata on an IPFS hashing algorithm.
+        ///   Metadata and implementation of an IPFS hashing algorithm.
         /// </summary>
         public class HashingAlgorithm
         {
@@ -332,6 +332,17 @@ namespace Ipfs
             }
 
             Digest = stream.ReadSomeBytes(digestSize);
+        }
+
+        /// <summary>
+        ///   Returns the <see cref="Base58"/> encoding of the <see cref="MultiHash"/>.
+        /// </summary>
+        /// <returns>
+        ///   A Base58 representaton of the MultiHash.
+        /// </returns>
+        public override string ToString()
+        {
+            return this.ToBase58();
         }
 
         /// <summary>
