@@ -274,7 +274,7 @@ namespace Ipfs
         public byte[] Digest { get; private set; }
 
         /// <summary>
-        ///   Writes the binary representation to the specified <see cref="Stream"/>.
+        ///   Writes the binary representation of the multihash to the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The <see cref="Stream"/> to write to.
@@ -285,13 +285,14 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            var cos = new CodedOutputStream(stream);
-            Write(cos);
-            cos.Flush();
+            using (var cos = new CodedOutputStream(stream))
+            {
+                Write(cos);
+            }
         }
 
         /// <summary>
-        ///   Writes the binary representation to the specified <see cref="CodedOutputStream"/>.
+        ///   Writes the binary representation of the multihash to the specified <see cref="CodedOutputStream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The <see cref="CodedOutputStream"/> to write to.
@@ -312,7 +313,10 @@ namespace Ipfs
 
         void Read(Stream stream)
         {
-            Read(new CodedInputStream(stream));
+            using (var cis = new CodedInputStream(stream))
+            {
+                Read(cis);
+            }
         }
 
         void Read(CodedInputStream stream)
