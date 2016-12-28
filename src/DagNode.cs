@@ -33,7 +33,7 @@ namespace Ipfs
         /// </param>
         /// <param name="hashAlgorithm">
         ///   The name of the hashing algorithm to use; defaults to 
-        ///   <see cref=MultiHash.DefaultAlgorithmName"/>.
+        ///   <see cref="MultiHash.DefaultAlgorithmName"/>.
         /// </param>
         public DagNode(byte[] data, IEnumerable<DagLink> links = null, string hashAlgorithm = MultiHash.DefaultAlgorithmName)
         {

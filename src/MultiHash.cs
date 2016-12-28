@@ -192,15 +192,13 @@ namespace Ipfs
         ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
         ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
-        ///   <note>
-        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
-        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
-        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new hashing algorithm is <see cref="HashingAlgorithm.Register">registered</see>.  This new algorithm does not support
+        ///   matching nor computing a hash.
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
         ///   the hashing algorithm is unknown.
         ///   </para>
-        ///   </note>
         /// </remarks>
         public MultiHash(Stream stream)
         {
@@ -221,15 +219,13 @@ namespace Ipfs
         ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
         ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
-        ///   <note>
-        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
-        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
-        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new hashing algorithm is <see cref="HashingAlgorithm.Register">registered</see>.  This new algorithm does not support
+        ///   matching nor computing a hash.
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
         ///   the hashing algorithm is unknown.
         ///   </para>
-        ///   </note>
         /// </remarks>
         public MultiHash(CodedInputStream stream)
         {
@@ -244,15 +240,13 @@ namespace Ipfs
         ///   A <see cref="Base58"/> encoded <b>MultiHash</b>.
         /// </param>
         /// <remarks>
-        ///   <note>
-        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
-        ///   a new <see cref="HashingAlgorithm.Register"/> is defined.  This algorithm does not support
-        ///   <see cref="O:Ipfs.Core.Multihash.Matches">matching</see> nor <see cref="O:Ipfs.Core.Multihash.ComputeHash">computing a hash</see>.
         ///   <para>
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new hashing algorithm is <see cref="HashingAlgorithm.Register">registered</see>.  This new algorithm does not support
+        ///   matching nor computing a hash.
         ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
         ///   the hashing algorithm is unknown.
         ///   </para>
-        ///   </note>
         /// </remarks>
         /// <seealso cref="ToBase58"/>
         public MultiHash(string s)
