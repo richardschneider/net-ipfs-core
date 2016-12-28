@@ -60,6 +60,9 @@
         ]
       }
     ],
+    "xref": [
+      "msdn.4.5.2.zip"
+    ],
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
