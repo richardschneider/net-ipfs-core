@@ -3,13 +3,13 @@
 [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core) 
 [![Coverage Status](https://coveralls.io/repos/richardschneider/net-ipfs-core/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-ipfs-core?branch=master)
 [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
-[![docs](https://cdn.rawgit.com/richardschneider/net-ipfs-core/master/doc/images/docs-latest-green.svg)](http://richardschneider.github.io/net-ipfs-core)
+[![docs](https://cdn.rawgit.com/richardschneider/net-ipfs-core/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-ipfs-core)
 
 The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
 
 The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.
 
-More information is on the [Documentation](http://richardschneider.github.io/net-ipfs-core/) web site.
+More information is on the [Documentation](https://richardschneider.github.io/net-ipfs-core/) web site.
 
 ## Getting started
 
@@ -21,11 +21,11 @@ For the latest build or older non-released builds see [Continuous Integration](h
 
 ## Major objects
 
-- [MerkleDag](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
-- [MultiAddress](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
-- [MultiHash](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
+- [MerkleDag](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
+- [MultiAddress](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
+- [MultiHash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
 
-See the [API Documentation](http://richardschneider.github.io/net-ipfs-core/api) for a list of all objects.
+See the [API Documentation](https://richardschneider.github.io/net-ipfs-core/api) for a list of all objects.
 
 ### MultiHash
 
@@ -39,8 +39,8 @@ A standard way to represent a networks address that supports [multiple network p
 
 ### Merkle DAG
 
-The [DagNode](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html) is a directed acyclic graph whose edges are a 
-[DagLink](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagLink.html). This means that links to objects can authenticate 
+The [DagNode](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html) is a directed acyclic graph whose edges are a 
+[DagLink](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagLink.html). This means that links to objects can authenticate 
 the objects themselves, and that every object contains a secure 
 representation of its children.
 
