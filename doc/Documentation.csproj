@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="articles\toc.yml" />
+    <Content Include="images\docs-latest-green.svg" />
     <Content Include="packages.config" />
     <Content Include="toc.yml" />
     <Content Include="index.md" />
@@ -90,7 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="apidoc\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

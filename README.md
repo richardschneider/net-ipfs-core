@@ -3,12 +3,13 @@
 [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core) 
 [![Coverage Status](https://coveralls.io/repos/richardschneider/net-ipfs-core/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-ipfs-core?branch=master)
 [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
+[![docs](doc/images/docs-latest-green.svg)](http://richardschneider.github.io/net-ipfs-core)
 
 The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
 
 The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.
 
-More information is on the [wiki](https://github.com/richardschneider/net-ipfs-core/wiki).
+More information is on the [Documentation](http://richardschneider.github.io/net-ipfs-core/) web site.
 
 ## Getting started
 
@@ -19,6 +20,12 @@ Published releases of IPFS Core are available on [NuGet](https://www.nuget.org/p
 For the latest build or older non-released builds see [Continuous Integration](https://github.com/richardschneider/net-ipfs-core/wiki/Continuous-Integration).
 
 ## Major objects
+
+- [MerkleDag](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
+- [MultiAddress](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
+- [MultiHash](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
+
+See the [API Documentation](http://richardschneider.github.io/net-ipfs-core/api) for a list of all objects.
 
 ### MultiHash
 
@@ -32,7 +39,10 @@ A standard way to represent a networks address that supports [multiple network p
 
 ### Merkle DAG
 
-The `DagNode` is a directed acyclic graph whose edges are a `DagLink`. This means that links to objects can authenticate the objects themselves, and that every object contains a secure representation of its children.
+The [DagNode](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html) is a directed acyclic graph whose edges are a 
+[DagLink](http://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagLink.html). This means that links to objects can authenticate 
+the objects themselves, and that every object contains a secure 
+representation of its children.
 
 Every Merkle is a directed acyclic graph (DAG) because each node is accessed via its name (the hash of `DagNode`). Each branch of Merkle is the hash of its local content (data and links);  naming children by their hash instead of their full contents. So after creation there is no way to edit a DagNode. This prevents cycles (assuming there are no hash collisions) since one can not link the first created node to the last note to create the last reference.
 
