@@ -3,7 +3,7 @@
 [![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-ipfs-core?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-ipfs-core) 
 [![Coverage Status](https://coveralls.io/repos/richardschneider/net-ipfs-core/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-ipfs-core?branch=master)
 [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
-[![docs](docs-latest-green.svg)](http://richardschneider.github.io/net-ipfs-core)
+[![docs](https://cdn.rawgit.com/richardschneider/net-ipfs-core/master/doc/images/docs-latest-green.svg)](http://richardschneider.github.io/net-ipfs-core)
 
 The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System)  for .Net (C#, VB, F# etc.)
 
