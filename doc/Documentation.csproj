@@ -68,7 +68,9 @@
   <ItemGroup>
     <Content Include="articles\toc.yml" />
     <Content Include="images\docs-latest-green.svg" />
+    <Content Include="images\ipfs-logo.svg" />
     <Content Include="packages.config" />
+    <Content Include="template\styles\main.css" />
     <Content Include="toc.yml" />
     <Content Include="index.md" />
     <Content Include="docfx.json" />
