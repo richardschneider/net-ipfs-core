@@ -3,7 +3,7 @@ version: x-{build}
 image: Visual Studio 2015
 
 cache:
-  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
+#  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
 
 environment:
   COVERALLS_REPO_TOKEN:
