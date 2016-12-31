@@ -75,7 +75,6 @@
     <Content Include="index.md" />
     <Content Include="docfx.json" />
     <Content Include="articles\intro.md" />
-    <Content Include="api\index.md" />
     <Content Include="namespaces.4.5.2.zip" />
     <Content Include="msdn.4.5.2.zip" />
     <None Include="Web.Debug.config">
@@ -93,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="apidoc\" />
+    <Folder Include="api\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
