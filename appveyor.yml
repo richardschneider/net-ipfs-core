@@ -33,6 +33,10 @@ nuget:
 
 before_build:
   - nuget restore
+# Build documentation in doc\_site
+  - docfx metadata doc\docfx.json
+  - docfx build doc\docfx.json
+# Determine the version
   - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
 
 platform: Any CPU
@@ -47,9 +51,6 @@ after_build:
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
   - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
-# Build documentation in doc\_site
-  - docfx metadata doc\docfx.json -f
-  - docfx build doc\docfx.json -f
 
 after_test: 
 # Generate coverage report
