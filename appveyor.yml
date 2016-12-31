@@ -1,6 +1,9 @@
 # gitversion will change the version number
 version: x-{build}
+
 image: Visual Studio 2015
+init:
+  - git config --global core.autocrlf input
 
 cache:
   - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
