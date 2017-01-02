@@ -58,6 +58,7 @@
     <Compile Include="Cryptography\SHA3ManagedTest.cs" />
     <Compile Include="DagLinkTest.cs" />
     <Compile Include="DagNodeTest.cs" />
+    <Compile Include="VarintTest.cs" />
     <Compile Include="HexStringTest.cs" />
     <Compile Include="NetworkProtocolTest.cs" />
     <Compile Include="ExceptionAssert.cs" />

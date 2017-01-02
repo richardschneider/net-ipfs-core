@@ -91,6 +91,7 @@
     <Compile Include="NetworkProtocol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtobufHelper.cs" />
+    <Compile Include="Varint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ipfs.dev.snk" />
