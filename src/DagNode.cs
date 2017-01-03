@@ -44,6 +44,32 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Creates a new instance of the <see cref="DagNode"/> class from the
+        ///   specified <see cref="Stream"/>.
+        /// </summary>
+        /// <param name="stream">(
+        ///   A <see cref="Stream"/> containing the binary representation of the
+        ///   <b>DagNode</b>.
+        /// </param>
+        public DagNode(Stream stream)
+        {
+            Read(stream);
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="DagNode"/> class from the
+        ///   specified <see cref="CodedInputStream"/>.
+        /// </summary>
+        /// <param name="stream">(
+        ///   A <see cref="CodedInputStream"/> containing the binary representation of the
+        ///   <b>DagNode</b>.
+        /// </param>
+        public DagNode(CodedInputStream stream)
+        {
+            Read(stream);
+        }
+
+        /// <summary>
         ///   Links to other nodes.
         /// </summary>
         /// <remarks>
@@ -150,6 +176,44 @@ namespace Ipfs
                 stream.WriteLength(Data.Length);
                 stream.WriteSomeBytes(Data);
             }
+        }
+
+        void Read(Stream stream)
+        {
+            using (var cis = new CodedInputStream(stream, true))
+            {
+                Read(cis);
+            }
+        }
+
+        void Read(CodedInputStream stream)
+        {
+            var links = new List<DagLink>();
+            bool done = false;
+
+            while (!stream.IsAtEnd && !done)
+            {
+                var tag = stream.ReadTag();
+                switch(WireFormat.GetTagFieldNumber(tag))
+                {
+                    case 1:
+                        Data = stream.ReadSomeBytes(stream.ReadLength());
+                        done = true;
+                        break;
+                    case 2:
+                        using (var ms = new MemoryStream(stream.ReadSomeBytes(stream.ReadLength())))
+                        {
+                            links.Add(new DagLink(ms));
+                        }
+                        break;
+                    default:
+                        throw new InvalidDataException("Unknown field number");
+                }
+            }
+
+            if (Data == null)
+                Data = new byte[0];
+            Links = links.ToArray();
         }
 
         /// <summary>

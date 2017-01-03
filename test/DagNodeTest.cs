@@ -15,11 +15,13 @@ namespace Ipfs
         [TestMethod]
         public void EmptyDAG()
         {
-            var node = new DagNode(null);
+            var node = new DagNode((byte[]) null);
             Assert.AreEqual(0, node.Data.Length);
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual(0, node.Size);
             Assert.AreEqual("QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n", node.Hash);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -31,6 +33,8 @@ namespace Ipfs
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", node.Hash);
             Assert.AreEqual(5, node.Size);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -45,6 +49,8 @@ namespace Ipfs
             Assert.AreEqual(1, node.Links.Count());
             Assert.AreEqual("QmVdMJFGTqF2ghySAmivGiQvsr9ZH7ujnNGBkLNNCe4HUE", node.Hash);
             Assert.AreEqual(43, node.Size);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -62,6 +68,8 @@ namespace Ipfs
             Assert.AreEqual(0, node.Data.Length);
             Assert.AreEqual(2, node.Links.Count());
             Assert.AreEqual("QmbNgNPPykP4YTuAeSa3DsnBJWLVxccrqLUZDPNQfizGKs", node.Hash);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -80,6 +88,8 @@ namespace Ipfs
             CollectionAssert.AreEqual(ab, node.Data);
             Assert.AreEqual(2, node.Links.Count());
             Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", node.Hash);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -110,6 +120,8 @@ namespace Ipfs
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual("8Vv347foTHxpLZDdguzcTp7mjBmySjWK1VF36Je7io4ZKHo28fefMFr28LSv757yTcaRzn1dRqPB6WWFpYvbd5YXca", node.Hash);
             Assert.AreEqual(5, node.Size);
+
+            RoundtripTest(node);
         }
 
         [TestMethod]
@@ -134,5 +146,21 @@ namespace Ipfs
             Assert.AreEqual(node.Size, link.Size);
         }
 
+        void RoundtripTest(DagNode a)
+        {
+            var ms = new MemoryStream();
+            a.Write(ms);
+            ms.Position = 0;
+            var b = new DagNode(ms);
+            CollectionAssert.AreEqual(a.Data, b.Data);
+            Assert.AreEqual(a.Links.Count(), b.Links.Count());
+            a.Links.Zip(b.Links, (first, second) =>
+            {
+                Assert.AreEqual(first.Hash, second.Hash);
+                Assert.AreEqual(first.Name, second.Name);
+                Assert.AreEqual(first.Size, second.Size);
+                return first;
+            }).ToArray();
+        }
     }
 }

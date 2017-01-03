@@ -15,7 +15,7 @@ namespace Ipfs
     public class DagLink
     {
         /// <summary>
-        ///   Create a new instance of <see cref="DagLink"/> classs.
+        ///   Create a new instance of <see cref="DagLink"/> class.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="hash"></param>
@@ -25,6 +25,32 @@ namespace Ipfs
             this.Name = name;
             this.Hash = hash;
             this.Size = size;
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="DagLink"/> class from the
+        ///   specified <see cref="Stream"/>.
+        /// </summary>
+        /// <param name="stream">(
+        ///   A <see cref="Stream"/> containing the binary representation of the
+        ///   <b>DagLink</b>.
+        /// </param>
+        public DagLink(Stream stream)
+        {
+            Read(stream);
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="DagLink"/> class from the
+        ///   specified <see cref="CodedInputStream"/>.
+        /// </summary>
+        /// <param name="stream">(
+        ///   A <see cref="CodedInputStream"/> containing the binary representation of the
+        ///   <b>DagLink</b>.
+        /// </param>
+        public DagLink(CodedInputStream stream)
+        {
+            Read(stream);
         }
 
         /// <summary>
@@ -84,6 +110,39 @@ namespace Ipfs
 
             stream.WriteTag(3, WireFormat.WireType.Varint);
             stream.WriteInt64(Size);
+        }
+
+        void Read(Stream stream)
+        {
+            using (var cis = new CodedInputStream(stream, true))
+            {
+                Read(cis);
+            }
+        }
+
+        void Read(CodedInputStream stream)
+        {
+            while (!stream.IsAtEnd)
+            {
+                var tag = stream.ReadTag();
+                switch (WireFormat.GetTagFieldNumber(tag))
+                {
+                    case 1:
+                        using (var ms = new MemoryStream(stream.ReadSomeBytes(stream.ReadLength())))
+                        {
+                            Hash = new MultiHash(ms).ToBase58();
+                        }
+                        break;
+                    case 2:
+                        Name = stream.ReadString();
+                        break;
+                    case 3:
+                        Size = stream.ReadInt64();
+                        break;
+                    default:
+                        throw new InvalidDataException("Unknown field number");
+                }
+            }
         }
 
         /// <summary>
