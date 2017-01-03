@@ -38,8 +38,9 @@ before_build:
   - nuget restore
 
 # Build documentation in doc\_site
-  - .\tools\docfx\docfx metadata doc\docfx.json
-  - .\tools\docfx\docfx build doc\docfx.json
+  - cd doc
+  - ..\tools\docfx\docfx
+  - cd ..
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 
 # Determine the version
