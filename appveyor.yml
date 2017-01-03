@@ -1,7 +1,7 @@
 # gitversion will change the version number
 version: x-{build}
 
-platform: x64
+platform: Any CPU
 configuration: Release
 image: Visual Studio 2015
 
