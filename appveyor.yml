@@ -1,7 +1,10 @@
 # gitversion will change the version number
 version: x-{build}
 
+platform: x64
+configuration: Release
 image: Visual Studio 2015
+
 init:
   - git config --global core.autocrlf input
 
@@ -38,16 +41,12 @@ before_build:
   - nuget restore
 
 # Build documentation in doc\_site
-  - cd doc
-  - ..\tools\docfx\docfx
-  - cd ..
+  - .\tools\docfx\docfx metadata doc\docfx.json
+  - .\tools\docfx\docfx build doc\docfx.json
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 
 # Determine the version
   - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
-
-platform: Any CPU
-configuration: Release
 
 build:
   project: IpfsCore.sln
