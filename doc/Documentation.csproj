@@ -75,8 +75,6 @@
     <Content Include="index.md" />
     <Content Include="docfx.json" />
     <Content Include="articles\intro.md" />
-    <Content Include="namespaces.4.5.2.zip" />
-    <Content Include="msdn.4.5.2.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
