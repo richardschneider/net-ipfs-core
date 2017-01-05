@@ -133,6 +133,18 @@ references:
   commentId: T:Ipfs.DagLink
   fullName: Ipfs.DagLink
   nameWithType: DagLink
+- uid: Ipfs.DagLink.#ctor(Google.Protobuf.CodedInputStream)
+  name: DagLink(CodedInputStream)
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_Google_Protobuf_CodedInputStream_
+  commentId: M:Ipfs.DagLink.#ctor(Google.Protobuf.CodedInputStream)
+  fullName: Ipfs.DagLink.DagLink(Google.Protobuf.CodedInputStream)
+  nameWithType: DagLink.DagLink(CodedInputStream)
+- uid: Ipfs.DagLink.#ctor(System.IO.Stream)
+  name: DagLink(Stream)
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_System_IO_Stream_
+  commentId: M:Ipfs.DagLink.#ctor(System.IO.Stream)
+  fullName: Ipfs.DagLink.DagLink(System.IO.Stream)
+  nameWithType: DagLink.DagLink(Stream)
 - uid: Ipfs.DagLink.#ctor(System.String,System.String,System.Int64)
   name: DagLink(String, String, Int64)
   href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_System_String_System_String_System_Int64_
@@ -217,6 +229,12 @@ references:
   commentId: T:Ipfs.DagNode
   fullName: Ipfs.DagNode
   nameWithType: DagNode
+- uid: Ipfs.DagNode.#ctor(Google.Protobuf.CodedInputStream)
+  name: DagNode(CodedInputStream)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_Google_Protobuf_CodedInputStream_
+  commentId: M:Ipfs.DagNode.#ctor(Google.Protobuf.CodedInputStream)
+  fullName: Ipfs.DagNode.DagNode(Google.Protobuf.CodedInputStream)
+  nameWithType: DagNode.DagNode(CodedInputStream)
 - uid: Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.DagLink},System.String)
   name: DagNode(Byte[], IEnumerable<DagLink>, String)
   href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_
@@ -226,12 +244,45 @@ references:
   fullName.vb: Ipfs.DagNode.DagNode(System.Byte(), System.Collections.Generic.IEnumerable(Of Ipfs.DagLink), System.String)
   nameWithType: DagNode.DagNode(Byte[], IEnumerable<DagLink>, String)
   nameWithType.vb: DagNode(Byte(), IEnumerable(Of DagLink), String)
+- uid: Ipfs.DagNode.#ctor(System.IO.Stream)
+  name: DagNode(Stream)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_IO_Stream_
+  commentId: M:Ipfs.DagNode.#ctor(System.IO.Stream)
+  fullName: Ipfs.DagNode.DagNode(System.IO.Stream)
+  nameWithType: DagNode.DagNode(Stream)
 - uid: Ipfs.DagNode.#ctor*
   name: DagNode
   href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_
   commentId: Overload:Ipfs.DagNode.#ctor
   fullName: Ipfs.DagNode.DagNode
   nameWithType: DagNode.DagNode
+- uid: Ipfs.DagNode.AddLink(Ipfs.DagLink)
+  name: AddLink(DagLink)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLink_Ipfs_DagLink_
+  commentId: M:Ipfs.DagNode.AddLink(Ipfs.DagLink)
+  fullName: Ipfs.DagNode.AddLink(Ipfs.DagLink)
+  nameWithType: DagNode.AddLink(DagLink)
+- uid: Ipfs.DagNode.AddLink*
+  name: AddLink
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLink_
+  commentId: Overload:Ipfs.DagNode.AddLink
+  fullName: Ipfs.DagNode.AddLink
+  nameWithType: DagNode.AddLink
+- uid: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
+  name: AddLinks(IEnumerable<DagLink>)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__
+  commentId: M:Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
+  name.vb: AddLinks(IEnumerable(Of DagLink))
+  fullName: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
+  fullName.vb: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
+  nameWithType: DagNode.AddLinks(IEnumerable<DagLink>)
+  nameWithType.vb: AddLinks(IEnumerable(Of DagLink))
+- uid: Ipfs.DagNode.AddLinks*
+  name: AddLinks
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_
+  commentId: Overload:Ipfs.DagNode.AddLinks
+  fullName: Ipfs.DagNode.AddLinks
+  nameWithType: DagNode.AddLinks
 - uid: Ipfs.DagNode.Data
   name: Data
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_Data
@@ -268,6 +319,33 @@ references:
   commentId: Overload:Ipfs.DagNode.Links
   fullName: Ipfs.DagNode.Links
   nameWithType: DagNode.Links
+- uid: Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
+  name: RemoveLink(DagLink)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLink_Ipfs_DagLink_
+  commentId: M:Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
+  fullName: Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
+  nameWithType: DagNode.RemoveLink(DagLink)
+- uid: Ipfs.DagNode.RemoveLink*
+  name: RemoveLink
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLink_
+  commentId: Overload:Ipfs.DagNode.RemoveLink
+  fullName: Ipfs.DagNode.RemoveLink
+  nameWithType: DagNode.RemoveLink
+- uid: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
+  name: RemoveLinks(IEnumerable<DagLink>)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__
+  commentId: M:Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
+  name.vb: RemoveLinks(IEnumerable(Of DagLink))
+  fullName: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
+  fullName.vb: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
+  nameWithType: DagNode.RemoveLinks(IEnumerable<DagLink>)
+  nameWithType.vb: RemoveLinks(IEnumerable(Of DagLink))
+- uid: Ipfs.DagNode.RemoveLinks*
+  name: RemoveLinks
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_
+  commentId: Overload:Ipfs.DagNode.RemoveLinks
+  fullName: Ipfs.DagNode.RemoveLinks
+  nameWithType: DagNode.RemoveLinks
 - uid: Ipfs.DagNode.Size
   name: Size
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_Size
@@ -955,3 +1033,75 @@ references:
   commentId: Overload:Ipfs.UnknownHashingAlgorithmEventArgs.Algorithm
   fullName: Ipfs.UnknownHashingAlgorithmEventArgs.Algorithm
   nameWithType: UnknownHashingAlgorithmEventArgs.Algorithm
+- uid: Ipfs.Varint
+  name: Varint
+  href: api/Ipfs.Varint.html
+  commentId: T:Ipfs.Varint
+  fullName: Ipfs.Varint
+  nameWithType: Varint
+- uid: Ipfs.Varint.DecodeInt32(System.Byte[],System.Int32)
+  name: DecodeInt32(Byte[], Int32)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt32_System_Byte___System_Int32_
+  commentId: M:Ipfs.Varint.DecodeInt32(System.Byte[],System.Int32)
+  name.vb: DecodeInt32(Byte(), Int32)
+  fullName: Ipfs.Varint.DecodeInt32(System.Byte[], System.Int32)
+  fullName.vb: Ipfs.Varint.DecodeInt32(System.Byte(), System.Int32)
+  nameWithType: Varint.DecodeInt32(Byte[], Int32)
+  nameWithType.vb: DecodeInt32(Byte(), Int32)
+- uid: Ipfs.Varint.DecodeInt32*
+  name: DecodeInt32
+  href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt32_
+  commentId: Overload:Ipfs.Varint.DecodeInt32
+  fullName: Ipfs.Varint.DecodeInt32
+  nameWithType: Varint.DecodeInt32
+- uid: Ipfs.Varint.DecodeInt64(System.Byte[],System.Int32)
+  name: DecodeInt64(Byte[], Int32)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_
+  commentId: M:Ipfs.Varint.DecodeInt64(System.Byte[],System.Int32)
+  name.vb: DecodeInt64(Byte(), Int32)
+  fullName: Ipfs.Varint.DecodeInt64(System.Byte[], System.Int32)
+  fullName.vb: Ipfs.Varint.DecodeInt64(System.Byte(), System.Int32)
+  nameWithType: Varint.DecodeInt64(Byte[], Int32)
+  nameWithType.vb: DecodeInt64(Byte(), Int32)
+- uid: Ipfs.Varint.DecodeInt64*
+  name: DecodeInt64
+  href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt64_
+  commentId: Overload:Ipfs.Varint.DecodeInt64
+  fullName: Ipfs.Varint.DecodeInt64
+  nameWithType: Varint.DecodeInt64
+- uid: Ipfs.Varint.Encode(System.Int64)
+  name: Encode(Int64)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_Encode_System_Int64_
+  commentId: M:Ipfs.Varint.Encode(System.Int64)
+  fullName: Ipfs.Varint.Encode(System.Int64)
+  nameWithType: Varint.Encode(Int64)
+- uid: Ipfs.Varint.Encode*
+  name: Encode
+  href: api/Ipfs.Varint.html#Ipfs_Varint_Encode_
+  commentId: Overload:Ipfs.Varint.Encode
+  fullName: Ipfs.Varint.Encode
+  nameWithType: Varint.Encode
+- uid: Ipfs.Varint.RequiredBytes(System.Int64)
+  name: RequiredBytes(Int64)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_RequiredBytes_System_Int64_
+  commentId: M:Ipfs.Varint.RequiredBytes(System.Int64)
+  fullName: Ipfs.Varint.RequiredBytes(System.Int64)
+  nameWithType: Varint.RequiredBytes(Int64)
+- uid: Ipfs.Varint.RequiredBytes*
+  name: RequiredBytes
+  href: api/Ipfs.Varint.html#Ipfs_Varint_RequiredBytes_
+  commentId: Overload:Ipfs.Varint.RequiredBytes
+  fullName: Ipfs.Varint.RequiredBytes
+  nameWithType: Varint.RequiredBytes
+- uid: Ipfs.Varint.WriteVarint(System.IO.Stream,System.Int64)
+  name: WriteVarint(Stream, Int64)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_
+  commentId: M:Ipfs.Varint.WriteVarint(System.IO.Stream,System.Int64)
+  fullName: Ipfs.Varint.WriteVarint(System.IO.Stream, System.Int64)
+  nameWithType: Varint.WriteVarint(Stream, Int64)
+- uid: Ipfs.Varint.WriteVarint*
+  name: WriteVarint
+  href: api/Ipfs.Varint.html#Ipfs_Varint_WriteVarint_
+  commentId: Overload:Ipfs.Varint.WriteVarint
+  fullName: Ipfs.Varint.WriteVarint
+  nameWithType: Varint.WriteVarint
