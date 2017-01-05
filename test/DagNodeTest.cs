@@ -146,6 +146,47 @@ namespace Ipfs
             Assert.AreEqual(node.Size, link.Size);
         }
 
+        [TestMethod]
+        public void AddLink()
+        {
+            var a = Encoding.UTF8.GetBytes("a");
+            var anode = new DagNode(a);
+
+            var b = Encoding.UTF8.GetBytes("b");
+            var bnode = new DagNode(b);
+
+            var cnode = bnode.AddLink(anode.ToLink());
+            Assert.IsFalse(Object.ReferenceEquals(bnode, cnode));
+            Assert.AreEqual(1, cnode.Data.Length);
+            Assert.AreEqual(1, cnode.Links.Count());
+            Assert.AreEqual(anode.Hash, cnode.Links.First().Hash);
+            Assert.AreEqual(anode.Size, cnode.Links.First().Size);
+
+            RoundtripTest(cnode);
+        }
+
+        [TestMethod]
+        public void RemoveLink()
+        {
+            var a = Encoding.UTF8.GetBytes("a");
+            var anode = new DagNode(a);
+
+            var b = Encoding.UTF8.GetBytes("b");
+            var bnode = new DagNode(b);
+
+            var c = Encoding.UTF8.GetBytes("c");
+            var cnode = new DagNode(c, new[] { anode.ToLink(), bnode.ToLink() });
+
+            var dnode = cnode.RemoveLink(anode.ToLink());
+            Assert.IsFalse(Object.ReferenceEquals(dnode, cnode));
+            Assert.AreEqual(1, dnode.Data.Length);
+            Assert.AreEqual(1, dnode.Links.Count());
+            Assert.AreEqual(bnode.Hash, dnode.Links.First().Hash);
+            Assert.AreEqual(bnode.Size, dnode.Links.First().Size);
+
+            RoundtripTest(cnode);
+        }
+
         void RoundtripTest(DagNode a)
         {
             var ms = new MemoryStream();

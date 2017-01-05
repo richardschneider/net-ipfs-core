@@ -134,6 +134,89 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Adds a link.
+        /// </summary>
+        /// <param name="link">
+        ///   The <see cref="DagLink"/> to add.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="DagNode"/> with the existing and new
+        ///   link.
+        /// </returns>
+        /// <remarks>
+        ///   A <b>DagNode</b> is immutable.
+        /// </remarks>
+        public DagNode AddLink(DagLink link)
+        {
+            return AddLinks(new[] { link });
+        }
+
+        /// <summary>
+        ///   Adds a sequence of links.
+        /// </summary>
+        /// <param name="links">
+        ///   The sequence of <see cref="DagLink"/> to add.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="DagNode"/> with the existing and new
+        ///   links.
+        /// </returns>
+        /// <remarks>
+        ///   A <b>DagNode</b> is immutable.
+        /// </remarks>
+        public DagNode AddLinks(IEnumerable<DagLink> links)
+        {
+            var all = Links.Union(links);
+            return new DagNode(Data, all, hashAlgorithm);
+        }
+
+        /// <summary>
+        ///   Removes a link.
+        /// </summary>
+        /// <param name="link">
+        ///   The <see cref="DagLink"/> to remove.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="DagNode"/> with the <paramref name="link"/>
+        ///   removed.
+        /// </returns>
+        /// <remarks>
+        ///   A <b>DagNode</b> is immutable.
+        ///   <para>
+        ///   No exception is raised if the <paramref name="link"/> does
+        ///   not exist.
+        ///   </para>
+        /// </remarks>
+        public DagNode RemoveLink(DagLink link)
+        {
+            return RemoveLinks(new[] { link });
+        }
+
+        /// <summary>
+        ///   Remove a sequence of links.
+        /// </summary>
+        /// <param name="links">
+        ///   The sequence of <see cref="DagLink"/> to remove.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="DagNode"/> with the <paramref name="links"/>
+        ///   removed.
+        /// </returns>
+        /// <remarks>
+        ///   A <b>DagNode</b> is immutable.
+        ///   <para>
+        ///   No exception is raised if any of the <paramref name="links"/> do
+        ///   not exist.
+        ///   </para>
+        /// </remarks>
+        public DagNode RemoveLinks(IEnumerable<DagLink> links)
+        {
+            var ignore = links.ToLookup(link => link.Hash);
+            var some = Links.Where(link => !ignore.Contains(link.Hash));
+            return new DagNode(Data, some, hashAlgorithm);
+        }
+
+        /// <summary>
         ///   Writes the binary representation of the node to the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
