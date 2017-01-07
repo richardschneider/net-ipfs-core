@@ -20,6 +20,7 @@ environment:
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -pre -y
+  - choco install microsoft-build-tools
   #- choco install docfx
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
