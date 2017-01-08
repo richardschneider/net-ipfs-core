@@ -49,13 +49,13 @@ build:
   verbosity: minimal
 
 after_build:
-# Build nuget package
-  - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
-  - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
 # Build documentation in doc\_site
   - .\tools\docfx\docfx metadata doc\docfx.json
   - .\tools\docfx\docfx build doc\docfx.json
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
+# Build nuget package
+  - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+  - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
 
 after_test: 
 # Generate coverage report
