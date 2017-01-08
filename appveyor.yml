@@ -39,6 +39,7 @@ nuget:
 
 before_build:
   - nuget restore
+  - ls packages
 
 # Build documentation in doc\_site
   - .\tools\docfx\docfx metadata doc\docfx.json
