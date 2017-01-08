@@ -2,7 +2,7 @@
 version: x-{build}
 
 platform: Any CPU
-configuration: Release
+configuration: Debug
 os: Visual Studio 2015
 
 init:
@@ -39,13 +39,6 @@ nuget:
 
 before_build:
   - nuget restore
-  - ls packages
-  - ls "C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.5.2"
-
-# Build documentation in doc\_site
-  - .\tools\docfx\docfx metadata doc\docfx.json
-  - .\tools\docfx\docfx build doc\docfx.json
-  - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 
 # Determine the version
   - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
@@ -59,6 +52,10 @@ after_build:
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
   - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
+# Build documentation in doc\_site
+  - .\tools\docfx\docfx metadata doc\docfx.json
+  - .\tools\docfx\docfx build doc\docfx.json
+  - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 
 after_test: 
 # Generate coverage report
