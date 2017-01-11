@@ -38,11 +38,6 @@ nuget:
   disable_publish_on_pr: true
 
 before_build:
-  - ps: >-
-      if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
-            {
-                git checkout $env:APPVEYOR_REPO_BRANCH -q
-            }
   - nuget restore
 
 # Determine the version
