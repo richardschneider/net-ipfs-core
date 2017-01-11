@@ -33,7 +33,7 @@ references:
   fullName: Ipfs.Base32.Encode(System.Byte[])
   fullName.vb: Ipfs.Base32.Encode(System.Byte())
   nameWithType: Base32.Encode(Byte[])
-  nameWithType.vb: Encode(Byte())
+  nameWithType.vb: Base32.Encode(Byte())
 - uid: Ipfs.Base32.Encode*
   name: Encode
   href: api/Ipfs.Base32.html#Ipfs_Base32_Encode_
@@ -60,7 +60,7 @@ references:
   fullName: Ipfs.Base32.ToBase32(System.Byte[])
   fullName.vb: Ipfs.Base32.ToBase32(System.Byte())
   nameWithType: Base32.ToBase32(Byte[])
-  nameWithType.vb: ToBase32(Byte())
+  nameWithType.vb: Base32.ToBase32(Byte())
 - uid: Ipfs.Base32.ToBase32*
   name: ToBase32
   href: api/Ipfs.Base32.html#Ipfs_Base32_ToBase32_
@@ -93,7 +93,7 @@ references:
   fullName: Ipfs.Base58.Encode(System.Byte[])
   fullName.vb: Ipfs.Base58.Encode(System.Byte())
   nameWithType: Base58.Encode(Byte[])
-  nameWithType.vb: Encode(Byte())
+  nameWithType.vb: Base58.Encode(Byte())
 - uid: Ipfs.Base58.Encode*
   name: Encode
   href: api/Ipfs.Base58.html#Ipfs_Base58_Encode_
@@ -120,7 +120,7 @@ references:
   fullName: Ipfs.Base58.ToBase58(System.Byte[])
   fullName.vb: Ipfs.Base58.ToBase58(System.Byte())
   nameWithType: Base58.ToBase58(Byte[])
-  nameWithType.vb: ToBase58(Byte())
+  nameWithType.vb: Base58.ToBase58(Byte())
 - uid: Ipfs.Base58.ToBase58*
   name: ToBase58
   href: api/Ipfs.Base58.html#Ipfs_Base58_ToBase58_
@@ -243,7 +243,7 @@ references:
   fullName: Ipfs.DagNode.DagNode(System.Byte[], System.Collections.Generic.IEnumerable<Ipfs.DagLink>, System.String)
   fullName.vb: Ipfs.DagNode.DagNode(System.Byte(), System.Collections.Generic.IEnumerable(Of Ipfs.DagLink), System.String)
   nameWithType: DagNode.DagNode(Byte[], IEnumerable<DagLink>, String)
-  nameWithType.vb: DagNode(Byte(), IEnumerable(Of DagLink), String)
+  nameWithType.vb: DagNode.DagNode(Byte(), IEnumerable(Of DagLink), String)
 - uid: Ipfs.DagNode.#ctor(System.IO.Stream)
   name: DagNode(Stream)
   href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_IO_Stream_
@@ -276,7 +276,7 @@ references:
   fullName: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
   fullName.vb: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
   nameWithType: DagNode.AddLinks(IEnumerable<DagLink>)
-  nameWithType.vb: AddLinks(IEnumerable(Of DagLink))
+  nameWithType.vb: DagNode.AddLinks(IEnumerable(Of DagLink))
 - uid: Ipfs.DagNode.AddLinks*
   name: AddLinks
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_
@@ -339,7 +339,7 @@ references:
   fullName: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
   fullName.vb: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
   nameWithType: DagNode.RemoveLinks(IEnumerable<DagLink>)
-  nameWithType.vb: RemoveLinks(IEnumerable(Of DagLink))
+  nameWithType.vb: DagNode.RemoveLinks(IEnumerable(Of DagLink))
 - uid: Ipfs.DagNode.RemoveLinks*
   name: RemoveLinks
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_
@@ -426,7 +426,7 @@ references:
   fullName: Ipfs.HexString.Encode(System.Byte[], System.String)
   fullName.vb: Ipfs.HexString.Encode(System.Byte(), System.String)
   nameWithType: HexString.Encode(Byte[], String)
-  nameWithType.vb: Encode(Byte(), String)
+  nameWithType.vb: HexString.Encode(Byte(), String)
 - uid: Ipfs.HexString.Encode*
   name: Encode
   href: api/Ipfs.HexString.html#Ipfs_HexString_Encode_
@@ -453,7 +453,7 @@ references:
   fullName: Ipfs.HexString.ToHexString(System.Byte[], System.String)
   fullName.vb: Ipfs.HexString.ToHexString(System.Byte(), System.String)
   nameWithType: HexString.ToHexString(Byte[], String)
-  nameWithType.vb: ToHexString(Byte(), String)
+  nameWithType.vb: HexString.ToHexString(Byte(), String)
 - uid: Ipfs.HexString.ToHexString*
   name: ToHexString
   href: api/Ipfs.HexString.html#Ipfs_HexString_ToHexString_
@@ -480,7 +480,7 @@ references:
   fullName: Ipfs.MultiAddress.MultiAddress(System.Byte[])
   fullName.vb: Ipfs.MultiAddress.MultiAddress(System.Byte())
   nameWithType: MultiAddress.MultiAddress(Byte[])
-  nameWithType.vb: MultiAddress(Byte())
+  nameWithType.vb: MultiAddress.MultiAddress(Byte())
 - uid: Ipfs.MultiAddress.#ctor(System.IO.Stream)
   name: MultiAddress(Stream)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress__ctor_System_IO_Stream_
@@ -549,7 +549,7 @@ references:
   fullName: Ipfs.MultiAddress.Implicit(System.String to Ipfs.MultiAddress)
   fullName.vb: Ipfs.MultiAddress.Widening(System.String to Ipfs.MultiAddress)
   nameWithType: MultiAddress.Implicit(String to MultiAddress)
-  nameWithType.vb: Widening(String to MultiAddress)
+  nameWithType.vb: MultiAddress.Widening(String to MultiAddress)
 - uid: Ipfs.MultiAddress.op_Implicit*
   name: Implicit
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_op_Implicit_
@@ -663,7 +663,7 @@ references:
   fullName: Ipfs.MultiHash.MultiHash(System.String, System.Byte[])
   fullName.vb: Ipfs.MultiHash.MultiHash(System.String, System.Byte())
   nameWithType: MultiHash.MultiHash(String, Byte[])
-  nameWithType.vb: MultiHash(String, Byte())
+  nameWithType.vb: MultiHash.MultiHash(String, Byte())
 - uid: Ipfs.MultiHash.#ctor*
   name: MultiHash
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash__ctor_
@@ -690,7 +690,7 @@ references:
   fullName: Ipfs.MultiHash.ComputeHash(System.Byte[], System.String)
   fullName.vb: Ipfs.MultiHash.ComputeHash(System.Byte(), System.String)
   nameWithType: MultiHash.ComputeHash(Byte[], String)
-  nameWithType.vb: ComputeHash(Byte(), String)
+  nameWithType.vb: MultiHash.ComputeHash(Byte(), String)
 - uid: Ipfs.MultiHash.ComputeHash(System.IO.Stream,System.String)
   name: ComputeHash(Stream, String)
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ComputeHash_System_IO_Stream_System_String_
@@ -807,7 +807,7 @@ references:
   fullName: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Byte, System.Byte, System.Func<System.Security.Cryptography.HashAlgorithm>)
   fullName.vb: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Byte, System.Byte, System.Func(Of System.Security.Cryptography.HashAlgorithm))
   nameWithType: MultiHash.HashingAlgorithm.Register(String, Byte, Byte, Func<HashAlgorithm>)
-  nameWithType.vb: Register(String, Byte, Byte, Func(Of HashAlgorithm))
+  nameWithType.vb: MultiHash.HashingAlgorithm.Register(String, Byte, Byte, Func(Of HashAlgorithm))
 - uid: Ipfs.MultiHash.HashingAlgorithm.Register*
   name: Register
   href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_
@@ -834,7 +834,7 @@ references:
   fullName: Ipfs.MultiHash.Matches(System.Byte[])
   fullName.vb: Ipfs.MultiHash.Matches(System.Byte())
   nameWithType: MultiHash.Matches(Byte[])
-  nameWithType.vb: Matches(Byte())
+  nameWithType.vb: MultiHash.Matches(Byte())
 - uid: Ipfs.MultiHash.Matches(System.IO.Stream)
   name: Matches(Stream)
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Matches_System_IO_Stream_
@@ -972,7 +972,7 @@ references:
   fullName: Ipfs.NetworkProtocol.Register<T>()
   fullName.vb: Ipfs.NetworkProtocol.Register(Of T)()
   nameWithType: NetworkProtocol.Register<T>()
-  nameWithType.vb: Register(Of T)()
+  nameWithType.vb: NetworkProtocol.Register(Of T)()
 - uid: Ipfs.NetworkProtocol.ToString
   name: ToString()
   href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_ToString
@@ -1047,7 +1047,7 @@ references:
   fullName: Ipfs.Varint.DecodeInt32(System.Byte[], System.Int32)
   fullName.vb: Ipfs.Varint.DecodeInt32(System.Byte(), System.Int32)
   nameWithType: Varint.DecodeInt32(Byte[], Int32)
-  nameWithType.vb: DecodeInt32(Byte(), Int32)
+  nameWithType.vb: Varint.DecodeInt32(Byte(), Int32)
 - uid: Ipfs.Varint.DecodeInt32*
   name: DecodeInt32
   href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt32_
@@ -1062,7 +1062,7 @@ references:
   fullName: Ipfs.Varint.DecodeInt64(System.Byte[], System.Int32)
   fullName.vb: Ipfs.Varint.DecodeInt64(System.Byte(), System.Int32)
   nameWithType: Varint.DecodeInt64(Byte[], Int32)
-  nameWithType.vb: DecodeInt64(Byte(), Int32)
+  nameWithType.vb: Varint.DecodeInt64(Byte(), Int32)
 - uid: Ipfs.Varint.DecodeInt64*
   name: DecodeInt64
   href: api/Ipfs.Varint.html#Ipfs_Varint_DecodeInt64_
