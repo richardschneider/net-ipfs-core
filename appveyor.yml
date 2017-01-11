@@ -38,6 +38,7 @@ nuget:
   disable_publish_on_pr: true
 
 before_build:
+  - git checkout %APPVEYOR_REPO_BRANCH% -q
   - nuget restore
 
 # Determine the version
