@@ -74,45 +74,26 @@
               <div class="markdown level0 summary"><p>A node in the IPFS Merkle DAG.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
+
+              <div class="markdown level0 remarks"><p>A <strong>DagNode</strong> has opaque <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Data">Data</a>
+and a set of navigable <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Links">Links</a>.</p>
+</div>
+              
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class DagNode</code></pre>
+              </div>
+
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
                   <div class="level1"><span class="xref">DagNode</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Ipfs</h6>
-              <h6><strong>Assembly</strong>:Ipfs.Core.dll</h6>
-              <h5 id="Ipfs_DagNode_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class DagNode</code></pre>
-              </div>
-              <h5 id="Ipfs_DagNode_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>A <strong>DagNode</strong> has opaque <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Data">Data</a>
-and a set of navigable <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Links">Links</a>.</p>
-</div>
+              
+              <h6><strong>Namespace</strong>: Ipfs</h6>
+              <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+              
+
+              
               <h3 id="constructors">Constructors
               </h3>
               <span class="small pull-right mobile-hide">
@@ -124,34 +105,33 @@ and a set of navigable <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Link
               </span>
               <a id="Ipfs_DagNode__ctor_" data-uid="Ipfs.DagNode.#ctor*"></a>
               <h4 id="Ipfs_DagNode__ctor_Google_Protobuf_CodedInputStream_" data-uid="Ipfs.DagNode.#ctor(Google.Protobuf.CodedInputStream)">DagNode(CodedInputStream)</h4>
+              
               <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Ipfs.DagNode.html">DagNode</a> class from the
 specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagNode(CodedInputStream stream)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td><p>(
+              <div>
+                  <span class="xref">Google.Protobuf.CodedInputStream</span>
+                  <span class="parametername">stream</span>
+                  <p>(
   A <span class="xref">Google.Protobuf.CodedInputStream</span> containing the binary representation of the
 <strong>DagNode</strong>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              </div>
+              
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.%23ctor(System.Byte%5B%5D%2CSystem.Collections.Generic.IEnumerable%7BIpfs.DagLink%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -161,45 +141,44 @@ specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
               </span>
               <a id="Ipfs_DagNode__ctor_" data-uid="Ipfs.DagNode.#ctor*"></a>
               <h4 id="Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_" data-uid="Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.DagLink},System.String)">DagNode(Byte[], IEnumerable&lt;DagLink&gt;, String)</h4>
+              
               <div class="markdown level1 summary"><p>Create a new instance of a <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the specified</p>
 <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Data">Data</a> and <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Links">Links</a>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagNode(byte[] data, IEnumerable&lt;DagLink&gt; links = null, string hashAlgorithm = &quot;sha2-256&quot;)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td><span class="parametername">data</span></td>
-                    <td><p>The opaque data, can be <strong>null</strong></p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;</td>
-                    <td><span class="parametername">links</span></td>
-                    <td><p>The links to other nodes.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-                    <td><span class="parametername">hashAlgorithm</span></td>
-                    <td><p>The name of the hashing algorithm to use; defaults to 
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                  <span class="parametername">data</span>
+                  <p>The opaque data, can be <strong>null</strong></p>
+
+              </div>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                  <span class="parametername">links</span>
+                  <p>The links to other nodes.</p>
+
+              </div>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+                  <span class="parametername">hashAlgorithm</span>
+                  <p>The name of the hashing algorithm to use; defaults to 
 <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_DefaultAlgorithmName">DefaultAlgorithmName</a>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              </div>
+              
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode__ctor_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.%23ctor(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -209,34 +188,33 @@ specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
               </span>
               <a id="Ipfs_DagNode__ctor_" data-uid="Ipfs.DagNode.#ctor*"></a>
               <h4 id="Ipfs_DagNode__ctor_System_IO_Stream_" data-uid="Ipfs.DagNode.#ctor(System.IO.Stream)">DagNode(Stream)</h4>
+              
               <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Ipfs.DagNode.html">DagNode</a> class from the
 specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagNode(Stream stream)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td><p>(
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
+                  <span class="parametername">stream</span>
+                  <p>(
   A <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> containing the binary representation of the
 <strong>DagNode</strong>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              </div>
+              
+              
+              
+              
+              
+              
+              
               <h3 id="properties">Properties
               </h3>
               <span class="small pull-right mobile-hide">
@@ -248,31 +226,29 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               </span>
               <a id="Ipfs_DagNode_Data_" data-uid="Ipfs.DagNode.Data*"></a>
               <h4 id="Ipfs_DagNode_Data" data-uid="Ipfs.DagNode.Data">Data</h4>
+              
               <div class="markdown level1 summary"><p>Opaque data of the node.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
+</div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public byte[] Data { get; }</code></pre>
               </div>
+
+              
+              
+              
               <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_Data_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
-</div>
+              <div>
+                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                
+              </div>
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Hash.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -282,28 +258,28 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               </span>
               <a id="Ipfs_DagNode_Hash_" data-uid="Ipfs.DagNode.Hash*"></a>
               <h4 id="Ipfs_DagNode_Hash" data-uid="Ipfs.DagNode.Hash">Hash</h4>
+              
               <div class="markdown level1 summary"><p>The <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> of the node.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Hash { get; }</code></pre>
               </div>
+
+              
+              
+              
               <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+                
+              </div>
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Links.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Links%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -313,35 +289,33 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               </span>
               <a id="Ipfs_DagNode_Links_" data-uid="Ipfs.DagNode.Links*"></a>
               <h4 id="Ipfs_DagNode_Links" data-uid="Ipfs.DagNode.Links">Links</h4>
+              
               <div class="markdown level1 summary"><p>Links to other nodes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;DagLink&gt; Links { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_Links_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
 <p>
 The links are sorted ascending by <a class="xref" href="Ipfs.DagLink.html#Ipfs_DagLink_Name">Name</a>. A <strong>null</strong>
 name is compared as &quot;&quot;.
 </p>
 </div>
+
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;DagLink&gt; Links { get; }</code></pre>
+              </div>
+
+              
+              
+              
+              <h5 class="propertyValue">Property Value</h5>
+              <div>
+                <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                
+              </div>
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Size.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -351,28 +325,28 @@ name is compared as &quot;&quot;.
               </span>
               <a id="Ipfs_DagNode_Size_" data-uid="Ipfs.DagNode.Size*"></a>
               <h4 id="Ipfs_DagNode_Size" data-uid="Ipfs.DagNode.Size">Size</h4>
+              
               <div class="markdown level1 summary"><p>The serialised size in bytes of the node.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public long Size { get; }</code></pre>
               </div>
+
+              
+              
+              
               <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>
+                
+              </div>
+              
+              
+              
+              
               <h3 id="methods">Methods
               </h3>
               <span class="small pull-right mobile-hide">
@@ -384,51 +358,38 @@ name is compared as &quot;&quot;.
               </span>
               <a id="Ipfs_DagNode_AddLink_" data-uid="Ipfs.DagNode.AddLink*"></a>
               <h4 id="Ipfs_DagNode_AddLink_Ipfs_DagLink_" data-uid="Ipfs.DagNode.AddLink(Ipfs.DagLink)">AddLink(DagLink)</h4>
+              
               <div class="markdown level1 summary"><p>Adds a link.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
+</div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagNode AddLink(DagLink link)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagLink.html">DagLink</a></td>
-                    <td><span class="parametername">link</span></td>
-                    <td><p>The <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="Ipfs.DagLink.html">DagLink</a>
+                  <span class="parametername">link</span>
+                  <p>The <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagNode.html">DagNode</a></td>
-                    <td><p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the existing and new
+              <div>
+                  <a class="xref" href="Ipfs.DagNode.html">DagNode</a>
+                  <p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the existing and new
 link.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_AddLink_Ipfs_DagLink__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
-</div>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable%7BIpfs.DagLink%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -438,51 +399,38 @@ link.</p>
               </span>
               <a id="Ipfs_DagNode_AddLinks_" data-uid="Ipfs.DagNode.AddLinks*"></a>
               <h4 id="Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__" data-uid="Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})">AddLinks(IEnumerable&lt;DagLink&gt;)</h4>
+              
               <div class="markdown level1 summary"><p>Adds a sequence of links.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
+</div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagNode AddLinks(IEnumerable&lt;DagLink&gt; links)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;</td>
-                    <td><span class="parametername">links</span></td>
-                    <td><p>The sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                  <span class="parametername">links</span>
+                  <p>The sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagNode.html">DagNode</a></td>
-                    <td><p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the existing and new
+              <div>
+                  <a class="xref" href="Ipfs.DagNode.html">DagNode</a>
+                  <p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the existing and new
 links.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
-</div>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_RemoveLink_Ipfs_DagLink_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.RemoveLink(Ipfs.DagLink)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -492,55 +440,42 @@ links.</p>
               </span>
               <a id="Ipfs_DagNode_RemoveLink_" data-uid="Ipfs.DagNode.RemoveLink*"></a>
               <h4 id="Ipfs_DagNode_RemoveLink_Ipfs_DagLink_" data-uid="Ipfs.DagNode.RemoveLink(Ipfs.DagLink)">RemoveLink(DagLink)</h4>
+              
               <div class="markdown level1 summary"><p>Removes a link.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagNode RemoveLink(DagLink link)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagLink.html">DagLink</a></td>
-                    <td><span class="parametername">link</span></td>
-                    <td><p>The <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to remove.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagNode.html">DagNode</a></td>
-                    <td><p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the <span class="paramref">link</span>
-removed.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_RemoveLink_Ipfs_DagLink__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
 <p>
 No exception is raised if the <span class="paramref">link</span> does
 not exist.
 </p>
 </div>
+
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DagNode RemoveLink(DagLink link)</code></pre>
+              </div>
+
+              <h5 class="parameters">Parameters</h5>
+              <div>
+                  <a class="xref" href="Ipfs.DagLink.html">DagLink</a>
+                  <span class="parametername">link</span>
+                  <p>The <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to remove.</p>
+
+              </div>
+              
+              <h5 class="returns">Returns</h5>
+              <div>
+                  <a class="xref" href="Ipfs.DagNode.html">DagNode</a>
+                  <p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the <span class="paramref">link</span>
+removed.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable%7BIpfs.DagLink%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -550,55 +485,42 @@ not exist.
               </span>
               <a id="Ipfs_DagNode_RemoveLinks_" data-uid="Ipfs.DagNode.RemoveLinks*"></a>
               <h4 id="Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__" data-uid="Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})">RemoveLinks(IEnumerable&lt;DagLink&gt;)</h4>
+              
               <div class="markdown level1 summary"><p>Remove a sequence of links.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagNode RemoveLinks(IEnumerable&lt;DagLink&gt; links)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;</td>
-                    <td><span class="parametername">links</span></td>
-                    <td><p>The sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to remove.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagNode.html">DagNode</a></td>
-                    <td><p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the <span class="paramref">links</span>
-removed.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink___remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>A <strong>DagNode</strong> is immutable.</p>
 <p>
 No exception is raised if any of the <span class="paramref">links</span> do
 not exist.
 </p>
 </div>
+
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DagNode RemoveLinks(IEnumerable&lt;DagLink&gt; links)</code></pre>
+              </div>
+
+              <h5 class="parameters">Parameters</h5>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                  <span class="parametername">links</span>
+                  <p>The sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to remove.</p>
+
+              </div>
+              
+              <h5 class="returns">Returns</h5>
+              <div>
+                  <a class="xref" href="Ipfs.DagNode.html">DagNode</a>
+                  <p>A new <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the <span class="paramref">links</span>
+removed.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_ToArray.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -608,29 +530,29 @@ not exist.
               </span>
               <a id="Ipfs_DagNode_ToArray_" data-uid="Ipfs.DagNode.ToArray*"></a>
               <h4 id="Ipfs_DagNode_ToArray" data-uid="Ipfs.DagNode.ToArray">ToArray()</h4>
+              
               <div class="markdown level1 summary"><p>Returns the IPFS binary representation as a byte array.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public byte[] ToArray()</code></pre>
               </div>
+
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td><p>A byte array.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                  <p>A byte array.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_ToLink_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.ToLink(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -640,47 +562,36 @@ not exist.
               </span>
               <a id="Ipfs_DagNode_ToLink_" data-uid="Ipfs.DagNode.ToLink*"></a>
               <h4 id="Ipfs_DagNode_ToLink_System_String_" data-uid="Ipfs.DagNode.ToLink(System.String)">ToLink(String)</h4>
+              
               <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to the <a class="xref" href="Ipfs.DagNode.html">DagNode</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public DagLink ToLink(string name = &quot;&quot;)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-                    <td><span class="parametername">name</span></td>
-                    <td><p>A name for the link; defaults to &quot;&quot;.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+                  <span class="parametername">name</span>
+                  <p>A name for the link; defaults to &quot;&quot;.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Ipfs.DagLink.html">DagLink</a></td>
-                    <td><p>A new <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to node.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="Ipfs.DagLink.html">DagLink</a>
+                  <p>A new <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to node.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Write_Google_Protobuf_CodedOutputStream_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Write(Google.Protobuf.CodedOutputStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -690,31 +601,30 @@ not exist.
               </span>
               <a id="Ipfs_DagNode_Write_" data-uid="Ipfs.DagNode.Write*"></a>
               <h4 id="Ipfs_DagNode_Write_Google_Protobuf_CodedOutputStream_" data-uid="Ipfs.DagNode.Write(Google.Protobuf.CodedOutputStream)">Write(CodedOutputStream)</h4>
+              
               <div class="markdown level1 summary"><p>Writes the binary representation of the node to the specified <span class="xref">Google.Protobuf.CodedOutputStream</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void Write(CodedOutputStream stream)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td><p>The <span class="xref">Google.Protobuf.CodedOutputStream</span> to write to.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <span class="xref">Google.Protobuf.CodedOutputStream</span>
+                  <span class="parametername">stream</span>
+                  <p>The <span class="xref">Google.Protobuf.CodedOutputStream</span> to write to.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Write_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Write(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -724,31 +634,30 @@ not exist.
               </span>
               <a id="Ipfs_DagNode_Write_" data-uid="Ipfs.DagNode.Write*"></a>
               <h4 id="Ipfs_DagNode_Write_System_IO_Stream_" data-uid="Ipfs.DagNode.Write(System.IO.Stream)">Write(Stream)</h4>
+              
               <div class="markdown level1 summary"><p>Writes the binary representation of the node to the specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void Write(Stream stream)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td><p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> to write to.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
+                  <span class="parametername">stream</span>
+                  <p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> to write to.</p>
+
+              </div>
+              
+              
+              
+              
+              
+              
+              
             </article>
           </div>
           

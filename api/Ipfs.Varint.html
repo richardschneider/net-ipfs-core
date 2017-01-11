@@ -74,48 +74,29 @@
               <div class="markdown level0 summary"><p>A codec for a variable integer.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
-                  <div class="level1"><span class="xref">Varint</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
-                </div>
-                <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Ipfs</h6>
-              <h6><strong>Assembly</strong>:Ipfs.Core.dll</h6>
-              <h5 id="Ipfs_Varint_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static class Varint</code></pre>
-              </div>
-              <h5 id="Ipfs_Varint_remarks"><strong>Remarks</strong></h5>
+
               <div class="markdown level0 remarks"><p>A <strong>VarInt</strong> is encoded in network byte order (Big Endian). Each byte (except the last) contains 7 bits
 of information with the most significant bit set to 1.  The last byte has MSB set to 0.</p>
 <p>
 Negative values are not allowed.  When encountered a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a> is thrown.
 </p>
 </div>
+              
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static class Varint</code></pre>
+              </div>
+
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  <div class="level1"><span class="xref">Varint</span></div>
+              </div>
+              
+              <h6><strong>Namespace</strong>: Ipfs</h6>
+              <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+              
+
+              
               <h3 id="methods">Methods
               </h3>
               <span class="small pull-right mobile-hide">
@@ -127,52 +108,41 @@ Negative values are not allowed.  When encountered a <a class="xref" href="https
               </span>
               <a id="Ipfs_Varint_DecodeInt32_" data-uid="Ipfs.Varint.DecodeInt32*"></a>
               <h4 id="Ipfs_Varint_DecodeInt32_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt32(System.Byte[],System.Int32)">DecodeInt32(Byte[], Int32)</h4>
+              
               <div class="markdown level1 summary"><p>Convert the byte array to an <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static int DecodeInt32(byte[] bytes, int offset = 0)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td><span class="parametername">bytes</span></td>
-                    <td><p>A byte array containing the variable integer.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
-                    <td><span class="parametername">offset</span></td>
-                    <td><p>Offset into <span class="paramref">bytes</span> to start reading from.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                  <span class="parametername">bytes</span>
+                  <p>A byte array containing the variable integer.</p>
+
+              </div>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>
+                  <span class="parametername">offset</span>
+                  <p>Offset into <span class="paramref">bytes</span> to start reading from.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>
+                  
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.DecodeInt64(System.Byte%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -182,52 +152,41 @@ Negative values are not allowed.  When encountered a <a class="xref" href="https
               </span>
               <a id="Ipfs_Varint_DecodeInt64_" data-uid="Ipfs.Varint.DecodeInt64*"></a>
               <h4 id="Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt64(System.Byte[],System.Int32)">DecodeInt64(Byte[], Int32)</h4>
+              
               <div class="markdown level1 summary"><p>Convert the byte array to a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static long DecodeInt64(byte[] bytes, int offset = 0)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td><span class="parametername">bytes</span></td>
-                    <td><p>A byte array containing the variable integer.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
-                    <td><span class="parametername">offset</span></td>
-                    <td><p>Offset into <span class="paramref">bytes</span> to start reading from.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                  <span class="parametername">bytes</span>
+                  <p>A byte array containing the variable integer.</p>
+
+              </div>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>
+                  <span class="parametername">offset</span>
+                  <p>Offset into <span class="paramref">bytes</span> to start reading from.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>
+                  
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_Encode_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.Encode(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -237,48 +196,37 @@ Negative values are not allowed.  When encountered a <a class="xref" href="https
               </span>
               <a id="Ipfs_Varint_Encode_" data-uid="Ipfs.Varint.Encode*"></a>
               <h4 id="Ipfs_Varint_Encode_System_Int64_" data-uid="Ipfs.Varint.Encode(System.Int64)">Encode(Int64)</h4>
+              
               <div class="markdown level1 summary"><p>Convert the value to its variable integer encoding.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static byte[] Encode(long value)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-                    <td><span class="parametername">value</span></td>
-                    <td><p>The value to convert.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>
+                  <span class="parametername">value</span>
+                  <p>The value to convert.</p>
+
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
-                    <td><p>A byte array representing the <span class="paramref">value</span> as
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+                  <p>A byte array representing the <span class="paramref">value</span> as
 a variable integer.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_RequiredBytes_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.RequiredBytes(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -288,45 +236,34 @@ a variable integer.</p>
               </span>
               <a id="Ipfs_Varint_RequiredBytes_" data-uid="Ipfs.Varint.RequiredBytes*"></a>
               <h4 id="Ipfs_Varint_RequiredBytes_System_Int64_" data-uid="Ipfs.Varint.RequiredBytes(System.Int64)">RequiredBytes(Int64)</h4>
+              
               <div class="markdown level1 summary"><p>The number of bytes required to encode the value.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static int RequiredBytes(long value)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-                    <td><span class="parametername">value</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>
+                  <span class="parametername">value</span>
+                  
+              </div>
+              
               <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>
+                  
+              </div>
+              
+              
+              
+              
+              
+              
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.WriteVarint(System.IO.Stream%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -336,36 +273,35 @@ a variable integer.</p>
               </span>
               <a id="Ipfs_Varint_WriteVarint_" data-uid="Ipfs.Varint.WriteVarint*"></a>
               <h4 id="Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_" data-uid="Ipfs.Varint.WriteVarint(System.IO.Stream,System.Int64)">WriteVarint(Stream, Int64)</h4>
+              
               <div class="markdown level1 summary"><p>Writes the variable integer encoding of the value to
 a stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
+              <div class="markdown level1 remarks"></div>
+
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static void WriteVarint(this Stream stream, long value)</code></pre>
               </div>
+
               <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-                    <td><span class="parametername">value</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
+                  <span class="parametername">stream</span>
+                  
+              </div>
+              <div>
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>
+                  <span class="parametername">value</span>
+                  
+              </div>
+              
+              
+              
+              
+              
+              
+              
               <h3 id="seealso">See Also</h3>
               <div class="seealso">
                   <div><span><a href="https://developers.google.com/protocol-buffers/docs/encoding#varints">https://developers.google.com/protocol-buffers/docs/encoding#varints</a></span></div>
