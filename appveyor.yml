@@ -50,8 +50,7 @@ build:
 
 after_build:
 # Build documentation in doc\_site
-  - docfx metadata doc\docfx.json
-  - docfx build doc\docfx.json
+  - docfx doc\docfx.json
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
