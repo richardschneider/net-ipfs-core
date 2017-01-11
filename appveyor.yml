@@ -19,7 +19,7 @@ environment:
 
 # tools we need for bulding/testing/deploying
 install:
-  #- choco install gitversion.portable -pre -y
+  - choco install gitversion.portable -pre -y
   - choco install docfx
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
@@ -46,7 +46,7 @@ before_build:
   - nuget restore
 
 # Determine the version
-  #- ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
 
 build:
   project: IpfsCore.sln
