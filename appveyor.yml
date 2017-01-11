@@ -1,12 +1,15 @@
 # gitversion will change the version number
 version: x-{build}
 
-#platform: Any CPU
 configuration: Release
 os: Visual Studio 2015
 
 init:
   - git config --global core.autocrlf input
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "noreply@emanon.org"
+  - git config --global user.name "Appveyor CI"
 
 cache:
   - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
@@ -16,11 +19,14 @@ environment:
     secure: j4sELCwhVRRjNXFVhjPZjdG4y2itz8jrExhlyDU/lTiLlRQ/P4brB69MGQRFBQae
   snk_secret:
     secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
+  git_token:
+    secure: NeX5NCOUXsCLc1UjTJjqB9F02FZ8Wq0VsxqTXC8kBdyK6zjxjebrf/9Da2sY1Kql
 
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -pre -y
-  - choco install docfx
+  - npm install gh-pages -g
+  #- choco install docfx
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
@@ -50,8 +56,9 @@ build:
 
 after_build:
 # Build documentation in doc\_site
-  - docfx doc\docfx.json
-  - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
+  - tools\docfx\docfx doc\docfx.json
+  - gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
+
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
   - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
