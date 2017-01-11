@@ -39,7 +39,7 @@ nuget:
 
 before_build:
   - ps: >-
-    if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
+      if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
             {
                 git checkout $env:APPVEYOR_REPO_BRANCH
             }
