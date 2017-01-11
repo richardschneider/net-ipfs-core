@@ -20,7 +20,7 @@ environment:
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -pre -y
-  #- choco install docfx
+  - choco install docfx
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
@@ -50,9 +50,8 @@ build:
 
 after_build:
 # Build documentation in doc\_site
-  - dir "C:\Program Files (x86)\MSBuild"
-  - .\tools\docfx\docfx metadata doc\docfx.json
-  - .\tools\docfx\docfx build doc\docfx.json
+  - docfx metadata doc\docfx.json
+  - docfx build doc\docfx.json
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
