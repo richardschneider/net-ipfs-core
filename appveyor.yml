@@ -50,6 +50,7 @@ build:
 
 after_build:
 # Build documentation in doc\_site
+  - dir "C:\Program Files (x86)\MSBuild"
   - .\tools\docfx\docfx metadata doc\docfx.json
   - .\tools\docfx\docfx build doc\docfx.json
   - appveyor PushArtifact "doc\api\Ipfs.Base32.yml"
