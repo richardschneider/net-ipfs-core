@@ -57,7 +57,7 @@ build:
 after_build:
 # Build documentation in doc\_site
   - tools\docfx\docfx doc\docfx.json
-  - gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
+  - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
 
 # Build nuget package
   - cmd: nuget pack src\IpfsCore.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
