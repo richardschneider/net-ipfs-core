@@ -53,23 +53,13 @@ namespace Ipfs
             Read(stream);
         }
 
-        /// <summary>
-        ///   A name associated with the linked node.
-        /// </summary>
-        /// <remarks>
-        ///   IPFS considers a <b>null</b> name different from a <see cref="string.Empty"/>
-        ///   name;
-        /// </remarks>
+        /// <inheritdoc />
         public string Name { get; private set; }
 
-        /// <summary>
-        ///   The <see cref="MultiHash"/> of the linked node.
-        /// </summary>
+        /// <inheritdoc />
         public string Hash { get; private set; }
 
-        /// <summary>
-        ///   The size in bytes of the linked node.
-        /// </summary>
+        /// <inheritdoc />
         public long Size { get; private set; }
 
         /// <summary>
