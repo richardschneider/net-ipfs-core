@@ -139,6 +139,12 @@ references:
   commentId: M:Ipfs.DagLink.#ctor(Google.Protobuf.CodedInputStream)
   fullName: Ipfs.DagLink.DagLink(Google.Protobuf.CodedInputStream)
   nameWithType: DagLink.DagLink(CodedInputStream)
+- uid: Ipfs.DagLink.#ctor(Ipfs.IMerkleLink)
+  name: DagLink(IMerkleLink)
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_Ipfs_IMerkleLink_
+  commentId: M:Ipfs.DagLink.#ctor(Ipfs.IMerkleLink)
+  fullName: Ipfs.DagLink.DagLink(Ipfs.IMerkleLink)
+  nameWithType: DagLink.DagLink(IMerkleLink)
 - uid: Ipfs.DagLink.#ctor(System.IO.Stream)
   name: DagLink(Stream)
   href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_System_IO_Stream_
