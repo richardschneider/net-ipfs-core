@@ -22,6 +22,17 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Cloning()
+        {
+            var link = new DagLink("abc", "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", 5);
+            var clone = new DagLink(link);
+
+            Assert.AreEqual("abc", clone.Name);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", clone.Hash);
+            Assert.AreEqual(5, clone.Size);
+        }
+
+        [TestMethod]
         public void Encoding()
         {
             var encoded = "0a22122023dca2a7429612378554b0bb5b85012dec00a17cc2c673f17d2b76a50b839cd51201611803";

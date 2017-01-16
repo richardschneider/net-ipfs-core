@@ -29,9 +29,23 @@ namespace Ipfs
 
         /// <summary>
         ///   Creates a new instance of the <see cref="DagLink"/> class from the
+        ///   specified <see cref="IMerkleLink"/>.
+        /// </summary>
+        /// <param name="link">(
+        ///   Some type of a Merkle link.
+        /// </param>
+        public DagLink(IMerkleLink link)
+        {
+            this.Name = link.Name;
+            this.Hash = link.Hash;
+            this.Size = link.Size;
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="DagLink"/> class from the
         ///   specified <see cref="Stream"/>.
         /// </summary>
-        /// <param name="stream">(
+        /// <param name="stream">
         ///   A <see cref="Stream"/> containing the binary representation of the
         ///   <b>DagLink</b>.
         /// </param>

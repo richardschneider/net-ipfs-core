@@ -226,7 +226,7 @@ namespace Ipfs
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            foreach (DagLink link in Links)
+            foreach (var link in Links.Select(l => new DagLink(l)))
             {
                 using (var linkStream = new MemoryStream())
                 {
