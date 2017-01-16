@@ -9,16 +9,19 @@ using System.Threading.Tasks;
 namespace Ipfs
 {
     /// <summary>
-    ///   A node in the IPFS.
+    ///   A Directed Acyclic Graph (DAG) in IPFS.
     /// </summary>
     /// <remarks>
-    ///   A <b>MerkleNode</b> has opaque <see cref="DataBytes"/> (<see cref="DataStream"/>)
-    ///   and a set of navigable <see cref="Links"/>.
+    ///   A <b>MerkleNode</b> has a sequence of navigable <see cref="Links"/>
+    ///   and some data (<see cref="IDataBlock.DataBytes"/> 
+    ///   or (<see cref="IDataBlock.DataStream"/>).
     /// </remarks>
     /// <typeparam name="Link">
     ///   The type of <see cref="IMerkleLink"/> used by this node.
     /// </typeparam>
-    public interface IMerkleNode<out Link>
+    /// <seealso href="https://en.wikipedia.org/wiki/Directed_acyclic_graph"/>
+    /// <seealso jref="https://github.com/ipfs/specs/tree/master/merkledag"/>
+    public interface IMerkleNode<out Link> : IDataBlock
         where Link : IMerkleLink
     {
 
@@ -36,33 +39,6 @@ namespace Ipfs
         ///   </para>
         /// </remarks>
         IEnumerable<Link> Links { get; }
-
-        /// <summary>
-        ///   Opaque data of the node as a byte array.
-        /// </summary>
-        /// <remarks>
-        ///   It is never <b>null</b>.
-        /// </remarks>
-        /// <value>
-        ///   The contents of the node as a sequence of bytes.
-        /// </value>
-        byte[] DataBytes { get; }
-
-        /// <summary>
-        ///   Opaque data of the node as a stream of bytes.
-        /// </summary>
-        /// <value>
-        ///   The contents of the node.
-        /// </value>
-        Stream DataStream { get; }
-
-        /// <summary>
-        ///   The string representation of the <see cref="MultiHash"/> of the node.
-        /// </summary>
-        /// <value>
-        ///   The unique ID of the node.
-        /// </value>
-        string Hash { get; }
 
         /// <summary>
         ///   Returns a link to the node.
