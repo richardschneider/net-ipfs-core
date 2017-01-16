@@ -75,7 +75,7 @@
 </div>
               <div class="markdown level0 conceptual"></div>
 
-              <div class="markdown level0 remarks"><p>A <strong>MerkleNde</strong> has opaque <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataBytes">DataBytes</a> or <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataStream">DataStream</a>
+              <div class="markdown level0 remarks"><p>A <strong>MerkleNode</strong> has opaque <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataBytes">DataBytes</a> (<a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataStream">DataStream</a>)
 and a set of navigable <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Links">Links</a>.</p>
 </div>
               
@@ -114,7 +114,7 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_DataBytes.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.DataBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L46">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L49">View Source</a>
               </span>
               <a id="Ipfs_IMerkleNode_1_DataBytes_" data-uid="Ipfs.IMerkleNode`1.DataBytes*"></a>
               <h4 id="Ipfs_IMerkleNode_1_DataBytes" data-uid="Ipfs.IMerkleNode`1.DataBytes">DataBytes</h4>
@@ -135,7 +135,8 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
               <h5 class="propertyValue">Property Value</h5>
               <div>
                 <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-                
+                <p>The contents of the node as a sequence of bytes.</p>
+
               </div>
               
               
@@ -146,7 +147,7 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_DataStream.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.DataStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L51">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L57">View Source</a>
               </span>
               <a id="Ipfs_IMerkleNode_1_DataStream_" data-uid="Ipfs.IMerkleNode`1.DataStream*"></a>
               <h4 id="Ipfs_IMerkleNode_1_DataStream" data-uid="Ipfs.IMerkleNode`1.DataStream">DataStream</h4>
@@ -166,7 +167,8 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
               <h5 class="propertyValue">Property Value</h5>
               <div>
                 <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
-                
+                <p>The contents of the node.</p>
+
               </div>
               
               
@@ -177,7 +179,7 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_Hash.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L56">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L65">View Source</a>
               </span>
               <a id="Ipfs_IMerkleNode_1_Hash_" data-uid="Ipfs.IMerkleNode`1.Hash*"></a>
               <h4 id="Ipfs_IMerkleNode_1_Hash" data-uid="Ipfs.IMerkleNode`1.Hash">Hash</h4>
@@ -197,7 +199,8 @@ The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by
               <h5 class="propertyValue">Property Value</h5>
               <div>
                 <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-                
+                <p>The unique ID of the node.</p>
+
               </div>
               
               
@@ -247,7 +250,7 @@ name is compared as &quot;&quot;.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_ToLink_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.ToLink(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L67">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L76">View Source</a>
               </span>
               <a id="Ipfs_IMerkleNode_1_ToLink_" data-uid="Ipfs.IMerkleNode`1.ToLink*"></a>
               <h4 id="Ipfs_IMerkleNode_1_ToLink_System_String_" data-uid="Ipfs.IMerkleNode`1.ToLink(System.String)">ToLink(String)</h4>
