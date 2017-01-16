@@ -12,7 +12,7 @@ namespace Ipfs
     /// <summary>
     ///   A link to another node in the IPFS Merkle DAG.
     /// </summary>
-    public class DagLink
+    public class DagLink : IMerkleLink
     {
         /// <summary>
         ///   Create a new instance of <see cref="DagLink"/> class.

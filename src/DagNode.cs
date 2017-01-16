@@ -12,10 +12,10 @@ namespace Ipfs
     ///   A node in the IPFS Merkle DAG.
     /// </summary>
     /// <remarks>
-    ///   A <b>DagNode</b> has opaque <see cref="DagNode.Data"/>
+    ///   A <b>DagNode</b> has opaque <see cref="DagNode.DataBytes"/>
     ///   and a set of navigable <see cref="DagNode.Links"/>.
     /// </remarks>
-    public class DagNode
+    public class DagNode : IMerkleNode<DagLink>
     {
         string hash;
         string hashAlgorithm;
@@ -23,7 +23,7 @@ namespace Ipfs
 
         /// <summary>
         ///   Create a new instance of a <see cref="DagNode"/> with the specified
-        ///   <see cref="DagNode.Data"/> and <see cref="DagNode.Links"/>
+        ///   <see cref="DagNode.DataBytes"/> and <see cref="DagNode.Links"/>
         /// </summary>
         /// <param name="data">
         ///   The opaque data, can be <b>null</b>
@@ -37,7 +37,7 @@ namespace Ipfs
         /// </param>
         public DagNode(byte[] data, IEnumerable<DagLink> links = null, string hashAlgorithm = MultiHash.DefaultAlgorithmName)
         {
-            this.Data = data == null ? new byte[0] : data;
+            this.DataBytes = data == null ? new byte[0] : data;
             this.Links = (links == null ? new DagLink[0] : links)
                 .OrderBy(link => link.Name == null ? "" : link.Name);
             this.hashAlgorithm = hashAlgorithm;
@@ -69,25 +69,23 @@ namespace Ipfs
             Read(stream);
         }
 
-        /// <summary>
-        ///   Links to other nodes.
-        /// </summary>
-        /// <remarks>
-        ///   It is never <b>null</b>.
-        ///   <para>
-        ///   The links are sorted ascending by <see cref="DagLink.Name"/>. A <b>null</b>
-        ///   name is compared as "".
-        ///   </para>
-        /// </remarks>
+        /// <inheritdoc />
+        /// <value>
+        ///   A sequence of <see cref="DagLink"/>.
+        /// </value>
         public IEnumerable<DagLink> Links { get; private set; }
 
-        /// <summary>
-        ///   Opaque data of the node.
-        /// </summary>
-        /// <remarks>
-        ///   It is never <b>null</b>.
-        /// </remarks>
-        public byte[] Data { get; private set; }
+        /// <inheritdoc />
+        public byte[] DataBytes { get; private set; }
+
+        /// <inheritdoc />
+        public Stream DataStream
+        {
+            get
+            {
+                return new MemoryStream(DataBytes, false);
+            }
+        }
 
         /// <summary>
         ///   The serialised size in bytes of the node.
@@ -104,9 +102,7 @@ namespace Ipfs
             }
         }
 
-        /// <summary>
-        ///   The <see cref="MultiHash"/> of the node.
-        /// </summary>
+        /// <inheritdoc />
         public string Hash
         {
             get
@@ -119,14 +115,9 @@ namespace Ipfs
             }
         }
 
-        /// <summary>
-        ///   Returns a <see cref="DagLink"/> to the <see cref="DagNode"/>.
-        /// </summary>
-        /// <param name="name">
-        ///   A name for the link; defaults to "".
-        /// </param>
+        /// <inheritdoc />
         /// <returns>
-        ///   A new <see cref="DagLink"/> to node.
+        ///   A new <see cref="DagLink"/> to the node.
         /// </returns>
         public DagLink ToLink(string name = "")
         {
@@ -167,14 +158,14 @@ namespace Ipfs
         public DagNode AddLinks(IEnumerable<DagLink> links)
         {
             var all = Links.Union(links);
-            return new DagNode(Data, all, hashAlgorithm);
+            return new DagNode(DataBytes, all, hashAlgorithm);
         }
 
         /// <summary>
         ///   Removes a link.
         /// </summary>
         /// <param name="link">
-        ///   The <see cref="DagLink"/> to remove.
+        ///   The <see cref="IMerkleLink"/> to remove.
         /// </param>
         /// <returns>
         ///   A new <see cref="DagNode"/> with the <paramref name="link"/>
@@ -187,7 +178,7 @@ namespace Ipfs
         ///   not exist.
         ///   </para>
         /// </remarks>
-        public DagNode RemoveLink(DagLink link)
+        public DagNode RemoveLink(IMerkleLink link)
         {
             return RemoveLinks(new[] { link });
         }
@@ -196,7 +187,7 @@ namespace Ipfs
         ///   Remove a sequence of links.
         /// </summary>
         /// <param name="links">
-        ///   The sequence of <see cref="DagLink"/> to remove.
+        ///   The sequence of <see cref="IMerkleLink"/> to remove.
         /// </param>
         /// <returns>
         ///   A new <see cref="DagNode"/> with the <paramref name="links"/>
@@ -209,11 +200,11 @@ namespace Ipfs
         ///   not exist.
         ///   </para>
         /// </remarks>
-        public DagNode RemoveLinks(IEnumerable<DagLink> links)
+        public DagNode RemoveLinks(IEnumerable<IMerkleLink> links)
         {
             var ignore = links.ToLookup(link => link.Hash);
             var some = Links.Where(link => !ignore.Contains(link.Hash));
-            return new DagNode(Data, some, hashAlgorithm);
+            return new DagNode(DataBytes, some, hashAlgorithm);
         }
 
         /// <summary>
@@ -241,7 +232,7 @@ namespace Ipfs
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            foreach (var link in Links)
+            foreach (DagLink link in Links)
             {
                 using (var linkStream = new MemoryStream())
                 {
@@ -253,11 +244,11 @@ namespace Ipfs
                 }
             }
             
-            if (Data.Length > 0)
+            if (DataBytes.Length > 0)
             {
                 stream.WriteTag(1, WireFormat.WireType.LengthDelimited);
-                stream.WriteLength(Data.Length);
-                stream.WriteSomeBytes(Data);
+                stream.WriteLength(DataBytes.Length);
+                stream.WriteSomeBytes(DataBytes);
             }
         }
 
@@ -280,7 +271,7 @@ namespace Ipfs
                 switch(WireFormat.GetTagFieldNumber(tag))
                 {
                     case 1:
-                        Data = stream.ReadSomeBytes(stream.ReadLength());
+                        DataBytes = stream.ReadSomeBytes(stream.ReadLength());
                         done = true;
                         break;
                     case 2:
@@ -294,8 +285,8 @@ namespace Ipfs
                 }
             }
 
-            if (Data == null)
-                Data = new byte[0];
+            if (DataBytes == null)
+                DataBytes = new byte[0];
             Links = links.ToArray();
         }
 

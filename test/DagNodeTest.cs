@@ -16,7 +16,7 @@ namespace Ipfs
         public void EmptyDAG()
         {
             var node = new DagNode((byte[]) null);
-            Assert.AreEqual(0, node.Data.Length);
+            Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual(0, node.Size);
             Assert.AreEqual("QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n", node.Hash);
@@ -29,7 +29,7 @@ namespace Ipfs
         {
             var abc = Encoding.UTF8.GetBytes("abc");
             var node = new DagNode(abc);
-            CollectionAssert.AreEqual(abc, node.Data);
+            CollectionAssert.AreEqual(abc, node.DataBytes);
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", node.Hash);
             Assert.AreEqual(5, node.Size);
@@ -45,7 +45,7 @@ namespace Ipfs
             var alink = anode.ToLink("a");
 
             var node = new DagNode(null, new[] { alink });
-            Assert.AreEqual(0, node.Data.Length);
+            Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(1, node.Links.Count());
             Assert.AreEqual("QmVdMJFGTqF2ghySAmivGiQvsr9ZH7ujnNGBkLNNCe4HUE", node.Hash);
             Assert.AreEqual(43, node.Size);
@@ -65,7 +65,7 @@ namespace Ipfs
             var blink = bnode.ToLink("b");
 
             var node = new DagNode(null, new[] { alink, blink });
-            Assert.AreEqual(0, node.Data.Length);
+            Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(2, node.Links.Count());
             Assert.AreEqual("QmbNgNPPykP4YTuAeSa3DsnBJWLVxccrqLUZDPNQfizGKs", node.Hash);
 
@@ -85,7 +85,7 @@ namespace Ipfs
 
             var ab = Encoding.UTF8.GetBytes("ab");
             var node = new DagNode(ab, new[] { alink, blink });
-            CollectionAssert.AreEqual(ab, node.Data);
+            CollectionAssert.AreEqual(ab, node.DataBytes);
             Assert.AreEqual(2, node.Links.Count());
             Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", node.Hash);
 
@@ -105,7 +105,7 @@ namespace Ipfs
 
             var ab = Encoding.UTF8.GetBytes("ab");
             var node = new DagNode(ab, new[] { blink, alink });
-            CollectionAssert.AreEqual(ab, node.Data);
+            CollectionAssert.AreEqual(ab, node.DataBytes);
             Assert.AreEqual(2, node.Links.Count());
             Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", node.Hash);
         }
@@ -116,7 +116,7 @@ namespace Ipfs
         {
             var abc = Encoding.UTF8.GetBytes("abc");
             var node = new DagNode(abc, null, "sha2-512");
-            CollectionAssert.AreEqual(abc, node.Data);
+            CollectionAssert.AreEqual(abc, node.DataBytes);
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual("8Vv347foTHxpLZDdguzcTp7mjBmySjWK1VF36Je7io4ZKHo28fefMFr28LSv757yTcaRzn1dRqPB6WWFpYvbd5YXca", node.Hash);
             Assert.AreEqual(5, node.Size);
@@ -157,7 +157,7 @@ namespace Ipfs
 
             var cnode = bnode.AddLink(anode.ToLink());
             Assert.IsFalse(Object.ReferenceEquals(bnode, cnode));
-            Assert.AreEqual(1, cnode.Data.Length);
+            Assert.AreEqual(1, cnode.DataBytes.Length);
             Assert.AreEqual(1, cnode.Links.Count());
             Assert.AreEqual(anode.Hash, cnode.Links.First().Hash);
             Assert.AreEqual(anode.Size, cnode.Links.First().Size);
@@ -179,7 +179,7 @@ namespace Ipfs
 
             var dnode = cnode.RemoveLink(anode.ToLink());
             Assert.IsFalse(Object.ReferenceEquals(dnode, cnode));
-            Assert.AreEqual(1, dnode.Data.Length);
+            Assert.AreEqual(1, dnode.DataBytes.Length);
             Assert.AreEqual(1, dnode.Links.Count());
             Assert.AreEqual(bnode.Hash, dnode.Links.First().Hash);
             Assert.AreEqual(bnode.Size, dnode.Links.First().Size);
@@ -193,7 +193,7 @@ namespace Ipfs
             a.Write(ms);
             ms.Position = 0;
             var b = new DagNode(ms);
-            CollectionAssert.AreEqual(a.Data, b.Data);
+            CollectionAssert.AreEqual(a.DataBytes, b.DataBytes);
             Assert.AreEqual(a.Links.Count(), b.Links.Count());
             a.Links.Zip(b.Links, (first, second) =>
             {

@@ -83,6 +83,8 @@
   <ItemGroup>
     <Compile Include="Base32.cs" />
     <Compile Include="Base58.cs" />
+    <Compile Include="IMerkleNode.cs" />
+    <Compile Include="IMerkleLink.cs" />
     <Compile Include="DagLink.cs" />
     <Compile Include="DagNode.cs" />
     <Compile Include="HexString.cs" />
