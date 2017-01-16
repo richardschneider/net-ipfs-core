@@ -14,7 +14,7 @@ namespace Ipfs
     /// <remarks>
     ///   A <b>DataBlock</b> has an <see cref="Hash">unique ID</see>
     ///   and some data (<see cref="IDataBlock.DataBytes"/> 
-    ///   or (<see cref="IDataBlock.DataStream"/>).
+    ///   or <see cref="IDataBlock.DataStream"/>).
     ///   <para>
     ///   It is useful to talk about them as "blocks" in Bitswap 
     ///   and other things that do not care about what is being stored.

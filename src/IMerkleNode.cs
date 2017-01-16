@@ -14,13 +14,13 @@ namespace Ipfs
     /// <remarks>
     ///   A <b>MerkleNode</b> has a sequence of navigable <see cref="Links"/>
     ///   and some data (<see cref="IDataBlock.DataBytes"/> 
-    ///   or (<see cref="IDataBlock.DataStream"/>).
+    ///   or <see cref="IDataBlock.DataStream"/>).
     /// </remarks>
     /// <typeparam name="Link">
     ///   The type of <see cref="IMerkleLink"/> used by this node.
     /// </typeparam>
     /// <seealso href="https://en.wikipedia.org/wiki/Directed_acyclic_graph"/>
-    /// <seealso jref="https://github.com/ipfs/specs/tree/master/merkledag"/>
+    /// <seealso href="https://github.com/ipfs/specs/tree/master/merkledag"/>
     public interface IMerkleNode<out Link> : IDataBlock
         where Link : IMerkleLink
     {
