@@ -12,7 +12,7 @@ namespace Ipfs
     ///   A node in the IPFS.
     /// </summary>
     /// <remarks>
-    ///   A <b>MerkleNde</b> has opaque <see cref="DataBytes"/> or <see cref="DataStream"/>
+    ///   A <b>MerkleNode</b> has opaque <see cref="DataBytes"/> (<see cref="DataStream"/>)
     ///   and a set of navigable <see cref="Links"/>.
     /// </remarks>
     /// <typeparam name="Link">
@@ -43,16 +43,25 @@ namespace Ipfs
         /// <remarks>
         ///   It is never <b>null</b>.
         /// </remarks>
+        /// <value>
+        ///   The contents of the node as a sequence of bytes.
+        /// </value>
         byte[] DataBytes { get; }
 
         /// <summary>
         ///   Opaque data of the node as a stream of bytes.
         /// </summary>
+        /// <value>
+        ///   The contents of the node.
+        /// </value>
         Stream DataStream { get; }
 
         /// <summary>
         ///   The string representation of the <see cref="MultiHash"/> of the node.
         /// </summary>
+        /// <value>
+        ///   The unique ID of the node.
+        /// </value>
         string Hash { get; }
 
         /// <summary>
