@@ -283,18 +283,30 @@ references:
   commentId: Overload:Ipfs.DagNode.AddLinks
   fullName: Ipfs.DagNode.AddLinks
   nameWithType: DagNode.AddLinks
-- uid: Ipfs.DagNode.Data
-  name: Data
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Data
-  commentId: P:Ipfs.DagNode.Data
-  fullName: Ipfs.DagNode.Data
-  nameWithType: DagNode.Data
-- uid: Ipfs.DagNode.Data*
-  name: Data
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Data_
-  commentId: Overload:Ipfs.DagNode.Data
-  fullName: Ipfs.DagNode.Data
-  nameWithType: DagNode.Data
+- uid: Ipfs.DagNode.DataBytes
+  name: DataBytes
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_DataBytes
+  commentId: P:Ipfs.DagNode.DataBytes
+  fullName: Ipfs.DagNode.DataBytes
+  nameWithType: DagNode.DataBytes
+- uid: Ipfs.DagNode.DataBytes*
+  name: DataBytes
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_DataBytes_
+  commentId: Overload:Ipfs.DagNode.DataBytes
+  fullName: Ipfs.DagNode.DataBytes
+  nameWithType: DagNode.DataBytes
+- uid: Ipfs.DagNode.DataStream
+  name: DataStream
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_DataStream
+  commentId: P:Ipfs.DagNode.DataStream
+  fullName: Ipfs.DagNode.DataStream
+  nameWithType: DagNode.DataStream
+- uid: Ipfs.DagNode.DataStream*
+  name: DataStream
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_DataStream_
+  commentId: Overload:Ipfs.DagNode.DataStream
+  fullName: Ipfs.DagNode.DataStream
+  nameWithType: DagNode.DataStream
 - uid: Ipfs.DagNode.Hash
   name: Hash
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_Hash
@@ -319,27 +331,27 @@ references:
   commentId: Overload:Ipfs.DagNode.Links
   fullName: Ipfs.DagNode.Links
   nameWithType: DagNode.Links
-- uid: Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
-  name: RemoveLink(DagLink)
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLink_Ipfs_DagLink_
-  commentId: M:Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
-  fullName: Ipfs.DagNode.RemoveLink(Ipfs.DagLink)
-  nameWithType: DagNode.RemoveLink(DagLink)
+- uid: Ipfs.DagNode.RemoveLink(Ipfs.IMerkleLink)
+  name: RemoveLink(IMerkleLink)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLink_Ipfs_IMerkleLink_
+  commentId: M:Ipfs.DagNode.RemoveLink(Ipfs.IMerkleLink)
+  fullName: Ipfs.DagNode.RemoveLink(Ipfs.IMerkleLink)
+  nameWithType: DagNode.RemoveLink(IMerkleLink)
 - uid: Ipfs.DagNode.RemoveLink*
   name: RemoveLink
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLink_
   commentId: Overload:Ipfs.DagNode.RemoveLink
   fullName: Ipfs.DagNode.RemoveLink
   nameWithType: DagNode.RemoveLink
-- uid: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
-  name: RemoveLinks(IEnumerable<DagLink>)
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__
-  commentId: M:Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
-  name.vb: RemoveLinks(IEnumerable(Of DagLink))
-  fullName: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
-  fullName.vb: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
-  nameWithType: DagNode.RemoveLinks(IEnumerable<DagLink>)
-  nameWithType.vb: DagNode.RemoveLinks(IEnumerable(Of DagLink))
+- uid: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})
+  name: RemoveLinks(IEnumerable<IMerkleLink>)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__
+  commentId: M:Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})
+  name.vb: RemoveLinks(IEnumerable(Of IMerkleLink))
+  fullName: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable<Ipfs.IMerkleLink>)
+  fullName.vb: Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable(Of Ipfs.IMerkleLink))
+  nameWithType: DagNode.RemoveLinks(IEnumerable<IMerkleLink>)
+  nameWithType.vb: DagNode.RemoveLinks(IEnumerable(Of IMerkleLink))
 - uid: Ipfs.DagNode.RemoveLinks*
   name: RemoveLinks
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_RemoveLinks_
@@ -460,6 +472,135 @@ references:
   commentId: Overload:Ipfs.HexString.ToHexString
   fullName: Ipfs.HexString.ToHexString
   nameWithType: HexString.ToHexString
+- uid: Ipfs.IMerkleLink
+  name: IMerkleLink
+  href: api/Ipfs.IMerkleLink.html
+  commentId: T:Ipfs.IMerkleLink
+  fullName: Ipfs.IMerkleLink
+  nameWithType: IMerkleLink
+- uid: Ipfs.IMerkleLink.Hash
+  name: Hash
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Hash
+  commentId: P:Ipfs.IMerkleLink.Hash
+  fullName: Ipfs.IMerkleLink.Hash
+  nameWithType: IMerkleLink.Hash
+- uid: Ipfs.IMerkleLink.Hash*
+  name: Hash
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Hash_
+  commentId: Overload:Ipfs.IMerkleLink.Hash
+  fullName: Ipfs.IMerkleLink.Hash
+  nameWithType: IMerkleLink.Hash
+- uid: Ipfs.IMerkleLink.Name
+  name: Name
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name
+  commentId: P:Ipfs.IMerkleLink.Name
+  fullName: Ipfs.IMerkleLink.Name
+  nameWithType: IMerkleLink.Name
+- uid: Ipfs.IMerkleLink.Name*
+  name: Name
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name_
+  commentId: Overload:Ipfs.IMerkleLink.Name
+  fullName: Ipfs.IMerkleLink.Name
+  nameWithType: IMerkleLink.Name
+- uid: Ipfs.IMerkleLink.Size
+  name: Size
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Size
+  commentId: P:Ipfs.IMerkleLink.Size
+  fullName: Ipfs.IMerkleLink.Size
+  nameWithType: IMerkleLink.Size
+- uid: Ipfs.IMerkleLink.Size*
+  name: Size
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Size_
+  commentId: Overload:Ipfs.IMerkleLink.Size
+  fullName: Ipfs.IMerkleLink.Size
+  nameWithType: IMerkleLink.Size
+- uid: Ipfs.IMerkleNode`1
+  name: IMerkleNode<Link>
+  href: api/Ipfs.IMerkleNode-1.html
+  commentId: T:Ipfs.IMerkleNode`1
+  name.vb: IMerkleNode(Of Link)
+  fullName: Ipfs.IMerkleNode<Link>
+  fullName.vb: Ipfs.IMerkleNode(Of Link)
+  nameWithType: IMerkleNode<Link>
+  nameWithType.vb: IMerkleNode(Of Link)
+- uid: Ipfs.IMerkleNode`1.DataBytes
+  name: DataBytes
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataBytes
+  commentId: P:Ipfs.IMerkleNode`1.DataBytes
+  fullName: Ipfs.IMerkleNode<Link>.DataBytes
+  fullName.vb: Ipfs.IMerkleNode(Of Link).DataBytes
+  nameWithType: IMerkleNode<Link>.DataBytes
+  nameWithType.vb: IMerkleNode(Of Link).DataBytes
+- uid: Ipfs.IMerkleNode`1.DataBytes*
+  name: DataBytes
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataBytes_
+  commentId: Overload:Ipfs.IMerkleNode`1.DataBytes
+  fullName: Ipfs.IMerkleNode<Link>.DataBytes
+  fullName.vb: Ipfs.IMerkleNode(Of Link).DataBytes
+  nameWithType: IMerkleNode<Link>.DataBytes
+  nameWithType.vb: IMerkleNode(Of Link).DataBytes
+- uid: Ipfs.IMerkleNode`1.DataStream
+  name: DataStream
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataStream
+  commentId: P:Ipfs.IMerkleNode`1.DataStream
+  fullName: Ipfs.IMerkleNode<Link>.DataStream
+  fullName.vb: Ipfs.IMerkleNode(Of Link).DataStream
+  nameWithType: IMerkleNode<Link>.DataStream
+  nameWithType.vb: IMerkleNode(Of Link).DataStream
+- uid: Ipfs.IMerkleNode`1.DataStream*
+  name: DataStream
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_DataStream_
+  commentId: Overload:Ipfs.IMerkleNode`1.DataStream
+  fullName: Ipfs.IMerkleNode<Link>.DataStream
+  fullName.vb: Ipfs.IMerkleNode(Of Link).DataStream
+  nameWithType: IMerkleNode<Link>.DataStream
+  nameWithType.vb: IMerkleNode(Of Link).DataStream
+- uid: Ipfs.IMerkleNode`1.Hash
+  name: Hash
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Hash
+  commentId: P:Ipfs.IMerkleNode`1.Hash
+  fullName: Ipfs.IMerkleNode<Link>.Hash
+  fullName.vb: Ipfs.IMerkleNode(Of Link).Hash
+  nameWithType: IMerkleNode<Link>.Hash
+  nameWithType.vb: IMerkleNode(Of Link).Hash
+- uid: Ipfs.IMerkleNode`1.Hash*
+  name: Hash
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Hash_
+  commentId: Overload:Ipfs.IMerkleNode`1.Hash
+  fullName: Ipfs.IMerkleNode<Link>.Hash
+  fullName.vb: Ipfs.IMerkleNode(Of Link).Hash
+  nameWithType: IMerkleNode<Link>.Hash
+  nameWithType.vb: IMerkleNode(Of Link).Hash
+- uid: Ipfs.IMerkleNode`1.Links
+  name: Links
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Links
+  commentId: P:Ipfs.IMerkleNode`1.Links
+  fullName: Ipfs.IMerkleNode<Link>.Links
+  fullName.vb: Ipfs.IMerkleNode(Of Link).Links
+  nameWithType: IMerkleNode<Link>.Links
+  nameWithType.vb: IMerkleNode(Of Link).Links
+- uid: Ipfs.IMerkleNode`1.Links*
+  name: Links
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Links_
+  commentId: Overload:Ipfs.IMerkleNode`1.Links
+  fullName: Ipfs.IMerkleNode<Link>.Links
+  fullName.vb: Ipfs.IMerkleNode(Of Link).Links
+  nameWithType: IMerkleNode<Link>.Links
+  nameWithType.vb: IMerkleNode(Of Link).Links
+- uid: Ipfs.IMerkleNode`1.ToLink(System.String)
+  name: ToLink(String)
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_ToLink_System_String_
+  commentId: M:Ipfs.IMerkleNode`1.ToLink(System.String)
+  fullName: Ipfs.IMerkleNode<Link>.ToLink(System.String)
+  fullName.vb: Ipfs.IMerkleNode(Of Link).ToLink(System.String)
+  nameWithType: IMerkleNode<Link>.ToLink(String)
+  nameWithType.vb: IMerkleNode(Of Link).ToLink(String)
+- uid: Ipfs.IMerkleNode`1.ToLink*
+  name: ToLink
+  href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_ToLink_
+  commentId: Overload:Ipfs.IMerkleNode`1.ToLink
+  fullName: Ipfs.IMerkleNode.ToLink
+  nameWithType: IMerkleNode.ToLink
 - uid: Ipfs.MultiAddress
   name: MultiAddress
   href: api/Ipfs.MultiAddress.html
