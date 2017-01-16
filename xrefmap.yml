@@ -235,15 +235,15 @@ references:
   commentId: M:Ipfs.DagNode.#ctor(Google.Protobuf.CodedInputStream)
   fullName: Ipfs.DagNode.DagNode(Google.Protobuf.CodedInputStream)
   nameWithType: DagNode.DagNode(CodedInputStream)
-- uid: Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.DagLink},System.String)
-  name: DagNode(Byte[], IEnumerable<DagLink>, String)
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_
-  commentId: M:Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.DagLink},System.String)
-  name.vb: DagNode(Byte(), IEnumerable(Of DagLink), String)
-  fullName: Ipfs.DagNode.DagNode(System.Byte[], System.Collections.Generic.IEnumerable<Ipfs.DagLink>, System.String)
-  fullName.vb: Ipfs.DagNode.DagNode(System.Byte(), System.Collections.Generic.IEnumerable(Of Ipfs.DagLink), System.String)
-  nameWithType: DagNode.DagNode(Byte[], IEnumerable<DagLink>, String)
-  nameWithType.vb: DagNode.DagNode(Byte(), IEnumerable(Of DagLink), String)
+- uid: Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink},System.String)
+  name: DagNode(Byte[], IEnumerable<IMerkleLink>, String)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__System_String_
+  commentId: M:Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink},System.String)
+  name.vb: DagNode(Byte(), IEnumerable(Of IMerkleLink), String)
+  fullName: Ipfs.DagNode.DagNode(System.Byte[], System.Collections.Generic.IEnumerable<Ipfs.IMerkleLink>, System.String)
+  fullName.vb: Ipfs.DagNode.DagNode(System.Byte(), System.Collections.Generic.IEnumerable(Of Ipfs.IMerkleLink), System.String)
+  nameWithType: DagNode.DagNode(Byte[], IEnumerable<IMerkleLink>, String)
+  nameWithType.vb: DagNode.DagNode(Byte(), IEnumerable(Of IMerkleLink), String)
 - uid: Ipfs.DagNode.#ctor(System.IO.Stream)
   name: DagNode(Stream)
   href: api/Ipfs.DagNode.html#Ipfs_DagNode__ctor_System_IO_Stream_
@@ -256,27 +256,27 @@ references:
   commentId: Overload:Ipfs.DagNode.#ctor
   fullName: Ipfs.DagNode.DagNode
   nameWithType: DagNode.DagNode
-- uid: Ipfs.DagNode.AddLink(Ipfs.DagLink)
-  name: AddLink(DagLink)
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLink_Ipfs_DagLink_
-  commentId: M:Ipfs.DagNode.AddLink(Ipfs.DagLink)
-  fullName: Ipfs.DagNode.AddLink(Ipfs.DagLink)
-  nameWithType: DagNode.AddLink(DagLink)
+- uid: Ipfs.DagNode.AddLink(Ipfs.IMerkleLink)
+  name: AddLink(IMerkleLink)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLink_Ipfs_IMerkleLink_
+  commentId: M:Ipfs.DagNode.AddLink(Ipfs.IMerkleLink)
+  fullName: Ipfs.DagNode.AddLink(Ipfs.IMerkleLink)
+  nameWithType: DagNode.AddLink(IMerkleLink)
 - uid: Ipfs.DagNode.AddLink*
   name: AddLink
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLink_
   commentId: Overload:Ipfs.DagNode.AddLink
   fullName: Ipfs.DagNode.AddLink
   nameWithType: DagNode.AddLink
-- uid: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
-  name: AddLinks(IEnumerable<DagLink>)
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__
-  commentId: M:Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})
-  name.vb: AddLinks(IEnumerable(Of DagLink))
-  fullName: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable<Ipfs.DagLink>)
-  fullName.vb: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable(Of Ipfs.DagLink))
-  nameWithType: DagNode.AddLinks(IEnumerable<DagLink>)
-  nameWithType.vb: DagNode.AddLinks(IEnumerable(Of DagLink))
+- uid: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})
+  name: AddLinks(IEnumerable<IMerkleLink>)
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__
+  commentId: M:Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})
+  name.vb: AddLinks(IEnumerable(Of IMerkleLink))
+  fullName: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable<Ipfs.IMerkleLink>)
+  fullName.vb: Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable(Of Ipfs.IMerkleLink))
+  nameWithType: DagNode.AddLinks(IEnumerable<IMerkleLink>)
+  nameWithType.vb: DagNode.AddLinks(IEnumerable(Of IMerkleLink))
 - uid: Ipfs.DagNode.AddLinks*
   name: AddLinks
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_AddLinks_

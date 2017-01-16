@@ -80,7 +80,7 @@ and a set of navigable <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Link
 </div>
               
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class DagNode : IMerkleNode&lt;DagLink&gt;, IDataBlock</code></pre>
+                <pre><code class="lang-csharp hljs">public class DagNode : IMerkleNode&lt;IMerkleLink&gt;, IDataBlock</code></pre>
               </div>
 
               <div class="inheritance">
@@ -134,13 +134,13 @@ specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
               
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.%23ctor(System.Byte%5B%5D%2CSystem.Collections.Generic.IEnumerable%7BIpfs.DagLink%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__System_String_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.%23ctor(System.Byte%5B%5D%2CSystem.Collections.Generic.IEnumerable%7BIpfs.IMerkleLink%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L38">View Source</a>
               </span>
               <a id="Ipfs_DagNode__ctor_" data-uid="Ipfs.DagNode.#ctor*"></a>
-              <h4 id="Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_DagLink__System_String_" data-uid="Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.DagLink},System.String)">DagNode(Byte[], IEnumerable&lt;DagLink&gt;, String)</h4>
+              <h4 id="Ipfs_DagNode__ctor_System_Byte___System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__System_String_" data-uid="Ipfs.DagNode.#ctor(System.Byte[],System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink},System.String)">DagNode(Byte[], IEnumerable&lt;IMerkleLink&gt;, String)</h4>
               
               <div class="markdown level1 summary"><p>Create a new instance of a <a class="xref" href="Ipfs.DagNode.html">DagNode</a> with the specified</p>
 <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_DataBytes">DataBytes</a> and <a class="xref" href="Ipfs.DagNode.html#Ipfs_DagNode_Links">Links</a>
@@ -149,7 +149,7 @@ specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
               <div class="markdown level1 remarks"></div>
 
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagNode(byte[] data, IEnumerable&lt;DagLink&gt; links = null, string hashAlgorithm = &quot;sha2-256&quot;)</code></pre>
+                <pre><code class="lang-csharp hljs">public DagNode(byte[] data, IEnumerable&lt;IMerkleLink&gt; links = null, string hashAlgorithm = &quot;sha2-256&quot;)</code></pre>
               </div>
 
               <h5 class="parameters">Parameters</h5>
@@ -160,7 +160,7 @@ specified <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
 
               </div>
               <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>&gt;
                   <span class="parametername">links</span>
                   <p>The links to other nodes.</p>
 
@@ -222,7 +222,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_DataBytes.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.DataBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L79">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L76">View Source</a>
               </span>
               <a id="Ipfs_DagNode_DataBytes_" data-uid="Ipfs.DagNode.DataBytes*"></a>
               <h4 id="Ipfs_DagNode_DataBytes" data-uid="Ipfs.DagNode.DataBytes">DataBytes</h4>
@@ -254,7 +254,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_DataStream.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.DataStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L82">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L79">View Source</a>
               </span>
               <a id="Ipfs_DagNode_DataStream_" data-uid="Ipfs.DagNode.DataStream*"></a>
               <h4 id="Ipfs_DagNode_DataStream" data-uid="Ipfs.DagNode.DataStream">DataStream</h4>
@@ -286,7 +286,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Hash.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L106">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L103">View Source</a>
               </span>
               <a id="Ipfs_DagNode_Hash_" data-uid="Ipfs.DagNode.Hash*"></a>
               <h4 id="Ipfs_DagNode_Hash" data-uid="Ipfs.DagNode.Hash">Hash</h4>
@@ -318,7 +318,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Links.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Links%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L76">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L73">View Source</a>
               </span>
               <a id="Ipfs_DagNode_Links_" data-uid="Ipfs.DagNode.Links*"></a>
               <h4 id="Ipfs_DagNode_Links" data-uid="Ipfs.DagNode.Links">Links</h4>
@@ -328,7 +328,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               <div class="markdown level1 remarks"></div>
 
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;DagLink&gt; Links { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;IMerkleLink&gt; Links { get; }</code></pre>
               </div>
 
               
@@ -336,9 +336,8 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               
               <h5 class="propertyValue">Property Value</h5>
               <div>
-                <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
-                <p>A sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a>.</p>
-
+                <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>&gt;
+                
               </div>
               
               <h5 class="implements">Implements</h5>
@@ -351,7 +350,7 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Size.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L93">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L90">View Source</a>
               </span>
               <a id="Ipfs_DagNode_Size_" data-uid="Ipfs.DagNode.Size*"></a>
               <h4 id="Ipfs_DagNode_Size" data-uid="Ipfs.DagNode.Size">Size</h4>
@@ -381,13 +380,13 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_AddLink_Ipfs_DagLink_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.AddLink(Ipfs.DagLink)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_AddLink_Ipfs_IMerkleLink_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.AddLink(Ipfs.IMerkleLink)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L140">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L134">View Source</a>
               </span>
               <a id="Ipfs_DagNode_AddLink_" data-uid="Ipfs.DagNode.AddLink*"></a>
-              <h4 id="Ipfs_DagNode_AddLink_Ipfs_DagLink_" data-uid="Ipfs.DagNode.AddLink(Ipfs.DagLink)">AddLink(DagLink)</h4>
+              <h4 id="Ipfs_DagNode_AddLink_Ipfs_IMerkleLink_" data-uid="Ipfs.DagNode.AddLink(Ipfs.IMerkleLink)">AddLink(IMerkleLink)</h4>
               
               <div class="markdown level1 summary"><p>Adds a link.</p>
 </div>
@@ -396,14 +395,14 @@ specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.
 </div>
 
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagNode AddLink(DagLink link)</code></pre>
+                <pre><code class="lang-csharp hljs">public DagNode AddLink(IMerkleLink link)</code></pre>
               </div>
 
               <h5 class="parameters">Parameters</h5>
               <div>
-                  <a class="xref" href="Ipfs.DagLink.html">DagLink</a>
+                  <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>
                   <span class="parametername">link</span>
-                  <p>The <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
+                  <p>The link to add.</p>
 
               </div>
               
@@ -422,13 +421,13 @@ link.</p>
               
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable%7BIpfs.DagLink%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable%7BIpfs.IMerkleLink%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L158">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L152">View Source</a>
               </span>
               <a id="Ipfs_DagNode_AddLinks_" data-uid="Ipfs.DagNode.AddLinks*"></a>
-              <h4 id="Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_DagLink__" data-uid="Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.DagLink})">AddLinks(IEnumerable&lt;DagLink&gt;)</h4>
+              <h4 id="Ipfs_DagNode_AddLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__" data-uid="Ipfs.DagNode.AddLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})">AddLinks(IEnumerable&lt;IMerkleLink&gt;)</h4>
               
               <div class="markdown level1 summary"><p>Adds a sequence of links.</p>
 </div>
@@ -437,14 +436,14 @@ link.</p>
 </div>
 
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagNode AddLinks(IEnumerable&lt;DagLink&gt; links)</code></pre>
+                <pre><code class="lang-csharp hljs">public DagNode AddLinks(IEnumerable&lt;IMerkleLink&gt; links)</code></pre>
               </div>
 
               <h5 class="parameters">Parameters</h5>
               <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.DagLink.html">DagLink</a>&gt;
+                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>&gt;
                   <span class="parametername">links</span>
-                  <p>The sequence of <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to add.</p>
+                  <p>The sequence of links to add.</p>
 
               </div>
               
@@ -466,7 +465,7 @@ links.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_RemoveLink_Ipfs_IMerkleLink_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.RemoveLink(Ipfs.IMerkleLink)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L181">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L175">View Source</a>
               </span>
               <a id="Ipfs_DagNode_RemoveLink_" data-uid="Ipfs.DagNode.RemoveLink*"></a>
               <h4 id="Ipfs_DagNode_RemoveLink_Ipfs_IMerkleLink_" data-uid="Ipfs.DagNode.RemoveLink(Ipfs.IMerkleLink)">RemoveLink(IMerkleLink)</h4>
@@ -511,7 +510,7 @@ removed.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable%7BIpfs.IMerkleLink%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L203">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L197">View Source</a>
               </span>
               <a id="Ipfs_DagNode_RemoveLinks_" data-uid="Ipfs.DagNode.RemoveLinks*"></a>
               <h4 id="Ipfs_DagNode_RemoveLinks_System_Collections_Generic_IEnumerable_Ipfs_IMerkleLink__" data-uid="Ipfs.DagNode.RemoveLinks(System.Collections.Generic.IEnumerable{Ipfs.IMerkleLink})">RemoveLinks(IEnumerable&lt;IMerkleLink&gt;)</h4>
@@ -556,7 +555,7 @@ removed.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_ToArray.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L299">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L293">View Source</a>
               </span>
               <a id="Ipfs_DagNode_ToArray_" data-uid="Ipfs.DagNode.ToArray*"></a>
               <h4 id="Ipfs_DagNode_ToArray" data-uid="Ipfs.DagNode.ToArray">ToArray()</h4>
@@ -588,7 +587,7 @@ removed.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_ToLink_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.ToLink(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L122">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L116">View Source</a>
               </span>
               <a id="Ipfs_DagNode_ToLink_" data-uid="Ipfs.DagNode.ToLink*"></a>
               <h4 id="Ipfs_DagNode_ToLink_System_String_" data-uid="Ipfs.DagNode.ToLink(System.String)">ToLink(String)</h4>
@@ -598,7 +597,7 @@ removed.</p>
               <div class="markdown level1 remarks"></div>
 
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DagLink ToLink(string name = &quot;&quot;)</code></pre>
+                <pre><code class="lang-csharp hljs">public IMerkleLink ToLink(string name = &quot;&quot;)</code></pre>
               </div>
 
               <h5 class="parameters">Parameters</h5>
@@ -610,9 +609,8 @@ removed.</p>
               
               <h5 class="returns">Returns</h5>
               <div>
-                  <a class="xref" href="Ipfs.DagLink.html">DagLink</a>
-                  <p>A new <a class="xref" href="Ipfs.DagLink.html">DagLink</a> to the node.</p>
-
+                  <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>
+                  
               </div>
               
               
@@ -627,7 +625,7 @@ removed.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Write_Google_Protobuf_CodedOutputStream_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Write(Google.Protobuf.CodedOutputStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L230">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L224">View Source</a>
               </span>
               <a id="Ipfs_DagNode_Write_" data-uid="Ipfs.DagNode.Write*"></a>
               <h4 id="Ipfs_DagNode_Write_Google_Protobuf_CodedOutputStream_" data-uid="Ipfs.DagNode.Write(Google.Protobuf.CodedOutputStream)">Write(CodedOutputStream)</h4>
@@ -660,7 +658,7 @@ removed.</p>
                 <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_DagNode_Write_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.DagNode.Write(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L216">View Source</a>
+                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/DagNode.cs/#L210">View Source</a>
               </span>
               <a id="Ipfs_DagNode_Write_" data-uid="Ipfs.DagNode.Write*"></a>
               <h4 id="Ipfs_DagNode_Write_System_IO_Stream_" data-uid="Ipfs.DagNode.Write(System.IO.Stream)">Write(Stream)</h4>
