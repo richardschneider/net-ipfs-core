@@ -15,7 +15,7 @@ namespace Ipfs
     ///   A <b>DagNode</b> has opaque <see cref="DagNode.DataBytes"/>
     ///   and a set of navigable <see cref="DagNode.Links"/>.
     /// </remarks>
-    public class DagNode : IMerkleNode<DagLink>
+    public class DagNode : IMerkleNode<IMerkleLink>
     {
         string hash;
         string hashAlgorithm;
@@ -35,7 +35,7 @@ namespace Ipfs
         ///   The name of the hashing algorithm to use; defaults to 
         ///   <see cref="MultiHash.DefaultAlgorithmName"/>.
         /// </param>
-        public DagNode(byte[] data, IEnumerable<DagLink> links = null, string hashAlgorithm = MultiHash.DefaultAlgorithmName)
+        public DagNode(byte[] data, IEnumerable<IMerkleLink> links = null, string hashAlgorithm = MultiHash.DefaultAlgorithmName)
         {
             this.DataBytes = data == null ? new byte[0] : data;
             this.Links = (links == null ? new DagLink[0] : links)
@@ -70,10 +70,7 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
-        /// <value>
-        ///   A sequence of <see cref="DagLink"/>.
-        /// </value>
-        public IEnumerable<DagLink> Links { get; private set; }
+        public IEnumerable<IMerkleLink> Links { get; private set; }
 
         /// <inheritdoc />
         public byte[] DataBytes { get; private set; }
@@ -116,10 +113,7 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
-        /// <returns>
-        ///   A new <see cref="DagLink"/> to the node.
-        /// </returns>
-        public DagLink ToLink(string name = "")
+        public IMerkleLink ToLink(string name = "")
         {
             return new DagLink(name, Hash, Size);
         }
@@ -128,7 +122,7 @@ namespace Ipfs
         ///   Adds a link.
         /// </summary>
         /// <param name="link">
-        ///   The <see cref="DagLink"/> to add.
+        ///   The link to add.
         /// </param>
         /// <returns>
         ///   A new <see cref="DagNode"/> with the existing and new
@@ -137,7 +131,7 @@ namespace Ipfs
         /// <remarks>
         ///   A <b>DagNode</b> is immutable.
         /// </remarks>
-        public DagNode AddLink(DagLink link)
+        public DagNode AddLink(IMerkleLink link)
         {
             return AddLinks(new[] { link });
         }
@@ -146,7 +140,7 @@ namespace Ipfs
         ///   Adds a sequence of links.
         /// </summary>
         /// <param name="links">
-        ///   The sequence of <see cref="DagLink"/> to add.
+        ///   The sequence of links to add.
         /// </param>
         /// <returns>
         ///   A new <see cref="DagNode"/> with the existing and new
@@ -155,7 +149,7 @@ namespace Ipfs
         /// <remarks>
         ///   A <b>DagNode</b> is immutable.
         /// </remarks>
-        public DagNode AddLinks(IEnumerable<DagLink> links)
+        public DagNode AddLinks(IEnumerable<IMerkleLink> links)
         {
             var all = Links.Union(links);
             return new DagNode(DataBytes, all, hashAlgorithm);
