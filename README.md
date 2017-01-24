@@ -25,7 +25,7 @@ For the latest build or older non-released builds see [Continuous Integration](h
 - [MultiAddress](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
 - [MultiHash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
 
-See the [API Documentation](https://richardschneider.github.io/net-ipfs-core/api) for a list of all objects.
+See the [API Documentation](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.html) for a list of all objects.
 
 ### MultiHash
 
