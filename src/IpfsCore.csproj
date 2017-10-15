@@ -2,9 +2,27 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2;net45</TargetFrameworks>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
+    <AssemblyVersion>0.42</AssemblyVersion>
+    
+    <!-- Nuget specs -->
+    <PackageId>Ipfs.Core</PackageId>
+    <Authors>Richard Schneider</Authors>
+    <Title>IPFS Core Objects</Title>
+    <Description>Core objects for IPFS.
+
+The InterPlanetary File System is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>© 2015 Richard Schneider</Copyright>
+    <PackageTags>ipfs peer-to-peer distributed file-system</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/richardschneider/net-ipfs-core/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/richardschneider/net-ipfs-core</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/ipfs/logo/blob/master/platform-icons/osx-menu-bar.png</PackageIconUrl>
+    <Version>0.42-dev</Version>
+
   </PropertyGroup>
  
   <ItemGroup>
@@ -22,5 +40,6 @@
       <NoWarn>NU1701</NoWarn>
     </PackageReference>
   </ItemGroup>
+ 
 
 </Project>
