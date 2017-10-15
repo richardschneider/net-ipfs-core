@@ -5,6 +5,7 @@
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
     <AssemblyVersion>0.42</AssemblyVersion>
+    <DocumentationFile>Ipfs.Core.xml</DocumentationFile>
     
     <!-- Nuget specs -->
     <PackageId>Ipfs.Core</PackageId>
@@ -18,6 +19,7 @@ The InterPlanetary File System is the permanent web. It is a new hypermedia dist
     <Copyright>© 2015 Richard Schneider</Copyright>
     <PackageTags>ipfs peer-to-peer distributed file-system</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
     <PackageLicenseUrl>https://github.com/richardschneider/net-ipfs-core/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/richardschneider/net-ipfs-core</PackageProjectUrl>
     <PackageIconUrl>https://github.com/ipfs/logo/blob/master/platform-icons/osx-menu-bar.png</PackageIconUrl>
