@@ -32,6 +32,7 @@ environment:
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -pre -y
+  - nuget update -self
   #- npm install gh-pages -g
   #- choco install docfx
   # No longer signing the assembly
