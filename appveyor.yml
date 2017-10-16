@@ -1,8 +1,14 @@
 # gitversion will change the version number
-version: x-{build}
+version: x-{build# branches to build
+
+branches:
+  # blacklist
+  except:
+    - gh-pages
 
 configuration: Release
 os: Visual Studio 2017
+
 
 init:
   - git config --global core.autocrlf input
@@ -52,7 +58,7 @@ before_build:
   - echo %GitVersion_MajorMinorPatch%
   - echo %GitVersion_NuGetVersion%
 
-build:
+build_script:
 #  project: IpfsCore.sln
 #  publish_nuget: false
 #  verbosity: minimal
