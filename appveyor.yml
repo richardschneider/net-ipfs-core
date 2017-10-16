@@ -65,7 +65,7 @@ build_script:
 #  publish_nuget: false
 #  verbosity: minimal
   - dotnet build -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
-  - dotnet pack -c %CONFIGURATION% -no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
+  - dotnet pack -c %CONFIGURATION% --no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
 after_build:
   - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Ipfs.Core.%GitVersion_MajorMinorPatch%.nupkg"
