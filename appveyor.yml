@@ -64,10 +64,10 @@ build_script:
 #  project: IpfsCore.sln
 #  publish_nuget: false
 #  verbosity: minimal
-  - dotnet build -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
+  - dotnet pack -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
 after_build:
-  - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_NuGetVersion%.nupkg"
+  - cmd: appveyor PushArtifact "Ipfs.Core.%GitVersion_MajorMinorPatch%.nupkg"
 # Build documentation in doc\_site
 #  - tools\docfx\docfx doc\docfx.json
 #  - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
