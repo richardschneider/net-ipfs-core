@@ -1,6 +1,7 @@
 # gitversion will change the version number
-version: x-{build# branches to build
+version: x-{build}
 
+# branches to build
 branches:
   # blacklist
   except:
