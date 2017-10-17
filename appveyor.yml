@@ -10,7 +10,6 @@ branches:
 configuration: Release
 os: Visual Studio 2017
 
-
 init:
   - git config --global core.autocrlf input
   - git config --global credential.helper store
@@ -43,10 +42,6 @@ install:
 pull_requests:
   do_not_increment_build_number: true
 
-# gitversion will change the assembly info
-#assembly_info:
-#  patch: false
-
 nuget:
   account_feed: true
   project_feed: true
@@ -61,9 +56,6 @@ before_build:
   - echo %GitVersion_NuGetVersion%
 
 build_script:
-#  project: IpfsCore.sln
-#  publish_nuget: false
-#  verbosity: minimal
   - dotnet build -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
   - dotnet pack -c %CONFIGURATION% --no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
