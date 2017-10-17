@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpfsCore", "src\IpfsCore.csproj", "{6401AF07-B7F2-4664-86AA-FAD99F82DFAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpfsCore", "src\IpfsCore.csproj", "{6401AF07-B7F2-4664-86AA-FAD99F82DFAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpfsCoreTests", "test\IpfsCoreTests.csproj", "{FE639401-D4C7-4528-A07C-4290A7710889}"
 EndProject
@@ -42,6 +42,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36ED5AA7-8F41-4F7D-A665-230635EF64A1}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = IpfsCore.vsmdi
