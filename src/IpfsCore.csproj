@@ -5,7 +5,8 @@
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
     <DocumentationFile>Ipfs.Core.xml</DocumentationFile>
-
+    <DebugType>full</DebugType>
+    
     <!-- developer build is always 0.42 -->
     <AssemblyVersion>0.42</AssemblyVersion>
     <Version>0.42</Version>

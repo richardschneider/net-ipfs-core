@@ -1,0 +1,1 @@
+packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[Ipfs*]* -[*Tests]* -[Ipfs.Core]SHA3*" -target:"c:\Program Files\dotnet\dotnet.exe" -targetargs:"test -c Release --no-build --no-restore test" -output:coverage.xml  -mergeoutput -hideskipped:File -oldStyle 
