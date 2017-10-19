@@ -11,17 +11,15 @@ namespace Ipfs
     static class ProtobufHelper
     {
         static MethodInfo writeRawBytes = typeof(CodedOutputStream)
-            .GetMethod("WriteRawBytes",
-                BindingFlags.NonPublic | BindingFlags.Instance,
-                null,
-                new Type[] { typeof(byte[]) },
-                null);
+            .GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Single(m =>
+                m.Name == "WriteRawBytes" && m.GetParameters().Count() == 1
+            );
         static MethodInfo readRawBytes = typeof(CodedInputStream)
-             .GetMethod("ReadRawBytes",
-                 BindingFlags.NonPublic | BindingFlags.Instance,
-                 null,
-                 new Type[] { typeof(int) },
-                 null);
+            .GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Single(m =>
+                m.Name == "ReadRawBytes"
+            );
 
         public static void WriteSomeBytes(this CodedOutputStream stream, byte[] bytes)
         {
