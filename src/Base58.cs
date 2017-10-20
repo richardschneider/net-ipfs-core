@@ -14,7 +14,7 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase58"/> to decode a Base-58 string.
     ///   </para>
     ///   <para>
-    ///   This is just thin wrapper of <see href="https://github.com/adamcaudill/Base58Check"/>.
+    ///   This is just thin wrapper of <see href="https://github.com/ssg/SimpleBase"/>.
     ///   </para>
     ///   <para>
     ///   This codec uses the BitCoin alphabet <b>not Flickr's</b>.
@@ -34,7 +34,7 @@ namespace Ipfs
         /// </returns>
         public static string Encode(byte[] bytes)
         {
-            return Base58Check.Base58CheckEncoding.EncodePlain(bytes);
+            return SimpleBase.Base58.Bitcoin.Encode(bytes);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Ipfs
         /// </returns>
         public static byte[] Decode(string s)
         {
-            return Base58Check.Base58CheckEncoding.DecodePlain(s);
+            return SimpleBase.Base58.Bitcoin.Decode(s);
         }
 
         /// <summary>

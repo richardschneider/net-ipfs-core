@@ -14,7 +14,7 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase32"/> to decode a Base-32 string.
     ///   </para>
     ///   <para>
-    ///   A thin wrapper around <see href="https://github.com/kappa7194/base32"/>.
+    ///   A thin wrapper around <see href="https://github.com/ssg/SimpleBase"/>.
     ///   </para>
     /// </remarks>
     public static class Base32
@@ -36,7 +36,7 @@ namespace Ipfs
         /// </returns>
         public static string Encode(byte[] input)
         {
-            return Albireo.Base32.Base32.Encode(input);
+            return SimpleBase.Base32.Rfc4648.Encode(input, true);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Ipfs
         /// </returns>
         public static byte[] Decode(string input)
         {
-            return Albireo.Base32.Base32.Decode(input);
+            return SimpleBase.Base32.Rfc4648.Decode(input);
         }
 
         /// <summary>

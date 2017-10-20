@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ipfs
 {
     [TestClass]
-    public class EncodeTests
+    public class Base32EncodeTests
     {
         byte[] getStringBytes(string x)
         {
@@ -56,7 +56,7 @@ namespace Ipfs
     }
 
     [TestClass]
-    public class DecodeTests
+    public class Base32DecodeTests
     {
         byte[] getStringBytes(string x)
         {

@@ -124,10 +124,14 @@ namespace Ipfs
         /// </summary>
         static MultiHash()
         {
-            HashingAlgorithm.Register("sha1", 0x11, 20, () => { return new SHA1Managed(); });
-            HashingAlgorithm.Register("sha2-256", 0x12, 32, () => { return new SHA256Managed(); });
-            HashingAlgorithm.Register("sha2-512", 0x13, 64, () => { return new SHA512Managed(); });
+            HashingAlgorithm.Register("sha1", 0x11, 20, () => SHA1.Create());
+            HashingAlgorithm.Register("sha2-256", 0x12, 32, () => SHA256.Create());
+            HashingAlgorithm.Register("sha2-512", 0x13, 64, () => SHA512.Create());
+#if SHA3
             HashingAlgorithm.Register("sha3-512", 0x14, 64, () => { return new SHA3.SHA3Managed(512); });
+#else
+            HashingAlgorithm.Register("sha3-512", 0x14, 64);
+#endif
             HashingAlgorithm.Register("blake2b", 0x40, 64);
             HashingAlgorithm.Register("blake2s", 0x41, 32);
         }

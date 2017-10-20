@@ -38,7 +38,7 @@ namespace Ipfs
         [TestMethod]
         public void Decode_Bad()
         {
-            ExceptionAssert.Throws<FormatException>(() =>  Base58.Decode("jo91waLQA1NNeBmZKUF=="));
+            ExceptionAssert.Throws<InvalidOperationException>(() =>  Base58.Decode("jo91waLQA1NNeBmZKUF=="));
         }
 
         [TestMethod]
