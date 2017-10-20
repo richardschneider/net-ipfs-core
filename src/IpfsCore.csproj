@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard16;netstandard2;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard14;netstandard2;net45</TargetFrameworks>
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
     <DocumentationFile>Ipfs.Core.xml</DocumentationFile>
