@@ -12,7 +12,7 @@ The interplanetary file system is the permanent web. It is a new hypermedia dist
 It supports the following runtimes
 
 - .NET Framework 4.5
-- .NET Standard 1.6
+- .NET Standard 1.4
 - .NET Standard 2.0
 
 More information is on the [Documentation](https://richardschneider.github.io/net-ipfs-core/) web site.
