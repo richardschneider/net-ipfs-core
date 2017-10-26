@@ -131,17 +131,9 @@ namespace Ipfs
             Assert.IsTrue(mh2.Matches(hello));
             Assert.IsFalse(mh2.Matches(hello1));
 
-            // Some platforms do not support SHA3
-            try
-            {
-                var mh3 = MultiHash.ComputeHash(hello, "sha3-512");
-                Assert.IsTrue(mh3.Matches(hello));
-                Assert.IsFalse(mh3.Matches(hello1));
-            }
-            catch (NotImplementedException)
-            {
-                // eat it
-            }
+            var mh3 = MultiHash.ComputeHash(hello, "sha3-512");
+            Assert.IsTrue(mh3.Matches(hello));
+            Assert.IsFalse(mh3.Matches(hello1));
         }
 
         [TestMethod]

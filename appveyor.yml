@@ -71,7 +71,7 @@ test_script:
 after_test: 
 # Generate coverage report
     - packages\OpenCover.4.6.519\tools\OpenCover.Console.exe 
-        -register:user -filter:"+[Ipfs*]* -[*Tests]* -[Ipfs.Core]SHA3*" 
+        -register:user -filter:"+[Ipfs*]* -[*Tests]* -[Ipfs.Core]Ipfs.Cryptography.SHA3*" 
         -target:"c:\Program Files\dotnet\dotnet.exe" 
         -targetargs:"test -c Release --no-build --no-restore --framework netcoreapp2.0 test" 
         -output:coverage.xml  
