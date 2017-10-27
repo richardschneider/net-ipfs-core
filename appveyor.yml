@@ -34,7 +34,7 @@ install:
   - choco install gitversion.portable -pre -y
   - nuget update -self
   #- npm install gh-pages -g
-  #- choco install docfx
+  - choco install docfx -y
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
