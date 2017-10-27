@@ -7,6 +7,17 @@ branches:
   except:
     - gh-pages
 
+-
+  branches:
+    only:
+      - master
+
+  environment:
+    snk_secret:
+      secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
+    git_token:
+      secure: NeX5NCOUXsCLc1UjTJjqB9F02FZ8Wq0VsxqTXC8kBdyK6zjxjebrf/9Da2sY1Kql
+
 configuration: Release
 os: Visual Studio 2017
 
@@ -33,7 +44,7 @@ environment:
 install:
   - choco install gitversion.portable -pre -y
   - nuget update -self
-  #- npm install gh-pages -g
+  - npm install gh-pages -g
   - choco install docfx -y
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
@@ -65,7 +76,7 @@ after_build:
   - cmd: builddocs.cmd
   - cmd: 7z a -tzip docs.zip doc\_site
   - cmd: appveyor PushArtifact docs.zip
-#  - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
+  - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
 
 test_script:
   - dotnet test -c %CONFIGURATION% --no-build --no-restore test
