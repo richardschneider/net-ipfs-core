@@ -140,6 +140,10 @@ namespace Ipfs
         /// <summary>
         ///   Gets the <see cref="HashAlgorithm"/> with the specified IPFS multi-hash name.
         /// </summary>
+        /// <param name="name">
+        ///   The name of a hashing algorithm, see <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/>
+        ///   for IPFS defined names.
+        /// </param>
         public static HashAlgorithm GetHashAlgorithm(string name = DefaultAlgorithmName)
         {
             return HashingAlgorithm.Names[name].Hasher();
