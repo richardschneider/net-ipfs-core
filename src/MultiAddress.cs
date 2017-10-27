@@ -60,7 +60,7 @@ namespace Ipfs
         ///   Creates a new instance of the <see cref="MultiAddress"/> class from the
         ///   specified <see cref="Stream"/>.
         /// </summary>
-        /// <param name="stream">(
+        /// <param name="stream">
         ///   A <see cref="Stream"/> containing the binary representation of a
         ///   <b>MultiAddress</b>.
         /// </param>

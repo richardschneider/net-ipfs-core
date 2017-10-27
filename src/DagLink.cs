@@ -17,9 +17,9 @@ namespace Ipfs
         /// <summary>
         ///   Create a new instance of <see cref="DagLink"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="hash"></param>
-        /// <param name="size"></param>
+        /// <param name="name">The name associated with the linked node.</param>
+        /// <param name="hash">The string representation of the <see cref="MultiHash"/> of the linked node.</param>
+        /// <param name="size">The serialised size (in bytes) of the linked node.</param>
         public DagLink(string name, string hash, long size)
         {
             this.Name = name;
@@ -31,7 +31,7 @@ namespace Ipfs
         ///   Creates a new instance of the <see cref="DagLink"/> class from the
         ///   specified <see cref="IMerkleLink"/>.
         /// </summary>
-        /// <param name="link">(
+        /// <param name="link">
         ///   Some type of a Merkle link.
         /// </param>
         public DagLink(IMerkleLink link)

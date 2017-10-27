@@ -34,7 +34,7 @@ namespace Ipfs
         /// <remarks>
         ///   It is never <b>null</b>.
         ///   <para>
-        ///   The links are sorted ascending by <typeparamref name="Link.Name"/>. A <b>null</b>
+        ///   The links are sorted ascending by <see cref="IMerkleLink.Name"/>. A <b>null</b>
         ///   name is compared as "".
         ///   </para>
         /// </remarks>

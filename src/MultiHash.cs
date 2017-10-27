@@ -186,7 +186,7 @@ namespace Ipfs
         ///   Creates a new instance of the <see cref="MultiHash"/> class from the
         ///   specified <see cref="Stream"/>.
         /// </summary>
-        /// <param name="stream">(
+        /// <param name="stream">
         ///   A <see cref="Stream"/> containing the binary representation of the
         ///   <b>MultiHash</b>.
         /// </param>
@@ -213,7 +213,7 @@ namespace Ipfs
         ///   Creates a new instance of the <see cref="MultiHash"/> class from the
         ///   specified <see cref="CodedInputStream"/>.
         /// </summary>
-        /// <param name="stream">(
+        /// <param name="stream">
         ///   A <see cref="CodedInputStream"/> containing the binary representation of the
         ///   <b>MultiHash</b>.
         /// </param>

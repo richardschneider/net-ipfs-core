@@ -11,6 +11,7 @@ namespace Ipfs
         /// <summary>
         ///   A name associated with the linked node.
         /// </summary>
+        /// <value>A <see cref="string"/> or <b>null</b>.</value>
         /// <remarks>
         ///   <note type="warning">
         ///   IPFS considers a <b>null</b> name different from a <see cref="string.Empty"/>
@@ -30,6 +31,7 @@ namespace Ipfs
         /// <summary>
         ///   The serialised size (in bytes) of the linked node.
         /// </summary>
+        /// <value>Number of bytes.</value>
         long Size { get; }
 
     }

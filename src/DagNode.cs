@@ -26,7 +26,7 @@ namespace Ipfs
         ///   <see cref="DagNode.DataBytes"/> and <see cref="DagNode.Links"/>
         /// </summary>
         /// <param name="data">
-        ///   The opaque data, can be <b>null</b>
+        ///   The opaque data, can be <b>null</b>.
         /// </param>
         /// <param name="links">
         ///   The links to other nodes.
@@ -47,7 +47,7 @@ namespace Ipfs
         ///   Creates a new instance of the <see cref="DagNode"/> class from the
         ///   specified <see cref="Stream"/>.
         /// </summary>
-        /// <param name="stream">(
+        /// <param name="stream">
         ///   A <see cref="Stream"/> containing the binary representation of the
         ///   <b>DagNode</b>.
         /// </param>
@@ -126,7 +126,7 @@ namespace Ipfs
         /// </param>
         /// <returns>
         ///   A new <see cref="DagNode"/> with the existing and new
-        ///   link.
+        ///   links.
         /// </returns>
         /// <remarks>
         ///   A <b>DagNode</b> is immutable.
