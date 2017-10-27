@@ -11,9 +11,12 @@
             "**/bin/**",
             "_site/**"
           ],
-		      "src": ".."
+          "src": ".."
         }
       ],
+      "properties": {
+        "TargetFramework": "net45"
+      },
       "dest": "api"
     }
   ],
