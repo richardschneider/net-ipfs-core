@@ -599,8 +599,10 @@ references:
   name: ToLink
   href: api/Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_ToLink_
   commentId: Overload:Ipfs.IMerkleNode`1.ToLink
-  fullName: Ipfs.IMerkleNode.ToLink
-  nameWithType: IMerkleNode.ToLink
+  fullName: Ipfs.IMerkleNode<Link>.ToLink
+  fullName.vb: Ipfs.IMerkleNode(Of Link).ToLink
+  nameWithType: IMerkleNode<Link>.ToLink
+  nameWithType.vb: IMerkleNode(Of Link).ToLink
 - uid: Ipfs.MultiAddress
   name: MultiAddress
   href: api/Ipfs.MultiAddress.html
@@ -772,6 +774,12 @@ references:
   commentId: Overload:Ipfs.MultiAddress.Write
   fullName: Ipfs.MultiAddress.Write
   nameWithType: MultiAddress.Write
+- uid: Ipfs.MultiBase
+  name: MultiBase
+  href: api/Ipfs.MultiBase.html
+  commentId: T:Ipfs.MultiBase
+  fullName: Ipfs.MultiBase
+  nameWithType: MultiBase
 - uid: Ipfs.MultiHash
   name: MultiHash
   href: api/Ipfs.MultiHash.html
@@ -1097,14 +1105,11 @@ references:
   fullName: Ipfs.NetworkProtocol.ReadValue
   nameWithType: NetworkProtocol.ReadValue
 - uid: Ipfs.NetworkProtocol.Register*
-  name: Register<T>
+  name: Register
   href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_Register_
   commentId: Overload:Ipfs.NetworkProtocol.Register
-  name.vb: Register(Of T)
-  fullName: Ipfs.NetworkProtocol.Register<T>
-  fullName.vb: Ipfs.NetworkProtocol.Register(Of T)
-  nameWithType: NetworkProtocol.Register<T>
-  nameWithType.vb: NetworkProtocol.Register(Of T)
+  fullName: Ipfs.NetworkProtocol.Register
+  nameWithType: NetworkProtocol.Register
 - uid: Ipfs.NetworkProtocol.Register``1
   name: Register<T>()
   href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_Register__1

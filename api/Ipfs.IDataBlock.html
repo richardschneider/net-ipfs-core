@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IDataBlock
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.26.3.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -66,138 +68,138 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Ipfs_IDataBlock" data-uid="Ipfs.IDataBlock">Interface IDataBlock
-              </h1>
-              <div class="markdown level0 summary"><p>Some data that is stored in IPFS.</p>
+            <article class="content wrap" id="_content" data-uid="Ipfs.IDataBlock">
+  
+  
+  <h1 id="Ipfs_IDataBlock" data-uid="Ipfs.IDataBlock">Interface IDataBlock
+  </h1>
+  <div class="markdown level0 summary"><p>Some data that is stored in IPFS.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 conceptual"></div>
 
-              <div class="markdown level0 remarks"><p>A <strong>DataBlock</strong> has an <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_Hash">Hash</a>
+  <div class="markdown level0 remarks"><p>A <strong>DataBlock</strong> has an <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_Hash">Hash</a>
 and some data (<a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataBytes">DataBytes</a> 
-or <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataStream">DataStream</a>).</p>
+or <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataStream">DataStream</a>).
 <p>
 It is useful to talk about them as &quot;blocks&quot; in Bitswap 
 and other things that do not care about what is being stored.
-</p>
+</p></p>
 </div>
-              
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IDataBlock</code></pre>
-              </div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDataBlock</code></pre>
+  </div>
 
-              
-              <h6><strong>Namespace</strong>: Ipfs</h6>
-              <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
-              
+  
+  <h6><strong>Namespace</strong>: System.Dynamic.ExpandoObject</h6>
+  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+  
 
-              
-              <h3 id="properties">Properties
-              </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock_DataBytes.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.DataBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IDataBlock.cs/#L36">View Source</a>
-              </span>
-              <a id="Ipfs_IDataBlock_DataBytes_" data-uid="Ipfs.IDataBlock.DataBytes*"></a>
-              <h4 id="Ipfs_IDataBlock_DataBytes" data-uid="Ipfs.IDataBlock.DataBytes">DataBytes</h4>
-              
-              <div class="markdown level1 summary"><p>Contents as a byte array.</p>
+  
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IDataBlock_DataBytes.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.DataBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IDataBlock.cs/#L36">View Source</a>
+  </span>
+  <a id="Ipfs_IDataBlock_DataBytes_" data-uid="Ipfs.IDataBlock.DataBytes*"></a>
+  <h4 id="Ipfs_IDataBlock_DataBytes" data-uid="Ipfs.IDataBlock.DataBytes">DataBytes</h4>
+  
+  <div class="markdown level1 summary"><p>Contents as a byte array.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
+  <div class="markdown level1 conceptual"></div>
+  <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
 </div>
 
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">byte[] DataBytes { get; }</code></pre>
-              </div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte[] DataBytes { get; }</code></pre>
+  </div>
 
-              
-              
-              
-              <h5 class="propertyValue">Property Value</h5>
-              <div>
-                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-                <p>The contents as a sequence of bytes.</p>
+  
+  
+  
+  <h5 class="propertyValue">Property Value</h5>
+  <div>
+    <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
+    <p>The contents as a sequence of bytes.</p>
 
-              </div>
-              
-              
-              
-              
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock_DataStream.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.DataStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IDataBlock.cs/#L44">View Source</a>
-              </span>
-              <a id="Ipfs_IDataBlock_DataStream_" data-uid="Ipfs.IDataBlock.DataStream*"></a>
-              <h4 id="Ipfs_IDataBlock_DataStream" data-uid="Ipfs.IDataBlock.DataStream">DataStream</h4>
-              
-              <div class="markdown level1 summary"><p>Contents as a stream of bytes.</p>
+  </div>
+  
+  
+  
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IDataBlock_DataStream.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.DataStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IDataBlock.cs/#L44">View Source</a>
+  </span>
+  <a id="Ipfs_IDataBlock_DataStream_" data-uid="Ipfs.IDataBlock.DataStream*"></a>
+  <h4 id="Ipfs_IDataBlock_DataStream" data-uid="Ipfs.IDataBlock.DataStream">DataStream</h4>
+  
+  <div class="markdown level1 summary"><p>Contents as a stream of bytes.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <div class="markdown level1 remarks"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="markdown level1 remarks"></div>
 
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Stream DataStream { get; }</code></pre>
-              </div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream DataStream { get; }</code></pre>
+  </div>
 
-              
-              
-              
-              <h5 class="propertyValue">Property Value</h5>
-              <div>
-                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
-                <p>The contents as a stream of bytes.</p>
+  
+  
+  
+  <h5 class="propertyValue">Property Value</h5>
+  <div>
+    <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
+    <p>The contents as a stream of bytes.</p>
 
-              </div>
-              
-              
-              
-              
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock_Hash.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IDataBlock.cs/#L52">View Source</a>
-              </span>
-              <a id="Ipfs_IDataBlock_Hash_" data-uid="Ipfs.IDataBlock.Hash*"></a>
-              <h4 id="Ipfs_IDataBlock_Hash" data-uid="Ipfs.IDataBlock.Hash">Hash</h4>
-              
-              <div class="markdown level1 summary"><p>The string representation of the <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a>.</p>
+  </div>
+  
+  
+  
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IDataBlock_Hash.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IDataBlock.cs/#L52">View Source</a>
+  </span>
+  <a id="Ipfs_IDataBlock_Hash_" data-uid="Ipfs.IDataBlock.Hash*"></a>
+  <h4 id="Ipfs_IDataBlock_Hash" data-uid="Ipfs.IDataBlock.Hash">Hash</h4>
+  
+  <div class="markdown level1 summary"><p>The string representation of the <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <div class="markdown level1 remarks"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="markdown level1 remarks"></div>
 
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">string Hash { get; }</code></pre>
-              </div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Hash { get; }</code></pre>
+  </div>
 
-              
-              
-              
-              <h5 class="propertyValue">Property Value</h5>
-              <div>
-                <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-                <p>The unique ID of the data.</p>
+  
+  
+  
+  <h5 class="propertyValue">Property Value</h5>
+  <div>
+    <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+    <p>The unique ID of the data.</p>
 
-              </div>
-              
-              
-              
-              
-              <h3 id="seealso">See Also</h3>
-              <div class="seealso">
-                  <div><a class="xref" href="Ipfs.IMerkleNode-1.html">IMerkleNode</a>&lt;Link&gt;</div>
-              </div>
-            </article>
+  </div>
+  
+  
+  
+  
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Ipfs.IMerkleNode-1.html">IMerkleNode</a>&lt;Link&gt;</div>
+  </div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -205,10 +207,10 @@ and other things that do not care about what is being stored.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IDataBlock.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IDataBlock.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IDataBlock.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

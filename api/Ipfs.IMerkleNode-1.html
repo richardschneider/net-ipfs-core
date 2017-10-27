@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IMerkleNode&lt;Link&gt;
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.26.3.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -66,133 +68,132 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Ipfs_IMerkleNode_1" data-uid="Ipfs.IMerkleNode`1">Interface IMerkleNode&lt;Link&gt;
-              </h1>
-              <div class="markdown level0 summary"><p>A Directed Acyclic Graph (DAG) in IPFS.</p>
+            <article class="content wrap" id="_content" data-uid="Ipfs.IMerkleNode`1">
+  
+  
+  <h1 id="Ipfs_IMerkleNode_1" data-uid="Ipfs.IMerkleNode`1">Interface IMerkleNode&lt;Link&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A Directed Acyclic Graph (DAG) in IPFS.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 conceptual"></div>
 
-              <div class="markdown level0 remarks"><p>A <strong>MerkleNode</strong> has a sequence of navigable <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Links">Links</a>
+  <div class="markdown level0 remarks"><p>A <strong>MerkleNode</strong> has a sequence of navigable <a class="xref" href="Ipfs.IMerkleNode-1.html#Ipfs_IMerkleNode_1_Links">Links</a>
 and some data (<a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataBytes">DataBytes</a> 
 or <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataStream">DataStream</a>).</p>
 </div>
-              
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IMerkleNode&lt;out Link&gt; : IDataBlock where Link : IMerkleLink</code></pre>
-              </div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMerkleNode&lt;out Link&gt; : IDataBlock where Link : IMerkleLink</code></pre>
+  </div>
 
-              
-              <h6><strong>Namespace</strong>: Ipfs</h6>
-              <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
-              
+  
+  <h6><strong>Namespace</strong>: System.Dynamic.ExpandoObject</h6>
+  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+  
 
-              
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">Link</span></td>
-                    <td>
-The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by this node.
+  
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">Link</span></td>
+        <td><p>The type of <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> used by this node.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_Links.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.Links%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L41">View Source</a>
-              </span>
-              <a id="Ipfs_IMerkleNode_1_Links_" data-uid="Ipfs.IMerkleNode`1.Links*"></a>
-              <h4 id="Ipfs_IMerkleNode_1_Links" data-uid="Ipfs.IMerkleNode`1.Links">Links</h4>
-              
-              <div class="markdown level1 summary"><p>Links to other nodes.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IMerkleNode_1_Links.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.Links%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IMerkleNode.cs/#L41">View Source</a>
+  </span>
+  <a id="Ipfs_IMerkleNode_1_Links_" data-uid="Ipfs.IMerkleNode`1.Links*"></a>
+  <h4 id="Ipfs_IMerkleNode_1_Links" data-uid="Ipfs.IMerkleNode`1.Links">Links</h4>
+  
+  <div class="markdown level1 summary"><p>Links to other nodes.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.</p>
+  <div class="markdown level1 conceptual"></div>
+  <div class="markdown level1 remarks"><p>It is never <strong>null</strong>.
 <p>
-The links are sorted ascending by <span class="typeparamref">Link.Name.Name</span>. A <strong>null</strong>
+The links are sorted ascending by <code data-dev-comment-type="typeparamref" class="typeparamref">Link.Name.Name</code>. A <strong>null</strong>
 name is compared as &quot;&quot;.
-</p>
+</p></p>
 </div>
 
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IEnumerable&lt;Link&gt; Links { get; }</code></pre>
-              </div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Link&gt; Links { get; }</code></pre>
+  </div>
 
-              
-              
-              
-              <h5 class="propertyValue">Property Value</h5>
-              <div>
-                <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;Link&gt;
-                <p>A sequence of <span class="typeparamref">Link</span>.</p>
+  
+  
+  
+  <h5 class="propertyValue">Property Value</h5>
+  <div>
+    <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;Link&gt;
+    <p>A sequence of <code data-dev-comment-type="typeparamref" class="typeparamref">Link</code>.</p>
 
-              </div>
-              
-              
-              
-              
-              <h3 id="methods">Methods
-              </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1_ToLink_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.ToLink(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L52">View Source</a>
-              </span>
-              <a id="Ipfs_IMerkleNode_1_ToLink_" data-uid="Ipfs.IMerkleNode`1.ToLink*"></a>
-              <h4 id="Ipfs_IMerkleNode_1_ToLink_System_String_" data-uid="Ipfs.IMerkleNode`1.ToLink(System.String)">ToLink(String)</h4>
-              
-              <div class="markdown level1 summary"><p>Returns a link to the node.</p>
+  </div>
+  
+  
+  
+  
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IMerkleNode_1_ToLink_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601.ToLink(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IMerkleNode.cs/#L52">View Source</a>
+  </span>
+  <a id="Ipfs_IMerkleNode_1_ToLink_" data-uid="Ipfs.IMerkleNode`1.ToLink*"></a>
+  <h4 id="Ipfs_IMerkleNode_1_ToLink_System_String_" data-uid="Ipfs.IMerkleNode`1.ToLink(System.String)">ToLink(String)</h4>
+  
+  <div class="markdown level1 summary"><p>Returns a link to the node.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <div class="markdown level1 remarks"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="markdown level1 remarks"></div>
 
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Link ToLink(string name = &quot;&quot;)</code></pre>
-              </div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Link ToLink(string name = &quot;&quot;)</code></pre>
+  </div>
 
-              <h5 class="parameters">Parameters</h5>
-              <div>
-                  <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-                  <span class="parametername">name</span>
-                  <p>A <a class="xref" href="Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name">Name</a> for the link; defaults to &quot;&quot;.</p>
+  <h5 class="parameters">Parameters</h5>
+  <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+      <span class="parametername">name</span>
+      <p>A <a class="xref" href="Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name">Name</a> for the link; defaults to &quot;&quot;.</p>
 
-              </div>
-              
-              <h5 class="returns">Returns</h5>
-              <div>
-                  <span class="xref">Link</span>
-                  <p>A new <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> to the node.</p>
+  </div>
+  
+  <h5 class="returns">Returns</h5>
+  <div>
+      <span class="xref">Link</span>
+      <p>A new <a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a> to the node.</p>
 
-              </div>
-              
-              
-              
-              
-              
-              
-              <h3 id="seealso">See Also</h3>
-              <div class="seealso">
-                  <div><span><a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">https://en.wikipedia.org/wiki/Directed_acyclic_graph</a></span></div>
-                  <div><span><a href="https://github.com/ipfs/specs/tree/master/merkledag">https://github.com/ipfs/specs/tree/master/merkledag</a></span></div>
-              </div>
-            </article>
+  </div>
+  
+  
+  
+  
+  
+  
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span><a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">https://en.wikipedia.org/wiki/Directed_acyclic_graph</a></span></div>
+      <div><span><a href="https://github.com/ipfs/specs/tree/master/merkledag">https://github.com/ipfs/specs/tree/master/merkledag</a></span></div>
+  </div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -200,10 +201,10 @@ name is compared as &quot;&quot;.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleNode_1.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/docfx/apiSpec/new?filename=Ipfs_IMerkleNode_1.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleNode%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleNode.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/docfx/src/IMerkleNode.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
