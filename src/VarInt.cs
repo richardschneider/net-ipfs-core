@@ -42,6 +42,10 @@ namespace Ipfs
         /// <summary>
         ///   The number of bytes required to encode the value.
         /// </summary>
+        /// <param name="value">A positive integer value.</param>
+        /// <returns>
+        ///   The number of bytes required to encode the value.
+        /// </returns>
         public static int RequiredBytes(long value)
         {
             return Encode(value).Length;
@@ -51,11 +55,12 @@ namespace Ipfs
         ///   Convert the byte array to an <see cref="int"/>.
         /// </summary>
         /// <param name="bytes">
-        ///   A byte array containing the variable integer.
+        ///   A varint encoded byte array containing the variable integer.
         /// </param>
         /// <param name="offset">
         ///   Offset into <paramref name="bytes"/> to start reading from.
         /// </param>
+        /// <returns>The integer value.</returns>
         public static int DecodeInt32 (byte[] bytes, int offset = 0)
         {
             using (var stream = new MemoryStream(bytes, false))
@@ -69,11 +74,12 @@ namespace Ipfs
         ///   Convert the byte array to a <see cref="long"/>.
         /// </summary>
         /// <param name="bytes">
-        ///   A byte array containing the variable integer.
+        ///   A varint encoded byte array containing the variable integer.
         /// </param>
         /// <param name="offset">
         ///   Offset into <paramref name="bytes"/> to start reading from.
         /// </param>
+        /// <returns>The integer value.</returns>
         public static long DecodeInt64(byte[] bytes, int offset = 0)
         {
             using (var stream = new MemoryStream(bytes, false))
@@ -87,6 +93,15 @@ namespace Ipfs
         ///   Writes the variable integer encoding of the value to
         ///   a stream.
         /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="Stream"/> to write to.
+        /// </param>
+        /// <param name="value">
+        ///   A non-negative value to write.
+        /// </param>
+        /// <exception cref="NotSupportedException">
+        ///   When <paramref name="value"/> is negative.
+        /// </exception>
         public static void WriteVarint(this Stream stream, long value)
         {
             if (value < 0)
@@ -105,7 +120,14 @@ namespace Ipfs
         /// <summary>
         ///   Reads a variable integer from the stream. 
         /// </summary>
-        static int ReadVarint32(this Stream stream)
+        /// <param name="stream">
+        ///   A varint encoded <see cref="Stream"/>.
+        /// </param>
+        /// <exception cref="InvalidDataException">
+        ///   When the varint value is greater than <see cref="Int32.MaxValue"/>.
+        /// </exception>
+        /// <returns>The integer value.</returns>
+        public static int ReadVarint32(this Stream stream)
         {
             var value = stream.ReadVarint64();
             if (value > int.MaxValue)
@@ -116,7 +138,14 @@ namespace Ipfs
         /// <summary>
         ///   Reads a variable integer from the stream. 
         /// </summary>
-        static long ReadVarint64(this Stream stream)
+        /// <param name="stream">
+        ///   A varint encoded <see cref="Stream"/>.
+        /// </param>
+        /// <exception cref="InvalidDataException">
+        ///   When the varint value is greater than <see cref="Int64.MaxValue"/>.
+        /// </exception>
+        /// <returns>The integer value.</returns>
+        public static long ReadVarint64(this Stream stream)
         {
             long value = 0;
             int shift = 0;
