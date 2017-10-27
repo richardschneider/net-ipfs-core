@@ -71,33 +71,52 @@
             <article class="content wrap" id="_content" data-uid="Ipfs.HexString">
   
   
-  <h1 id="Ipfs_HexString" data-uid="Ipfs.HexString">Class HexString
+  <h1 id="Ipfs_HexString" data-uid="Ipfs.HexString" class="text-break">Class HexString
   </h1>
   <div class="markdown level0 summary"><p>A codec for <a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level1"><span class="xref">HexString</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.html">Ipfs</a></h6>
+  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+  <h5 id="Ipfs_HexString_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class HexString</code></pre>
+  </div>
+  <h5 id="Ipfs_HexString_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
 A codec for a hexadecimal string, <a class="xref" href="Ipfs.HexString.html#Ipfs_HexString_Encode_System_Byte___System_String_">Encode(Byte[], String)</a> and <a class="xref" href="Ipfs.HexString.html#Ipfs_HexString_Decode_System_String_">Decode(String)</a>.  Adds the extension method <a class="xref" href="Ipfs.HexString.html#Ipfs_HexString_ToHexString_System_Byte___System_String_">ToHexString(Byte[], String)</a>
 to encode a byte array and <a class="xref" href="Ipfs.HexString.html#Ipfs_HexString_ToHexBuffer_System_String_">ToHexBuffer(String)</a> to decode a hexadecimal <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>.
 </p>
 </div>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class HexString</code></pre>
-  </div>
-
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-      <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
-      <div class="level"><span class="xref"></span></div>
-  </div>
-  
-  <h6><strong>Namespace</strong>: System.Dynamic.ExpandoObject</h6>
-  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
-  
-
-  
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -109,37 +128,48 @@ to encode a byte array and <a class="xref" href="Ipfs.HexString.html#Ipfs_HexStr
   </span>
   <a id="Ipfs_HexString_Decode_" data-uid="Ipfs.HexString.Decode*"></a>
   <h4 id="Ipfs_HexString_Decode_System_String_" data-uid="Ipfs.HexString.Decode(System.String)">Decode(String)</h4>
-  
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, which encodes binary data as hexadecimal digits, 
 to an equivalent 8-bit unsigned integer array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <div class="markdown level1 remarks"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static byte[] Decode(string s)</code></pre>
   </div>
-
   <h5 class="parameters">Parameters</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <span class="parametername">s</span>
-      <p>The hexadecimal string to convert.</p>
-
-  </div>
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The hexadecimal string to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-      <p>An array of 8-bit unsigned integers that is equivalent to <code data-dev-comment-type="paramref" class="paramref">s</code>.</p>
-
-  </div>
-  
-  
-  
-  
-  
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><p>An array of 8-bit unsigned integers that is equivalent to <code data-dev-comment-type="paramref" class="paramref">s</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_HexString_Encode_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20Ipfs.HexString.Encode(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -149,43 +179,54 @@ to an equivalent 8-bit unsigned integer array.</p>
   </span>
   <a id="Ipfs_HexString_Encode_" data-uid="Ipfs.HexString.Encode*"></a>
   <h4 id="Ipfs_HexString_Encode_System_Byte___System_String_" data-uid="Ipfs.HexString.Encode(System.Byte[],System.String)">Encode(Byte[], String)</h4>
-  
   <div class="markdown level1 summary"><p>Converts an array of 8-bit unsigned integers to its equivalent hexadecimal string representation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <div class="markdown level1 remarks"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string Encode(byte[] buffer, string format = &quot;G&quot;)</code></pre>
   </div>
-
   <h5 class="parameters">Parameters</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-      <span class="parametername">buffer</span>
-      <p>An array of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>.</p>
-
-  </div>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <span class="parametername">format</span>
-      <p>One of the format specifiers (&quot;G&quot; and &quot;x&quot; for lower-case hex digits, or &quot;X&quot; for the upper-case).
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>An array of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>One of the format specifiers (&quot;G&quot; and &quot;x&quot; for lower-case hex digits, or &quot;X&quot; for the upper-case).
 The default is &quot;G&quot;.</p>
-
-  </div>
-  
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <p>The string representation, in hexadecimal, of the contents of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.  </p>
-
-  </div>
-  
-  
-  
-  
-  
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><p>The string representation, in hexadecimal, of the contents of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.  </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_HexString_ToHexBuffer_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.HexString.ToHexBuffer(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -195,37 +236,48 @@ The default is &quot;G&quot;.</p>
   </span>
   <a id="Ipfs_HexString_ToHexBuffer_" data-uid="Ipfs.HexString.ToHexBuffer*"></a>
   <h4 id="Ipfs_HexString_ToHexBuffer_System_String_" data-uid="Ipfs.HexString.ToHexBuffer(System.String)">ToHexBuffer(String)</h4>
-  
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, which encodes binary data as a hexadecimal string, 
 to an equivalent 8-bit unsigned integer array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <div class="markdown level1 remarks"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static byte[] ToHexBuffer(this string s)</code></pre>
   </div>
-
   <h5 class="parameters">Parameters</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <span class="parametername">s</span>
-      <p>The hexadecimal string to convert.</p>
-
-  </div>
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The hexadecimal string to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-      <p>An array of 8-bit unsigned integers that is equivalent to <code data-dev-comment-type="paramref" class="paramref">s</code>.</p>
-
-  </div>
-  
-  
-  
-  
-  
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><p>An array of 8-bit unsigned integers that is equivalent to <code data-dev-comment-type="paramref" class="paramref">s</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_HexString_ToHexString_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20Ipfs.HexString.ToHexString(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -235,43 +287,54 @@ to an equivalent 8-bit unsigned integer array.</p>
   </span>
   <a id="Ipfs_HexString_ToHexString_" data-uid="Ipfs.HexString.ToHexString*"></a>
   <h4 id="Ipfs_HexString_ToHexString_System_Byte___System_String_" data-uid="Ipfs.HexString.ToHexString(System.Byte[],System.String)">ToHexString(Byte[], String)</h4>
-  
   <div class="markdown level1 summary"><p>Converts an array of 8-bit unsigned integers to its equivalent hexadecimal string representation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <div class="markdown level1 remarks"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string ToHexString(this byte[] buffer, string format = &quot;G&quot;)</code></pre>
   </div>
-
   <h5 class="parameters">Parameters</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]
-      <span class="parametername">buffer</span>
-      <p>An array of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>.</p>
-
-  </div>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <span class="parametername">format</span>
-      <p>One of the format specifiers (&quot;G&quot; and &quot;x&quot; for lower-case hex digits, or &quot;X&quot; for the upper-case).
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>An array of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>One of the format specifiers (&quot;G&quot; and &quot;x&quot; for lower-case hex digits, or &quot;X&quot; for the upper-case).
 The default is &quot;G&quot;.</p>
-
-  </div>
-  
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
-  <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
-      <p>The string representation, in hexadecimal, of the contents of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.</p>
-
-  </div>
-  
-  
-  
-  
-  
-  
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><p>The string representation, in hexadecimal, of the contents of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
