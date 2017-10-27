@@ -9,11 +9,11 @@ branches:
 
 for:
 -
-  branches:
+   branches:
     only:
       - master
 
-  environment:
+   environment:
     snk_secret:
       secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
     git_token:
