@@ -13,10 +13,10 @@ for:
       secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
     git_token:
       secure: NeX5NCOUXsCLc1UjTJjqB9F02FZ8Wq0VsxqTXC8kBdyK6zjxjebrf/9Da2sY1Kql
+
 - 
   branches:
-  # blacklist
-  except:
+   except:
     - gh-pages
 
 configuration: Release
