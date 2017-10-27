@@ -1227,6 +1227,30 @@ references:
   commentId: Overload:Ipfs.Varint.Encode
   fullName: Ipfs.Varint.Encode
   nameWithType: Varint.Encode
+- uid: Ipfs.Varint.ReadVarint32(System.IO.Stream)
+  name: ReadVarint32(Stream)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint32_System_IO_Stream_
+  commentId: M:Ipfs.Varint.ReadVarint32(System.IO.Stream)
+  fullName: Ipfs.Varint.ReadVarint32(System.IO.Stream)
+  nameWithType: Varint.ReadVarint32(Stream)
+- uid: Ipfs.Varint.ReadVarint32*
+  name: ReadVarint32
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint32_
+  commentId: Overload:Ipfs.Varint.ReadVarint32
+  fullName: Ipfs.Varint.ReadVarint32
+  nameWithType: Varint.ReadVarint32
+- uid: Ipfs.Varint.ReadVarint64(System.IO.Stream)
+  name: ReadVarint64(Stream)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint64_System_IO_Stream_
+  commentId: M:Ipfs.Varint.ReadVarint64(System.IO.Stream)
+  fullName: Ipfs.Varint.ReadVarint64(System.IO.Stream)
+  nameWithType: Varint.ReadVarint64(Stream)
+- uid: Ipfs.Varint.ReadVarint64*
+  name: ReadVarint64
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint64_
+  commentId: Overload:Ipfs.Varint.ReadVarint64
+  fullName: Ipfs.Varint.ReadVarint64
+  nameWithType: Varint.ReadVarint64
 - uid: Ipfs.Varint.RequiredBytes(System.Int64)
   name: RequiredBytes(Int64)
   href: api/Ipfs.Varint.html#Ipfs_Varint_RequiredBytes_System_Int64_
