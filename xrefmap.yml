@@ -948,15 +948,15 @@ references:
   commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.Name
   fullName: Ipfs.MultiHash.HashingAlgorithm.Name
   nameWithType: MultiHash.HashingAlgorithm.Name
-- uid: Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Byte,System.Byte,System.Func{System.Security.Cryptography.HashAlgorithm})
-  name: Register(String, Byte, Byte, Func<HashAlgorithm>)
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_System_String_System_Byte_System_Byte_System_Func_System_Security_Cryptography_HashAlgorithm__
-  commentId: M:Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Byte,System.Byte,System.Func{System.Security.Cryptography.HashAlgorithm})
-  name.vb: Register(String, Byte, Byte, Func(Of HashAlgorithm))
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Byte, System.Byte, System.Func<System.Security.Cryptography.HashAlgorithm>)
-  fullName.vb: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Byte, System.Byte, System.Func(Of System.Security.Cryptography.HashAlgorithm))
-  nameWithType: MultiHash.HashingAlgorithm.Register(String, Byte, Byte, Func<HashAlgorithm>)
-  nameWithType.vb: MultiHash.HashingAlgorithm.Register(String, Byte, Byte, Func(Of HashAlgorithm))
+- uid: Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
+  name: Register(String, Int32, Int32, Func<HashAlgorithm>)
+  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__
+  commentId: M:Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
+  name.vb: Register(String, Int32, Int32, Func(Of HashAlgorithm))
+  fullName: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func<System.Security.Cryptography.HashAlgorithm>)
+  fullName.vb: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func(Of System.Security.Cryptography.HashAlgorithm))
+  nameWithType: MultiHash.HashingAlgorithm.Register(String, Int32, Int32, Func<HashAlgorithm>)
+  nameWithType.vb: MultiHash.HashingAlgorithm.Register(String, Int32, Int32, Func(Of HashAlgorithm))
 - uid: Ipfs.MultiHash.HashingAlgorithm.Register*
   name: Register
   href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_
