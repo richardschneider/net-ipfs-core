@@ -202,5 +202,22 @@ namespace Ipfs
             Assert.AreEqual(hash, mh.ToString());
         } 
 
+        [TestMethod]
+        public void Varint_Hash_Code_and_Length()
+        {
+            var concise = "1220f8c3bf62a9aa3e6fc1619c250e48abe7519373d3edf41be62eb5dc45199af2ef"
+                .ToHexBuffer();
+            var mh = new MultiHash(new MemoryStream(concise, false));
+            Assert.AreEqual("sha2-256", mh.Algorithm.Name);
+            Assert.AreEqual(0x12, mh.Algorithm.Code);
+            Assert.AreEqual(0x20, mh.Algorithm.DigestSize);
+
+            var longer = "9200a000f8c3bf62a9aa3e6fc1619c250e48abe7519373d3edf41be62eb5dc45199af2ef"
+                .ToHexBuffer();
+            mh = new MultiHash(new MemoryStream(longer, false));
+            Assert.AreEqual("sha2-256", mh.Algorithm.Name);
+            Assert.AreEqual(0x12, mh.Algorithm.Code);
+            Assert.AreEqual(0x20, mh.Algorithm.DigestSize);
+        }
     }
 }

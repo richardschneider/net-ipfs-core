@@ -24,7 +24,7 @@ namespace Ipfs
         public class HashingAlgorithm
         {
             internal static Dictionary<string, HashingAlgorithm> Names = new Dictionary<string, HashingAlgorithm>();
-            internal static HashingAlgorithm[] Codes = new HashingAlgorithm[0x100];
+            internal static Dictionary<int, HashingAlgorithm> Codes = new Dictionary<int, HashingAlgorithm>();
 
             /// <summary>
             ///   The name of the algorithm.
@@ -35,15 +35,14 @@ namespace Ipfs
             ///   The IPFS number assigned to the hashing algorithm.
             /// </summary>
             /// <remarks>
-            ///   0x00-0x0f reserved for application specific functions. <br/>
-            ///   0x10-0x3f reserved for SHA standard functions.
+            ///   Valid hash codes at <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</see>.
             /// </remarks>
-            public byte Code { get; private set; }
+            public int Code { get; private set; }
 
             /// <summary>
             ///   The size, in bytes, of the digest value.
             /// </summary>
-            public byte DigestSize { get; private set; }
+            public int DigestSize { get; private set; }
 
             /// <summary>
             ///   Returns a cryptographic hash algorithm that can compute
@@ -79,19 +78,19 @@ namespace Ipfs
             ///   The size, in bytes, of the digest value.
             /// </param>
             /// <param name="hasher">
-            ///   A <c>Func</c> that a <see cref="HashAlgorithm"/>.  If not specified, then a <c>Func</c> is created to
-            ///   return a <see cref="NotImplementedException"/>.
+            ///   A <c>Func</c> that returns a <see cref="HashAlgorithm"/>.  If not specified, then a <c>Func</c> is created to
+            ///   throw a <see cref="NotImplementedException"/>.
             /// </param>
             /// <returns>
             ///   A new <see cref="HashingAlgorithm"/>.
             /// </returns>
-            public static HashingAlgorithm Register(string name, byte code, byte digestSize, Func<HashAlgorithm> hasher = null)
+            public static HashingAlgorithm Register(string name, int code, int digestSize, Func<HashAlgorithm> hasher = null)
             {
                 if (string.IsNullOrWhiteSpace(name))
                     throw new ArgumentNullException("name");
                 if (Names.ContainsKey(name))
                     throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is already defined.", name));
-                if (Codes[code] != null)
+                if (Codes.ContainsKey(code))
                     throw new ArgumentException(string.Format("The IPFS hashing algorithm code 0x{0:x2} is already defined.", code));
                 if (hasher == null)
                     hasher = () => { throw new NotImplementedException(string.Format("The IPFS hashing algorithm '{0}' is not implemented.", name)); };
@@ -193,8 +192,8 @@ namespace Ipfs
         /// <remarks>
         ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
         ///   <para>
-        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
-        ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
         ///   <para>
         ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
@@ -220,8 +219,8 @@ namespace Ipfs
         /// <remarks>
         ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
         ///   <para>
-        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
-        ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
         ///   <para>
         ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
@@ -296,15 +295,15 @@ namespace Ipfs
         ///   The <see cref="CodedOutputStream"/> to write to.
         /// </param>
         /// <remarks>
-        ///   The binary representation is a 1-byte <see cref="HashingAlgorithm.Code"/>,
-        ///   1-byte <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         /// </remarks>
         public void Write(CodedOutputStream stream)
         {
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            stream.WriteRawTag(Algorithm.Code);
+            stream.WriteInt32(Algorithm.Code);
             stream.WriteLength(Algorithm.DigestSize);
             stream.WriteSomeBytes(Digest);
         }
@@ -319,10 +318,11 @@ namespace Ipfs
 
         void Read(CodedInputStream stream)
         {
-            byte code = (byte) stream.ReadTag();
-            byte digestSize = (byte) stream.ReadLength();
+            var code = stream.ReadInt32();
+            var digestSize = stream.ReadLength();
 
-            Algorithm = HashingAlgorithm.Codes[code];
+            HashingAlgorithm.Codes.TryGetValue(code, out HashingAlgorithm a);
+            Algorithm = a;
             if (Algorithm == null)
             {
                 Algorithm = HashingAlgorithm.Register("ipfs-" + code, code, digestSize);
