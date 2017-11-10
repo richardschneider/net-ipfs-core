@@ -27,8 +27,6 @@ namespace Ipfs
     /// <seealso href="https://github.com/jbenet/multiaddr"/>
     public class MultiAddress : IEquatable<MultiAddress>
     {
-        static readonly ILog log = LogManager.GetLogger<MultiAddress>();
-
         /// <summary>
         ///   Creates a new instance of the <see cref="MultiAddress"/> class.
         /// </summary>
