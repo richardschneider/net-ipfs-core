@@ -155,6 +155,11 @@ namespace Ipfs
                 "/ip4/1.2.3.4/tcp/80/utp",
                 "/onion/aaimaq4ygg2iegci:80",
                 "/onion/timaq4ygg2iegci7:80/http",
+                "/p2p-circuit/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC",
+                "/dns/ipfs.io",
+                "/dns4/ipfs.io",
+                "/dns6/ipfs.io",
+                "/dns4/wss0.bootstrap.libp2p.io/tcp/443/wss/ipfs/QmZMxNdpMkewiVZLMRxaNxUeZpDUb34pWjZ1kZvsd16Zic",
             };
             foreach (var a in addresses)
             {

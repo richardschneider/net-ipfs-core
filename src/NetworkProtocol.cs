@@ -41,6 +41,10 @@ namespace Ipfs
             NetworkProtocol.Register<OnionNetworkProtocol>();
             NetworkProtocol.Register<Libp2pWebrtcDirectNetworkProtocol>();
             NetworkProtocol.Register<P2pCircuitNetworkProtocol>();
+            NetworkProtocol.Register<DnsNetworkProtocol>();
+            NetworkProtocol.Register<Dns4NetworkProtocol>();
+            NetworkProtocol.Register<Dns6NetworkProtocol>();
+            NetworkProtocol.Register<WssNetworkProtocol>();
         }
 
         /// <summary>
@@ -365,6 +369,12 @@ namespace Ipfs
         public override uint Code { get { return 477; } }
     }
 
+    class WssNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "wss"; } }
+        public override uint Code { get { return 478; } }
+    }
+
     class Libp2pWebrtcStarNetworkProtocol : ValuelessNetworkProtocol
     {
         public override string Name { get { return "libp2p-webrtc-star"; } }
@@ -393,5 +403,48 @@ namespace Ipfs
     {
         public override string Name { get { return "p2p-circuit"; } }
         public override uint Code { get { return 290; } }
+    }
+
+    abstract class DomainNameNetworkProtocol : NetworkProtocol
+    {
+        public string DomainName { get; set; }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            DomainName = Value;
+        }
+        public override void ReadValue(CodedInputStream stream)
+        {
+            Value = stream.ReadString();
+            DomainName = Value;
+        }
+
+        public override void WriteValue(TextWriter stream)
+        {
+            stream.Write('/');
+            stream.Write(DomainName.ToString());
+        }
+        public override void WriteValue(CodedOutputStream stream)
+        {
+            stream.WriteString(DomainName);
+        }
+    }
+
+    class DnsNetworkProtocol : DomainNameNetworkProtocol
+    {
+        public override string Name { get { return "dns"; } }
+        public override uint Code { get { return 53; } }
+    }
+
+    class Dns4NetworkProtocol : DomainNameNetworkProtocol
+    {
+        public override string Name { get { return "dns4"; } }
+        public override uint Code { get { return 54; } }
+    }
+
+    class Dns6NetworkProtocol : DomainNameNetworkProtocol
+    {
+        public override string Name { get { return "dns6"; } }
+        public override uint Code { get { return 55; } }
     }
 }
