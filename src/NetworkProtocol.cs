@@ -39,6 +39,8 @@ namespace Ipfs
             NetworkProtocol.Register<UdtNetworkProtocol>();
             NetworkProtocol.Register<UtpNetworkProtocol>();
             NetworkProtocol.Register<OnionNetworkProtocol>();
+            NetworkProtocol.Register<Libp2pWebrtcDirectNetworkProtocol>();
+            NetworkProtocol.Register<P2pCircuitNetworkProtocol>();
         }
 
         /// <summary>
@@ -369,6 +371,12 @@ namespace Ipfs
         public override uint Code { get { return 275; } }
     }
 
+    class Libp2pWebrtcDirectNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "libp2p-webrtc-direct"; } }
+        public override uint Code { get { return 276; } }
+    }
+
     class UdtNetworkProtocol : ValuelessNetworkProtocol
     {
         public override string Name { get { return "udt"; } }
@@ -379,5 +387,11 @@ namespace Ipfs
     {
         public override string Name { get { return "utp"; } }
         public override uint Code { get { return 302; } }
+    }
+
+    class P2pCircuitNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "p2p-circuit"; } }
+        public override uint Code { get { return 290; } }
     }
 }
