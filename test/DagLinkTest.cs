@@ -59,5 +59,13 @@ namespace Ipfs
             Assert.AreEqual(encoded, link.ToArray().ToHexString());
         }
 
+        [TestMethod]
+        public void Null_Stream()
+        {
+            ExceptionAssert.Throws(() => new DagLink((CodedInputStream)null));
+            ExceptionAssert.Throws(() => new DagLink((Stream)null));
+        }
+
+
     }
 }
