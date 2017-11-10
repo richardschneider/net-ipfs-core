@@ -187,6 +187,13 @@ namespace Ipfs
             RoundtripTest(cnode);
         }
 
+        [TestMethod]
+        public void Null_Stream()
+        {
+            ExceptionAssert.Throws(() => new DagNode((CodedInputStream)null));
+            ExceptionAssert.Throws(() => new DagNode((Stream)null));
+        }
+
         void RoundtripTest(DagNode a)
         {
             var ms = new MemoryStream();
@@ -194,6 +201,7 @@ namespace Ipfs
             ms.Position = 0;
             var b = new DagNode(ms);
             CollectionAssert.AreEqual(a.DataBytes, b.DataBytes);
+            CollectionAssert.AreEqual(a.ToArray(), b.ToArray());
             Assert.AreEqual(a.Links.Count(), b.Links.Count());
             a.Links.Zip(b.Links, (first, second) =>
             {
@@ -202,6 +210,16 @@ namespace Ipfs
                 Assert.AreEqual(first.Size, second.Size);
                 return first;
             }).ToArray();
+
+            using (var first = a.DataStream)
+            using (var second = b.DataStream)
+            {
+                Assert.AreEqual(first.Length, second.Length);
+                for (int i = 0; i < first.Length; ++i)
+                {
+                    Assert.AreEqual(first.ReadByte(), second.ReadByte());
+                }
+            }
         }
     }
 }
