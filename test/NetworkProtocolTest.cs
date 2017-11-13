@@ -18,8 +18,6 @@ namespace Ipfs
             Assert.AreEqual("/tcp/8080", new MultiAddress("/tcp/8080").Protocols[0].ToString());
         }
 
-
-
         [TestMethod]
         public void Register_Name_Already_Exists()
         {

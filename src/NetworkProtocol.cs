@@ -44,6 +44,7 @@ namespace Ipfs
             NetworkProtocol.Register<DnsNetworkProtocol>();
             NetworkProtocol.Register<Dns4NetworkProtocol>();
             NetworkProtocol.Register<Dns6NetworkProtocol>();
+            NetworkProtocol.Register<DnsAddrNetworkProtocol>();
             NetworkProtocol.Register<WssNetworkProtocol>();
         }
 
@@ -446,5 +447,11 @@ namespace Ipfs
     {
         public override string Name { get { return "dns6"; } }
         public override uint Code { get { return 55; } }
+    }
+
+    class DnsAddrNetworkProtocol : DomainNameNetworkProtocol
+    {
+        public override string Name { get { return "dnsaddr"; } }
+        public override uint Code { get { return 12345; } }
     }
 }

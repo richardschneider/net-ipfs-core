@@ -160,6 +160,7 @@ namespace Ipfs
                 "/dns4/ipfs.io",
                 "/dns6/ipfs.io",
                 "/dns4/wss0.bootstrap.libp2p.io/tcp/443/wss/ipfs/QmZMxNdpMkewiVZLMRxaNxUeZpDUb34pWjZ1kZvsd16Zic",
+                "/dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
             };
             foreach (var a in addresses)
             {
