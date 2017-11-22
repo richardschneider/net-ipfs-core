@@ -18,7 +18,7 @@ namespace Ipfs
             var mh = new MultiHash("sha1", new byte[20]);
             mh = new MultiHash("sha2-256", new byte[32]);
             mh = new MultiHash("sha2-512", new byte[64]);
-            mh = new MultiHash("sha3-512", new byte[64]);
+            mh = new MultiHash("keccak-512", new byte[64]);
         }
 
         [TestMethod]
@@ -131,7 +131,7 @@ namespace Ipfs
             Assert.IsTrue(mh2.Matches(hello));
             Assert.IsFalse(mh2.Matches(hello1));
 
-            var mh3 = MultiHash.ComputeHash(hello, "sha3-512");
+            var mh3 = MultiHash.ComputeHash(hello, "keccak-512");
             Assert.IsTrue(mh3.Matches(hello));
             Assert.IsFalse(mh3.Matches(hello1));
         }

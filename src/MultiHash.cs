@@ -126,7 +126,10 @@ namespace Ipfs
             HashingAlgorithm.Register("sha1", 0x11, 20, () => SHA1.Create());
             HashingAlgorithm.Register("sha2-256", 0x12, 32, () => SHA256.Create());
             HashingAlgorithm.Register("sha2-512", 0x13, 64, () => SHA512.Create());
-            HashingAlgorithm.Register("sha3-512", 0x14, 64, () => { return new Ipfs.Cryptography.SHA3Managed(512); });
+            HashingAlgorithm.Register("keccak-224", 0x1A, 64, () => { return new Ipfs.Cryptography.KeccakManaged(224); });
+            HashingAlgorithm.Register("keccak-256", 0x1B, 64, () => { return new Ipfs.Cryptography.KeccakManaged(256); });
+            HashingAlgorithm.Register("keccak-384", 0x1C, 64, () => { return new Ipfs.Cryptography.KeccakManaged(384); });
+            HashingAlgorithm.Register("keccak-512", 0x1D, 64, () => { return new Ipfs.Cryptography.KeccakManaged(512); });
             HashingAlgorithm.Register("blake2b", 0x40, 64);
             HashingAlgorithm.Register("blake2s", 0x41, 32);
         }
@@ -145,7 +148,14 @@ namespace Ipfs
         /// </param>
         public static HashAlgorithm GetHashAlgorithm(string name = DefaultAlgorithmName)
         {
-            return HashingAlgorithm.Names[name].Hasher();
+            try
+            {
+                return HashingAlgorithm.Names[name].Hasher();
+            }
+            catch (KeyNotFoundException)
+            {
+                throw new KeyNotFoundException($"Hash algorithm '{name}' is not registered");
+            }
         }
 
 
