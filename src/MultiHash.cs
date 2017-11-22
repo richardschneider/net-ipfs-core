@@ -6,6 +6,8 @@ using System.IO;
 using System.Security.Cryptography;
 using Common.Logging;
 using Google.Protobuf;
+using Ipfs.Cryptography;
+using BC = Org.BouncyCastle.Crypto.Digests;
 
 namespace Ipfs
 {
@@ -126,10 +128,14 @@ namespace Ipfs
             HashingAlgorithm.Register("sha1", 0x11, 20, () => SHA1.Create());
             HashingAlgorithm.Register("sha2-256", 0x12, 32, () => SHA256.Create());
             HashingAlgorithm.Register("sha2-512", 0x13, 64, () => SHA512.Create());
-            HashingAlgorithm.Register("keccak-224", 0x1A, 64, () => { return new Ipfs.Cryptography.KeccakManaged(224); });
-            HashingAlgorithm.Register("keccak-256", 0x1B, 64, () => { return new Ipfs.Cryptography.KeccakManaged(256); });
-            HashingAlgorithm.Register("keccak-384", 0x1C, 64, () => { return new Ipfs.Cryptography.KeccakManaged(384); });
-            HashingAlgorithm.Register("keccak-512", 0x1D, 64, () => { return new Ipfs.Cryptography.KeccakManaged(512); });
+            HashingAlgorithm.Register("keccak-224", 0x1A, 224 / 8, () => new KeccakManaged(224));
+            HashingAlgorithm.Register("keccak-256", 0x1B, 256 / 8, () => new KeccakManaged(256));
+            HashingAlgorithm.Register("keccak-384", 0x1C, 384 / 8, () => new KeccakManaged(384));
+            HashingAlgorithm.Register("keccak-512", 0x1D, 512 / 8, () => new KeccakManaged(512));
+            HashingAlgorithm.Register("sha3-224", 0x17, 224 / 8, () => new BouncyDigest(new BC.Sha3Digest(224)));
+            HashingAlgorithm.Register("sha3-256", 0x16, 256 / 8, () => new BouncyDigest(new BC.Sha3Digest(256)));
+            HashingAlgorithm.Register("sha3-384", 0x15, 384 / 8, () => new BouncyDigest(new BC.Sha3Digest(384)));
+            HashingAlgorithm.Register("sha3-512", 0x14, 512 / 8, () => new BouncyDigest(new BC.Sha3Digest(512)));
             HashingAlgorithm.Register("blake2b", 0x40, 64);
             HashingAlgorithm.Register("blake2s", 0x41, 32);
         }

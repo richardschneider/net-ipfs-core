@@ -219,5 +219,26 @@ namespace Ipfs
             Assert.AreEqual(0x12, mh.Algorithm.Code);
             Assert.AreEqual(0x20, mh.Algorithm.DigestSize);
         }
+
+        [TestMethod]
+        public void Compute_Hash_All_Algorithms()
+        {
+            foreach (var alg in MultiHash.HashingAlgorithm.All)
+            {
+                try
+                {
+                    var mh = MultiHash.ComputeHash(new byte[0], alg.Name);
+                    Assert.IsNotNull(mh, alg.Name);
+                    Assert.AreEqual(alg.Code, mh.Algorithm.Code, alg.Name);
+                    Assert.AreEqual(alg.Name, mh.Algorithm.Name, alg.Name);
+                    Assert.AreEqual(alg.DigestSize, alg.DigestSize, alg.Name);
+                    Assert.AreEqual(alg.DigestSize, mh.Digest.Length, alg.Name);
+                }
+                catch (NotImplementedException)
+                {
+                    // If NYI then can't test it.
+                }
+            }
+        }
     }
 }

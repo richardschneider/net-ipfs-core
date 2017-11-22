@@ -26,15 +26,20 @@ namespace Ipfs.Cryptography
             },
 
             // From https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program/Secure-Hashing#sha3vsha3vss
-            //new TestVector {
-            //    Algorithm = "sha3-512",
-            //    Input = "37d518",
-            //    Digest = "4aa96b1547e6402c0eee781acaa660797efe26ec00b4f2e0aec4a6d10688dd64cbd7f12b3b6c7f802e2096c041208b9289aec380d1a748fdfcd4128553d781e3"
-            //},
+            new TestVector {
+                Algorithm = "sha3-512",
+                Input = "",
+                Digest = "a69f73cca23a9ac5c8b567dc185a756e97c982164fe25859e0d1dcc1475c80a615b2123af1f5f94c11e3e9402c3ac558f500199d95b6d3e301758586281dcd26"
+            },
+            new TestVector {
+                Algorithm = "sha3-512",
+                Input = "37d518",
+                Digest = "4aa96b1547e6402c0eee781acaa660797efe26ec00b4f2e0aec4a6d10688dd64cbd7f12b3b6c7f802e2096c041208b9289aec380d1a748fdfcd4128553d781e3"
+            },
         };
 
         /// <summary>
-        ///   Test vectors for SHA-3 from various sources.
+        ///   Test vectors from various sources.
         /// </summary>
         [TestMethod]
         public void CheckHashes()
@@ -44,7 +49,7 @@ namespace Ipfs.Cryptography
                 var actual = MultiHash
                     .GetHashAlgorithm(v.Algorithm)
                     .ComputeHash(v.Input.ToHexBuffer());
-                Assert.AreEqual(v.Digest, actual.ToHexString(), v.Algorithm);
+                Assert.AreEqual(v.Digest, actual.ToHexString(), $"{v.Algorithm} for '{v.Input}'");
             }
         }
     }
