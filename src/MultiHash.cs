@@ -136,6 +136,8 @@ namespace Ipfs
             HashingAlgorithm.Register("sha3-256", 0x16, 256 / 8, () => new BouncyDigest(new BC.Sha3Digest(256)));
             HashingAlgorithm.Register("sha3-384", 0x15, 384 / 8, () => new BouncyDigest(new BC.Sha3Digest(384)));
             HashingAlgorithm.Register("sha3-512", 0x14, 512 / 8, () => new BouncyDigest(new BC.Sha3Digest(512)));
+            HashingAlgorithm.Register("shake-128", 0x18, 128 / 8, () => new BouncyDigest(new BC.ShakeDigest(128)));
+            HashingAlgorithm.Register("shake-256", 0x19, 256 / 8, () => new BouncyDigest(new BC.ShakeDigest(256)));
             HashingAlgorithm.Register("blake2b", 0x40, 64);
             HashingAlgorithm.Register("blake2s", 0x41, 32);
         }
