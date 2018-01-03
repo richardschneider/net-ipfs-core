@@ -996,6 +996,24 @@ references:
   commentId: Overload:Ipfs.MultiHash.Matches
   fullName: Ipfs.MultiHash.Matches
   nameWithType: MultiHash.Matches
+- uid: Ipfs.MultiHash.op_Implicit(System.String)~Ipfs.MultiHash
+  name: Implicit(String to MultiHash)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Implicit_System_String__Ipfs_MultiHash
+  commentId: M:Ipfs.MultiHash.op_Implicit(System.String)~Ipfs.MultiHash
+  name.vb: Widening(String to MultiHash)
+  fullName: Ipfs.MultiHash.Implicit(System.String to Ipfs.MultiHash)
+  fullName.vb: Ipfs.MultiHash.Widening(System.String to Ipfs.MultiHash)
+  nameWithType: MultiHash.Implicit(String to MultiHash)
+  nameWithType.vb: MultiHash.Widening(String to MultiHash)
+- uid: Ipfs.MultiHash.op_Implicit*
+  name: Implicit
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Implicit_
+  commentId: Overload:Ipfs.MultiHash.op_Implicit
+  name.vb: Widening
+  fullName: Ipfs.MultiHash.Implicit
+  fullName.vb: Ipfs.MultiHash.Widening
+  nameWithType: MultiHash.Implicit
+  nameWithType.vb: MultiHash.Widening
 - uid: Ipfs.MultiHash.ToArray
   name: ToArray()
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToArray
