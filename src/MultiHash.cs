@@ -279,6 +279,23 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Implicit casting of a <see cref="string"/> to a <see cref="MultiHash"/>.
+        /// </summary>
+        /// <param name="s">
+        ///   A <see cref="Base58"/> encoded <b>MultiHash</b>.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="MultiHash"/>.
+        /// </returns>
+        /// <remarks>
+        ///    Equivalent to <code>new MultiHash(s)</code>
+        /// </remarks>
+        static public implicit operator MultiHash(string s)
+        {
+            return new MultiHash(s);
+        }
+
+        /// <summary>
         ///   The hashing algorithm.
         /// </summary>
         public HashingAlgorithm Algorithm { get; private set; }
@@ -456,10 +473,10 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   Generate the multihash for the specified data. 
+        ///   Generate the multihash for the specified byte array. 
         /// </summary>
         /// <param name="data">
-        ///   The <see cref="Stream"/> containing the data to hash.
+        ///   The byte array containing the data to hash.
         /// </param>
         /// <param name="algorithmName">
         ///   The name of the hashing algorithm to use; defaults to <see cref="DefaultAlgorithmName"/>.
@@ -473,7 +490,7 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   Generate the multihash for the specified data. 
+        ///   Generate the multihash for the specified <see cref="Stream"/>. 
         /// </summary>
         /// <param name="data">
         ///   The <see cref="Stream"/> containing the data to hash.

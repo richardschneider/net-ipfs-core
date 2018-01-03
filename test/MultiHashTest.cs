@@ -200,7 +200,17 @@ namespace Ipfs
             var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
             var mh = new MultiHash(hash);
             Assert.AreEqual(hash, mh.ToString());
-        } 
+        }
+
+        [TestMethod]
+        public void Implicit_Conversion_From_String()
+        {
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            MultiHash mh = hash;
+            Assert.IsNotNull(mh);
+            Assert.IsInstanceOfType(mh, typeof(MultiHash));
+            Assert.AreEqual(hash, mh.ToString());
+        }
 
         [TestMethod]
         public void Varint_Hash_Code_and_Length()
