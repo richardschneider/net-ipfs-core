@@ -16,7 +16,7 @@ namespace Ipfs
     ///   addressing size + encoding considerations.
     /// </summary>
     /// <seealso href="https://github.com/jbenet/multihash"/>
-    public class MultiHash
+    public class MultiHash : IEquatable<MultiHash>
     {
         static readonly ILog log = LogManager.GetLogger<MultiHash>();
 
@@ -369,6 +369,51 @@ namespace Ipfs
             }
 
             Digest = stream.ReadSomeBytes(digestSize);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as MultiHash;
+            return (that == null)
+                ? false
+                : this.ToString() == that.ToString();
+        }
+
+        /// <inheritdoc />
+        public bool Equals(MultiHash that)
+        {
+            return this.ToString() == that.ToString();
+        }
+
+        /// <summary>
+        ///   Value equality.
+        /// </summary>
+        public static bool operator ==(MultiHash a, MultiHash b)
+        {
+            if (object.ReferenceEquals(a, b)) return true;
+            if (object.ReferenceEquals(a, null)) return false;
+            if (object.ReferenceEquals(b, null)) return false;
+
+            return a.Equals(b);
+        }
+
+        /// <summary>
+        ///   Value inequality.
+        /// </summary>
+        public static bool operator !=(MultiHash a, MultiHash b)
+        {
+            if (object.ReferenceEquals(a, b)) return false;
+            if (object.ReferenceEquals(a, null)) return true;
+            if (object.ReferenceEquals(b, null)) return true;
+
+            return !a.Equals(b);
         }
 
         /// <summary>
