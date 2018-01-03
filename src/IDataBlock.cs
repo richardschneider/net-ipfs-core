@@ -44,12 +44,12 @@ namespace Ipfs
         Stream DataStream { get; }
 
         /// <summary>
-        ///   The string representation of the <see cref="MultiHash"/>.
+        ///   The unique ID of the data.
         /// </summary>
         /// <value>
-        ///   The unique ID of the data.
+        ///   A <see cref="MultiHash"/> of the content.
         /// </value>
-        string Hash { get; }
+        MultiHash Hash { get; }
 
     }
 

@@ -17,7 +17,7 @@ namespace Ipfs
     /// </remarks>
     public class DagNode : IMerkleNode<IMerkleLink>
     {
-        string hash;
+        MultiHash hash;
         string hashAlgorithm;
         long? size;
 
@@ -37,9 +37,9 @@ namespace Ipfs
         /// </param>
         public DagNode(byte[] data, IEnumerable<IMerkleLink> links = null, string hashAlgorithm = MultiHash.DefaultAlgorithmName)
         {
-            this.DataBytes = data == null ? new byte[0] : data;
-            this.Links = (links == null ? new DagLink[0] : links)
-                .OrderBy(link => link.Name == null ? "" : link.Name);
+            this.DataBytes = data ?? (new byte[0]);
+            this.Links = (links ?? (new DagLink[0]))
+                .OrderBy(link => link.Name ?? "");
             this.hashAlgorithm = hashAlgorithm;
         }
 
@@ -100,7 +100,7 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
-        public string Hash
+        public MultiHash Hash
         {
             get
             {
@@ -306,7 +306,7 @@ namespace Ipfs
                 Write(ms);
                 size = ms.Position;
                 ms.Position = 0;
-                hash = MultiHash.ComputeHash(ms, hashAlgorithm).ToBase58();
+                hash = MultiHash.ComputeHash(ms, hashAlgorithm);
             }
         }
     }

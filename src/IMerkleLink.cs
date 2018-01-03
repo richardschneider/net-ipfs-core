@@ -21,12 +21,12 @@ namespace Ipfs
         string Name { get; }
 
         /// <summary>
-        ///   The string representation of the <see cref="MultiHash"/> of the linked node.
+        ///   The unique ID of the link.
         /// </summary>
         /// <value>
-        ///   The unique ID of the linked node.
+        ///   A <see cref="MultiHash"/> of the content.
         /// </value>
-        string Hash { get; }
+        MultiHash Hash { get; }
 
         /// <summary>
         ///   The serialised size (in bytes) of the linked node.

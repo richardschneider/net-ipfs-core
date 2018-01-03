@@ -18,9 +18,9 @@ namespace Ipfs
         ///   Create a new instance of <see cref="DagLink"/> class.
         /// </summary>
         /// <param name="name">The name associated with the linked node.</param>
-        /// <param name="hash">The string representation of the <see cref="MultiHash"/> of the linked node.</param>
+        /// <param name="hash">The <see cref="MultiHash"/> of the linked node.</param>
         /// <param name="size">The serialised size (in bytes) of the linked node.</param>
-        public DagLink(string name, string hash, long size)
+        public DagLink(string name, MultiHash hash, long size)
         {
             this.Name = name;
             this.Hash = hash;
@@ -71,7 +71,7 @@ namespace Ipfs
         public string Name { get; private set; }
 
         /// <inheritdoc />
-        public string Hash { get; private set; }
+        public MultiHash Hash { get; private set; }
 
         /// <inheritdoc />
         public long Size { get; private set; }
@@ -102,9 +102,8 @@ namespace Ipfs
                 throw new ArgumentNullException("stream");
 
             stream.WriteTag(1, WireFormat.WireType.LengthDelimited);
-            var mh = new MultiHash(Hash);
-            stream.WriteLength(mh.Algorithm.DigestSize + 2); // + 2 bytes for digest size
-            mh.Write(stream);
+            stream.WriteLength(Hash.Algorithm.DigestSize + 2); // + 2 bytes for digest size
+            Hash.Write(stream);
 
             if (Name != null)
             {
@@ -134,7 +133,7 @@ namespace Ipfs
                     case 1:
                         using (var ms = new MemoryStream(stream.ReadSomeBytes(stream.ReadLength())))
                         {
-                            Hash = new MultiHash(ms).ToBase58();
+                            Hash = new MultiHash(ms);
                         }
                         break;
                     case 2:
