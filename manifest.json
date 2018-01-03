@@ -161,6 +161,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Peer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Peer.html",
+          "hash": "o5eq92el+YMmTpAgr6dntg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.UnknownHashingAlgorithmEventArgs.yml",
       "output": {
         ".html": {
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.html",
-          "hash": "j5xeeTVR3ide/1UMqnAYaw=="
+          "hash": "TIjDYKNyHZZir+CsPKo6zw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "wPHMnQ7irPffdVWfc1Maqg=="
+          "hash": "obCepAwgiiw62NvNSoDfoA=="
         }
       },
       "is_incremental": false,

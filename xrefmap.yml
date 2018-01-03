@@ -1233,6 +1233,168 @@ references:
   commentId: Overload:Ipfs.NetworkProtocol.WriteValue
   fullName: Ipfs.NetworkProtocol.WriteValue
   nameWithType: NetworkProtocol.WriteValue
+- uid: Ipfs.Peer
+  name: Peer
+  href: api/Ipfs.Peer.html
+  commentId: T:Ipfs.Peer
+  fullName: Ipfs.Peer
+  nameWithType: Peer
+- uid: Ipfs.Peer.Addresses
+  name: Addresses
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Addresses
+  commentId: P:Ipfs.Peer.Addresses
+  fullName: Ipfs.Peer.Addresses
+  nameWithType: Peer.Addresses
+- uid: Ipfs.Peer.Addresses*
+  name: Addresses
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Addresses_
+  commentId: Overload:Ipfs.Peer.Addresses
+  fullName: Ipfs.Peer.Addresses
+  nameWithType: Peer.Addresses
+- uid: Ipfs.Peer.AgentVersion
+  name: AgentVersion
+  href: api/Ipfs.Peer.html#Ipfs_Peer_AgentVersion
+  commentId: P:Ipfs.Peer.AgentVersion
+  fullName: Ipfs.Peer.AgentVersion
+  nameWithType: Peer.AgentVersion
+- uid: Ipfs.Peer.AgentVersion*
+  name: AgentVersion
+  href: api/Ipfs.Peer.html#Ipfs_Peer_AgentVersion_
+  commentId: Overload:Ipfs.Peer.AgentVersion
+  fullName: Ipfs.Peer.AgentVersion
+  nameWithType: Peer.AgentVersion
+- uid: Ipfs.Peer.Equals(Ipfs.Peer)
+  name: Equals(Peer)
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Equals_Ipfs_Peer_
+  commentId: M:Ipfs.Peer.Equals(Ipfs.Peer)
+  fullName: Ipfs.Peer.Equals(Ipfs.Peer)
+  nameWithType: Peer.Equals(Peer)
+- uid: Ipfs.Peer.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Equals_System_Object_
+  commentId: M:Ipfs.Peer.Equals(System.Object)
+  fullName: Ipfs.Peer.Equals(System.Object)
+  nameWithType: Peer.Equals(Object)
+- uid: Ipfs.Peer.Equals*
+  name: Equals
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Equals_
+  commentId: Overload:Ipfs.Peer.Equals
+  fullName: Ipfs.Peer.Equals
+  nameWithType: Peer.Equals
+- uid: Ipfs.Peer.GetHashCode
+  name: GetHashCode()
+  href: api/Ipfs.Peer.html#Ipfs_Peer_GetHashCode
+  commentId: M:Ipfs.Peer.GetHashCode
+  fullName: Ipfs.Peer.GetHashCode()
+  nameWithType: Peer.GetHashCode()
+- uid: Ipfs.Peer.GetHashCode*
+  name: GetHashCode
+  href: api/Ipfs.Peer.html#Ipfs_Peer_GetHashCode_
+  commentId: Overload:Ipfs.Peer.GetHashCode
+  fullName: Ipfs.Peer.GetHashCode
+  nameWithType: Peer.GetHashCode
+- uid: Ipfs.Peer.Id
+  name: Id
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Id
+  commentId: P:Ipfs.Peer.Id
+  fullName: Ipfs.Peer.Id
+  nameWithType: Peer.Id
+- uid: Ipfs.Peer.Id*
+  name: Id
+  href: api/Ipfs.Peer.html#Ipfs_Peer_Id_
+  commentId: Overload:Ipfs.Peer.Id
+  fullName: Ipfs.Peer.Id
+  nameWithType: Peer.Id
+- uid: Ipfs.Peer.IsValid
+  name: IsValid()
+  href: api/Ipfs.Peer.html#Ipfs_Peer_IsValid
+  commentId: M:Ipfs.Peer.IsValid
+  fullName: Ipfs.Peer.IsValid()
+  nameWithType: Peer.IsValid()
+- uid: Ipfs.Peer.IsValid*
+  name: IsValid
+  href: api/Ipfs.Peer.html#Ipfs_Peer_IsValid_
+  commentId: Overload:Ipfs.Peer.IsValid
+  fullName: Ipfs.Peer.IsValid
+  nameWithType: Peer.IsValid
+- uid: Ipfs.Peer.op_Equality(Ipfs.Peer,Ipfs.Peer)
+  name: Equality(Peer, Peer)
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Equality_Ipfs_Peer_Ipfs_Peer_
+  commentId: M:Ipfs.Peer.op_Equality(Ipfs.Peer,Ipfs.Peer)
+  fullName: Ipfs.Peer.Equality(Ipfs.Peer, Ipfs.Peer)
+  nameWithType: Peer.Equality(Peer, Peer)
+- uid: Ipfs.Peer.op_Equality*
+  name: Equality
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Equality_
+  commentId: Overload:Ipfs.Peer.op_Equality
+  fullName: Ipfs.Peer.Equality
+  nameWithType: Peer.Equality
+- uid: Ipfs.Peer.op_Implicit(System.String)~Ipfs.Peer
+  name: Implicit(String to Peer)
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Implicit_System_String__Ipfs_Peer
+  commentId: M:Ipfs.Peer.op_Implicit(System.String)~Ipfs.Peer
+  name.vb: Widening(String to Peer)
+  fullName: Ipfs.Peer.Implicit(System.String to Ipfs.Peer)
+  fullName.vb: Ipfs.Peer.Widening(System.String to Ipfs.Peer)
+  nameWithType: Peer.Implicit(String to Peer)
+  nameWithType.vb: Peer.Widening(String to Peer)
+- uid: Ipfs.Peer.op_Implicit*
+  name: Implicit
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Implicit_
+  commentId: Overload:Ipfs.Peer.op_Implicit
+  name.vb: Widening
+  fullName: Ipfs.Peer.Implicit
+  fullName.vb: Ipfs.Peer.Widening
+  nameWithType: Peer.Implicit
+  nameWithType.vb: Peer.Widening
+- uid: Ipfs.Peer.op_Inequality(Ipfs.Peer,Ipfs.Peer)
+  name: Inequality(Peer, Peer)
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Inequality_Ipfs_Peer_Ipfs_Peer_
+  commentId: M:Ipfs.Peer.op_Inequality(Ipfs.Peer,Ipfs.Peer)
+  fullName: Ipfs.Peer.Inequality(Ipfs.Peer, Ipfs.Peer)
+  nameWithType: Peer.Inequality(Peer, Peer)
+- uid: Ipfs.Peer.op_Inequality*
+  name: Inequality
+  href: api/Ipfs.Peer.html#Ipfs_Peer_op_Inequality_
+  commentId: Overload:Ipfs.Peer.op_Inequality
+  fullName: Ipfs.Peer.Inequality
+  nameWithType: Peer.Inequality
+- uid: Ipfs.Peer.ProtocolVersion
+  name: ProtocolVersion
+  href: api/Ipfs.Peer.html#Ipfs_Peer_ProtocolVersion
+  commentId: P:Ipfs.Peer.ProtocolVersion
+  fullName: Ipfs.Peer.ProtocolVersion
+  nameWithType: Peer.ProtocolVersion
+- uid: Ipfs.Peer.ProtocolVersion*
+  name: ProtocolVersion
+  href: api/Ipfs.Peer.html#Ipfs_Peer_ProtocolVersion_
+  commentId: Overload:Ipfs.Peer.ProtocolVersion
+  fullName: Ipfs.Peer.ProtocolVersion
+  nameWithType: Peer.ProtocolVersion
+- uid: Ipfs.Peer.PublicKey
+  name: PublicKey
+  href: api/Ipfs.Peer.html#Ipfs_Peer_PublicKey
+  commentId: P:Ipfs.Peer.PublicKey
+  fullName: Ipfs.Peer.PublicKey
+  nameWithType: Peer.PublicKey
+- uid: Ipfs.Peer.PublicKey*
+  name: PublicKey
+  href: api/Ipfs.Peer.html#Ipfs_Peer_PublicKey_
+  commentId: Overload:Ipfs.Peer.PublicKey
+  fullName: Ipfs.Peer.PublicKey
+  nameWithType: Peer.PublicKey
+- uid: Ipfs.Peer.ToString
+  name: ToString()
+  href: api/Ipfs.Peer.html#Ipfs_Peer_ToString
+  commentId: M:Ipfs.Peer.ToString
+  fullName: Ipfs.Peer.ToString()
+  nameWithType: Peer.ToString()
+- uid: Ipfs.Peer.ToString*
+  name: ToString
+  href: api/Ipfs.Peer.html#Ipfs_Peer_ToString_
+  commentId: Overload:Ipfs.Peer.ToString
+  fullName: Ipfs.Peer.ToString
+  nameWithType: Peer.ToString
 - uid: Ipfs.UnknownHashingAlgorithmEventArgs
   name: UnknownHashingAlgorithmEventArgs
   href: api/Ipfs.UnknownHashingAlgorithmEventArgs.html
