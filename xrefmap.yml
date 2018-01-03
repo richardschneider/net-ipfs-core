@@ -870,6 +870,24 @@ references:
   commentId: Overload:Ipfs.MultiHash.Digest
   fullName: Ipfs.MultiHash.Digest
   nameWithType: MultiHash.Digest
+- uid: Ipfs.MultiHash.Equals(Ipfs.MultiHash)
+  name: Equals(MultiHash)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Equals_Ipfs_MultiHash_
+  commentId: M:Ipfs.MultiHash.Equals(Ipfs.MultiHash)
+  fullName: Ipfs.MultiHash.Equals(Ipfs.MultiHash)
+  nameWithType: MultiHash.Equals(MultiHash)
+- uid: Ipfs.MultiHash.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Equals_System_Object_
+  commentId: M:Ipfs.MultiHash.Equals(System.Object)
+  fullName: Ipfs.MultiHash.Equals(System.Object)
+  nameWithType: MultiHash.Equals(Object)
+- uid: Ipfs.MultiHash.Equals*
+  name: Equals
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Equals_
+  commentId: Overload:Ipfs.MultiHash.Equals
+  fullName: Ipfs.MultiHash.Equals
+  nameWithType: MultiHash.Equals
 - uid: Ipfs.MultiHash.GetHashAlgorithm(System.String)
   name: GetHashAlgorithm(String)
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashAlgorithm_System_String_
@@ -882,6 +900,18 @@ references:
   commentId: Overload:Ipfs.MultiHash.GetHashAlgorithm
   fullName: Ipfs.MultiHash.GetHashAlgorithm
   nameWithType: MultiHash.GetHashAlgorithm
+- uid: Ipfs.MultiHash.GetHashCode
+  name: GetHashCode()
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashCode
+  commentId: M:Ipfs.MultiHash.GetHashCode
+  fullName: Ipfs.MultiHash.GetHashCode()
+  nameWithType: MultiHash.GetHashCode()
+- uid: Ipfs.MultiHash.GetHashCode*
+  name: GetHashCode
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashCode_
+  commentId: Overload:Ipfs.MultiHash.GetHashCode
+  fullName: Ipfs.MultiHash.GetHashCode
+  nameWithType: MultiHash.GetHashCode
 - uid: Ipfs.MultiHash.HashingAlgorithm
   name: MultiHash.HashingAlgorithm
   href: api/Ipfs.MultiHash.HashingAlgorithm.html
@@ -996,6 +1026,18 @@ references:
   commentId: Overload:Ipfs.MultiHash.Matches
   fullName: Ipfs.MultiHash.Matches
   nameWithType: MultiHash.Matches
+- uid: Ipfs.MultiHash.op_Equality(Ipfs.MultiHash,Ipfs.MultiHash)
+  name: Equality(MultiHash, MultiHash)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Equality_Ipfs_MultiHash_Ipfs_MultiHash_
+  commentId: M:Ipfs.MultiHash.op_Equality(Ipfs.MultiHash,Ipfs.MultiHash)
+  fullName: Ipfs.MultiHash.Equality(Ipfs.MultiHash, Ipfs.MultiHash)
+  nameWithType: MultiHash.Equality(MultiHash, MultiHash)
+- uid: Ipfs.MultiHash.op_Equality*
+  name: Equality
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Equality_
+  commentId: Overload:Ipfs.MultiHash.op_Equality
+  fullName: Ipfs.MultiHash.Equality
+  nameWithType: MultiHash.Equality
 - uid: Ipfs.MultiHash.op_Implicit(System.String)~Ipfs.MultiHash
   name: Implicit(String to MultiHash)
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Implicit_System_String__Ipfs_MultiHash
@@ -1014,6 +1056,18 @@ references:
   fullName.vb: Ipfs.MultiHash.Widening
   nameWithType: MultiHash.Implicit
   nameWithType.vb: MultiHash.Widening
+- uid: Ipfs.MultiHash.op_Inequality(Ipfs.MultiHash,Ipfs.MultiHash)
+  name: Inequality(MultiHash, MultiHash)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Inequality_Ipfs_MultiHash_Ipfs_MultiHash_
+  commentId: M:Ipfs.MultiHash.op_Inequality(Ipfs.MultiHash,Ipfs.MultiHash)
+  fullName: Ipfs.MultiHash.Inequality(Ipfs.MultiHash, Ipfs.MultiHash)
+  nameWithType: MultiHash.Inequality(MultiHash, MultiHash)
+- uid: Ipfs.MultiHash.op_Inequality*
+  name: Inequality
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_op_Inequality_
+  commentId: Overload:Ipfs.MultiHash.op_Inequality
+  fullName: Ipfs.MultiHash.Inequality
+  nameWithType: MultiHash.Inequality
 - uid: Ipfs.MultiHash.ToArray
   name: ToArray()
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToArray

@@ -82,19 +82,17 @@ addressing size + encoding considerations.</p>
     <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
     <div class="level1"><span class="xref">MultiHash</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Ipfs.MultiHash.html">MultiHash</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -107,7 +105,7 @@ addressing size + encoding considerations.</p>
   <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
   <h5 id="Ipfs_MultiHash_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MultiHash</code></pre>
+    <pre><code class="lang-csharp hljs">public class MultiHash : IEquatable&lt;MultiHash&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -433,7 +431,7 @@ specified <a class="xref" href="Ipfs.MultiHash.HashingAlgorithm.html">MultiHash.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_ComputeHash_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.ComputeHash(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L487">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L532">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_ComputeHash_" data-uid="Ipfs.MultiHash.ComputeHash*"></a>
   <h4 id="Ipfs_MultiHash_ComputeHash_System_Byte___System_String_" data-uid="Ipfs.MultiHash.ComputeHash(System.Byte[],System.String)">ComputeHash(Byte[], String)</h4>
@@ -489,7 +487,7 @@ specified <a class="xref" href="Ipfs.MultiHash.HashingAlgorithm.html">MultiHash.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_ComputeHash_System_IO_Stream_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.ComputeHash(System.IO.Stream%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L504">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L549">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_ComputeHash_" data-uid="Ipfs.MultiHash.ComputeHash*"></a>
   <h4 id="Ipfs_MultiHash_ComputeHash_System_IO_Stream_System_String_" data-uid="Ipfs.MultiHash.ComputeHash(System.IO.Stream,System.String)">ComputeHash(Stream, String)</h4>
@@ -542,6 +540,102 @@ specified <a class="xref" href="Ipfs.MultiHash.HashingAlgorithm.html">MultiHash.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_Equals_Ipfs_MultiHash_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.Equals(Ipfs.MultiHash)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L390">View Source</a>
+  </span>
+  <a id="Ipfs_MultiHash_Equals_" data-uid="Ipfs.MultiHash.Equals*"></a>
+  <h4 id="Ipfs_MultiHash_Equals_Ipfs_MultiHash_" data-uid="Ipfs.MultiHash.Equals(Ipfs.MultiHash)">Equals(MultiHash)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MultiHash that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L381">View Source</a>
+  </span>
+  <a id="Ipfs_MultiHash_Equals_" data-uid="Ipfs.MultiHash.Equals*"></a>
+  <h4 id="Ipfs_MultiHash_Equals_System_Object_" data-uid="Ipfs.MultiHash.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_GetHashAlgorithm_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.GetHashAlgorithm(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -592,10 +686,42 @@ for IPFS defined names.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_GetHashCode.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L375">View Source</a>
+  </span>
+  <a id="Ipfs_MultiHash_GetHashCode_" data-uid="Ipfs.MultiHash.GetHashCode*"></a>
+  <h4 id="Ipfs_MultiHash_GetHashCode" data-uid="Ipfs.MultiHash.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_Matches_System_Byte___.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.Matches(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L428">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L473">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_Matches_" data-uid="Ipfs.MultiHash.Matches*"></a>
   <h4 id="Ipfs_MultiHash_Matches_System_Byte___" data-uid="Ipfs.MultiHash.Matches(System.Byte[])">Matches(Byte[])</h4>
@@ -648,7 +774,7 @@ for IPFS defined names.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_Matches_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.Matches(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L451">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L496">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_Matches_" data-uid="Ipfs.MultiHash.Matches*"></a>
   <h4 id="Ipfs_MultiHash_Matches_System_IO_Stream_" data-uid="Ipfs.MultiHash.Matches(System.IO.Stream)">Matches(Stream)</h4>
@@ -701,7 +827,7 @@ for IPFS defined names.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_ToArray.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L407">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L452">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_ToArray_" data-uid="Ipfs.MultiHash.ToArray*"></a>
   <h4 id="Ipfs_MultiHash_ToArray" data-uid="Ipfs.MultiHash.ToArray">ToArray()</h4>
@@ -736,7 +862,7 @@ for IPFS defined names.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_ToBase58.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.ToBase58%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L389">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L434">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_ToBase58_" data-uid="Ipfs.MultiHash.ToBase58*"></a>
   <h4 id="Ipfs_MultiHash_ToBase58" data-uid="Ipfs.MultiHash.ToBase58">ToBase58()</h4>
@@ -767,7 +893,7 @@ for IPFS defined names.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_ToString.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L380">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L425">View Source</a>
   </span>
   <a id="Ipfs_MultiHash_ToString_" data-uid="Ipfs.MultiHash.ToString*"></a>
   <h4 id="Ipfs_MultiHash_ToString" data-uid="Ipfs.MultiHash.ToString">ToString()</h4>
@@ -876,6 +1002,59 @@ for IPFS defined names.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_op_Equality_Ipfs_MultiHash_Ipfs_MultiHash_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.op_Equality(Ipfs.MultiHash%2CIpfs.MultiHash)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L398">View Source</a>
+  </span>
+  <a id="Ipfs_MultiHash_op_Equality_" data-uid="Ipfs.MultiHash.op_Equality*"></a>
+  <h4 id="Ipfs_MultiHash_op_Equality_Ipfs_MultiHash_Ipfs_MultiHash_" data-uid="Ipfs.MultiHash.op_Equality(Ipfs.MultiHash,Ipfs.MultiHash)">Equality(MultiHash, MultiHash)</h4>
+  <div class="markdown level1 summary"><p>Value equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(MultiHash a, MultiHash b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_op_Implicit_System_String__Ipfs_MultiHash.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.op_Implicit(System.String)~Ipfs.MultiHash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -927,6 +1106,63 @@ for IPFS defined names.</p>
   <h5 id="Ipfs_MultiHash_op_Implicit_System_String__Ipfs_MultiHash_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Equivalent to <pre><code>new MultiHash(s)</code></pre></p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiHash_op_Inequality_Ipfs_MultiHash_Ipfs_MultiHash_.md&amp;value=---%0Auid%3A%20Ipfs.MultiHash.op_Inequality(Ipfs.MultiHash%2CIpfs.MultiHash)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiHash.cs/#L410">View Source</a>
+  </span>
+  <a id="Ipfs_MultiHash_op_Inequality_" data-uid="Ipfs.MultiHash.op_Inequality*"></a>
+  <h4 id="Ipfs_MultiHash_op_Inequality_Ipfs_MultiHash_Ipfs_MultiHash_" data-uid="Ipfs.MultiHash.op_Inequality(Ipfs.MultiHash,Ipfs.MultiHash)">Inequality(MultiHash, MultiHash)</h4>
+  <div class="markdown level1 summary"><p>Value inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(MultiHash a, MultiHash b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://github.com/jbenet/multihash">https://github.com/jbenet/multihash</a></span></div>
