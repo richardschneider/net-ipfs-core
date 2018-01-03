@@ -151,12 +151,12 @@ references:
   commentId: M:Ipfs.DagLink.#ctor(System.IO.Stream)
   fullName: Ipfs.DagLink.DagLink(System.IO.Stream)
   nameWithType: DagLink.DagLink(Stream)
-- uid: Ipfs.DagLink.#ctor(System.String,System.String,System.Int64)
-  name: DagLink(String, String, Int64)
-  href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_System_String_System_String_System_Int64_
-  commentId: M:Ipfs.DagLink.#ctor(System.String,System.String,System.Int64)
-  fullName: Ipfs.DagLink.DagLink(System.String, System.String, System.Int64)
-  nameWithType: DagLink.DagLink(String, String, Int64)
+- uid: Ipfs.DagLink.#ctor(System.String,Ipfs.MultiHash,System.Int64)
+  name: DagLink(String, MultiHash, Int64)
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_System_String_Ipfs_MultiHash_System_Int64_
+  commentId: M:Ipfs.DagLink.#ctor(System.String,Ipfs.MultiHash,System.Int64)
+  fullName: Ipfs.DagLink.DagLink(System.String, Ipfs.MultiHash, System.Int64)
+  nameWithType: DagLink.DagLink(String, MultiHash, Int64)
 - uid: Ipfs.DagLink.#ctor*
   name: DagLink
   href: api/Ipfs.DagLink.html#Ipfs_DagLink__ctor_
