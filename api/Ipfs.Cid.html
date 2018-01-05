@@ -149,7 +149,7 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-        <td><p>dag-pb, dag-cbor, eth-block, etc.</p>
+        <td><p>dag-pb, dag-cbor, eth-block, etc.  Defaults to &quot;dag-pb&quot;.</p>
 </td>
       </tr>
     </tbody>
@@ -185,7 +185,7 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-        <td><p>base58btc, base64, etc.</p>
+        <td><p>base58btc, base64, etc.  Defaults to &quot;base58btc&quot;,</p>
 </td>
       </tr>
     </tbody>
@@ -262,14 +262,123 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Cid_Decode_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.Cid.Decode(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L119">View Source</a>
+  </span>
+  <a id="Ipfs_Cid_Decode_" data-uid="Ipfs.Cid.Decode*"></a>
+  <h4 id="Ipfs_Cid_Decode_System_String_" data-uid="Ipfs.Cid.Decode(System.String)">Decode(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>
+to an equivalent <a class="xref" href="Ipfs.Cid.html">Cid</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cid Decode(string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The <a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Encode">Encode()</a> string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><p>A new <a class="xref" href="Ipfs.Cid.html">Cid</a> that is equivalent to <code data-dev-comment-type="paramref" class="paramref">input</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.formatexception(v=vs.110).aspx">FormatException</a></td>
+        <td><p>When the <code data-dev-comment-type="paramref" class="paramref">input</code> can not be decoded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Cid_Encode.md&amp;value=---%0Auid%3A%20Ipfs.Cid.Encode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L96">View Source</a>
+  </span>
+  <a id="Ipfs_Cid_Encode_" data-uid="Ipfs.Cid.Encode*"></a>
+  <h4 id="Ipfs_Cid_Encode" data-uid="Ipfs.Cid.Encode">Encode()</h4>
+  <div class="markdown level1 summary"><p>Converts the CID to its equivalent string representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Encode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><p>The string representation of the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_Cid_Encode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For <a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Version">Version</a> 0, this is equalivalent to the 
+<a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase58">ToBase58()</a>
+of the <a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Hash">Hash</a>.</p>
+</div>
+  <h5 id="Ipfs_Cid_Encode_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Decode_System_String_">Decode(String)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Cid_ToString.md&amp;value=---%0Auid%3A%20Ipfs.Cid.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L60">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L65">View Source</a>
   </span>
   <a id="Ipfs_Cid_ToString_" data-uid="Ipfs.Cid.ToString*"></a>
   <h4 id="Ipfs_Cid_ToString" data-uid="Ipfs.Cid.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A CID that is readable by a human.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,7 +395,8 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-        <td></td>
+        <td><p>e.g. &quot;base58btc cidv0 dag-pb sha2-256 Qm...&quot;</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -299,7 +409,7 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Cid_op_Implicit_Ipfs_MultiHash__Ipfs_Cid.md&amp;value=---%0Auid%3A%20Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L88">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Cid.cs/#L140">View Source</a>
   </span>
   <a id="Ipfs_Cid_op_Implicit_" data-uid="Ipfs.Cid.op_Implicit*"></a>
   <h4 id="Ipfs_Cid_op_Implicit_Ipfs_MultiHash__Ipfs_Cid" data-uid="Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid">Implicit(MultiHash to Cid)</h4>
@@ -339,7 +449,8 @@ The <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">Algorith
     <tbody>
       <tr>
         <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
-        <td><p>A new <a class="xref" href="Ipfs.Cid.html">Cid</a> v0 based on the <code data-dev-comment-type="paramref" class="paramref">hash</code>.</p>
+        <td><p>A new <a class="xref" href="Ipfs.Cid.html">Cid</a> based on the <code data-dev-comment-type="paramref" class="paramref">hash</code>.  A <a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Version">Version</a> 0
+CID is returned if the <code data-dev-comment-type="paramref" class="paramref">hash</code> is &quot;sha2-356&quot;; otherwise <a class="xref" href="Ipfs.Cid.html#Ipfs_Cid_Version">Version</a> 1.</p>
 </td>
       </tr>
     </tbody>

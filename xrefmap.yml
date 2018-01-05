@@ -145,6 +145,30 @@ references:
   commentId: Overload:Ipfs.Cid.ContentType
   fullName: Ipfs.Cid.ContentType
   nameWithType: Cid.ContentType
+- uid: Ipfs.Cid.Decode(System.String)
+  name: Decode(String)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Decode_System_String_
+  commentId: M:Ipfs.Cid.Decode(System.String)
+  fullName: Ipfs.Cid.Decode(System.String)
+  nameWithType: Cid.Decode(String)
+- uid: Ipfs.Cid.Decode*
+  name: Decode
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Decode_
+  commentId: Overload:Ipfs.Cid.Decode
+  fullName: Ipfs.Cid.Decode
+  nameWithType: Cid.Decode
+- uid: Ipfs.Cid.Encode
+  name: Encode()
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Encode
+  commentId: M:Ipfs.Cid.Encode
+  fullName: Ipfs.Cid.Encode()
+  nameWithType: Cid.Encode()
+- uid: Ipfs.Cid.Encode*
+  name: Encode
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Encode_
+  commentId: Overload:Ipfs.Cid.Encode
+  fullName: Ipfs.Cid.Encode
+  nameWithType: Cid.Encode
 - uid: Ipfs.Cid.Encoding
   name: Encoding
   href: api/Ipfs.Cid.html#Ipfs_Cid_Encoding
