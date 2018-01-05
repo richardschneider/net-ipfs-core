@@ -34,7 +34,7 @@ namespace Ipfs
         ///   The encoding of the CID.
         /// </summary>
         /// <value>
-        ///   base58btc, base64, etc.
+        ///   base58btc, base64, etc.  Defaults to "base58btc",
         /// </value>
         /// <seealso href="https://github.com/multiformats/multibase"/>
         public string Encoding { get; set; } = "base58btc";
@@ -43,7 +43,7 @@ namespace Ipfs
         ///   The content type or format of the data being addressed.
         /// </summary>
         /// <value>
-        ///   dag-pb, dag-cbor, eth-block, etc.
+        ///   dag-pb, dag-cbor, eth-block, etc.  Defaults to "dag-pb".
         /// </value>
         /// <seealso href="https://github.com/multiformats/multicodec"/>
         public string ContentType { get; set; } = "dag-pb";
@@ -82,22 +82,78 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Converts the CID to its equivalent string representation.
+        /// </summary>
+        /// <returns>
+        ///   The string representation of the <see cref="Cid"/>.
+        /// </returns>
+        /// <remarks>
+        ///   For <see cref="Version"/> 0, this is equalivalent to the 
+        ///   <see cref="MultiHash.ToBase58()">base58btc encoding</see>
+        ///   of the <see cref="Hash"/>.
+        /// </remarks>
+        /// <seealso cref="Decode"/>
+        public string Encode()
+        {
+            if (Version == 0)
+            {
+                return Hash.ToBase58();
+            }
+
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///   Converts the specified <see cref="string"/>
+        ///   to an equivalent <see cref="Cid"/> object.
+        /// </summary>
+        /// <param name="input">
+        ///   The <see cref="Cid.Encode">CID encoded</see> string.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="Cid"/> that is equivalent to <paramref name="input"/>.
+        /// </returns>
+        /// <exception cref="FormatException">
+        ///   When the <paramref name="input"/> can not be decoded.
+        /// </exception>
+        public static Cid Decode(string input)
+        {
+            // SHA2-256 MultiHash is CID v0.
+            if (input.Length == 46 && input.StartsWith("Qm"))
+            {
+                return (Cid)new MultiHash(input);
+            }
+
+            throw new FormatException();
+        }
+
+        /// <summary>
         ///   Implicit casting of a <see cref="MultiHash"/> to a <see cref="Cid"/>.
         /// </summary>
         /// <param name="hash">
         ///   A <see cref="MultiHash"/>.
         /// </param>
         /// <returns>
-        ///   A new <see cref="Cid"/> v0 based on the <paramref name="hash"/>.
+        ///   A new <see cref="Cid"/> based on the <paramref name="hash"/>.  A <see cref="Version"/> 0
+        ///   CID is returned if the <paramref name="hash"/> is "sha2-356"; otherwise <see cref="Version"/> 1.
         /// </returns>
         static public implicit operator Cid(MultiHash hash)
         {
+            if (hash.Algorithm.Name == "sha2-256")
+            {
+                return new Cid
+                {
+                    Hash = hash,
+                    Version = 0,
+                    Encoding = "base58btc",
+                    ContentType = "dag-pb"
+                };
+            }
+
             return new Cid
             {
-                Hash = hash,
-                Version = 0,
-                Encoding = "base58btc",
-                ContentType = "dag-pb"
+                Version = 1,
+                Hash = hash
             };
         }
 
