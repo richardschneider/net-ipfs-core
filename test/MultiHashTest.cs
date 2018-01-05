@@ -1,4 +1,4 @@
-using Ipfs;
+using Ipfs.Registry;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -39,7 +39,7 @@ namespace Ipfs
         [TestMethod]
         public void Parsing_Unknown_Hash_Number()
         {
-            MultiHash.HashingAlgorithm unknown = null;
+            HashingAlgorithm unknown = null;
             EventHandler<UnknownHashingAlgorithmEventArgs> unknownHandler = (s, e) => { unknown = e.Algorithm; };
             var ms = new MemoryStream(new byte[] { 0x01, 0x02, 0x0a, 0x0b });
             MultiHash.UnknownHashingAlgorithm += unknownHandler;
@@ -109,7 +109,7 @@ namespace Ipfs
         [TestMethod]
         public void Compute_Not_Implemented_Hash_Array()
         {
-            MultiHash.HashingAlgorithm.Register("not-implemented", 0x0F, 32);
+            HashingAlgorithm.Register("not-implemented", 0x0F, 32);
             var hello = Encoding.UTF8.GetBytes("Hello, world.");
             ExceptionAssert.Throws<NotImplementedException>(() => MultiHash.ComputeHash(hello, "not-implemented"));
         }
@@ -149,32 +149,6 @@ namespace Ipfs
 
             hello1.Position = 0;
             Assert.IsFalse(mh.Matches(hello1));
-        }
-
-        [TestMethod]
-        public void HashingAlgorithm_Bad_Name()
-        {
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register(null, 1, 1));
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register("", 1, 1));
-            ExceptionAssert.Throws<ArgumentNullException>(() => MultiHash.HashingAlgorithm.Register("   ", 1, 1));
-        }
-
-        [TestMethod]
-        public void HashingAlgorithm_Name_Already_Exists()
-        {
-            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Register("sha1", 0x11, 1));
-        }
-
-        [TestMethod]
-        public void HashingAlgorithm_Number_Already_Exists()
-        {
-            ExceptionAssert.Throws<ArgumentException>(() => MultiHash.HashingAlgorithm.Register("sha1-x", 0x11, 1));
-        }
-
-        [TestMethod]
-        public void HashingAlgorithms_Are_Enumerable()
-        {
-            Assert.IsTrue(5 <= MultiHash.HashingAlgorithm.All.Count());
         }
 
         [TestMethod]
@@ -277,7 +251,7 @@ namespace Ipfs
         [TestMethod]
         public void Compute_Hash_All_Algorithms()
         {
-            foreach (var alg in MultiHash.HashingAlgorithm.All)
+            foreach (var alg in HashingAlgorithm.All)
             {
                 try
                 {
