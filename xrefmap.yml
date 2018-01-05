@@ -127,6 +127,90 @@ references:
   commentId: Overload:Ipfs.Base58.ToBase58
   fullName: Ipfs.Base58.ToBase58
   nameWithType: Base58.ToBase58
+- uid: Ipfs.Cid
+  name: Cid
+  href: api/Ipfs.Cid.html
+  commentId: T:Ipfs.Cid
+  fullName: Ipfs.Cid
+  nameWithType: Cid
+- uid: Ipfs.Cid.ContentType
+  name: ContentType
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ContentType
+  commentId: P:Ipfs.Cid.ContentType
+  fullName: Ipfs.Cid.ContentType
+  nameWithType: Cid.ContentType
+- uid: Ipfs.Cid.ContentType*
+  name: ContentType
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ContentType_
+  commentId: Overload:Ipfs.Cid.ContentType
+  fullName: Ipfs.Cid.ContentType
+  nameWithType: Cid.ContentType
+- uid: Ipfs.Cid.Encoding
+  name: Encoding
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Encoding
+  commentId: P:Ipfs.Cid.Encoding
+  fullName: Ipfs.Cid.Encoding
+  nameWithType: Cid.Encoding
+- uid: Ipfs.Cid.Encoding*
+  name: Encoding
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Encoding_
+  commentId: Overload:Ipfs.Cid.Encoding
+  fullName: Ipfs.Cid.Encoding
+  nameWithType: Cid.Encoding
+- uid: Ipfs.Cid.Hash
+  name: Hash
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Hash
+  commentId: P:Ipfs.Cid.Hash
+  fullName: Ipfs.Cid.Hash
+  nameWithType: Cid.Hash
+- uid: Ipfs.Cid.Hash*
+  name: Hash
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Hash_
+  commentId: Overload:Ipfs.Cid.Hash
+  fullName: Ipfs.Cid.Hash
+  nameWithType: Cid.Hash
+- uid: Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid
+  name: Implicit(MultiHash to Cid)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_Ipfs_MultiHash__Ipfs_Cid
+  commentId: M:Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid
+  name.vb: Widening(MultiHash to Cid)
+  fullName: Ipfs.Cid.Implicit(Ipfs.MultiHash to Ipfs.Cid)
+  fullName.vb: Ipfs.Cid.Widening(Ipfs.MultiHash to Ipfs.Cid)
+  nameWithType: Cid.Implicit(MultiHash to Cid)
+  nameWithType.vb: Cid.Widening(MultiHash to Cid)
+- uid: Ipfs.Cid.op_Implicit*
+  name: Implicit
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_
+  commentId: Overload:Ipfs.Cid.op_Implicit
+  name.vb: Widening
+  fullName: Ipfs.Cid.Implicit
+  fullName.vb: Ipfs.Cid.Widening
+  nameWithType: Cid.Implicit
+  nameWithType.vb: Cid.Widening
+- uid: Ipfs.Cid.ToString
+  name: ToString()
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ToString
+  commentId: M:Ipfs.Cid.ToString
+  fullName: Ipfs.Cid.ToString()
+  nameWithType: Cid.ToString()
+- uid: Ipfs.Cid.ToString*
+  name: ToString
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ToString_
+  commentId: Overload:Ipfs.Cid.ToString
+  fullName: Ipfs.Cid.ToString
+  nameWithType: Cid.ToString
+- uid: Ipfs.Cid.Version
+  name: Version
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Version
+  commentId: P:Ipfs.Cid.Version
+  fullName: Ipfs.Cid.Version
+  nameWithType: Cid.Version
+- uid: Ipfs.Cid.Version*
+  name: Version
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Version_
+  commentId: Overload:Ipfs.Cid.Version
+  fullName: Ipfs.Cid.Version
+  nameWithType: Cid.Version
 - uid: Ipfs.DagLink
   name: DagLink
   href: api/Ipfs.DagLink.html

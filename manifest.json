@@ -29,6 +29,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Cid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Cid.html",
+          "hash": "CDylOK+ppqHPUBGHdUlplw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.DagLink.yml",
       "output": {
         ".html": {
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.html",
-          "hash": "TIjDYKNyHZZir+CsPKo6zw=="
+          "hash": "l63ExPevNtFQS5cKgW3mPA=="
         }
       },
       "is_incremental": false,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "obCepAwgiiw62NvNSoDfoA=="
+          "hash": "eXcREVYovukvQESzsiSuMQ=="
         }
       },
       "is_incremental": false,
@@ -309,11 +321,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
