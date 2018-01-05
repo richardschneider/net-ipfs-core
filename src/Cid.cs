@@ -56,21 +56,26 @@ namespace Ipfs
         /// </value>
         public MultiHash Hash { get; set; }
 
-        /// <inheritdoc/>
+        /// <summary>
+        ///   A CID that is readable by a human.
+        /// </summary>
+        /// <returns>
+        ///  e.g. "base58btc cidv0 dag-pb sha2-256 Qm..."
+        /// </returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
             sb.Append(Encoding);
-            sb.Append(':');
+            sb.Append(' ');
             sb.Append("cidv");
             sb.Append(Version);
-            sb.Append(':');
+            sb.Append(' ');
             sb.Append(ContentType);
             if (Hash != null)
             {
-                sb.Append(':');
+                sb.Append(' ');
                 sb.Append(Hash.Algorithm.Name);
-                sb.Append(':');
+                sb.Append(' ');
                 sb.Append(Hash.ToBase58()); // TODO: Use the encoding
             }
             return sb.ToString();

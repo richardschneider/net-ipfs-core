@@ -14,7 +14,7 @@ namespace Ipfs
         public void HumanReadable()
         {
             var cid = new Cid { Hash = new MultiHash("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V") };
-            Assert.AreEqual("base58btc:cidv0:dag-pb:sha2-256:QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString());
+            Assert.AreEqual("base58btc cidv0 dag-pb sha2-256 QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString());
         }
 
         [TestMethod]
