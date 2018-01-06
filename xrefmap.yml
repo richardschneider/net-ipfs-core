@@ -1020,99 +1020,6 @@ references:
   commentId: Overload:Ipfs.MultiHash.GetHashCode
   fullName: Ipfs.MultiHash.GetHashCode
   nameWithType: MultiHash.GetHashCode
-- uid: Ipfs.MultiHash.HashingAlgorithm
-  name: MultiHash.HashingAlgorithm
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html
-  commentId: T:Ipfs.MultiHash.HashingAlgorithm
-  fullName: Ipfs.MultiHash.HashingAlgorithm
-  nameWithType: MultiHash.HashingAlgorithm
-- uid: Ipfs.MultiHash.HashingAlgorithm.All
-  name: All
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_All
-  commentId: P:Ipfs.MultiHash.HashingAlgorithm.All
-  fullName: Ipfs.MultiHash.HashingAlgorithm.All
-  nameWithType: MultiHash.HashingAlgorithm.All
-- uid: Ipfs.MultiHash.HashingAlgorithm.All*
-  name: All
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_All_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.All
-  fullName: Ipfs.MultiHash.HashingAlgorithm.All
-  nameWithType: MultiHash.HashingAlgorithm.All
-- uid: Ipfs.MultiHash.HashingAlgorithm.Code
-  name: Code
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Code
-  commentId: P:Ipfs.MultiHash.HashingAlgorithm.Code
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Code
-  nameWithType: MultiHash.HashingAlgorithm.Code
-- uid: Ipfs.MultiHash.HashingAlgorithm.Code*
-  name: Code
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Code_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.Code
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Code
-  nameWithType: MultiHash.HashingAlgorithm.Code
-- uid: Ipfs.MultiHash.HashingAlgorithm.DigestSize
-  name: DigestSize
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_DigestSize
-  commentId: P:Ipfs.MultiHash.HashingAlgorithm.DigestSize
-  fullName: Ipfs.MultiHash.HashingAlgorithm.DigestSize
-  nameWithType: MultiHash.HashingAlgorithm.DigestSize
-- uid: Ipfs.MultiHash.HashingAlgorithm.DigestSize*
-  name: DigestSize
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_DigestSize_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.DigestSize
-  fullName: Ipfs.MultiHash.HashingAlgorithm.DigestSize
-  nameWithType: MultiHash.HashingAlgorithm.DigestSize
-- uid: Ipfs.MultiHash.HashingAlgorithm.Hasher
-  name: Hasher
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Hasher
-  commentId: P:Ipfs.MultiHash.HashingAlgorithm.Hasher
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Hasher
-  nameWithType: MultiHash.HashingAlgorithm.Hasher
-- uid: Ipfs.MultiHash.HashingAlgorithm.Hasher*
-  name: Hasher
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Hasher_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.Hasher
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Hasher
-  nameWithType: MultiHash.HashingAlgorithm.Hasher
-- uid: Ipfs.MultiHash.HashingAlgorithm.Name
-  name: Name
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Name
-  commentId: P:Ipfs.MultiHash.HashingAlgorithm.Name
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Name
-  nameWithType: MultiHash.HashingAlgorithm.Name
-- uid: Ipfs.MultiHash.HashingAlgorithm.Name*
-  name: Name
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Name_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.Name
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Name
-  nameWithType: MultiHash.HashingAlgorithm.Name
-- uid: Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
-  name: Register(String, Int32, Int32, Func<HashAlgorithm>)
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__
-  commentId: M:Ipfs.MultiHash.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
-  name.vb: Register(String, Int32, Int32, Func(Of HashAlgorithm))
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func<System.Security.Cryptography.HashAlgorithm>)
-  fullName.vb: Ipfs.MultiHash.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func(Of System.Security.Cryptography.HashAlgorithm))
-  nameWithType: MultiHash.HashingAlgorithm.Register(String, Int32, Int32, Func<HashAlgorithm>)
-  nameWithType.vb: MultiHash.HashingAlgorithm.Register(String, Int32, Int32, Func(Of HashAlgorithm))
-- uid: Ipfs.MultiHash.HashingAlgorithm.Register*
-  name: Register
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_Register_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.Register
-  fullName: Ipfs.MultiHash.HashingAlgorithm.Register
-  nameWithType: MultiHash.HashingAlgorithm.Register
-- uid: Ipfs.MultiHash.HashingAlgorithm.ToString
-  name: ToString()
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_ToString
-  commentId: M:Ipfs.MultiHash.HashingAlgorithm.ToString
-  fullName: Ipfs.MultiHash.HashingAlgorithm.ToString()
-  nameWithType: MultiHash.HashingAlgorithm.ToString()
-- uid: Ipfs.MultiHash.HashingAlgorithm.ToString*
-  name: ToString
-  href: api/Ipfs.MultiHash.HashingAlgorithm.html#Ipfs_MultiHash_HashingAlgorithm_ToString_
-  commentId: Overload:Ipfs.MultiHash.HashingAlgorithm.ToString
-  fullName: Ipfs.MultiHash.HashingAlgorithm.ToString
-  nameWithType: MultiHash.HashingAlgorithm.ToString
 - uid: Ipfs.MultiHash.Matches(System.Byte[])
   name: Matches(Byte[])
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Matches_System_Byte___
@@ -1503,6 +1410,198 @@ references:
   commentId: Overload:Ipfs.Peer.ToString
   fullName: Ipfs.Peer.ToString
   nameWithType: Peer.ToString
+- uid: Ipfs.Registry
+  name: Ipfs.Registry
+  href: api/Ipfs.Registry.html
+  commentId: N:Ipfs.Registry
+  fullName: Ipfs.Registry
+  nameWithType: Ipfs.Registry
+- uid: Ipfs.Registry.HashingAlgorithm
+  name: HashingAlgorithm
+  href: api/Ipfs.Registry.HashingAlgorithm.html
+  commentId: T:Ipfs.Registry.HashingAlgorithm
+  fullName: Ipfs.Registry.HashingAlgorithm
+  nameWithType: HashingAlgorithm
+- uid: Ipfs.Registry.HashingAlgorithm.All
+  name: All
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_All
+  commentId: P:Ipfs.Registry.HashingAlgorithm.All
+  fullName: Ipfs.Registry.HashingAlgorithm.All
+  nameWithType: HashingAlgorithm.All
+- uid: Ipfs.Registry.HashingAlgorithm.All*
+  name: All
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_All_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.All
+  fullName: Ipfs.Registry.HashingAlgorithm.All
+  nameWithType: HashingAlgorithm.All
+- uid: Ipfs.Registry.HashingAlgorithm.Code
+  name: Code
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code
+  commentId: P:Ipfs.Registry.HashingAlgorithm.Code
+  fullName: Ipfs.Registry.HashingAlgorithm.Code
+  nameWithType: HashingAlgorithm.Code
+- uid: Ipfs.Registry.HashingAlgorithm.Code*
+  name: Code
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.Code
+  fullName: Ipfs.Registry.HashingAlgorithm.Code
+  nameWithType: HashingAlgorithm.Code
+- uid: Ipfs.Registry.HashingAlgorithm.DigestSize
+  name: DigestSize
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_DigestSize
+  commentId: P:Ipfs.Registry.HashingAlgorithm.DigestSize
+  fullName: Ipfs.Registry.HashingAlgorithm.DigestSize
+  nameWithType: HashingAlgorithm.DigestSize
+- uid: Ipfs.Registry.HashingAlgorithm.DigestSize*
+  name: DigestSize
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_DigestSize_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.DigestSize
+  fullName: Ipfs.Registry.HashingAlgorithm.DigestSize
+  nameWithType: HashingAlgorithm.DigestSize
+- uid: Ipfs.Registry.HashingAlgorithm.Hasher
+  name: Hasher
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Hasher
+  commentId: P:Ipfs.Registry.HashingAlgorithm.Hasher
+  fullName: Ipfs.Registry.HashingAlgorithm.Hasher
+  nameWithType: HashingAlgorithm.Hasher
+- uid: Ipfs.Registry.HashingAlgorithm.Hasher*
+  name: Hasher
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Hasher_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.Hasher
+  fullName: Ipfs.Registry.HashingAlgorithm.Hasher
+  nameWithType: HashingAlgorithm.Hasher
+- uid: Ipfs.Registry.HashingAlgorithm.Name
+  name: Name
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name
+  commentId: P:Ipfs.Registry.HashingAlgorithm.Name
+  fullName: Ipfs.Registry.HashingAlgorithm.Name
+  nameWithType: HashingAlgorithm.Name
+- uid: Ipfs.Registry.HashingAlgorithm.Name*
+  name: Name
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.Name
+  fullName: Ipfs.Registry.HashingAlgorithm.Name
+  nameWithType: HashingAlgorithm.Name
+- uid: Ipfs.Registry.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
+  name: Register(String, Int32, Int32, Func<HashAlgorithm>)
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__
+  commentId: M:Ipfs.Registry.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})
+  name.vb: Register(String, Int32, Int32, Func(Of HashAlgorithm))
+  fullName: Ipfs.Registry.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func<System.Security.Cryptography.HashAlgorithm>)
+  fullName.vb: Ipfs.Registry.HashingAlgorithm.Register(System.String, System.Int32, System.Int32, System.Func(Of System.Security.Cryptography.HashAlgorithm))
+  nameWithType: HashingAlgorithm.Register(String, Int32, Int32, Func<HashAlgorithm>)
+  nameWithType.vb: HashingAlgorithm.Register(String, Int32, Int32, Func(Of HashAlgorithm))
+- uid: Ipfs.Registry.HashingAlgorithm.Register*
+  name: Register
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.Register
+  fullName: Ipfs.Registry.HashingAlgorithm.Register
+  nameWithType: HashingAlgorithm.Register
+- uid: Ipfs.Registry.HashingAlgorithm.ToString
+  name: ToString()
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_ToString
+  commentId: M:Ipfs.Registry.HashingAlgorithm.ToString
+  fullName: Ipfs.Registry.HashingAlgorithm.ToString()
+  nameWithType: HashingAlgorithm.ToString()
+- uid: Ipfs.Registry.HashingAlgorithm.ToString*
+  name: ToString
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_ToString_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.ToString
+  fullName: Ipfs.Registry.HashingAlgorithm.ToString
+  nameWithType: HashingAlgorithm.ToString
+- uid: Ipfs.Registry.MultiBaseAlgorithm
+  name: MultiBaseAlgorithm
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html
+  commentId: T:Ipfs.Registry.MultiBaseAlgorithm
+  fullName: Ipfs.Registry.MultiBaseAlgorithm
+  nameWithType: MultiBaseAlgorithm
+- uid: Ipfs.Registry.MultiBaseAlgorithm.All
+  name: All
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_All
+  commentId: P:Ipfs.Registry.MultiBaseAlgorithm.All
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.All
+  nameWithType: MultiBaseAlgorithm.All
+- uid: Ipfs.Registry.MultiBaseAlgorithm.All*
+  name: All
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_All_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.All
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.All
+  nameWithType: MultiBaseAlgorithm.All
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Code
+  name: Code
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Code
+  commentId: P:Ipfs.Registry.MultiBaseAlgorithm.Code
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Code
+  nameWithType: MultiBaseAlgorithm.Code
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Code*
+  name: Code
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Code_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Code
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Code
+  nameWithType: MultiBaseAlgorithm.Code
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Decode
+  name: Decode
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Decode
+  commentId: P:Ipfs.Registry.MultiBaseAlgorithm.Decode
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Decode
+  nameWithType: MultiBaseAlgorithm.Decode
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Decode*
+  name: Decode
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Decode_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Decode
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Decode
+  nameWithType: MultiBaseAlgorithm.Decode
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Encode
+  name: Encode
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Encode
+  commentId: P:Ipfs.Registry.MultiBaseAlgorithm.Encode
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Encode
+  nameWithType: MultiBaseAlgorithm.Encode
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Encode*
+  name: Encode
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Encode_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Encode
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Encode
+  nameWithType: MultiBaseAlgorithm.Encode
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Name
+  name: Name
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Name
+  commentId: P:Ipfs.Registry.MultiBaseAlgorithm.Name
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Name
+  nameWithType: MultiBaseAlgorithm.Name
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Name*
+  name: Name
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Name_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Name
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Name
+  nameWithType: MultiBaseAlgorithm.Name
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Register(System.String,System.Char,System.Func{System.Byte[],System.String},System.Func{System.String,System.Byte[]})
+  name: Register(String, Char, Func<Byte[], String>, Func<String, Byte[]>)
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Register_System_String_System_Char_System_Func_System_Byte___System_String__System_Func_System_String_System_Byte____
+  commentId: M:Ipfs.Registry.MultiBaseAlgorithm.Register(System.String,System.Char,System.Func{System.Byte[],System.String},System.Func{System.String,System.Byte[]})
+  name.vb: Register(String, Char, Func(Of Byte(), String), Func(Of String, Byte()))
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Register(System.String, System.Char, System.Func<System.Byte[], System.String>, System.Func<System.String, System.Byte[]>)
+  fullName.vb: Ipfs.Registry.MultiBaseAlgorithm.Register(System.String, System.Char, System.Func(Of System.Byte(), System.String), System.Func(Of System.String, System.Byte()))
+  nameWithType: MultiBaseAlgorithm.Register(String, Char, Func<Byte[], String>, Func<String, Byte[]>)
+  nameWithType.vb: MultiBaseAlgorithm.Register(String, Char, Func(Of Byte(), String), Func(Of String, Byte()))
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Register*
+  name: Register
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Register_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Register
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Register
+  nameWithType: MultiBaseAlgorithm.Register
+- uid: Ipfs.Registry.MultiBaseAlgorithm.ToString
+  name: ToString()
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_ToString
+  commentId: M:Ipfs.Registry.MultiBaseAlgorithm.ToString
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.ToString()
+  nameWithType: MultiBaseAlgorithm.ToString()
+- uid: Ipfs.Registry.MultiBaseAlgorithm.ToString*
+  name: ToString
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_ToString_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.ToString
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.ToString
+  nameWithType: MultiBaseAlgorithm.ToString
 - uid: Ipfs.UnknownHashingAlgorithmEventArgs
   name: UnknownHashingAlgorithmEventArgs
   href: api/Ipfs.UnknownHashingAlgorithmEventArgs.html

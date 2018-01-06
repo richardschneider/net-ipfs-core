@@ -129,19 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.MultiBase.html",
-          "hash": "TKKiptl+5zIUu/MAH2MsWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ipfs.MultiHash.HashingAlgorithm.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ipfs.MultiHash.HashingAlgorithm.html",
-          "hash": "WA5NxfHco4JrJag6yFea7A=="
+          "hash": "cyGZMDfo+1Ay1UcfLSg9sA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.MultiHash.html",
-          "hash": "yYYAb87xckwxm+kJmc9WRw=="
+          "hash": "zanyRzhqx/D9AWFSOFQs6g=="
         }
       },
       "is_incremental": false,
@@ -185,11 +173,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Registry.HashingAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Registry.HashingAlgorithm.html",
+          "hash": "jq41uugAzd8tRZxJ++C86A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Registry.MultiBaseAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Registry.MultiBaseAlgorithm.html",
+          "hash": "AQdvj9HPPf4XjIw3R6opTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Registry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Registry.html",
+          "hash": "0lWhtLiZTBhoKxq7GYJlHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.UnknownHashingAlgorithmEventArgs.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.UnknownHashingAlgorithmEventArgs.html",
-          "hash": "WkOTFCcFSS8tfWztvDzMXw=="
+          "hash": "HIFajgfY9zpFo6yTAT+T2g=="
         }
       },
       "is_incremental": false,
@@ -213,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.html",
-          "hash": "l63ExPevNtFQS5cKgW3mPA=="
+          "hash": "CGEACGKyCGbxJ6Zc90ep7w=="
         }
       },
       "is_incremental": false,
@@ -225,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eXcREVYovukvQESzsiSuMQ=="
+          "hash": "N6BjSQBpFiyCfU6Ht5fkmQ=="
         }
       },
       "is_incremental": false,
@@ -321,22 +345,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
