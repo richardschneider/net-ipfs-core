@@ -40,16 +40,16 @@ namespace Ipfs.Registry
                 bytes => SimpleBase.Base16.EncodeLower(bytes),
                 s => SimpleBase.Base16.Decode(s));
             Register("base32", 'b',
-                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, false),
+                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, false).ToLowerInvariant(),
                 s => SimpleBase.Base32.Rfc4648.Decode(s));
             Register("base32pad", 'c',
-                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, true),
+                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, true).ToLowerInvariant(),
                 s => SimpleBase.Base32.Rfc4648.Decode(s));
             Register("base32hex", 'v',
-                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, false),
+                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, false).ToLowerInvariant(),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
             Register("base32hexpad", 't',
-                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true),
+                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true).ToLowerInvariant(),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
             Register("base32z", 'h',
                 null,
