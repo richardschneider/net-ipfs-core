@@ -24,6 +24,12 @@ namespace Ipfs.Registry
         /// <summary>
         ///   Register the standard hash algorithms for IPFS.
         /// </summary>
+        /// <remarks>
+        ///   The algorithms are supported: sha1, sha2-256, sha2-512, keccak-224, keccak-256,
+        ///   keccak-384, keccak-512, sha3-224, sha3-256, sha3-384, sha3-512,
+        ///   shake-128 and shake-256.
+        /// </remarks>
+        /// <seealso href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/>
         static HashingAlgorithm()
         {
             Register("sha1", 0x11, 20, () => SHA1.Create());

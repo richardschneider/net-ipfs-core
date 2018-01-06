@@ -79,6 +79,26 @@ namespace Ipfs
                 Input = "f",
                 Output = "tco======"
             },
+            new TestVector {
+                Algorithm = "base64pad",
+                Input = "f",
+                Output = "MZg=="
+            },
+            new TestVector {
+                Algorithm = "base64",
+                Input = "f",
+                Output = "mZg"
+            },
+            new TestVector {
+                Algorithm = "base64",
+                Input = "χοÿ",
+                Output = "mw7fDr8O/"
+            },
+            new TestVector {
+                Algorithm = "base64url",
+                Input = "χοÿ",
+                Output = "uw7fDr8O_"
+            },
 
         };
 

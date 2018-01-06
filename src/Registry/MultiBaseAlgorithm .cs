@@ -20,6 +20,12 @@ namespace Ipfs.Registry
         /// <summary>
         ///   Register the standard multi-base algorithms for IPFS.
         /// </summary>
+        /// <remarks>
+        ///   These algorithms are supported: base58btc, base58flickr, base64,
+        ///   base64pad, base64url, base16, base32, base32pad, base32hex
+        ///   and base32hexpad.
+        /// </remarks>
+        /// <seealso href="https://github.com/multiformats/multibase/blob/master/multibase.csv"/>
         static MultiBaseAlgorithm()
         {
             Register("base58btc", 'z',
@@ -28,14 +34,15 @@ namespace Ipfs.Registry
             Register("base58flickr", 'Z',
                 bytes => SimpleBase.Base58.Flickr.Encode(bytes),
                 s => SimpleBase.Base58.Flickr.Decode(s));
-            Register("base64", 'm');
-            Register("base64pad", 'M');
-            Register("base64url", 'u');
-            Register("base64urlpad", 'U');
-            Register("base1", '1');
-            Register("base2", '0');
-            Register("base8", '7');
-            Register("base10", '9');
+            Register("base64", 'm',
+                bytes => bytes.ToBase64NoPad(),
+                s => s.FromBase64NoPad());
+            Register("base64pad", 'M',
+                bytes => Convert.ToBase64String(bytes),
+                s => Convert.FromBase64String(s));
+            Register("base64url", 'u',
+                bytes => bytes.ToBase64Url(),
+                s => s.FromBase64Url());
             Register("base16", 'f',
                 bytes => SimpleBase.Base16.EncodeLower(bytes),
                 s => SimpleBase.Base16.Decode(s));
@@ -51,9 +58,13 @@ namespace Ipfs.Registry
             Register("base32hexpad", 't',
                 bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true).ToLowerInvariant(),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
-            Register("base32z", 'h',
-                null,
-                null);
+
+            // TODO
+            Register("base1", '1');
+            Register("base2", '0');
+            Register("base8", '7');
+            Register("base10", '9');
+            Register("base32z", 'h');
         }
 
         /// <summary>
