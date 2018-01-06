@@ -10,7 +10,7 @@ namespace Ipfs
     ///   Self identifying base encodings.
     /// </summary>
     /// <remarks>
-    ///   <b>Multibase</b> is a protocol for distinguishing base encodings 
+    ///   <b>MultiBase</b> is a protocol for distinguishing base encodings 
     ///   and other simple string encodings, and for ensuring full compatibility 
     ///   with program interfaces.
     /// </remarks>

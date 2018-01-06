@@ -13,7 +13,7 @@ namespace Ipfs.Registry
     /// </summary>
     /// <remarks>
     ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to hashing algorithm.
-    ///   See <see href=""https://github.com/multiformats/multihash/blob/master/hashtable.csv"/> for
+    ///   See <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/> for
     ///   the currently defined hashing algorithms.
     /// </remarks>
     public class HashingAlgorithm
