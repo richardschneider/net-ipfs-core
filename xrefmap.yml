@@ -888,6 +888,39 @@ references:
   commentId: T:Ipfs.MultiBase
   fullName: Ipfs.MultiBase
   nameWithType: MultiBase
+- uid: Ipfs.MultiBase.Decode(System.String)
+  name: Decode(String)
+  href: api/Ipfs.MultiBase.html#Ipfs_MultiBase_Decode_System_String_
+  commentId: M:Ipfs.MultiBase.Decode(System.String)
+  fullName: Ipfs.MultiBase.Decode(System.String)
+  nameWithType: MultiBase.Decode(String)
+- uid: Ipfs.MultiBase.Decode*
+  name: Decode
+  href: api/Ipfs.MultiBase.html#Ipfs_MultiBase_Decode_
+  commentId: Overload:Ipfs.MultiBase.Decode
+  fullName: Ipfs.MultiBase.Decode
+  nameWithType: MultiBase.Decode
+- uid: Ipfs.MultiBase.DefaultAlgorithmName
+  name: DefaultAlgorithmName
+  href: api/Ipfs.MultiBase.html#Ipfs_MultiBase_DefaultAlgorithmName
+  commentId: F:Ipfs.MultiBase.DefaultAlgorithmName
+  fullName: Ipfs.MultiBase.DefaultAlgorithmName
+  nameWithType: MultiBase.DefaultAlgorithmName
+- uid: Ipfs.MultiBase.Encode(System.Byte[],System.String)
+  name: Encode(Byte[], String)
+  href: api/Ipfs.MultiBase.html#Ipfs_MultiBase_Encode_System_Byte___System_String_
+  commentId: M:Ipfs.MultiBase.Encode(System.Byte[],System.String)
+  name.vb: Encode(Byte(), String)
+  fullName: Ipfs.MultiBase.Encode(System.Byte[], System.String)
+  fullName.vb: Ipfs.MultiBase.Encode(System.Byte(), System.String)
+  nameWithType: MultiBase.Encode(Byte[], String)
+  nameWithType.vb: MultiBase.Encode(Byte(), String)
+- uid: Ipfs.MultiBase.Encode*
+  name: Encode
+  href: api/Ipfs.MultiBase.html#Ipfs_MultiBase_Encode_
+  commentId: Overload:Ipfs.MultiBase.Encode
+  fullName: Ipfs.MultiBase.Encode
+  nameWithType: MultiBase.Encode
 - uid: Ipfs.MultiHash
   name: MultiHash
   href: api/Ipfs.MultiHash.html

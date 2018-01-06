@@ -109,13 +109,186 @@
   <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
   <h5 id="Ipfs_MultiBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MultiBase</code></pre>
+    <pre><code class="lang-csharp hljs">public static class MultiBase</code></pre>
   </div>
   <h5 id="Ipfs_MultiBase_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p><strong>MultiBase</strong> is a protocol for distinguishing base encodings 
-and other simple string encodings, and for ensuring full compatibility 
-with program interfaces.</p>
+and other simple string encodings.</p>
 </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiBase_DefaultAlgorithmName.md&amp;value=---%0Auid%3A%20Ipfs.MultiBase.DefaultAlgorithmName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiBase.cs/#L23">View Source</a>
+  </span>
+  <h4 id="Ipfs_MultiBase_DefaultAlgorithmName" data-uid="Ipfs.MultiBase.DefaultAlgorithmName">DefaultAlgorithmName</h4>
+  <div class="markdown level1 summary"><p>The default multi-base algorithm is &quot;base58btc&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultAlgorithmName = &quot;base58btc&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiBase_Decode_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiBase.Decode(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiBase.cs/#L88">View Source</a>
+  </span>
+  <a id="Ipfs_MultiBase_Decode_" data-uid="Ipfs.MultiBase.Decode*"></a>
+  <h4 id="Ipfs_MultiBase_Decode_System_String_" data-uid="Ipfs.MultiBase.Decode(System.String)">Decode(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, which encodes binary data, 
+to an equivalent 8-bit unsigned integer array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] Decode(string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The multi-base string to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><p>An array of 8-bit unsigned integers that is equivalent to <code data-dev-comment-type="paramref" class="paramref">s</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.formatexception(v=vs.110).aspx">FormatException</a></td>
+        <td><p>When the <code data-dev-comment-type="paramref" class="paramref">s</code> can not be decoded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiBase_Encode_System_Byte___System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiBase.Encode(System.Byte%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiBase.cs/#L64">View Source</a>
+  </span>
+  <a id="Ipfs_MultiBase_Encode_" data-uid="Ipfs.MultiBase.Encode*"></a>
+  <h4 id="Ipfs_MultiBase_Encode_System_Byte___System_String_" data-uid="Ipfs.MultiBase.Encode(System.Byte[],System.String)">Encode(Byte[], String)</h4>
+  <div class="markdown level1 summary"><p>Converts an array of 8-bit unsigned integers to its equivalent string representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Encode(byte[] bytes, string algorithmName = &quot;base58btc&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>An array of 8-bit unsigned integers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">algorithmName</span></td>
+        <td><p>The name of the multi-base algorithm to use. See <a href="https://github.com/multiformats/multibase/blob/master/multibase.csv">https://github.com/multiformats/multibase/blob/master/multibase.csv</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><p>A <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a> starting with the algorithm&apos;s <a class="xref" href="Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Code">Code</a> and
+followed by the encoded string representation of the <code data-dev-comment-type="paramref" class="paramref">bytes</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.generic.keynotfoundexception(v=vs.110).aspx">KeyNotFoundException</a></td>
+        <td><p>When <code data-dev-comment-type="paramref" class="paramref">algorithmName</code> is not registered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://github.com/multiformats/multibase">https://github.com/multiformats/multibase</a></span></div>
