@@ -14,6 +14,9 @@ namespace Ipfs
     ///   A protocol for differentiating outputs from various well-established cryptographic hash functions, 
     ///   addressing size + encoding considerations.
     /// </summary>
+    /// <remarks>
+    ///   See the <see cref="HashingAlgorithm">registry</see> for supported algorithms.
+    /// </remarks>
     /// <seealso href="https://github.com/jbenet/multihash"/>
     public class MultiHash : IEquatable<MultiHash>
     {

@@ -11,6 +11,11 @@ namespace Ipfs.Registry
     ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to multi-base algorithm.
     ///   See <see href="https://github.com/multiformats/multibase/blob/master/multibase.csv"/> for
     ///   the currently defined multi-base algorithms.
+    ///   <para>
+    ///   These algorithms are supported: base58btc, base58flickr, base64,
+    ///   base64pad, base64url, base16, base32, base32pad, base32hex
+    ///   and base32hexpad.
+    ///   </para>
     /// </remarks>
     public class MultiBaseAlgorithm
     {
@@ -20,11 +25,6 @@ namespace Ipfs.Registry
         /// <summary>
         ///   Register the standard multi-base algorithms for IPFS.
         /// </summary>
-        /// <remarks>
-        ///   These algorithms are supported: base58btc, base58flickr, base64,
-        ///   base64pad, base64url, base16, base32, base32pad, base32hex
-        ///   and base32hexpad.
-        /// </remarks>
         /// <seealso href="https://github.com/multiformats/multibase/blob/master/multibase.csv"/>
         static MultiBaseAlgorithm()
         {

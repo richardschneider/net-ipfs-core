@@ -12,7 +12,8 @@ namespace Ipfs
     /// </summary>
     /// <remarks>
     ///   <b>MultiBase</b> is a protocol for distinguishing base encodings 
-    ///   and other simple string encodings.
+    ///   and other simple string encodings.  
+    ///   See the <see cref="MultiBaseAlgorithm">registry</see> for supported algorithms.
     /// </remarks>
     /// <seealso href="https://github.com/multiformats/multibase"/>
     public static class MultiBase
