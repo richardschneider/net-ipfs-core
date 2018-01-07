@@ -92,10 +92,6 @@ namespace Ipfs
             {
                 throw new ArgumentNullException("s");
             }
-            if (s.Length < 1)
-            {
-                throw new FormatException($"MultiBase '{s}' is invalid; too short.");
-            }
 
             MultiBaseAlgorithm.Codes.TryGetValue(s[0], out MultiBaseAlgorithm alg);
             if (alg == null)

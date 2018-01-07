@@ -28,8 +28,18 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Encode_Null_Data_Not_Allowed()
+        {
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiBase.Encode(null));
+        }
+
+        [TestMethod]
         public void Decode_Bad_Formats()
         {
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiBase.Decode(null));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiBase.Decode(""));
+            ExceptionAssert.Throws<ArgumentNullException>(() => MultiBase.Decode("   "));
+
             ExceptionAssert.Throws<FormatException>(() => MultiBase.Decode("?"));
             ExceptionAssert.Throws<FormatException>(() => MultiBase.Decode("??"));
             ExceptionAssert.Throws<FormatException>(() => MultiBase.Decode("???"));
@@ -100,6 +110,21 @@ namespace Ipfs
                 Input = "χοÿ",
                 Output = "uw7fDr8O_"
             },
+            new TestVector {
+                Algorithm = "base64url",
+                Input = "f",
+                Output = "uZg"
+            },
+            new TestVector {
+                Algorithm = "base64url",
+                Input = "fo",
+                Output = "uZm8"
+            },
+            new TestVector {
+                Algorithm = "base64url",
+                Input = "foo",
+                Output = "uZm9v"
+            },
 
         };
 
@@ -126,6 +151,16 @@ namespace Ipfs
             {
                 var s = MultiBase.Encode(empty, alg.Name);
                 CollectionAssert.AreEqual(empty, MultiBase.Decode(s), alg.Name);
+            }
+        }
+
+        [TestMethod]
+        public void Invalid_Encoded_String()
+        {
+            foreach (var alg in MultiBaseAlgorithm.All)
+            {
+                var bad = alg.Code + "?";
+                ExceptionAssert.Throws<FormatException>(() => MultiBase.Decode(bad));
             }
         }
 

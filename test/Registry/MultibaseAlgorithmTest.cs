@@ -44,15 +44,17 @@ namespace Ipfs.Registry
 
             foreach (var alg in MultiBaseAlgorithm.All)
             {
-                try
-                {
-                    var s = alg.Encode(bytes);
-                    CollectionAssert.AreEqual(bytes, alg.Decode(s), alg.Name);
-                }
-                catch (NotImplementedException)
-                {
-                    // If NYI then can't test it.
-                }
+                var s = alg.Encode(bytes);
+                CollectionAssert.AreEqual(bytes, alg.Decode(s), alg.Name);
+            }
+        }
+
+        [TestMethod]
+        public void Name_Is_Also_ToString()
+        {
+            foreach (var alg in MultiBaseAlgorithm.All)
+            {
+                Assert.AreEqual(alg.Name, alg.ToString());
             }
         }
     }
