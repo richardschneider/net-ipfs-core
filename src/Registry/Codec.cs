@@ -102,6 +102,12 @@ namespace Ipfs.Registry
         /// <returns>
         ///   A new <see cref="Codec"/>.
         /// </returns>
+        /// <exception cref="ArgumentException">
+        ///   When the <paramref name="name"/> or <paramref name="code"/> is already defined.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        ///   When the <paramref name="name"/> is null or empty.
+        /// </exception>
         public static Codec Register(string name, int code)
         {
             if (string.IsNullOrWhiteSpace(name))
