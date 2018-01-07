@@ -49,6 +49,45 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Encode_V1()
+        {
+            var cid = new Cid
+            {
+                Version = 1,
+                ContentType = "raw",
+                Encoding = "base58btc",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+        }
+
+        [TestMethod]
+        public void Encode_V1_Invalid_ContentType()
+        {
+            var cid = new Cid
+            {
+                Version = 1,
+                ContentType = "unknown",
+                Encoding = "base58btc",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.ThrowsException<KeyNotFoundException>(() => cid.Encode());
+        }
+
+        [TestMethod]
+        public void Encode_V1_Invalid_Encoding()
+        {
+            var cid = new Cid
+            {
+                Version = 1,
+                ContentType = "raw",
+                Encoding = "unknown",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.ThrowsException<KeyNotFoundException>(() => cid.Encode());
+        }
+
+        [TestMethod]
         public void Decode_V0()
         {
             var hash = "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V";
@@ -59,5 +98,63 @@ namespace Ipfs
             Assert.AreEqual(hash, cid.Encode());
         }
 
+        [TestMethod]
+        public void Decode_V0_Invalid()
+        {
+            var hash = "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39?";
+            Assert.ThrowsException<FormatException>(() => Cid.Decode(hash));
+        }
+
+        [TestMethod]
+        public void Decode_Invalid_Version()
+        {
+            var cid = new Cid
+            {
+                Version = 32767,
+                ContentType = "raw",
+                Encoding = "base58btc",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            var s = cid.Encode();
+            Assert.ThrowsException<FormatException>(() => Cid.Decode(s));
+        }
+
+        [TestMethod]
+        public void Decode_V1()
+        {
+            var id = "zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn";
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            var cid = Cid.Decode(id);
+            Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("base58btc", cid.Encoding);
+            Assert.AreEqual("raw", cid.ContentType);
+            Assert.AreEqual(hash, cid.Hash);
+        }
+
+        [TestMethod]
+        public void Decode_V1_Unknown_ContentType()
+        {
+            var id = "zJAFhtPN28kqMxDkZawWCCL52BzaiymqFgX3LA7XzkNRMNAN1T1J";
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            var cid = Cid.Decode(id);
+            Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("base58btc", cid.Encoding);
+            Assert.AreEqual("codec-32767", cid.ContentType);
+            Assert.AreEqual(hash, cid.Hash);
+        }
+
+        [TestMethod]
+        public void Decode_V1_Invalid_MultiBase_String()
+        {
+            var id = "zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDX?";
+            Assert.ThrowsException<FormatException>(() => Cid.Decode(id));
+        }
+
+        [TestMethod]
+        public void Decode_V1_Invalid_MultiBase_Code()
+        {
+            var id = "?";
+            Assert.ThrowsException<FormatException>(() => Cid.Decode(id));
+        }
     }
 }

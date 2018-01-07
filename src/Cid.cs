@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Ipfs
@@ -36,7 +37,7 @@ namespace Ipfs
         /// <value>
         ///   base58btc, base64, etc.  Defaults to "base58btc",
         /// </value>
-        /// <seealso href="https://github.com/multiformats/multibase"/>
+        /// <seealso cref="MultiBase"/>
         public string Encoding { get; set; } = "base58btc";
 
         /// <summary>
@@ -45,7 +46,7 @@ namespace Ipfs
         /// <value>
         ///   dag-pb, dag-cbor, eth-block, etc.  Defaults to "dag-pb".
         /// </value>
-        /// <seealso href="https://github.com/multiformats/multicodec"/>
+        /// <seealso cref="MultiCodec"/>
         public string ContentType { get; set; } = "dag-pb";
 
         /// <summary>
@@ -100,7 +101,13 @@ namespace Ipfs
                 return Hash.ToBase58();
             }
 
-            throw new NotImplementedException();
+            using (var ms = new MemoryStream())
+            {
+                ms.WriteVarint(Version);
+                ms.WriteMultiCodec(ContentType);
+                Hash.Write(ms);
+                return MultiBase.Encode(ms.ToArray(), Encoding);
+            }
         }
 
         /// <summary>
@@ -116,15 +123,37 @@ namespace Ipfs
         /// <exception cref="FormatException">
         ///   When the <paramref name="input"/> can not be decoded.
         /// </exception>
+        /// <seealso cref="Encode"/>
         public static Cid Decode(string input)
         {
-            // SHA2-256 MultiHash is CID v0.
-            if (input.Length == 46 && input.StartsWith("Qm"))
+            try
             {
-                return (Cid)new MultiHash(input);
-            }
+                // SHA2-256 MultiHash is CID v0.
+                if (input.Length == 46 && input.StartsWith("Qm"))
+                {
+                    return (Cid)new MultiHash(input);
+                }
 
-            throw new FormatException();
+                using (var ms = new MemoryStream(MultiBase.Decode(input), false))
+                {
+                    var version = ms.ReadVarint32();
+                    if (version != 1)
+                    {
+                        throw new InvalidDataException($"Unknown CID version '{version}'.");
+                    }
+                    return new Cid
+                    {
+                        Version = version,
+                        Encoding = Registry.MultiBaseAlgorithm.Codes[input[0]].Name,
+                        ContentType = ms.ReadMultiCodec().Name,
+                        Hash = new MultiHash(ms)
+                    };
+                }
+            }
+            catch (Exception e)
+            {
+                throw new FormatException($"Invalid CID '{input}'.", e);
+            }
         }
 
         /// <summary>

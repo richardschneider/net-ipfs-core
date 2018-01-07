@@ -42,7 +42,7 @@ namespace Ipfs
             }
             catch (KeyNotFoundException)
             {
-                throw new KeyNotFoundException($"MutiBase algorithm '{name}' is not registered");
+                throw new KeyNotFoundException($"MutiBase algorithm '{name}' is not registered.");
             }
         }
 
