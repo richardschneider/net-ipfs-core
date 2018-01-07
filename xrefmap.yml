@@ -1755,6 +1755,18 @@ references:
   commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.ToString
   fullName: Ipfs.Registry.MultiBaseAlgorithm.ToString
   nameWithType: MultiBaseAlgorithm.ToString
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Unregister(Ipfs.Registry.MultiBaseAlgorithm)
+  name: Unregister(MultiBaseAlgorithm)
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Unregister_Ipfs_Registry_MultiBaseAlgorithm_
+  commentId: M:Ipfs.Registry.MultiBaseAlgorithm.Unregister(Ipfs.Registry.MultiBaseAlgorithm)
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Unregister(Ipfs.Registry.MultiBaseAlgorithm)
+  nameWithType: MultiBaseAlgorithm.Unregister(MultiBaseAlgorithm)
+- uid: Ipfs.Registry.MultiBaseAlgorithm.Unregister*
+  name: Unregister
+  href: api/Ipfs.Registry.MultiBaseAlgorithm.html#Ipfs_Registry_MultiBaseAlgorithm_Unregister_
+  commentId: Overload:Ipfs.Registry.MultiBaseAlgorithm.Unregister
+  fullName: Ipfs.Registry.MultiBaseAlgorithm.Unregister
+  nameWithType: MultiBaseAlgorithm.Unregister
 - uid: Ipfs.UnknownHashingAlgorithmEventArgs
   name: UnknownHashingAlgorithmEventArgs
   href: api/Ipfs.UnknownHashingAlgorithmEventArgs.html
