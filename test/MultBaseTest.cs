@@ -1,3 +1,4 @@
+using Ipfs.Registry;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -114,6 +115,17 @@ namespace Ipfs
                 var s = MultiBase.Encode(bytes, v.Algorithm);
                 Assert.AreEqual(v.Output, s);
                 CollectionAssert.AreEqual(bytes, MultiBase.Decode(s));
+            }
+        }
+
+        [TestMethod]
+        public void EmptyData()
+        {
+            var empty = new byte[0];
+            foreach (var alg in MultiBaseAlgorithm.All)
+            {
+                var s = MultiBase.Encode(empty, alg.Name);
+                CollectionAssert.AreEqual(empty, MultiBase.Decode(s), alg.Name);
             }
         }
 

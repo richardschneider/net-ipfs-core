@@ -92,7 +92,7 @@ namespace Ipfs
             {
                 throw new ArgumentNullException("s");
             }
-            if (s.Length < 2)
+            if (s.Length < 1)
             {
                 throw new FormatException($"MultiBase '{s}' is invalid; too short.");
             }

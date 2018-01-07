@@ -59,12 +59,14 @@ namespace Ipfs.Registry
                 bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true).ToLowerInvariant(),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
 
-            // TODO
+            // Not supported
+#if false
             Register("base1", '1');
             Register("base2", '0');
             Register("base8", '7');
             Register("base10", '9');
             Register("base32z", 'h');
+#endif
         }
 
         /// <summary>
