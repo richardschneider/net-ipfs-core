@@ -1041,6 +1041,36 @@ references:
   commentId: Overload:Ipfs.MultiBase.Encode
   fullName: Ipfs.MultiBase.Encode
   nameWithType: MultiBase.Encode
+- uid: Ipfs.MultiCodec
+  name: MultiCodec
+  href: api/Ipfs.MultiCodec.html
+  commentId: T:Ipfs.MultiCodec
+  fullName: Ipfs.MultiCodec
+  nameWithType: MultiCodec
+- uid: Ipfs.MultiCodec.ReadMultiCodec(System.IO.Stream)
+  name: ReadMultiCodec(Stream)
+  href: api/Ipfs.MultiCodec.html#Ipfs_MultiCodec_ReadMultiCodec_System_IO_Stream_
+  commentId: M:Ipfs.MultiCodec.ReadMultiCodec(System.IO.Stream)
+  fullName: Ipfs.MultiCodec.ReadMultiCodec(System.IO.Stream)
+  nameWithType: MultiCodec.ReadMultiCodec(Stream)
+- uid: Ipfs.MultiCodec.ReadMultiCodec*
+  name: ReadMultiCodec
+  href: api/Ipfs.MultiCodec.html#Ipfs_MultiCodec_ReadMultiCodec_
+  commentId: Overload:Ipfs.MultiCodec.ReadMultiCodec
+  fullName: Ipfs.MultiCodec.ReadMultiCodec
+  nameWithType: MultiCodec.ReadMultiCodec
+- uid: Ipfs.MultiCodec.WriteMultiCodec(System.IO.Stream,System.String)
+  name: WriteMultiCodec(Stream, String)
+  href: api/Ipfs.MultiCodec.html#Ipfs_MultiCodec_WriteMultiCodec_System_IO_Stream_System_String_
+  commentId: M:Ipfs.MultiCodec.WriteMultiCodec(System.IO.Stream,System.String)
+  fullName: Ipfs.MultiCodec.WriteMultiCodec(System.IO.Stream, System.String)
+  nameWithType: MultiCodec.WriteMultiCodec(Stream, String)
+- uid: Ipfs.MultiCodec.WriteMultiCodec*
+  name: WriteMultiCodec
+  href: api/Ipfs.MultiCodec.html#Ipfs_MultiCodec_WriteMultiCodec_
+  commentId: Overload:Ipfs.MultiCodec.WriteMultiCodec
+  fullName: Ipfs.MultiCodec.WriteMultiCodec
+  nameWithType: MultiCodec.WriteMultiCodec
 - uid: Ipfs.MultiHash
   name: MultiHash
   href: api/Ipfs.MultiHash.html
