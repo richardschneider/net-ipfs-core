@@ -57,5 +57,20 @@ namespace Ipfs.Registry
                 Assert.AreEqual(alg.Name, alg.ToString());
             }
         }
+
+        [TestMethod] 
+        public void Known_But_NYI()
+        {
+            var alg = MultiBaseAlgorithm.Register("nyi", 'n');
+            try
+            {
+                ExceptionAssert.Throws<NotImplementedException>(() => alg.Encode(null));
+                ExceptionAssert.Throws<NotImplementedException>(() => alg.Decode(null));
+            }
+            finally
+            {
+                MultiBaseAlgorithm.Unregister(alg);
+            }
+        }
     }
 }
