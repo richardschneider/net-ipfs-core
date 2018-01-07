@@ -9,8 +9,8 @@ namespace Ipfs.Registry
     /// </summary>
     /// <remarks>
     ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to codecs.
-    ///   See <see href="https://github.com/multiformats/multicodec/blob/master/table.csv"/> for
-    ///   the currently defined multi-codecs.
+    ///   See <see href="https://github.com/multiformats/multicodec/blob/master/table.csv">table.csv</see> 
+    ///   for the currently defined multi-codecs.
     /// </remarks>
     /// <seealso href="https://github.com/multiformats/multicodec"/>
     public class Codec
@@ -80,8 +80,11 @@ namespace Ipfs.Registry
         }
 
         /// <summary>
-        ///   The <see cref="Name"/> of the algorithm.
+        ///   The <see cref="Name"/> of the codec.
         /// </summary>
+        /// <value>
+        ///   The <see cref="Name"/> of the codec.
+        /// </value>
         public override string ToString()
         {
             return Name;
@@ -133,6 +136,9 @@ namespace Ipfs.Registry
         /// <summary>
         ///   A sequence consisting of all codecs.
         /// </summary>
+        /// <value>
+        ///   All the registered codecs.
+        /// </value>
         public static IEnumerable<Codec> All
         {
             get { return Names.Values; }
