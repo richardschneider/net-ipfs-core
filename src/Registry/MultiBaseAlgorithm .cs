@@ -163,12 +163,12 @@ namespace Ipfs.Registry
         }
 
         /// <summary>
-        ///   Unregister an IPFS algorithm.
+        ///   Remove an IPFS algorithm from the registry.
         /// </summary>
         /// <param name="algorithm">
         ///   The <see cref="MultiBaseAlgorithm"/> to remove.
         /// </param>
-        public static void Unregister(MultiBaseAlgorithm algorithm)
+        public static void Deregister(MultiBaseAlgorithm algorithm)
         {
             Names.Remove(algorithm.Name);
             Codes.Remove(algorithm.Code);

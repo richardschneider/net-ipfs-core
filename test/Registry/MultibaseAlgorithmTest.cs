@@ -69,7 +69,7 @@ namespace Ipfs.Registry
             }
             finally
             {
-                MultiBaseAlgorithm.Unregister(alg);
+                MultiBaseAlgorithm.Deregister(alg);
             }
         }
     }

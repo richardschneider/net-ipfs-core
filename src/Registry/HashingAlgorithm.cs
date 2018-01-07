@@ -138,6 +138,18 @@ namespace Ipfs.Registry
         }
 
         /// <summary>
+        ///   Remove an IPFS hashing algorithm from the registry.
+        /// </summary>
+        /// <param name="algorithm">
+        ///   The <see cref="HashingAlgorithm"/> to remove.
+        /// </param>
+        public static void Deregister(HashingAlgorithm algorithm)
+        {
+            Names.Remove(algorithm.Name);
+            Codes.Remove(algorithm.Code);
+        }
+
+        /// <summary>
         ///   A sequence consisting of all <see cref="HashingAlgorithm">hashing algorithms</see>.
         /// </summary>
         public static IEnumerable<HashingAlgorithm> All

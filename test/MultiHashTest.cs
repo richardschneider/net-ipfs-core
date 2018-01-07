@@ -109,9 +109,16 @@ namespace Ipfs
         [TestMethod]
         public void Compute_Not_Implemented_Hash_Array()
         {
-            HashingAlgorithm.Register("not-implemented", 0x0F, 32);
-            var hello = Encoding.UTF8.GetBytes("Hello, world.");
-            ExceptionAssert.Throws<NotImplementedException>(() => MultiHash.ComputeHash(hello, "not-implemented"));
+            var alg = HashingAlgorithm.Register("not-implemented", 0x0F, 32);
+            try
+            {
+                var hello = Encoding.UTF8.GetBytes("Hello, world.");
+                ExceptionAssert.Throws<NotImplementedException>(() => MultiHash.ComputeHash(hello, "not-implemented"));
+            }
+            finally
+            {
+                HashingAlgorithm.Deregister(alg);
+            }
         }
 
         [TestMethod]
