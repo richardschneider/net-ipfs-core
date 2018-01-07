@@ -1569,6 +1569,84 @@ references:
   commentId: N:Ipfs.Registry
   fullName: Ipfs.Registry
   nameWithType: Ipfs.Registry
+- uid: Ipfs.Registry.Codec
+  name: Codec
+  href: api/Ipfs.Registry.Codec.html
+  commentId: T:Ipfs.Registry.Codec
+  fullName: Ipfs.Registry.Codec
+  nameWithType: Codec
+- uid: Ipfs.Registry.Codec.All
+  name: All
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_All
+  commentId: P:Ipfs.Registry.Codec.All
+  fullName: Ipfs.Registry.Codec.All
+  nameWithType: Codec.All
+- uid: Ipfs.Registry.Codec.All*
+  name: All
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_All_
+  commentId: Overload:Ipfs.Registry.Codec.All
+  fullName: Ipfs.Registry.Codec.All
+  nameWithType: Codec.All
+- uid: Ipfs.Registry.Codec.Code
+  name: Code
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Code
+  commentId: P:Ipfs.Registry.Codec.Code
+  fullName: Ipfs.Registry.Codec.Code
+  nameWithType: Codec.Code
+- uid: Ipfs.Registry.Codec.Code*
+  name: Code
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Code_
+  commentId: Overload:Ipfs.Registry.Codec.Code
+  fullName: Ipfs.Registry.Codec.Code
+  nameWithType: Codec.Code
+- uid: Ipfs.Registry.Codec.Deregister(Ipfs.Registry.Codec)
+  name: Deregister(Codec)
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Deregister_Ipfs_Registry_Codec_
+  commentId: M:Ipfs.Registry.Codec.Deregister(Ipfs.Registry.Codec)
+  fullName: Ipfs.Registry.Codec.Deregister(Ipfs.Registry.Codec)
+  nameWithType: Codec.Deregister(Codec)
+- uid: Ipfs.Registry.Codec.Deregister*
+  name: Deregister
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Deregister_
+  commentId: Overload:Ipfs.Registry.Codec.Deregister
+  fullName: Ipfs.Registry.Codec.Deregister
+  nameWithType: Codec.Deregister
+- uid: Ipfs.Registry.Codec.Name
+  name: Name
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Name
+  commentId: P:Ipfs.Registry.Codec.Name
+  fullName: Ipfs.Registry.Codec.Name
+  nameWithType: Codec.Name
+- uid: Ipfs.Registry.Codec.Name*
+  name: Name
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Name_
+  commentId: Overload:Ipfs.Registry.Codec.Name
+  fullName: Ipfs.Registry.Codec.Name
+  nameWithType: Codec.Name
+- uid: Ipfs.Registry.Codec.Register(System.String,System.Int32)
+  name: Register(String, Int32)
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Register_System_String_System_Int32_
+  commentId: M:Ipfs.Registry.Codec.Register(System.String,System.Int32)
+  fullName: Ipfs.Registry.Codec.Register(System.String, System.Int32)
+  nameWithType: Codec.Register(String, Int32)
+- uid: Ipfs.Registry.Codec.Register*
+  name: Register
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Register_
+  commentId: Overload:Ipfs.Registry.Codec.Register
+  fullName: Ipfs.Registry.Codec.Register
+  nameWithType: Codec.Register
+- uid: Ipfs.Registry.Codec.ToString
+  name: ToString()
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_ToString
+  commentId: M:Ipfs.Registry.Codec.ToString
+  fullName: Ipfs.Registry.Codec.ToString()
+  nameWithType: Codec.ToString()
+- uid: Ipfs.Registry.Codec.ToString*
+  name: ToString
+  href: api/Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_ToString_
+  commentId: Overload:Ipfs.Registry.Codec.ToString
+  fullName: Ipfs.Registry.Codec.ToString
+  nameWithType: Codec.ToString
 - uid: Ipfs.Registry.HashingAlgorithm
   name: HashingAlgorithm
   href: api/Ipfs.Registry.HashingAlgorithm.html
