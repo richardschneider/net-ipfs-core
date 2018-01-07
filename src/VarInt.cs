@@ -16,6 +16,14 @@ namespace Ipfs
     ///   <para>
     ///   Negative values are not allowed.  When encountered a <see cref="NotSupportedException"/> is thrown.
     ///   </para>
+    ///   <para>
+    ///   Adds the following extension methods to <see cref="Stream"/>
+    ///    <list type="bullet">
+    ///      <item><description><see cref="ReadVarint32"/></description></item>
+    ///      <item><description><see cref="ReadVarint64"/></description></item>
+    ///      <item><description><see cref="WriteVarint"/></description></item>
+    ///    </list>
+    ///   </para>
     /// </remarks>
     /// <seealso href="https://developers.google.com/protocol-buffers/docs/encoding#varints"/>
     public static class Varint
