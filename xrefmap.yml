@@ -394,6 +394,18 @@ references:
   commentId: Overload:Ipfs.Cid.op_Inequality
   fullName: Ipfs.Cid.Inequality
   nameWithType: Cid.Inequality
+- uid: Ipfs.Cid.Read(System.IO.Stream)
+  name: Read(Stream)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Read_System_IO_Stream_
+  commentId: M:Ipfs.Cid.Read(System.IO.Stream)
+  fullName: Ipfs.Cid.Read(System.IO.Stream)
+  nameWithType: Cid.Read(Stream)
+- uid: Ipfs.Cid.Read*
+  name: Read
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Read_
+  commentId: Overload:Ipfs.Cid.Read
+  fullName: Ipfs.Cid.Read
+  nameWithType: Cid.Read
 - uid: Ipfs.Cid.ToString
   name: ToString()
   href: api/Ipfs.Cid.html#Ipfs_Cid_ToString
@@ -418,6 +430,18 @@ references:
   commentId: Overload:Ipfs.Cid.Version
   fullName: Ipfs.Cid.Version
   nameWithType: Cid.Version
+- uid: Ipfs.Cid.Write(System.IO.Stream)
+  name: Write(Stream)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Write_System_IO_Stream_
+  commentId: M:Ipfs.Cid.Write(System.IO.Stream)
+  fullName: Ipfs.Cid.Write(System.IO.Stream)
+  nameWithType: Cid.Write(Stream)
+- uid: Ipfs.Cid.Write*
+  name: Write
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Write_
+  commentId: Overload:Ipfs.Cid.Write
+  fullName: Ipfs.Cid.Write
+  nameWithType: Cid.Write
 - uid: Ipfs.DagLink
   name: DagLink
   href: api/Ipfs.DagLink.html
