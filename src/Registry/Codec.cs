@@ -25,6 +25,7 @@ namespace Ipfs.Registry
         static Codec()
         {
             Register("raw", 0x55);
+            Register("cms", 0x57); // Not official yet, https://github.com/multiformats/multicodec/pull/69
             Register("cbor", 0x51);
             Register("protobuf", 0x50);
             Register("rlp", 0x60);
