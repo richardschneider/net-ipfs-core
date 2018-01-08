@@ -364,6 +364,15 @@ references:
   fullName.vb: Ipfs.Cid.Widening(Ipfs.MultiHash to Ipfs.Cid)
   nameWithType: Cid.Implicit(MultiHash to Cid)
   nameWithType.vb: Cid.Widening(MultiHash to Cid)
+- uid: Ipfs.Cid.op_Implicit(System.String)~Ipfs.Cid
+  name: Implicit(String to Cid)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_System_String__Ipfs_Cid
+  commentId: M:Ipfs.Cid.op_Implicit(System.String)~Ipfs.Cid
+  name.vb: Widening(String to Cid)
+  fullName: Ipfs.Cid.Implicit(System.String to Ipfs.Cid)
+  fullName.vb: Ipfs.Cid.Widening(System.String to Ipfs.Cid)
+  nameWithType: Cid.Implicit(String to Cid)
+  nameWithType.vb: Cid.Widening(String to Cid)
 - uid: Ipfs.Cid.op_Implicit*
   name: Implicit
   href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_
