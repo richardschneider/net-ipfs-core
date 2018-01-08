@@ -156,5 +156,49 @@ namespace Ipfs
             var id = "?";
             Assert.ThrowsException<FormatException>(() => Cid.Decode(id));
         }
+
+        [TestMethod]
+        public void Value_Equality()
+        {
+            var a0 = Cid.Decode("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn");
+            var a1 = Cid.Decode("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn");
+            var b = Cid.Decode("QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L5");
+            Cid c = null;
+            Cid d = null;
+
+            Assert.IsTrue(c == d);
+            Assert.IsFalse(c == b);
+            Assert.IsFalse(b == c);
+
+            Assert.IsFalse(c != d);
+            Assert.IsTrue(c != b);
+            Assert.IsTrue(b != c);
+
+#pragma warning disable 1718
+            Assert.IsTrue(a0 == a0);
+            Assert.IsTrue(a0 == a1);
+            Assert.IsFalse(a0 == b);
+
+            Assert.IsFalse(a0 != a0);
+            Assert.IsFalse(a0 != a1);
+            Assert.IsTrue(a0 != b);
+
+            Assert.IsTrue(a0.Equals(a0));
+            Assert.IsTrue(a0.Equals(a1));
+            Assert.IsFalse(a0.Equals(b));
+
+            Assert.AreEqual(a0, a0);
+            Assert.AreEqual(a0, a1);
+            Assert.AreNotEqual(a0, b);
+
+            Assert.AreEqual<Cid>(a0, a0);
+            Assert.AreEqual<Cid>(a0, a1);
+            Assert.AreNotEqual<Cid>(a0, b);
+
+            Assert.AreEqual(a0.GetHashCode(), a0.GetHashCode());
+            Assert.AreEqual(a0.GetHashCode(), a1.GetHashCode());
+            Assert.AreNotEqual(a0.GetHashCode(), b.GetHashCode());
+        }
+
     }
 }

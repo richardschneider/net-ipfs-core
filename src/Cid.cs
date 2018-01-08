@@ -21,7 +21,7 @@ namespace Ipfs
     ///   </note>
     /// </remarks>
     /// <seealso href="https://github.com/ipld/cid"/>
-    public class Cid
+    public class Cid : IEquatable<Cid>
     {
         /// <summary>
         ///   The version of the CID.
@@ -184,6 +184,50 @@ namespace Ipfs
                 Version = 1,
                 Hash = hash
             };
+        }
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return Encode().GetHashCode();
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as Cid;
+            return (that == null)
+                ? false
+                : this.Encode() == that.Encode();
+        }
+
+        /// <inheritdoc />
+        public bool Equals(Cid that)
+        {
+            return this.Encode() == that.Encode();
+        }
+
+        /// <summary>
+        ///   Value equality.
+        /// </summary>
+        public static bool operator ==(Cid a, Cid b)
+        {
+            if (object.ReferenceEquals(a, b)) return true;
+            if (object.ReferenceEquals(a, null)) return false;
+            if (object.ReferenceEquals(b, null)) return false;
+
+            return a.Equals(b);
+        }
+
+        /// <summary>
+        ///   Value inequality.
+        /// </summary>
+        public static bool operator !=(Cid a, Cid b)
+        {
+            if (object.ReferenceEquals(a, b)) return false;
+            if (object.ReferenceEquals(a, null)) return true;
+            if (object.ReferenceEquals(b, null)) return true;
+
+            return !a.Equals(b);
         }
 
     }
