@@ -200,5 +200,27 @@ namespace Ipfs
             Assert.AreNotEqual(a0.GetHashCode(), b.GetHashCode());
         }
 
+        [TestMethod]
+        public void Implicit_Conversion_From_V0_String()
+        {
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            Cid cid = hash;
+            Assert.AreEqual(0, cid.Version);
+            Assert.AreEqual("dag-pb", cid.ContentType);
+            Assert.AreEqual("base58btc", cid.Encoding);
+            Assert.AreEqual(hash, cid.Encode());
+        }
+
+        [TestMethod]
+        public void Implicit_Conversion_From_V1_String()
+        {
+            var id = "zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn";
+            var hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            Cid cid = id;
+            Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("base58btc", cid.Encoding);
+            Assert.AreEqual("raw", cid.ContentType);
+            Assert.AreEqual(hash, cid.Hash);
+        }
     }
 }
