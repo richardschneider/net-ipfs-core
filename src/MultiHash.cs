@@ -197,7 +197,7 @@ namespace Ipfs
         /// </remarks>
         public void Write(Stream stream)
         {
-            using (var cos = new CodedOutputStream(stream))
+            using (var cos = new CodedOutputStream(stream, true))
             {
                 Write(cos);
             }
@@ -225,7 +225,7 @@ namespace Ipfs
 
         void Read(Stream stream)
         {
-            using (var cis = new CodedInputStream(stream))
+            using (var cis = new CodedInputStream(stream, true))
             {
                 Read(cis);
             }

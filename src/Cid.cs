@@ -157,6 +157,56 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Reads the binary representation of the CID from the specified <see cref="Stream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="Stream"/> to read from.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="Cid"/>.
+        /// </returns>
+        public static Cid Read(Stream stream)
+        {
+            var cid = new Cid();
+            var length = stream.ReadVarint32();
+            if (length == 34)
+            {
+                cid.Version = 0;
+            }
+            else
+            {
+                cid.Version = stream.ReadVarint32();
+                cid.ContentType = stream.ReadMultiCodec().Name;
+            }
+            cid.Hash = new MultiHash(stream);
+
+            return cid;
+        }
+
+        /// <summary>
+        ///   Writes the binary representation of the CID to the specified <see cref="Stream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="Stream"/> to write to.
+        /// </param>
+        public void Write(Stream stream)
+        {
+            using (var ms = new MemoryStream())
+            {
+                if (Version != 0)
+                {
+                    ms.WriteVarint(Version);
+                    ms.WriteMultiCodec(this.ContentType);
+                }
+                Hash.Write(ms);
+
+                stream.WriteVarint(ms.Length);
+                ms.Position = 0;
+                ms.CopyTo(stream);
+            }
+        }
+
+        /// <summary>
         ///   Implicit casting of a <see cref="MultiHash"/> to a <see cref="Cid"/>.
         /// </summary>
         /// <param name="hash">

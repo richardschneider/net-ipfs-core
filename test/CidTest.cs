@@ -225,5 +225,31 @@ namespace Ipfs
             Assert.AreEqual("raw", cid.ContentType);
             Assert.AreEqual(hash, cid.Hash);
         }
+
+        [TestMethod]
+        public void Streaming_V0()
+        {
+            Cid cid = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            var stream = new MemoryStream();
+            cid.Write(stream);
+            stream.Position = 0;
+            Cid clone = Cid.Read(stream);
+            Assert.AreEqual(cid.Version, clone.Version);
+            Assert.AreEqual(cid.ContentType, clone.ContentType);
+            Assert.AreEqual(cid.Hash, clone.Hash);
+        }
+
+        [TestMethod]
+        public void Streaming_V1()
+        {
+            Cid cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
+            var stream = new MemoryStream();
+            cid.Write(stream);
+            stream.Position = 0;
+            Cid clone = Cid.Read(stream);
+            Assert.AreEqual(cid.Version, clone.Version);
+            Assert.AreEqual(cid.ContentType, clone.ContentType);
+            Assert.AreEqual(cid.Hash, clone.Hash);
+        }
     }
 }
