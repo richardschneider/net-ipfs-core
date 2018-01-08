@@ -77,7 +77,7 @@ namespace Ipfs
                 sb.Append(' ');
                 sb.Append(Hash.Algorithm.Name);
                 sb.Append(' ');
-                sb.Append(Hash.ToBase58()); // TODO: Use the encoding
+                sb.Append(MultiBase.Encode(Hash.ToArray(), Encoding).Substring(1));
             }
             return sb.ToString();
         }
