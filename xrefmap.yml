@@ -301,6 +301,36 @@ references:
   commentId: Overload:Ipfs.Cid.Encoding
   fullName: Ipfs.Cid.Encoding
   nameWithType: Cid.Encoding
+- uid: Ipfs.Cid.Equals(Ipfs.Cid)
+  name: Equals(Cid)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Equals_Ipfs_Cid_
+  commentId: M:Ipfs.Cid.Equals(Ipfs.Cid)
+  fullName: Ipfs.Cid.Equals(Ipfs.Cid)
+  nameWithType: Cid.Equals(Cid)
+- uid: Ipfs.Cid.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Equals_System_Object_
+  commentId: M:Ipfs.Cid.Equals(System.Object)
+  fullName: Ipfs.Cid.Equals(System.Object)
+  nameWithType: Cid.Equals(Object)
+- uid: Ipfs.Cid.Equals*
+  name: Equals
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Equals_
+  commentId: Overload:Ipfs.Cid.Equals
+  fullName: Ipfs.Cid.Equals
+  nameWithType: Cid.Equals
+- uid: Ipfs.Cid.GetHashCode
+  name: GetHashCode()
+  href: api/Ipfs.Cid.html#Ipfs_Cid_GetHashCode
+  commentId: M:Ipfs.Cid.GetHashCode
+  fullName: Ipfs.Cid.GetHashCode()
+  nameWithType: Cid.GetHashCode()
+- uid: Ipfs.Cid.GetHashCode*
+  name: GetHashCode
+  href: api/Ipfs.Cid.html#Ipfs_Cid_GetHashCode_
+  commentId: Overload:Ipfs.Cid.GetHashCode
+  fullName: Ipfs.Cid.GetHashCode
+  nameWithType: Cid.GetHashCode
 - uid: Ipfs.Cid.Hash
   name: Hash
   href: api/Ipfs.Cid.html#Ipfs_Cid_Hash
@@ -313,6 +343,18 @@ references:
   commentId: Overload:Ipfs.Cid.Hash
   fullName: Ipfs.Cid.Hash
   nameWithType: Cid.Hash
+- uid: Ipfs.Cid.op_Equality(Ipfs.Cid,Ipfs.Cid)
+  name: Equality(Cid, Cid)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Equality_Ipfs_Cid_Ipfs_Cid_
+  commentId: M:Ipfs.Cid.op_Equality(Ipfs.Cid,Ipfs.Cid)
+  fullName: Ipfs.Cid.Equality(Ipfs.Cid, Ipfs.Cid)
+  nameWithType: Cid.Equality(Cid, Cid)
+- uid: Ipfs.Cid.op_Equality*
+  name: Equality
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Equality_
+  commentId: Overload:Ipfs.Cid.op_Equality
+  fullName: Ipfs.Cid.Equality
+  nameWithType: Cid.Equality
 - uid: Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid
   name: Implicit(MultiHash to Cid)
   href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_Ipfs_MultiHash__Ipfs_Cid
@@ -331,6 +373,18 @@ references:
   fullName.vb: Ipfs.Cid.Widening
   nameWithType: Cid.Implicit
   nameWithType.vb: Cid.Widening
+- uid: Ipfs.Cid.op_Inequality(Ipfs.Cid,Ipfs.Cid)
+  name: Inequality(Cid, Cid)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Inequality_Ipfs_Cid_Ipfs_Cid_
+  commentId: M:Ipfs.Cid.op_Inequality(Ipfs.Cid,Ipfs.Cid)
+  fullName: Ipfs.Cid.Inequality(Ipfs.Cid, Ipfs.Cid)
+  nameWithType: Cid.Inequality(Cid, Cid)
+- uid: Ipfs.Cid.op_Inequality*
+  name: Inequality
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Inequality_
+  commentId: Overload:Ipfs.Cid.op_Inequality
+  fullName: Ipfs.Cid.Inequality
+  nameWithType: Cid.Inequality
 - uid: Ipfs.Cid.ToString
   name: ToString()
   href: api/Ipfs.Cid.html#Ipfs_Cid_ToString
