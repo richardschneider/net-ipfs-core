@@ -17,7 +17,7 @@ namespace Ipfs
         {
             var link = new DagLink("abc", "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", 5);
             Assert.AreEqual("abc", link.Name);
-            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", link.Hash);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)link.Hash);
             Assert.AreEqual(5, link.Size);
         }
 
@@ -28,7 +28,7 @@ namespace Ipfs
             var clone = new DagLink(link);
 
             Assert.AreEqual("abc", clone.Name);
-            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", clone.Hash);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)clone.Hash);
             Assert.AreEqual(5, clone.Size);
         }
 
