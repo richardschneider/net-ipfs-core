@@ -66,6 +66,17 @@ namespace Ipfs
             ExceptionAssert.Throws(() => new DagLink((Stream)null));
         }
 
+        [TestMethod]
+        public void Cid_V1()
+        {
+            var link = new DagLink("hello", "zB7NCdng5WffuNCgHu4PhDj7nbtuVrhPc2pMhanNxYKRsECdjX9nd44g6CRu2xNrj2bG2NNaTsveL5zDGWhbfiug3VekW", 11);
+            Assert.AreEqual("hello", link.Name);
+            Assert.AreEqual(1, link.Hash.Version);
+            Assert.AreEqual("raw", link.Hash.ContentType);
+            Assert.AreEqual("sha2-512", link.Hash.Hash.Algorithm.Name);
+            Assert.AreEqual(11, link.Size);
+        }
+
 
     }
 }

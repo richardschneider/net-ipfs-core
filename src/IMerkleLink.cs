@@ -24,9 +24,9 @@ namespace Ipfs
         ///   The unique ID of the link.
         /// </summary>
         /// <value>
-        ///   A <see cref="MultiHash"/> of the content.
+        ///   A <see cref="Cid"/> of the content.
         /// </value>
-        MultiHash Hash { get; }
+        Cid Hash { get; }
 
         /// <summary>
         ///   The serialised size (in bytes) of the linked node.

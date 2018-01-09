@@ -194,6 +194,23 @@ namespace Ipfs
             ExceptionAssert.Throws(() => new DagNode((Stream)null));
         }
 
+        [TestMethod]
+        public void Link_With_CID_V1()
+        {
+            var data = "124F0A4401551340309ECC489C12D6EB4CC40F50C902F2B4D0ED77EE511A7C7A9BCD3CA86D4CD86F989DD35BC5FF499670DA34255B45B0CFD830E81F605DCF7DC5542E93AE9CD76F120568656C6C6F180B0A020801"
+                .ToHexBuffer();
+            var ms = new MemoryStream(data, false);
+            var node = new DagNode(ms);
+            Assert.AreEqual("0801", node.DataBytes.ToHexString());
+            Assert.AreEqual(1, node.Links.Count());
+            var link = node.Links.First();
+            Assert.AreEqual("hello", link.Name);
+            Assert.AreEqual(1, link.Hash.Version);
+            Assert.AreEqual("raw", link.Hash.ContentType);
+            Assert.AreEqual("sha2-512", link.Hash.Hash.Algorithm.Name);
+            Assert.AreEqual(11, link.Size);
+        }
+
         void RoundtripTest(DagNode a)
         {
             var ms = new MemoryStream();

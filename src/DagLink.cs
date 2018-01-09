@@ -18,9 +18,9 @@ namespace Ipfs
         ///   Create a new instance of <see cref="DagLink"/> class.
         /// </summary>
         /// <param name="name">The name associated with the linked node.</param>
-        /// <param name="hash">The <see cref="MultiHash"/> of the linked node.</param>
+        /// <param name="hash">The <see cref="Cid"/> of the linked node.</param>
         /// <param name="size">The serialised size (in bytes) of the linked node.</param>
-        public DagLink(string name, MultiHash hash, long size)
+        public DagLink(string name, Cid hash, long size)
         {
             this.Name = name;
             this.Hash = hash;
@@ -71,7 +71,7 @@ namespace Ipfs
         public string Name { get; private set; }
 
         /// <inheritdoc />
-        public MultiHash Hash { get; private set; }
+        public Cid Hash { get; private set; }
 
         /// <inheritdoc />
         public long Size { get; private set; }
@@ -102,7 +102,6 @@ namespace Ipfs
                 throw new ArgumentNullException("stream");
 
             stream.WriteTag(1, WireFormat.WireType.LengthDelimited);
-            stream.WriteLength(Hash.Algorithm.DigestSize + 2); // + 2 bytes for digest size
             Hash.Write(stream);
 
             if (Name != null)
@@ -131,10 +130,7 @@ namespace Ipfs
                 switch (WireFormat.GetTagFieldNumber(tag))
                 {
                     case 1:
-                        using (var ms = new MemoryStream(stream.ReadSomeBytes(stream.ReadLength())))
-                        {
-                            Hash = new MultiHash(ms);
-                        }
+                        Hash = Cid.Read(stream);
                         break;
                     case 2:
                         Name = stream.ReadString();
