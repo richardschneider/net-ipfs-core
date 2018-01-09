@@ -19,7 +19,7 @@ namespace Ipfs
             Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(0, node.Links.Count());
             Assert.AreEqual(0, node.Size);
-            Assert.AreEqual("QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n", node.Hash);
+            Assert.AreEqual("QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n", (string)node.Id);
 
             RoundtripTest(node);
         }
@@ -31,7 +31,7 @@ namespace Ipfs
             var node = new DagNode(abc);
             CollectionAssert.AreEqual(abc, node.DataBytes);
             Assert.AreEqual(0, node.Links.Count());
-            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", node.Hash);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)node.Id);
             Assert.AreEqual(5, node.Size);
 
             RoundtripTest(node);
@@ -47,7 +47,7 @@ namespace Ipfs
             var node = new DagNode(null, new[] { alink });
             Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(1, node.Links.Count());
-            Assert.AreEqual("QmVdMJFGTqF2ghySAmivGiQvsr9ZH7ujnNGBkLNNCe4HUE", node.Hash);
+            Assert.AreEqual("QmVdMJFGTqF2ghySAmivGiQvsr9ZH7ujnNGBkLNNCe4HUE", (string)node.Id);
             Assert.AreEqual(43, node.Size);
 
             RoundtripTest(node);
@@ -67,7 +67,7 @@ namespace Ipfs
             var node = new DagNode(null, new[] { alink, blink });
             Assert.AreEqual(0, node.DataBytes.Length);
             Assert.AreEqual(2, node.Links.Count());
-            Assert.AreEqual("QmbNgNPPykP4YTuAeSa3DsnBJWLVxccrqLUZDPNQfizGKs", node.Hash);
+            Assert.AreEqual("QmbNgNPPykP4YTuAeSa3DsnBJWLVxccrqLUZDPNQfizGKs", (string)node.Id);
 
             RoundtripTest(node);
         }
@@ -87,7 +87,7 @@ namespace Ipfs
             var node = new DagNode(ab, new[] { alink, blink });
             CollectionAssert.AreEqual(ab, node.DataBytes);
             Assert.AreEqual(2, node.Links.Count());
-            Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", node.Hash);
+            Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", (string)node.Id);
 
             RoundtripTest(node);
         }
@@ -107,7 +107,7 @@ namespace Ipfs
             var node = new DagNode(ab, new[] { blink, alink });
             CollectionAssert.AreEqual(ab, node.DataBytes);
             Assert.AreEqual(2, node.Links.Count());
-            Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", node.Hash);
+            Assert.AreEqual("Qma5sYpEc9hSYdkuXpMDJYem95Mj7hbEd9C412dEQ4ZkfP", (string)node.Id);
         }
 
 
@@ -118,7 +118,9 @@ namespace Ipfs
             var node = new DagNode(abc, null, "sha2-512");
             CollectionAssert.AreEqual(abc, node.DataBytes);
             Assert.AreEqual(0, node.Links.Count());
-            Assert.AreEqual("8Vv347foTHxpLZDdguzcTp7mjBmySjWK1VF36Je7io4ZKHo28fefMFr28LSv757yTcaRzn1dRqPB6WWFpYvbd5YXca", node.Hash);
+            // Had to change the test, because sha2-512 always generates a CID V1.
+            // Assert.AreEqual("8Vv347foTHxpLZDdguzcTp7mjBmySjWK1VF36Je7io4ZKHo28fefMFr28LSv757yTcaRzn1dRqPB6WWFpYvbd5YXca", (string)node.Id);
+            Assert.AreEqual("zBunREkQwjzkZwU71RKBcv2n3XwkTehtzVLkeUPTKjtBDBs2pnGRHLcxt3bGqzX38BkuNom2bQquyPj5Fh7dBZV3UdXPU", (string)node.Id);
             Assert.AreEqual(5, node.Size);
 
             RoundtripTest(node);
@@ -131,7 +133,7 @@ namespace Ipfs
             var node = new DagNode(abc);
             var link = node.ToLink();
             Assert.AreEqual("", link.Name);
-            Assert.AreEqual(node.Hash, link.Id);
+            Assert.AreEqual(node.Id, link.Id);
             Assert.AreEqual(node.Size, link.Size);
         }
 
@@ -142,7 +144,7 @@ namespace Ipfs
             var node = new DagNode(abc);
             var link = node.ToLink("abc");
             Assert.AreEqual("abc", link.Name);
-            Assert.AreEqual(node.Hash, link.Id);
+            Assert.AreEqual(node.Id, link.Id);
             Assert.AreEqual(node.Size, link.Size);
         }
 
@@ -159,7 +161,7 @@ namespace Ipfs
             Assert.IsFalse(Object.ReferenceEquals(bnode, cnode));
             Assert.AreEqual(1, cnode.DataBytes.Length);
             Assert.AreEqual(1, cnode.Links.Count());
-            Assert.AreEqual(anode.Hash, cnode.Links.First().Id);
+            Assert.AreEqual(anode.Id, cnode.Links.First().Id);
             Assert.AreEqual(anode.Size, cnode.Links.First().Size);
 
             RoundtripTest(cnode);
@@ -181,7 +183,7 @@ namespace Ipfs
             Assert.IsFalse(Object.ReferenceEquals(dnode, cnode));
             Assert.AreEqual(1, dnode.DataBytes.Length);
             Assert.AreEqual(1, dnode.Links.Count());
-            Assert.AreEqual(bnode.Hash, dnode.Links.First().Id);
+            Assert.AreEqual(bnode.Id, dnode.Links.First().Id);
             Assert.AreEqual(bnode.Size, dnode.Links.First().Size);
 
             RoundtripTest(cnode);

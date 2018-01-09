@@ -18,12 +18,12 @@ namespace Ipfs
         ///   Create a new instance of <see cref="DagLink"/> class.
         /// </summary>
         /// <param name="name">The name associated with the linked node.</param>
-        /// <param name="hash">The <see cref="Cid"/> of the linked node.</param>
+        /// <param name="id">The <see cref="Cid"/> of the linked node.</param>
         /// <param name="size">The serialised size (in bytes) of the linked node.</param>
-        public DagLink(string name, Cid hash, long size)
+        public DagLink(string name, Cid id, long size)
         {
             this.Name = name;
-            this.Id = hash;
+            this.Id = id;
             this.Size = size;
         }
 

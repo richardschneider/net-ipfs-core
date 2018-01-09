@@ -17,7 +17,7 @@ namespace Ipfs
     /// </remarks>
     public class DagNode : IMerkleNode<IMerkleLink>
     {
-        MultiHash hash;
+        Cid id;
         string hashAlgorithm;
         long? size;
 
@@ -100,22 +100,22 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
-        public MultiHash Hash
+        public Cid Id
         {
             get
             {
-                if (hash == null)
+                if (id == null)
                 {
                    ComputeHash();
                 }
-                return hash;
+                return id;
             }
         }
 
         /// <inheritdoc />
         public IMerkleLink ToLink(string name = "")
         {
-            return new DagLink(name, Hash, Size);
+            return new DagLink(name, Id, Size);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Ipfs
                 Write(ms);
                 size = ms.Position;
                 ms.Position = 0;
-                hash = MultiHash.ComputeHash(ms, hashAlgorithm);
+                id = MultiHash.ComputeHash(ms, hashAlgorithm);
             }
         }
     }

@@ -12,7 +12,7 @@ namespace Ipfs
     ///   Some data that is stored in IPFS.
     /// </summary>
     /// <remarks>
-    ///   A <b>DataBlock</b> has an <see cref="Hash">unique ID</see>
+    ///   A <b>DataBlock</b> has an <see cref="Id">unique ID</see>
     ///   and some data (<see cref="IDataBlock.DataBytes"/> 
     ///   or <see cref="IDataBlock.DataStream"/>).
     ///   <para>
@@ -47,9 +47,9 @@ namespace Ipfs
         ///   The unique ID of the data.
         /// </summary>
         /// <value>
-        ///   A <see cref="MultiHash"/> of the content.
+        ///   A <see cref="Cid"/> of the content.
         /// </value>
-        MultiHash Hash { get; }
+        Cid Id { get; }
 
     }
 
