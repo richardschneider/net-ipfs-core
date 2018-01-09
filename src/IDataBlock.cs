@@ -51,6 +51,13 @@ namespace Ipfs
         /// </value>
         Cid Id { get; }
 
+        /// <summary>
+        ///   The size (in bytes) of the data.
+        /// </summary>
+        /// <value>Number of bytes.</value>
+        long Size { get; }
+
+
     }
 
 }

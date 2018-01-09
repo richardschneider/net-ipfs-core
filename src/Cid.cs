@@ -25,6 +25,11 @@ namespace Ipfs
     public class Cid : IEquatable<Cid>
     {
         /// <summary>
+        ///   The default <see cref="ContentType"/>, "dag-pb".
+        /// </summary>
+        public const string DefaultContentType = "dag-pb";
+
+        /// <summary>
         ///   The version of the CID.
         /// </summary>
         /// <value>
@@ -48,7 +53,7 @@ namespace Ipfs
         ///   dag-pb, dag-cbor, eth-block, etc.  Defaults to "dag-pb".
         /// </value>
         /// <seealso cref="MultiCodec"/>
-        public string ContentType { get; set; } = "dag-pb";
+        public string ContentType { get; set; } = DefaultContentType;
 
         /// <summary>
         ///   The cryptographic hash of the content being addressed.
