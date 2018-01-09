@@ -117,17 +117,72 @@ tiny bit of self-description. A multicodec identifier is both a varint and the c
 identifying the following data.
 <p>
 Adds the following extension methods to <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
-<ul><li><a class="xref" href="Ipfs.MultiCodec.html#Ipfs_MultiCodec_ReadMultiCodec_System_IO_Stream_">ReadMultiCodec(Stream)</a></li><li><a class="xref" href="Ipfs.MultiCodec.html#Ipfs_MultiCodec_WriteMultiCodec_System_IO_Stream_System_String_">WriteMultiCodec(Stream, String)</a></li></ul>
+<ul><li>ReadMultiCodec</li><li><a class="xref" href="Ipfs.MultiCodec.html#Ipfs_MultiCodec_WriteMultiCodec_System_IO_Stream_System_String_">WriteMultiCodec(Stream, String)</a></li></ul>
 </p></p>
 </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiCodec_ReadMultiCodec_Google_Protobuf_CodedInputStream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiCodec.ReadMultiCodec(Google.Protobuf.CodedInputStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L67">View Source</a>
+  </span>
+  <a id="Ipfs_MultiCodec_ReadMultiCodec_" data-uid="Ipfs.MultiCodec.ReadMultiCodec*"></a>
+  <h4 id="Ipfs_MultiCodec_ReadMultiCodec_Google_Protobuf_CodedInputStream_" data-uid="Ipfs.MultiCodec.ReadMultiCodec(Google.Protobuf.CodedInputStream)">ReadMultiCodec(CodedInputStream)</h4>
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Ipfs.Registry.Codec.html">Codec</a> from the <span class="xref">Google.Protobuf.CodedInputStream</span>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Codec ReadMultiCodec(this CodedInputStream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>A multicodec encoded <span class="xref">Google.Protobuf.CodedInputStream</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Registry.Codec.html">Codec</a></td>
+        <td><p>The codec.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_MultiCodec_ReadMultiCodec_Google_Protobuf_CodedInputStream__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <strong>code</strong> does not exist, a new <a class="xref" href="Ipfs.Registry.Codec.html">Codec</a> is
+registered with the <a class="xref" href="Ipfs.Registry.Codec.html#Ipfs_Registry_Codec_Name">Name</a> &quot;codec-x&quot;; where
+&apos;x&apos; is the code&apos;s decimal represention.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiCodec_ReadMultiCodec_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiCodec.ReadMultiCodec(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L43">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L44">View Source</a>
   </span>
   <a id="Ipfs_MultiCodec_ReadMultiCodec_" data-uid="Ipfs.MultiCodec.ReadMultiCodec*"></a>
   <h4 id="Ipfs_MultiCodec_ReadMultiCodec_System_IO_Stream_" data-uid="Ipfs.MultiCodec.ReadMultiCodec(System.IO.Stream)">ReadMultiCodec(Stream)</h4>
@@ -182,7 +237,7 @@ registered with the <a class="xref" href="Ipfs.Registry.Codec.html#Ipfs_Registry
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiCodec_WriteMultiCodec_System_IO_Stream_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiCodec.WriteMultiCodec(System.IO.Stream%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L70">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L94">View Source</a>
   </span>
   <a id="Ipfs_MultiCodec_WriteMultiCodec_" data-uid="Ipfs.MultiCodec.WriteMultiCodec*"></a>
   <h4 id="Ipfs_MultiCodec_WriteMultiCodec_System_IO_Stream_System_String_" data-uid="Ipfs.MultiCodec.WriteMultiCodec(System.IO.Stream,System.String)">WriteMultiCodec(Stream, String)</h4>
@@ -253,7 +308,7 @@ the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiCodec.md&amp;value=---%0Auid%3A%20Ipfs.MultiCodec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiCodec.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
