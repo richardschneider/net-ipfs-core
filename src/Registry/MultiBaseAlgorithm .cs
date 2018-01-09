@@ -58,6 +58,21 @@ namespace Ipfs.Registry
             Register("base32hexpad", 't',
                 bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true).ToLowerInvariant(),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
+            Register("BASE16", 'F',
+                bytes => SimpleBase.Base16.EncodeUpper(bytes),
+                s => SimpleBase.Base16.Decode(s));
+            Register("BASE32", 'B',
+                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, false),
+                s => SimpleBase.Base32.Rfc4648.Decode(s));
+            Register("BASE32PAD", 'C',
+                bytes => SimpleBase.Base32.Rfc4648.Encode(bytes, true),
+                s => SimpleBase.Base32.Rfc4648.Decode(s));
+            Register("BASE32HEX", 'V',
+                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, false),
+                s => SimpleBase.Base32.ExtendedHex.Decode(s));
+            Register("BASE32HEXPAD", 'T',
+                bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true),
+                s => SimpleBase.Base32.ExtendedHex.Decode(s));
 
             // Not supported
 #if false

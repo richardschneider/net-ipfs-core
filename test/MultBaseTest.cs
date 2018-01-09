@@ -125,6 +125,41 @@ namespace Ipfs
                 Input = "foo",
                 Output = "uZm9v"
             },
+            new TestVector {
+                Algorithm = "BASE16",
+                Input = "yes mani !",
+                Output = "F796573206D616E692021"
+            },
+            new TestVector {
+                Algorithm = "BASE32",
+                Input = "yes mani !",
+                Output = "BPFSXGIDNMFXGSIBB"
+            },
+            new TestVector {
+                Algorithm = "BASE32PAD",
+                Input = "yes mani !",
+                Output = "CPFSXGIDNMFXGSIBB"
+            },
+            new TestVector {
+                Algorithm = "BASE32",
+                Input = "f",
+                Output = "BMY"
+            },
+            new TestVector {
+                Algorithm = "BASE32PAD",
+                Input = "f",
+                Output = "CMY======"
+            },
+            new TestVector {
+                Algorithm = "BASE32HEX",
+                Input = "f",
+                Output = "VCO"
+            },
+            new TestVector {
+                Algorithm = "BASE32HEXPAD",
+                Input = "f",
+                Output = "TCO======"
+            },
 
         };
 
