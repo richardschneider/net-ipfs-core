@@ -348,5 +348,21 @@ namespace Ipfs
             return Cid.Decode(s);
         }
 
+        /// <summary>
+        ///   Implicit casting of a <see cref="Cid"/> to a <see cref="string"/>.
+        /// </summary>
+        /// <param name="id">
+        ///   A <b>Cid</b>.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="string"/>.
+        /// </returns>
+        /// <remarks>
+        ///    Equivalent to <code>Cid.Encode()</code>
+        /// </remarks>
+        static public implicit operator string(Cid id)
+        {
+            return id.Encode();
+        }
     }
 }

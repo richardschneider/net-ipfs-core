@@ -228,6 +228,15 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Implicit_Conversion_To_String()
+        {
+            var id = "zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn";
+            Cid cid = id;
+            string s = cid;
+            Assert.AreEqual(id, s);
+        }
+
+        [TestMethod]
         public void Streaming_V0()
         {
             Cid cid = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
