@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -203,6 +204,56 @@ namespace Ipfs
                 stream.WriteVarint(ms.Length);
                 ms.Position = 0;
                 ms.CopyTo(stream);
+            }
+        }
+
+        /// <summary>
+        ///   Reads the binary representation of the CID from the specified <see cref="CodedInputStream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="CodedInputStream"/> to read from.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="Cid"/>.
+        /// </returns>
+        public static Cid Read(CodedInputStream stream)
+        {
+            var cid = new Cid();
+            var length = stream.ReadLength();
+            if (length == 34)
+            {
+                cid.Version = 0;
+            }
+            else
+            {
+                cid.Version = stream.ReadInt32();
+                cid.ContentType = stream.ReadMultiCodec().Name;
+            }
+            cid.Hash = new MultiHash(stream);
+
+            return cid;
+        }
+
+        /// <summary>
+        ///   Writes the binary representation of the CID to the specified <see cref="CodedOutputStream"/>.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="CodedOutputStream"/> to write to.
+        /// </param>
+        public void Write(CodedOutputStream stream)
+        {
+            using (var ms = new MemoryStream())
+            {
+                if (Version != 0)
+                {
+                    ms.WriteVarint(Version);
+                    ms.WriteMultiCodec(this.ContentType);
+                }
+                Hash.Write(ms);
+
+                var bytes = ms.ToArray();
+                stream.WriteLength(bytes.Length);
+                stream.WriteSomeBytes(bytes);
             }
         }
 

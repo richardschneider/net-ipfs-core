@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using Google.Protobuf;
 
 namespace Ipfs
 {
@@ -247,6 +248,37 @@ namespace Ipfs
             cid.Write(stream);
             stream.Position = 0;
             Cid clone = Cid.Read(stream);
+            Assert.AreEqual(cid.Version, clone.Version);
+            Assert.AreEqual(cid.ContentType, clone.ContentType);
+            Assert.AreEqual(cid.Hash, clone.Hash);
+        }
+        [TestMethod]
+        public void Protobuf_V0()
+        {
+            Cid cid = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            var stream = new MemoryStream();
+            var cos = new CodedOutputStream(stream);
+            cid.Write(cos);
+            cos.Flush();
+            stream.Position = 0;
+            var cis = new CodedInputStream(stream);
+            Cid clone = Cid.Read(cis);
+            Assert.AreEqual(cid.Version, clone.Version);
+            Assert.AreEqual(cid.ContentType, clone.ContentType);
+            Assert.AreEqual(cid.Hash, clone.Hash);
+        }
+
+        [TestMethod]
+        public void Protobuf_V1()
+        {
+            Cid cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
+            var stream = new MemoryStream();
+            var cos = new CodedOutputStream(stream);
+            cid.Write(cos);
+            cos.Flush();
+            stream.Position = 0;
+            var cis = new CodedInputStream(stream);
+            Cid clone = Cid.Read(cis);
             Assert.AreEqual(cid.Version, clone.Version);
             Assert.AreEqual(cid.ContentType, clone.ContentType);
             Assert.AreEqual(cid.Hash, clone.Hash);

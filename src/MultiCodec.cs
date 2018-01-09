@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ipfs.Registry;
+using Google.Protobuf;
 
 namespace Ipfs
 {
@@ -18,7 +19,7 @@ namespace Ipfs
     ///   <para>
     ///   Adds the following extension methods to <see cref="Stream"/>
     ///    <list type="bullet">
-    ///      <item><description><see cref="ReadMultiCodec"/></description></item>
+    ///      <item><description>ReadMultiCodec</description></item>
     ///      <item><description><see cref="WriteMultiCodec"/></description></item>
     ///    </list>
     ///   </para>
@@ -43,6 +44,29 @@ namespace Ipfs
         public static Codec ReadMultiCodec(this Stream stream)
         {
             var code = stream.ReadVarint32();
+            Codec.Codes.TryGetValue(code, out Codec codec);
+            if (codec == null)
+            {
+                codec = Codec.Register($"codec-{code}", code);
+            }
+            return codec;
+        }
+
+        /// <summary>
+        ///   Reads a <see cref="Codec"/> from the <see cref="CodedInputStream"/>. 
+        /// </summary>
+        /// <param name="stream">
+        ///   A multicodec encoded <see cref="CodedInputStream"/>.
+        /// </param>
+        /// <returns>The codec.</returns>
+        /// <remarks>
+        ///   If the <b>code</b> does not exist, a new <see cref="Codec"/> is
+        ///   registered with the <see cref="Codec.Name"/> "codec-x"; where
+        ///   'x' is the code's decimal represention.
+        /// </remarks>
+        public static Codec ReadMultiCodec(this CodedInputStream stream)
+        {
+            var code = stream.ReadInt32();
             Codec.Codes.TryGetValue(code, out Codec codec);
             if (codec == null)
             {
