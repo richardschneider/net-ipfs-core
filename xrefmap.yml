@@ -277,6 +277,12 @@ references:
   commentId: Overload:Ipfs.Cid.Decode
   fullName: Ipfs.Cid.Decode
   nameWithType: Cid.Decode
+- uid: Ipfs.Cid.DefaultContentType
+  name: DefaultContentType
+  href: api/Ipfs.Cid.html#Ipfs_Cid_DefaultContentType
+  commentId: F:Ipfs.Cid.DefaultContentType
+  fullName: Ipfs.Cid.DefaultContentType
+  nameWithType: Cid.DefaultContentType
 - uid: Ipfs.Cid.Encode
   name: Encode()
   href: api/Ipfs.Cid.html#Ipfs_Cid_Encode
@@ -463,6 +469,69 @@ references:
   commentId: Overload:Ipfs.Cid.Write
   fullName: Ipfs.Cid.Write
   nameWithType: Cid.Write
+- uid: Ipfs.CoreApi
+  name: Ipfs.CoreApi
+  href: api/Ipfs.CoreApi.html
+  commentId: N:Ipfs.CoreApi
+  fullName: Ipfs.CoreApi
+  nameWithType: Ipfs.CoreApi
+- uid: Ipfs.CoreApi.IBlockApi
+  name: IBlockApi
+  href: api/Ipfs.CoreApi.IBlockApi.html
+  commentId: T:Ipfs.CoreApi.IBlockApi
+  fullName: Ipfs.CoreApi.IBlockApi
+  nameWithType: IBlockApi
+- uid: Ipfs.CoreApi.IBlockApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  name: GetAsync(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.GetAsync(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.GetAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.GetAsync*
+  name: GetAsync
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_GetAsync_
+  commentId: Overload:Ipfs.CoreApi.IBlockApi.GetAsync
+  fullName: Ipfs.CoreApi.IBlockApi.GetAsync
+  nameWithType: IBlockApi.GetAsync
+- uid: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Threading.CancellationToken)
+  name: PutAsync(Byte[], String, String, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_System_Byte___System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Threading.CancellationToken)
+  name.vb: PutAsync(Byte(), String, String, CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[], System.String, System.String, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte(), System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.PutAsync(Byte[], String, String, CancellationToken)
+  nameWithType.vb: IBlockApi.PutAsync(Byte(), String, String, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.PutAsync*
+  name: PutAsync
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_
+  commentId: Overload:Ipfs.CoreApi.IBlockApi.PutAsync
+  fullName: Ipfs.CoreApi.IBlockApi.PutAsync
+  nameWithType: IBlockApi.PutAsync
+- uid: Ipfs.CoreApi.IBlockApi.RemoveAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)
+  name: RemoveAsync(Cid, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_RemoveAsync_Ipfs_Cid_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.RemoveAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.RemoveAsync(Ipfs.Cid, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.RemoveAsync(Cid, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.RemoveAsync*
+  name: RemoveAsync
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_RemoveAsync_
+  commentId: Overload:Ipfs.CoreApi.IBlockApi.RemoveAsync
+  fullName: Ipfs.CoreApi.IBlockApi.RemoveAsync
+  nameWithType: IBlockApi.RemoveAsync
+- uid: Ipfs.CoreApi.IBlockApi.StatAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  name: StatAsync(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_StatAsync_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.StatAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.StatAsync(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.StatAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.StatAsync*
+  name: StatAsync
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_StatAsync_
+  commentId: Overload:Ipfs.CoreApi.IBlockApi.StatAsync
+  fullName: Ipfs.CoreApi.IBlockApi.StatAsync
+  nameWithType: IBlockApi.StatAsync
 - uid: Ipfs.DagLink
   name: DagLink
   href: api/Ipfs.DagLink.html
@@ -856,6 +925,18 @@ references:
   commentId: Overload:Ipfs.IDataBlock.Id
   fullName: Ipfs.IDataBlock.Id
   nameWithType: IDataBlock.Id
+- uid: Ipfs.IDataBlock.Size
+  name: Size
+  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Size
+  commentId: P:Ipfs.IDataBlock.Size
+  fullName: Ipfs.IDataBlock.Size
+  nameWithType: IDataBlock.Size
+- uid: Ipfs.IDataBlock.Size*
+  name: Size
+  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Size_
+  commentId: Overload:Ipfs.IDataBlock.Size
+  fullName: Ipfs.IDataBlock.Size
+  nameWithType: IDataBlock.Size
 - uid: Ipfs.IMerkleLink
   name: IMerkleLink
   href: api/Ipfs.IMerkleLink.html
