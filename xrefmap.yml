@@ -355,6 +355,15 @@ references:
   commentId: Overload:Ipfs.Cid.op_Equality
   fullName: Ipfs.Cid.Equality
   nameWithType: Cid.Equality
+- uid: Ipfs.Cid.op_Implicit(Ipfs.Cid)~System.String
+  name: Implicit(Cid to String)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_Ipfs_Cid__System_String
+  commentId: M:Ipfs.Cid.op_Implicit(Ipfs.Cid)~System.String
+  name.vb: Widening(Cid to String)
+  fullName: Ipfs.Cid.Implicit(Ipfs.Cid to System.String)
+  fullName.vb: Ipfs.Cid.Widening(Ipfs.Cid to System.String)
+  nameWithType: Cid.Implicit(Cid to String)
+  nameWithType.vb: Cid.Widening(Cid to String)
 - uid: Ipfs.Cid.op_Implicit(Ipfs.MultiHash)~Ipfs.Cid
   name: Implicit(MultiHash to Cid)
   href: api/Ipfs.Cid.html#Ipfs_Cid_op_Implicit_Ipfs_MultiHash__Ipfs_Cid
