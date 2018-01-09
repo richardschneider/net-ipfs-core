@@ -196,8 +196,8 @@ namespace Ipfs
         /// </remarks>
         public DagNode RemoveLinks(IEnumerable<IMerkleLink> links)
         {
-            var ignore = links.ToLookup(link => link.Hash);
-            var some = Links.Where(link => !ignore.Contains(link.Hash));
+            var ignore = links.ToLookup(link => link.Id);
+            var some = Links.Where(link => !ignore.Contains(link.Id));
             return new DagNode(DataBytes, some, hashAlgorithm);
         }
 

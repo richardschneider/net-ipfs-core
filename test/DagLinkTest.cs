@@ -17,7 +17,7 @@ namespace Ipfs
         {
             var link = new DagLink("abc", "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", 5);
             Assert.AreEqual("abc", link.Name);
-            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)link.Hash);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)link.Id);
             Assert.AreEqual(5, link.Size);
         }
 
@@ -28,7 +28,7 @@ namespace Ipfs
             var clone = new DagLink(link);
 
             Assert.AreEqual("abc", clone.Name);
-            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)clone.Hash);
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", (string)clone.Id);
             Assert.AreEqual(5, clone.Size);
         }
 
@@ -71,9 +71,9 @@ namespace Ipfs
         {
             var link = new DagLink("hello", "zB7NCdng5WffuNCgHu4PhDj7nbtuVrhPc2pMhanNxYKRsECdjX9nd44g6CRu2xNrj2bG2NNaTsveL5zDGWhbfiug3VekW", 11);
             Assert.AreEqual("hello", link.Name);
-            Assert.AreEqual(1, link.Hash.Version);
-            Assert.AreEqual("raw", link.Hash.ContentType);
-            Assert.AreEqual("sha2-512", link.Hash.Hash.Algorithm.Name);
+            Assert.AreEqual(1, link.Id.Version);
+            Assert.AreEqual("raw", link.Id.ContentType);
+            Assert.AreEqual("sha2-512", link.Id.Hash.Algorithm.Name);
             Assert.AreEqual(11, link.Size);
         }
 

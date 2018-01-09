@@ -131,7 +131,7 @@ namespace Ipfs
             var node = new DagNode(abc);
             var link = node.ToLink();
             Assert.AreEqual("", link.Name);
-            Assert.AreEqual(node.Hash, link.Hash);
+            Assert.AreEqual(node.Hash, link.Id);
             Assert.AreEqual(node.Size, link.Size);
         }
 
@@ -142,7 +142,7 @@ namespace Ipfs
             var node = new DagNode(abc);
             var link = node.ToLink("abc");
             Assert.AreEqual("abc", link.Name);
-            Assert.AreEqual(node.Hash, link.Hash);
+            Assert.AreEqual(node.Hash, link.Id);
             Assert.AreEqual(node.Size, link.Size);
         }
 
@@ -159,7 +159,7 @@ namespace Ipfs
             Assert.IsFalse(Object.ReferenceEquals(bnode, cnode));
             Assert.AreEqual(1, cnode.DataBytes.Length);
             Assert.AreEqual(1, cnode.Links.Count());
-            Assert.AreEqual(anode.Hash, cnode.Links.First().Hash);
+            Assert.AreEqual(anode.Hash, cnode.Links.First().Id);
             Assert.AreEqual(anode.Size, cnode.Links.First().Size);
 
             RoundtripTest(cnode);
@@ -181,7 +181,7 @@ namespace Ipfs
             Assert.IsFalse(Object.ReferenceEquals(dnode, cnode));
             Assert.AreEqual(1, dnode.DataBytes.Length);
             Assert.AreEqual(1, dnode.Links.Count());
-            Assert.AreEqual(bnode.Hash, dnode.Links.First().Hash);
+            Assert.AreEqual(bnode.Hash, dnode.Links.First().Id);
             Assert.AreEqual(bnode.Size, dnode.Links.First().Size);
 
             RoundtripTest(cnode);
@@ -205,9 +205,9 @@ namespace Ipfs
             Assert.AreEqual(1, node.Links.Count());
             var link = node.Links.First();
             Assert.AreEqual("hello", link.Name);
-            Assert.AreEqual(1, link.Hash.Version);
-            Assert.AreEqual("raw", link.Hash.ContentType);
-            Assert.AreEqual("sha2-512", link.Hash.Hash.Algorithm.Name);
+            Assert.AreEqual(1, link.Id.Version);
+            Assert.AreEqual("raw", link.Id.ContentType);
+            Assert.AreEqual("sha2-512", link.Id.Hash.Algorithm.Name);
             Assert.AreEqual(11, link.Size);
         }
 
@@ -222,7 +222,7 @@ namespace Ipfs
             Assert.AreEqual(a.Links.Count(), b.Links.Count());
             a.Links.Zip(b.Links, (first, second) =>
             {
-                Assert.AreEqual(first.Hash, second.Hash);
+                Assert.AreEqual(first.Id, second.Id);
                 Assert.AreEqual(first.Name, second.Name);
                 Assert.AreEqual(first.Size, second.Size);
                 return first;

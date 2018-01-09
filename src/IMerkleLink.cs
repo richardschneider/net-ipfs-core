@@ -26,7 +26,7 @@ namespace Ipfs
         /// <value>
         ///   A <see cref="Cid"/> of the content.
         /// </value>
-        Cid Hash { get; }
+        Cid Id { get; }
 
         /// <summary>
         ///   The serialised size (in bytes) of the linked node.

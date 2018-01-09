@@ -23,7 +23,7 @@ namespace Ipfs
         public DagLink(string name, Cid hash, long size)
         {
             this.Name = name;
-            this.Hash = hash;
+            this.Id = hash;
             this.Size = size;
         }
 
@@ -37,7 +37,7 @@ namespace Ipfs
         public DagLink(IMerkleLink link)
         {
             this.Name = link.Name;
-            this.Hash = link.Hash;
+            this.Id = link.Id;
             this.Size = link.Size;
         }
 
@@ -71,7 +71,7 @@ namespace Ipfs
         public string Name { get; private set; }
 
         /// <inheritdoc />
-        public Cid Hash { get; private set; }
+        public Cid Id { get; private set; }
 
         /// <inheritdoc />
         public long Size { get; private set; }
@@ -102,7 +102,7 @@ namespace Ipfs
                 throw new ArgumentNullException("stream");
 
             stream.WriteTag(1, WireFormat.WireType.LengthDelimited);
-            Hash.Write(stream);
+            Id.Write(stream);
 
             if (Name != null)
             {
@@ -130,7 +130,7 @@ namespace Ipfs
                 switch (WireFormat.GetTagFieldNumber(tag))
                 {
                     case 1:
-                        Hash = Cid.Read(stream);
+                        Id = Cid.Read(stream);
                         break;
                     case 2:
                         Name = stream.ReadString();
