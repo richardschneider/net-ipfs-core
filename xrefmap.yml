@@ -499,18 +499,18 @@ references:
   commentId: Overload:Ipfs.DagLink.#ctor
   fullName: Ipfs.DagLink.DagLink
   nameWithType: DagLink.DagLink
-- uid: Ipfs.DagLink.Hash
-  name: Hash
-  href: api/Ipfs.DagLink.html#Ipfs_DagLink_Hash
-  commentId: P:Ipfs.DagLink.Hash
-  fullName: Ipfs.DagLink.Hash
-  nameWithType: DagLink.Hash
-- uid: Ipfs.DagLink.Hash*
-  name: Hash
-  href: api/Ipfs.DagLink.html#Ipfs_DagLink_Hash_
-  commentId: Overload:Ipfs.DagLink.Hash
-  fullName: Ipfs.DagLink.Hash
-  nameWithType: DagLink.Hash
+- uid: Ipfs.DagLink.Id
+  name: Id
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink_Id
+  commentId: P:Ipfs.DagLink.Id
+  fullName: Ipfs.DagLink.Id
+  nameWithType: DagLink.Id
+- uid: Ipfs.DagLink.Id*
+  name: Id
+  href: api/Ipfs.DagLink.html#Ipfs_DagLink_Id_
+  commentId: Overload:Ipfs.DagLink.Id
+  fullName: Ipfs.DagLink.Id
+  nameWithType: DagLink.Id
 - uid: Ipfs.DagLink.Name
   name: Name
   href: api/Ipfs.DagLink.html#Ipfs_DagLink_Name
@@ -649,18 +649,18 @@ references:
   commentId: Overload:Ipfs.DagNode.DataStream
   fullName: Ipfs.DagNode.DataStream
   nameWithType: DagNode.DataStream
-- uid: Ipfs.DagNode.Hash
-  name: Hash
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Hash
-  commentId: P:Ipfs.DagNode.Hash
-  fullName: Ipfs.DagNode.Hash
-  nameWithType: DagNode.Hash
-- uid: Ipfs.DagNode.Hash*
-  name: Hash
-  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Hash_
-  commentId: Overload:Ipfs.DagNode.Hash
-  fullName: Ipfs.DagNode.Hash
-  nameWithType: DagNode.Hash
+- uid: Ipfs.DagNode.Id
+  name: Id
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Id
+  commentId: P:Ipfs.DagNode.Id
+  fullName: Ipfs.DagNode.Id
+  nameWithType: DagNode.Id
+- uid: Ipfs.DagNode.Id*
+  name: Id
+  href: api/Ipfs.DagNode.html#Ipfs_DagNode_Id_
+  commentId: Overload:Ipfs.DagNode.Id
+  fullName: Ipfs.DagNode.Id
+  nameWithType: DagNode.Id
 - uid: Ipfs.DagNode.Links
   name: Links
   href: api/Ipfs.DagNode.html#Ipfs_DagNode_Links
@@ -844,36 +844,36 @@ references:
   commentId: Overload:Ipfs.IDataBlock.DataStream
   fullName: Ipfs.IDataBlock.DataStream
   nameWithType: IDataBlock.DataStream
-- uid: Ipfs.IDataBlock.Hash
-  name: Hash
-  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Hash
-  commentId: P:Ipfs.IDataBlock.Hash
-  fullName: Ipfs.IDataBlock.Hash
-  nameWithType: IDataBlock.Hash
-- uid: Ipfs.IDataBlock.Hash*
-  name: Hash
-  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Hash_
-  commentId: Overload:Ipfs.IDataBlock.Hash
-  fullName: Ipfs.IDataBlock.Hash
-  nameWithType: IDataBlock.Hash
+- uid: Ipfs.IDataBlock.Id
+  name: Id
+  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Id
+  commentId: P:Ipfs.IDataBlock.Id
+  fullName: Ipfs.IDataBlock.Id
+  nameWithType: IDataBlock.Id
+- uid: Ipfs.IDataBlock.Id*
+  name: Id
+  href: api/Ipfs.IDataBlock.html#Ipfs_IDataBlock_Id_
+  commentId: Overload:Ipfs.IDataBlock.Id
+  fullName: Ipfs.IDataBlock.Id
+  nameWithType: IDataBlock.Id
 - uid: Ipfs.IMerkleLink
   name: IMerkleLink
   href: api/Ipfs.IMerkleLink.html
   commentId: T:Ipfs.IMerkleLink
   fullName: Ipfs.IMerkleLink
   nameWithType: IMerkleLink
-- uid: Ipfs.IMerkleLink.Hash
-  name: Hash
-  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Hash
-  commentId: P:Ipfs.IMerkleLink.Hash
-  fullName: Ipfs.IMerkleLink.Hash
-  nameWithType: IMerkleLink.Hash
-- uid: Ipfs.IMerkleLink.Hash*
-  name: Hash
-  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Hash_
-  commentId: Overload:Ipfs.IMerkleLink.Hash
-  fullName: Ipfs.IMerkleLink.Hash
-  nameWithType: IMerkleLink.Hash
+- uid: Ipfs.IMerkleLink.Id
+  name: Id
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Id
+  commentId: P:Ipfs.IMerkleLink.Id
+  fullName: Ipfs.IMerkleLink.Id
+  nameWithType: IMerkleLink.Id
+- uid: Ipfs.IMerkleLink.Id*
+  name: Id
+  href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Id_
+  commentId: Overload:Ipfs.IMerkleLink.Id
+  fullName: Ipfs.IMerkleLink.Id
+  nameWithType: IMerkleLink.Id
 - uid: Ipfs.IMerkleLink.Name
   name: Name
   href: api/Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name

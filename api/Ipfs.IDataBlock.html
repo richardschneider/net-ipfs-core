@@ -83,7 +83,7 @@
     <pre><code class="lang-csharp hljs">public interface IDataBlock</code></pre>
   </div>
   <h5 id="Ipfs_IDataBlock_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>A <strong>DataBlock</strong> has an <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_Hash">Hash</a>
+  <div class="markdown level0 remarks"><p>A <strong>DataBlock</strong> has an <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_Id">Id</a>
 and some data (<a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataBytes">DataBytes</a> 
 or <a class="xref" href="Ipfs.IDataBlock.html#Ipfs_IDataBlock_DataStream">DataStream</a>).
 <p>
@@ -162,19 +162,19 @@ and other things that do not care about what is being stored.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock_Hash.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IDataBlock_Id.md&amp;value=---%0Auid%3A%20Ipfs.IDataBlock.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IDataBlock.cs/#L52">View Source</a>
   </span>
-  <a id="Ipfs_IDataBlock_Hash_" data-uid="Ipfs.IDataBlock.Hash*"></a>
-  <h4 id="Ipfs_IDataBlock_Hash" data-uid="Ipfs.IDataBlock.Hash">Hash</h4>
+  <a id="Ipfs_IDataBlock_Id_" data-uid="Ipfs.IDataBlock.Id*"></a>
+  <h4 id="Ipfs_IDataBlock_Id" data-uid="Ipfs.IDataBlock.Id">Id</h4>
   <div class="markdown level1 summary"><p>The unique ID of the data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">MultiHash Hash { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">Cid Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,8 +186,8 @@ and other things that do not care about what is being stored.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
-        <td><p>A <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> of the content.</p>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><p>A <a class="xref" href="Ipfs.Cid.html">Cid</a> of the content.</p>
 </td>
       </tr>
     </tbody>
