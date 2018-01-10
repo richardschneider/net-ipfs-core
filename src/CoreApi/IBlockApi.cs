@@ -6,7 +6,7 @@ namespace Ipfs.CoreApi
 {
 
     /// <summary>
-    ///   Manages the raw <see cref="IDataBlock">IPFS blocks</see>.
+    ///   Manages IPFS blocks.
     /// </summary>
     /// <remarks>
     ///   An IPFS Block is a byte sequence that represents an IPFS Object 
@@ -73,6 +73,10 @@ namespace Ipfs.CoreApi
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value
+        ///    contains the block's id and data.
+        /// </returns>
         Task<IDataBlock> StatAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
