@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/nuget/v/Ipfs.Core.svg)](https://www.nuget.org/packages/Ipfs.Core)
 [![docs](https://cdn.rawgit.com/richardschneider/net-ipfs-core/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-ipfs-core)
 
-The core objects of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System) for .Net (C#, VB, F# etc.)
+The core objects and interfaces of the [IPFS](https://github.com/ipfs/ipfs) (Inter Planetary File System) for .Net (C#, VB, F# etc.)
 
 The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.
 

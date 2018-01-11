@@ -62,6 +62,19 @@ namespace Ipfs
         public string ProtocolVersion { get; set; } = unknown;
 
         /// <summary>
+        ///   The <see cref="MultiAddress"/> that the peer is connected on.
+        /// </summary>
+        /// <value>
+        ///   <b>null</b> when the peer is not connected to.
+        /// </value>
+        public MultiAddress ConnectedAddress { get; set; }
+
+        /// <summary>
+        /// The round-trip time it takes to get data from the peer.
+        /// </summary>
+        public TimeSpan? Latency { get; set; }
+
+        /// <summary>
         ///   Determines if the information on the peer is valid.
         /// </summary>
         /// <returns>

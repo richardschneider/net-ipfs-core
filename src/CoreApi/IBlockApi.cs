@@ -1,4 +1,5 @@
 ﻿
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,7 +7,7 @@ namespace Ipfs.CoreApi
 {
 
     /// <summary>
-    ///   Manages the raw <see cref="IDataBlock">IPFS blocks</see>.
+    ///   Manages IPFS blocks.
     /// </summary>
     /// <remarks>
     ///   An IPFS Block is a byte sequence that represents an IPFS Object 
@@ -55,11 +56,37 @@ namespace Ipfs.CoreApi
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
-        ///    A task that represents the asynchronous put operation. The task's value
-        ///    contains the block's id and data.
+        ///    A task that represents the asynchronous put operation. The task's value is
+        ///    the block's <see cref="Cid"/>.
         /// </returns>
-        Task<IDataBlock> PutAsync(
+        Task<Cid> PutAsync(
             byte[] data,
+            string contentType = Cid.DefaultContentType,
+            string multiHash = MultiHash.DefaultAlgorithmName,
+            CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Stores a stream as a IPFS block.
+        /// </summary>
+        /// <param name="data">
+        ///   The <see cref="Stream"/> of data to send to the IPFS network.
+        /// </param>
+        /// <param name="contentType">
+        ///   The content type or format of the <paramref name="data"/>; such as "raw" or "dag-db".
+        ///   See <see cref="MultiCodec"/> for more details.
+        /// </param>
+        /// <param name="multiHash">
+        ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous put operation. The task's value is
+        ///    the block's <see cref="Cid"/>.
+        /// </returns>
+        Task<Cid> PutAsync(
+            Stream data,
             string contentType = Cid.DefaultContentType,
             string multiHash = MultiHash.DefaultAlgorithmName,
             CancellationToken cancel = default(CancellationToken));
@@ -73,6 +100,10 @@ namespace Ipfs.CoreApi
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value
+        ///    contains the block's id and size.
+        /// </returns>
         Task<IDataBlock> StatAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
@@ -89,14 +120,14 @@ namespace Ipfs.CoreApi
         ///   exist.  Default value is <b>false</b>.
         /// </param>
         /// <returns>
-        ///   The awaited Task will return the deleted <paramref name="id"/> or
-        ///   <see cref="string.Empty"/> if the hash does not exist and <paramref name="ignoreNonexistent"/>
+        ///   The awaited Task will return the deleted <paramref name="id"/> or <b>null</b>
+        ///   if the <paramref name="id"/> does not exist and <paramref name="ignoreNonexistent"/>
         ///   is <b>true</b>.
         /// </returns>
         /// <remarks>
         ///   This removes the block from the local cache and does not affect other peers.
         /// </remarks>
-        Task<string> RemoveAsync(Cid id, bool ignoreNonexistent = false, CancellationToken cancel = default(CancellationToken));
+        Task<Cid> RemoveAsync(Cid id, bool ignoreNonexistent = false, CancellationToken cancel = default(CancellationToken));
     }
 
 }

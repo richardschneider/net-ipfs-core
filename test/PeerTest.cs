@@ -14,6 +14,7 @@ namespace Ipfs
         const string marsId = "QmSoLMeWqB7YGVLJN3pNLQpmmEk35v6wYtsMGLzSr5QBU3";
         const string plutoId = "QmSoLPppuBtQSGwKDZT2M73ULpjvfd3aZ6ha4oFGL1KrGM";
         const string marsPublicKey = "CAASogEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKGUtbRQf+a9SBHFEruNAUatS/tsGUnHuCtifGrlbYPELD3UyyhWf/FYczBCavx3i8hIPEW2jQv4ehxQxi/cg9SHswZCQblSi0ucwTBFr8d40JEiyB9CcapiMdFQxdMgGvXEOQdLz1pz+UPUDojkdKZq8qkkeiBn7KlAoGEocnmpAgMBAAE=";
+        static string marsAddress = "/ip4/10.1.10.10/tcp/29087/ipfs/QmSoLMeWqB7YGVLJN3pNLQpmmEk35v6wYtsMGLzSr5QBU3";
 
         [TestMethod]
         public new void ToString()
@@ -32,6 +33,20 @@ namespace Ipfs
             Assert.AreEqual("unknown/0.0", peer.AgentVersion);
             Assert.AreEqual(null, peer.PublicKey);
             Assert.AreEqual(false, peer.IsValid()); // missing peer ID
+            Assert.AreEqual(null, peer.ConnectedAddress);
+            Assert.IsFalse(peer.Latency.HasValue);
+        }
+
+        [TestMethod]
+        public void ConnectedPeer()
+        {
+            var peer = new Peer
+            {
+                ConnectedAddress = new MultiAddress(marsAddress),
+                Latency = TimeSpan.FromHours(3.03 * 2)
+            };
+            Assert.AreEqual(marsAddress, peer.ConnectedAddress.ToString());
+            Assert.AreEqual(3.03 * 2, peer.Latency.Value.TotalHours);
         }
 
         [TestMethod]
