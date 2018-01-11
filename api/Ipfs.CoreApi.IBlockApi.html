@@ -73,7 +73,7 @@
   
   <h1 id="Ipfs_CoreApi_IBlockApi" data-uid="Ipfs.CoreApi.IBlockApi" class="text-break">Interface IBlockApi
   </h1>
-  <div class="markdown level0 summary"><p>Manages the raw <a class="xref" href="Ipfs.IDataBlock.html">IDataBlock</a>.</p>
+  <div class="markdown level0 summary"><p>Manages IPFS blocks.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.CoreApi.html">Ipfs.CoreApi</a></h6>
@@ -101,7 +101,7 @@ This may be very good or bad, we haven&apos;t decided yet 😄
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi.GetAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L39">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L40">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBlockApi_GetAsync_" data-uid="Ipfs.CoreApi.IBlockApi.GetAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBlockApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBlockApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync(Cid, CancellationToken)</h4>
@@ -158,7 +158,7 @@ contains the block&apos;s id and data.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi_PutAsync_System_Byte___System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte%5B%5D%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L61">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L62">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBlockApi_PutAsync_" data-uid="Ipfs.CoreApi.IBlockApi.PutAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBlockApi_PutAsync_System_Byte___System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Threading.CancellationToken)">PutAsync(Byte[], String, String, CancellationToken)</h4>
@@ -167,7 +167,7 @@ contains the block&apos;s id and data.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IDataBlock&gt; PutAsync(byte[] data, string contentType = &quot;dag-pb&quot;, string multiHash = &quot;sha2-256&quot;, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(byte[] data, string contentType = &quot;dag-pb&quot;, string multiHash = &quot;sha2-256&quot;, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,9 +216,79 @@ See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IDataBlock.html">IDataBlock</a>&gt;</td>
-        <td><p>A task that represents the asynchronous put operation. The task&apos;s value
-contains the block&apos;s id and data.</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>A task that represents the asynchronous put operation. The task&apos;s value is
+the block&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi_PutAsync_System_IO_Stream_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L88">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IBlockApi_PutAsync_" data-uid="Ipfs.CoreApi.IBlockApi.PutAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IBlockApi_PutAsync_System_IO_Stream_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream,System.String,System.String,System.Threading.CancellationToken)">PutAsync(Stream, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Stores a stream as a IPFS block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(Stream data, string contentType = &quot;dag-pb&quot;, string multiHash = &quot;sha2-256&quot;, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> of data to send to the IPFS network.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;dag-db&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">multiHash</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>A task that represents the asynchronous put operation. The task&apos;s value is
+the block&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -228,7 +298,7 @@ contains the block&apos;s id and data.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi_RemoveAsync_Ipfs_Cid_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi.RemoveAsync(Ipfs.Cid%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L99">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L130">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBlockApi_RemoveAsync_" data-uid="Ipfs.CoreApi.IBlockApi.RemoveAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBlockApi_RemoveAsync_Ipfs_Cid_System_Boolean_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBlockApi.RemoveAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)">RemoveAsync(Cid, Boolean, CancellationToken)</h4>
@@ -237,7 +307,7 @@ contains the block&apos;s id and data.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; RemoveAsync(Cid id, bool ignoreNonexistent = false, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; RemoveAsync(Cid id, bool ignoreNonexistent = false, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,9 +350,9 @@ exist.  Default value is <strong>false</strong>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
-        <td><p>The awaited Task will return the deleted <code data-dev-comment-type="paramref" class="paramref">id</code> or
-<a class="xref" href="https://msdn.microsoft.com/en-us/library/74wsya52(v=vs.110).aspx">Empty</a> if the hash does not exist and <code data-dev-comment-type="paramref" class="paramref">ignoreNonexistent</code>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>The awaited Task will return the deleted <code data-dev-comment-type="paramref" class="paramref">id</code> or <strong>null</strong>
+if the <code data-dev-comment-type="paramref" class="paramref">id</code> does not exist and <code data-dev-comment-type="paramref" class="paramref">ignoreNonexistent</code>
 is <strong>true</strong>.</p>
 </td>
       </tr>
@@ -296,7 +366,7 @@ is <strong>true</strong>.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi_StatAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi.StatAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L76">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L107">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBlockApi_StatAsync_" data-uid="Ipfs.CoreApi.IBlockApi.StatAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBlockApi_StatAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBlockApi.StatAsync(Ipfs.Cid,System.Threading.CancellationToken)">StatAsync(Cid, CancellationToken)</h4>
@@ -342,7 +412,9 @@ is <strong>true</strong>.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IDataBlock.html">IDataBlock</a>&gt;</td>
-        <td></td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+contains the block&apos;s id and size.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -361,7 +433,7 @@ is <strong>true</strong>.</p>
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBlockApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBlockApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBlockApi.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

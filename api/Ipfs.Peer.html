@@ -178,6 +178,38 @@ is &quot;unknown/0.0&quot;.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_ConnectedAddress.md&amp;value=---%0Auid%3A%20Ipfs.Peer.ConnectedAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L70">View Source</a>
+  </span>
+  <a id="Ipfs_Peer_ConnectedAddress_" data-uid="Ipfs.Peer.ConnectedAddress*"></a>
+  <h4 id="Ipfs_Peer_ConnectedAddress" data-uid="Ipfs.Peer.ConnectedAddress">ConnectedAddress</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a> that the peer is connected on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiAddress ConnectedAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td><p><strong>null</strong> when the peer is not connected to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_Id.md&amp;value=---%0Auid%3A%20Ipfs.Peer.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -205,6 +237,37 @@ is &quot;unknown/0.0&quot;.</p>
         <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
         <td><p>This is the <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> of the peer&apos;s <a class="xref" href="Ipfs.Peer.html#Ipfs_Peer_PublicKey">PublicKey</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_Latency.md&amp;value=---%0Auid%3A%20Ipfs.Peer.Latency%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L75">View Source</a>
+  </span>
+  <a id="Ipfs_Peer_Latency_" data-uid="Ipfs.Peer.Latency*"></a>
+  <h4 id="Ipfs_Peer_Latency" data-uid="Ipfs.Peer.Latency">Latency</h4>
+  <div class="markdown level1 summary"><p>The round-trip time it takes to get data from the peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? Latency { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -283,7 +346,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_Equals_Ipfs_Peer_.md&amp;value=---%0Auid%3A%20Ipfs.Peer.Equals(Ipfs.Peer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L103">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L116">View Source</a>
   </span>
   <a id="Ipfs_Peer_Equals_" data-uid="Ipfs.Peer.Equals*"></a>
   <h4 id="Ipfs_Peer_Equals_Ipfs_Peer_" data-uid="Ipfs.Peer.Equals(Ipfs.Peer)">Equals(Peer)</h4>
@@ -330,7 +393,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Ipfs.Peer.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L94">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L107">View Source</a>
   </span>
   <a id="Ipfs_Peer_Equals_" data-uid="Ipfs.Peer.Equals*"></a>
   <h4 id="Ipfs_Peer_Equals_System_Object_" data-uid="Ipfs.Peer.Equals(System.Object)">Equals(Object)</h4>
@@ -379,7 +442,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_GetHashCode.md&amp;value=---%0Auid%3A%20Ipfs.Peer.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L88">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L101">View Source</a>
   </span>
   <a id="Ipfs_Peer_GetHashCode_" data-uid="Ipfs.Peer.GetHashCode*"></a>
   <h4 id="Ipfs_Peer_GetHashCode" data-uid="Ipfs.Peer.GetHashCode">GetHashCode()</h4>
@@ -411,7 +474,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_IsValid.md&amp;value=---%0Auid%3A%20Ipfs.Peer.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L77">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L90">View Source</a>
   </span>
   <a id="Ipfs_Peer_IsValid_" data-uid="Ipfs.Peer.IsValid*"></a>
   <h4 id="Ipfs_Peer_IsValid" data-uid="Ipfs.Peer.IsValid">IsValid()</h4>
@@ -447,7 +510,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_ToString.md&amp;value=---%0Auid%3A%20Ipfs.Peer.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L138">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L151">View Source</a>
   </span>
   <a id="Ipfs_Peer_ToString_" data-uid="Ipfs.Peer.ToString*"></a>
   <h4 id="Ipfs_Peer_ToString" data-uid="Ipfs.Peer.ToString">ToString()</h4>
@@ -483,7 +546,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_op_Equality_Ipfs_Peer_Ipfs_Peer_.md&amp;value=---%0Auid%3A%20Ipfs.Peer.op_Equality(Ipfs.Peer%2CIpfs.Peer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L111">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L124">View Source</a>
   </span>
   <a id="Ipfs_Peer_op_Equality_" data-uid="Ipfs.Peer.op_Equality*"></a>
   <h4 id="Ipfs_Peer_op_Equality_Ipfs_Peer_Ipfs_Peer_" data-uid="Ipfs.Peer.op_Equality(Ipfs.Peer,Ipfs.Peer)">Equality(Peer, Peer)</h4>
@@ -536,7 +599,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_op_Implicit_System_String__Ipfs_Peer.md&amp;value=---%0Auid%3A%20Ipfs.Peer.op_Implicit(System.String)~Ipfs.Peer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L155">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L168">View Source</a>
   </span>
   <a id="Ipfs_Peer_op_Implicit_" data-uid="Ipfs.Peer.op_Implicit*"></a>
   <h4 id="Ipfs_Peer_op_Implicit_System_String__Ipfs_Peer" data-uid="Ipfs.Peer.op_Implicit(System.String)~Ipfs.Peer">Implicit(String to Peer)</h4>
@@ -589,7 +652,7 @@ is &quot;unknown/0.0&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Peer_op_Inequality_Ipfs_Peer_Ipfs_Peer_.md&amp;value=---%0Auid%3A%20Ipfs.Peer.op_Inequality(Ipfs.Peer%2CIpfs.Peer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L123">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Peer.cs/#L136">View Source</a>
   </span>
   <a id="Ipfs_Peer_op_Inequality_" data-uid="Ipfs.Peer.op_Inequality*"></a>
   <h4 id="Ipfs_Peer_op_Inequality_Ipfs_Peer_Ipfs_Peer_" data-uid="Ipfs.Peer.op_Inequality(Ipfs.Peer,Ipfs.Peer)">Inequality(Peer, Peer)</h4>

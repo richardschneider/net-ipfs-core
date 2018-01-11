@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Ipfs.CoreApi
+    <title>Interface IFileSystemLink
    | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Ipfs.CoreApi
+    <meta name="title" content="Interface IFileSystemLink
    | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.29.1.0">
     
@@ -68,58 +68,67 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ipfs.CoreApi">
+            <article class="content wrap" id="_content" data-uid="Ipfs.IFileSystemLink">
   
-  <h1 id="Ipfs_CoreApi" data-uid="Ipfs.CoreApi" class="text-break">Namespace Ipfs.CoreApi
+  
+  <h1 id="Ipfs_IFileSystemLink" data-uid="Ipfs.IFileSystemLink" class="text-break">Interface IFileSystemLink
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A link to another file system node in IPFS.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="interfaces">Interfaces
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Name">IMerkleLink.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Id">IMerkleLink.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Ipfs.IMerkleLink.html#Ipfs_IMerkleLink_Size">IMerkleLink.Size</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.html">Ipfs</a></h6>
+  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+  <h5 id="Ipfs_IFileSystemLink_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFileSystemLink : IMerkleLink</code></pre>
+  </div>
+  <h3 id="properties">Properties
   </h3>
-      <h4><a class="xref" href="Ipfs.CoreApi.IBitswapApi.html">IBitswapApi</a></h4>
-      <section><p>Interact with the bitswap agent.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IBlockApi.html">IBlockApi</a></h4>
-      <section><p>Manages IPFS blocks.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IConfigApi.html">IConfigApi</a></h4>
-      <section><p>TODO</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.ICoreApi.html">ICoreApi</a></h4>
-      <section><p>The IPFS Core API.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IDagApi.html">IDagApi</a></h4>
-      <section><p>Manages the IPLD Directed Acrylic Graph.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IDhtApi.html">IDhtApi</a></h4>
-      <section><p>Manages the Distributed Hash Table.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IFileSystemApi.html">IFileSystemApi</a></h4>
-      <section><p>Manages the files/directories in IPFS.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IGenericApi.html">IGenericApi</a></h4>
-      <section><p>Some miscellaneous methods.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IKeyApi.html">IKeyApi</a></h4>
-      <section><p>Manages cryptographic keys.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.INameApi.html">INameApi</a></h4>
-      <section><p>Manages the IPNS (Interplanetary Name Space).</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IObjectApi.html">IObjectApi</a></h4>
-      <section><p>Manages the IPFS Directed Acrylic Graph.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IPinApi.html">IPinApi</a></h4>
-      <section><p>Manage pinned objects (locally stored and permanent).</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.IPubSubApi.html">IPubSubApi</a></h4>
-      <section><p>Allows you to publish messages to a given topic, and also to
-subscribe to new messages on a given topic.</p>
-</section>
-      <h4><a class="xref" href="Ipfs.CoreApi.ISwarmApi.html">ISwarmApi</a></h4>
-      <section><p>Manages the swarm of peers.</p>
-</section>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IFileSystemLink_IsDirectory.md&amp;value=---%0Auid%3A%20Ipfs.IFileSystemLink.IsDirectory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IFileSystemLink.cs/#L19">View Source</a>
+  </span>
+  <a id="Ipfs_IFileSystemLink_IsDirectory_" data-uid="Ipfs.IFileSystemLink.IsDirectory*"></a>
+  <h4 id="Ipfs_IFileSystemLink_IsDirectory" data-uid="Ipfs.IFileSystemLink.IsDirectory">IsDirectory</h4>
+  <div class="markdown level1 summary"><p>Determines if the link is a directory (folder).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsDirectory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><p><strong>true</strong> if the link is a directory; Otherwise <strong>false</strong>,
+the link is some type of a file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -127,6 +136,12 @@ subscribe to new messages on a given topic.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IFileSystemLink.md&amp;value=---%0Auid%3A%20Ipfs.IFileSystemLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IFileSystemLink.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
