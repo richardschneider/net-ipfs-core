@@ -4,10 +4,6 @@ version: x-{build}
 # branches to build
 for:
 -
-   branches:
-    only:
-      - master
-
    environment:
     snk_secret:
       secure: 5QzEIgiDqTIrZruPaIQIvTlNMl5BZ7TGEps7ALyBfHE=
