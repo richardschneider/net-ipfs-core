@@ -38,5 +38,29 @@ namespace Ipfs.CoreApi
         ///   is a sequence of <see cref="Peer">Connected Peers</see>.
         /// </returns>
         Task<IEnumerable<Peer>> PeersAsync(CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Connect to a peer.
+        /// </summary>
+        /// <param name="address">
+        ///   An ipfs <see cref="MultiAddress"/>, such as
+        ///  <c>/ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ</c>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        Task ConnectAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Disconnect from a peer.
+        /// </summary>
+        /// <param name="address">
+        ///   An ipfs <see cref="MultiAddress"/>, such as
+        ///  <c>/ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ</c>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        Task DisconnectAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
     }
 }
