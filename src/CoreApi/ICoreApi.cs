@@ -5,8 +5,12 @@ using System.Text;
 namespace Ipfs.CoreApi
 {
     /// <summary>
-    ///   TODO
+    ///   The IPFS Core API.
     /// </summary>
+    /// <remarks>
+    ///   The Core API defines a set of interfaces to manage IPFS.
+    /// </remarks>
+    /// <seealso href="https://github.com/ipfs/interface-ipfs-core"/>
     public interface ICoreApi
     {
         /// <summary>

@@ -32,6 +32,8 @@ namespace Ipfs
             Assert.AreEqual("unknown/0.0", peer.AgentVersion);
             Assert.AreEqual(null, peer.PublicKey);
             Assert.AreEqual(false, peer.IsValid()); // missing peer ID
+            Assert.AreEqual(null, peer.ConnectedAddress);
+            Assert.IsFalse(peer.Latency.HasValue);
         }
 
         [TestMethod]
