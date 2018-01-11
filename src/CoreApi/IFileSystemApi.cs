@@ -24,9 +24,9 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///    A task that represents the asynchronous operation. The task's value is
-        ///    the file's <see cref="Cid"/>.
+        ///    the file's node.
         /// </returns>
-        Task<Cid> AddFileAsync(string path, CancellationToken cancel = default(CancellationToken));
+        Task<IFileSystemNode> AddFileAsync(string path, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Add some text to the interplanetary file system.
@@ -39,9 +39,9 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   the text's <see cref="Cid"/>.
+        ///   the text's node.
         /// </returns>
-        Task<Cid> AddTextAsync(string text, CancellationToken cancel = default(CancellationToken));
+        Task<IFileSystemNode> AddTextAsync(string text, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Add a <see cref="Stream"/> to interplanetary file system.
@@ -53,9 +53,9 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   the data's <see cref="Cid"/>.
+        ///   the data's node.
         /// </returns>
-        Task<Cid> AddAsync(Stream stream, string name = "", CancellationToken cancel = default(CancellationToken));
+        Task<IFileSystemNode> AddAsync(Stream stream, string name = "", CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Add a directory and its files to the interplanetary file system.
@@ -71,9 +71,9 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   the directory's <see cref="Cid"/>.
+        ///   the directory's node.
         /// </returns>
-        Task<Cid> AddDirectoryAsync(string path, bool recursive = true, CancellationToken cancel = default(CancellationToken));
+        Task<IFileSystemNode> AddDirectoryAsync(string path, bool recursive = true, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Reads the content of an existing IPFS file as text.
