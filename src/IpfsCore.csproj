@@ -41,4 +41,7 @@ The InterPlanetary File System is the permanent web. It is a new hypermedia dist
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
     <DefineConstants>NETSTANDARD14</DefineConstants>
   </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
+    <PackageReference Include="System.Security.SecureString" Version="4.3.0" />
+  </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -64,6 +65,62 @@ namespace Ipfs.CoreApi
         /// <returns>
         ///   A sequence of IPFS keys that were deleted.
         /// </returns>
-        Task<IEnumerable<IKey>> RemoveAsync(string name, CancellationToken cancel = default(CancellationToken));
+        Task<IKey> RemoveAsync(string name, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Rename the specified key.
+        /// </summary>
+        /// <param name="oldName">
+        ///   The local name of the key.
+        /// </param>
+        /// <param name="newName">
+        ///   The new local name of the key.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A sequence of IPFS keys that were deleted.
+        /// </returns>
+        Task<IKey> RenameAsync(string oldName, string newName, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Export a key to a PEM encoded password protected PKCS #8 container.
+        /// </summary>
+        /// <param name="name">
+        ///   The local name of the key.
+        /// </param>
+        /// <param name="password">
+        ///   The PEM's password.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value
+        ///    the password protected PEM string.
+        /// </returns>
+        Task<string> Export(string name, SecureString password, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Import a key from a PEM encoded password protected PKCS #8 container.
+        /// </summary>
+        /// <param name="name">
+        ///   The local name of the key.
+        /// </param>
+        /// <param name="pem">
+        ///   The PEM encoded PKCS #8 container.
+        /// </param>
+        /// <param name="password">
+        ///   The <paramref name="pem"/>'s password.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value
+        ///    the password protected PEM string.
+        /// </returns>
+        Task<IKey> Import(string name, string pem, SecureString password = null, CancellationToken cancel = default(CancellationToken));
     }
 }
