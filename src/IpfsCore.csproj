@@ -15,12 +15,12 @@
     <PackageId>Ipfs.Core</PackageId>
     <Authors>Richard Schneider</Authors>
     <Title>IPFS Core Objects</Title>
-    <Description>Core objects for IPFS.
+    <Description>Core objects and interfaces for IPFS.
 
 The InterPlanetary File System is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Copyright>© 2015-2017 Richard Schneider</Copyright>
+    <Copyright>© 2015-2018 Richard Schneider</Copyright>
     <PackageTags>ipfs peer-to-peer distributed file-system</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <PackageLicenseUrl>https://github.com/richardschneider/net-ipfs-core/blob/master/LICENSE</PackageLicenseUrl>
