@@ -550,6 +550,54 @@ references:
   commentId: T:Ipfs.CoreApi.IConfigApi
   fullName: Ipfs.CoreApi.IConfigApi
   nameWithType: IConfigApi
+- uid: Ipfs.CoreApi.IConfigApi.GetAsync(System.String,System.Threading.CancellationToken)
+  name: GetAsync(String, CancellationToken)
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_GetAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IConfigApi.GetAsync(System.String,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IConfigApi.GetAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: IConfigApi.GetAsync(String, CancellationToken)
+- uid: Ipfs.CoreApi.IConfigApi.GetAsync(System.Threading.CancellationToken)
+  name: GetAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_GetAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IConfigApi.GetAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IConfigApi.GetAsync(System.Threading.CancellationToken)
+  nameWithType: IConfigApi.GetAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IConfigApi.GetAsync*
+  name: GetAsync
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_GetAsync_
+  commentId: Overload:Ipfs.CoreApi.IConfigApi.GetAsync
+  fullName: Ipfs.CoreApi.IConfigApi.GetAsync
+  nameWithType: IConfigApi.GetAsync
+- uid: Ipfs.CoreApi.IConfigApi.ReplaceAsync(Newtonsoft.Json.Linq.JObject)
+  name: ReplaceAsync(JObject)
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_ReplaceAsync_Newtonsoft_Json_Linq_JObject_
+  commentId: M:Ipfs.CoreApi.IConfigApi.ReplaceAsync(Newtonsoft.Json.Linq.JObject)
+  fullName: Ipfs.CoreApi.IConfigApi.ReplaceAsync(Newtonsoft.Json.Linq.JObject)
+  nameWithType: IConfigApi.ReplaceAsync(JObject)
+- uid: Ipfs.CoreApi.IConfigApi.ReplaceAsync*
+  name: ReplaceAsync
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_ReplaceAsync_
+  commentId: Overload:Ipfs.CoreApi.IConfigApi.ReplaceAsync
+  fullName: Ipfs.CoreApi.IConfigApi.ReplaceAsync
+  nameWithType: IConfigApi.ReplaceAsync
+- uid: Ipfs.CoreApi.IConfigApi.SetAsync(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken)
+  name: SetAsync(String, JToken, CancellationToken)
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_SetAsync_System_String_Newtonsoft_Json_Linq_JToken_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IConfigApi.SetAsync(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IConfigApi.SetAsync(System.String, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken)
+  nameWithType: IConfigApi.SetAsync(String, JToken, CancellationToken)
+- uid: Ipfs.CoreApi.IConfigApi.SetAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: SetAsync(String, String, CancellationToken)
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_SetAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IConfigApi.SetAsync(System.String,System.String,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IConfigApi.SetAsync(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: IConfigApi.SetAsync(String, String, CancellationToken)
+- uid: Ipfs.CoreApi.IConfigApi.SetAsync*
+  name: SetAsync
+  href: api/Ipfs.CoreApi.IConfigApi.html#Ipfs_CoreApi_IConfigApi_SetAsync_
+  commentId: Overload:Ipfs.CoreApi.IConfigApi.SetAsync
+  fullName: Ipfs.CoreApi.IConfigApi.SetAsync
+  nameWithType: IConfigApi.SetAsync
 - uid: Ipfs.CoreApi.ICoreApi
   name: ICoreApi
   href: api/Ipfs.CoreApi.ICoreApi.html
