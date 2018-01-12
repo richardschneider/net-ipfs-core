@@ -94,7 +94,7 @@ The Key API is work in progress! There be dragons here.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_CreateAsync_System_String_System_String_System_Int32_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.CreateAsync(System.String%2CSystem.String%2CSystem.Int32%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L38">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L39">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_CreateAsync_" data-uid="Ipfs.CoreApi.IKeyApi.CreateAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_CreateAsync_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.CreateAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">CreateAsync(String, String, Int32, CancellationToken)</h4>
@@ -159,10 +159,142 @@ The Key API is work in progress! There be dragons here.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_Export_System_String_System_Security_SecureString_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.Export(System.String%2CSystem.Security.SecureString%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L103">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IKeyApi_Export_" data-uid="Ipfs.CoreApi.IKeyApi.Export*"></a>
+  <h4 id="Ipfs_CoreApi_IKeyApi_Export_System_String_System_Security_SecureString_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.Export(System.String,System.Security.SecureString,System.Threading.CancellationToken)">Export(String, SecureString, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Export a key to a PEM encoded password protected PKCS #8 container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; Export(string name, SecureString password, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The local name of the key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx">SecureString</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The PEM&apos;s password.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+the password protected PEM string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_Import_System_String_System_String_System_Security_SecureString_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.Import(System.String%2CSystem.String%2CSystem.Security.SecureString%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L124">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IKeyApi_Import_" data-uid="Ipfs.CoreApi.IKeyApi.Import*"></a>
+  <h4 id="Ipfs_CoreApi_IKeyApi_Import_System_String_System_String_System_Security_SecureString_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.Import(System.String,System.String,System.Security.SecureString,System.Threading.CancellationToken)">Import(String, String, SecureString, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Import a key from a PEM encoded password protected PKCS #8 container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IKey&gt; Import(string name, string pem, SecureString password = null, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The local name of the key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">pem</span></td>
+        <td><p>The PEM encoded PKCS #8 container.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx">SecureString</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">pem</code>&apos;s password.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+the password protected PEM string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_ListAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.ListAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L53">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L54">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_ListAsync_" data-uid="Ipfs.CoreApi.IKeyApi.ListAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_ListAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.ListAsync(System.Threading.CancellationToken)">ListAsync(CancellationToken)</h4>
@@ -212,7 +344,7 @@ The Key API is work in progress! There be dragons here.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_RemoveAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.RemoveAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L67">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L68">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_RemoveAsync_" data-uid="Ipfs.CoreApi.IKeyApi.RemoveAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_RemoveAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.RemoveAsync(System.String,System.Threading.CancellationToken)">RemoveAsync(String, CancellationToken)</h4>
@@ -221,7 +353,7 @@ The Key API is work in progress! There be dragons here.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;IKey&gt;&gt; RemoveAsync(string name, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IKey&gt; RemoveAsync(string name, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +389,69 @@ The Key API is work in progress! There be dragons here.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
+        <td><p>A sequence of IPFS keys that were deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_RenameAsync_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.RenameAsync(System.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L85">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IKeyApi_RenameAsync_" data-uid="Ipfs.CoreApi.IKeyApi.RenameAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IKeyApi_RenameAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.RenameAsync(System.String,System.String,System.Threading.CancellationToken)">RenameAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Rename the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IKey&gt; RenameAsync(string oldName, string newName, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">oldName</span></td>
+        <td><p>The local name of the key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new local name of the key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
         <td><p>A sequence of IPFS keys that were deleted.</p>
 </td>
       </tr>
@@ -278,7 +472,7 @@ The Key API is work in progress! There be dragons here.
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
