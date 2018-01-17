@@ -958,30 +958,36 @@ references:
   commentId: Overload:Ipfs.CoreApi.IKeyApi.CreateAsync
   fullName: Ipfs.CoreApi.IKeyApi.CreateAsync
   nameWithType: IKeyApi.CreateAsync
-- uid: Ipfs.CoreApi.IKeyApi.Export(System.String,System.Security.SecureString,System.Threading.CancellationToken)
-  name: Export(String, SecureString, CancellationToken)
-  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_Export_System_String_System_Security_SecureString_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IKeyApi.Export(System.String,System.Security.SecureString,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IKeyApi.Export(System.String, System.Security.SecureString, System.Threading.CancellationToken)
-  nameWithType: IKeyApi.Export(String, SecureString, CancellationToken)
-- uid: Ipfs.CoreApi.IKeyApi.Export*
-  name: Export
-  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_Export_
-  commentId: Overload:Ipfs.CoreApi.IKeyApi.Export
-  fullName: Ipfs.CoreApi.IKeyApi.Export
-  nameWithType: IKeyApi.Export
-- uid: Ipfs.CoreApi.IKeyApi.Import(System.String,System.String,System.Security.SecureString,System.Threading.CancellationToken)
-  name: Import(String, String, SecureString, CancellationToken)
-  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_Import_System_String_System_String_System_Security_SecureString_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IKeyApi.Import(System.String,System.String,System.Security.SecureString,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IKeyApi.Import(System.String, System.String, System.Security.SecureString, System.Threading.CancellationToken)
-  nameWithType: IKeyApi.Import(String, String, SecureString, CancellationToken)
-- uid: Ipfs.CoreApi.IKeyApi.Import*
-  name: Import
-  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_Import_
-  commentId: Overload:Ipfs.CoreApi.IKeyApi.Import
-  fullName: Ipfs.CoreApi.IKeyApi.Import
-  nameWithType: IKeyApi.Import
+- uid: Ipfs.CoreApi.IKeyApi.ExportAsync(System.String,System.Char[],System.Threading.CancellationToken)
+  name: ExportAsync(String, Char[], CancellationToken)
+  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_ExportAsync_System_String_System_Char___System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IKeyApi.ExportAsync(System.String,System.Char[],System.Threading.CancellationToken)
+  name.vb: ExportAsync(String, Char(), CancellationToken)
+  fullName: Ipfs.CoreApi.IKeyApi.ExportAsync(System.String, System.Char[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IKeyApi.ExportAsync(System.String, System.Char(), System.Threading.CancellationToken)
+  nameWithType: IKeyApi.ExportAsync(String, Char[], CancellationToken)
+  nameWithType.vb: IKeyApi.ExportAsync(String, Char(), CancellationToken)
+- uid: Ipfs.CoreApi.IKeyApi.ExportAsync*
+  name: ExportAsync
+  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_ExportAsync_
+  commentId: Overload:Ipfs.CoreApi.IKeyApi.ExportAsync
+  fullName: Ipfs.CoreApi.IKeyApi.ExportAsync
+  nameWithType: IKeyApi.ExportAsync
+- uid: Ipfs.CoreApi.IKeyApi.ImportAsync(System.String,System.String,System.Char[],System.Threading.CancellationToken)
+  name: ImportAsync(String, String, Char[], CancellationToken)
+  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_ImportAsync_System_String_System_String_System_Char___System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IKeyApi.ImportAsync(System.String,System.String,System.Char[],System.Threading.CancellationToken)
+  name.vb: ImportAsync(String, String, Char(), CancellationToken)
+  fullName: Ipfs.CoreApi.IKeyApi.ImportAsync(System.String, System.String, System.Char[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IKeyApi.ImportAsync(System.String, System.String, System.Char(), System.Threading.CancellationToken)
+  nameWithType: IKeyApi.ImportAsync(String, String, Char[], CancellationToken)
+  nameWithType.vb: IKeyApi.ImportAsync(String, String, Char(), CancellationToken)
+- uid: Ipfs.CoreApi.IKeyApi.ImportAsync*
+  name: ImportAsync
+  href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_ImportAsync_
+  commentId: Overload:Ipfs.CoreApi.IKeyApi.ImportAsync
+  fullName: Ipfs.CoreApi.IKeyApi.ImportAsync
+  nameWithType: IKeyApi.ImportAsync
 - uid: Ipfs.CoreApi.IKeyApi.ListAsync(System.Threading.CancellationToken)
   name: ListAsync(CancellationToken)
   href: api/Ipfs.CoreApi.IKeyApi.html#Ipfs_CoreApi_IKeyApi_ListAsync_System_Threading_CancellationToken_

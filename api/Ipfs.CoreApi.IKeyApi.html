@@ -94,7 +94,7 @@ The Key API is work in progress! There be dragons here.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_CreateAsync_System_String_System_String_System_Int32_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.CreateAsync(System.String%2CSystem.String%2CSystem.Int32%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L39">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L40">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_CreateAsync_" data-uid="Ipfs.CoreApi.IKeyApi.CreateAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_CreateAsync_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.CreateAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">CreateAsync(String, String, Int32, CancellationToken)</h4>
@@ -152,26 +152,27 @@ The Key API is work in progress! There be dragons here.
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
-        <td><p>The information on the newly created key.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+the key that was created.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_Export_System_String_System_Security_SecureString_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.Export(System.String%2CSystem.Security.SecureString%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_ExportAsync_System_String_System_Char___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.ExportAsync(System.String%2CSystem.Char%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L103">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L107">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IKeyApi_Export_" data-uid="Ipfs.CoreApi.IKeyApi.Export*"></a>
-  <h4 id="Ipfs_CoreApi_IKeyApi_Export_System_String_System_Security_SecureString_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.Export(System.String,System.Security.SecureString,System.Threading.CancellationToken)">Export(String, SecureString, CancellationToken)</h4>
+  <a id="Ipfs_CoreApi_IKeyApi_ExportAsync_" data-uid="Ipfs.CoreApi.IKeyApi.ExportAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IKeyApi_ExportAsync_System_String_System_Char___System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.ExportAsync(System.String,System.Char[],System.Threading.CancellationToken)">ExportAsync(String, Char[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Export a key to a PEM encoded password protected PKCS #8 container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; Export(string name, SecureString password, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExportAsync(string name, char[] password, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +191,7 @@ The Key API is work in progress! There be dragons here.
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx">SecureString</a></td>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.char(v=vs.110).aspx">Char</a>[]</td>
         <td><span class="parametername">password</span></td>
         <td><p>The PEM&apos;s password.</p>
 </td>
@@ -214,7 +215,7 @@ The Key API is work in progress! There be dragons here.
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
 the password protected PEM string.</p>
 </td>
       </tr>
@@ -222,19 +223,19 @@ the password protected PEM string.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_Import_System_String_System_String_System_Security_SecureString_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.Import(System.String%2CSystem.String%2CSystem.Security.SecureString%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_ImportAsync_System_String_System_String_System_Char___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.ImportAsync(System.String%2CSystem.String%2CSystem.Char%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L124">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L128">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IKeyApi_Import_" data-uid="Ipfs.CoreApi.IKeyApi.Import*"></a>
-  <h4 id="Ipfs_CoreApi_IKeyApi_Import_System_String_System_String_System_Security_SecureString_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.Import(System.String,System.String,System.Security.SecureString,System.Threading.CancellationToken)">Import(String, String, SecureString, CancellationToken)</h4>
+  <a id="Ipfs_CoreApi_IKeyApi_ImportAsync_" data-uid="Ipfs.CoreApi.IKeyApi.ImportAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IKeyApi_ImportAsync_System_String_System_String_System_Char___System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.ImportAsync(System.String,System.String,System.Char[],System.Threading.CancellationToken)">ImportAsync(String, String, Char[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Import a key from a PEM encoded password protected PKCS #8 container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IKey&gt; Import(string name, string pem, SecureString password = null, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IKey&gt; ImportAsync(string name, string pem, char[] password = null, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,7 +260,7 @@ the password protected PEM string.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx">SecureString</a></td>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.char(v=vs.110).aspx">Char</a>[]</td>
         <td><span class="parametername">password</span></td>
         <td><p>The <code data-dev-comment-type="paramref" class="paramref">pem</code>&apos;s password.</p>
 </td>
@@ -283,8 +284,8 @@ the password protected PEM string.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation. The task&apos;s value
-the password protected PEM string.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result
+is the newly imported key.</p>
 </td>
       </tr>
     </tbody>
@@ -294,7 +295,7 @@ the password protected PEM string.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_ListAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.ListAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L54">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L56">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_ListAsync_" data-uid="Ipfs.CoreApi.IKeyApi.ListAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_ListAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.ListAsync(System.Threading.CancellationToken)">ListAsync(CancellationToken)</h4>
@@ -334,7 +335,8 @@ the password protected PEM string.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;&gt;</td>
-        <td><p>A sequence of IPFS keys.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+a sequence of IPFS keys.</p>
 </td>
       </tr>
     </tbody>
@@ -344,7 +346,7 @@ the password protected PEM string.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_RemoveAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.RemoveAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L68">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L71">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_RemoveAsync_" data-uid="Ipfs.CoreApi.IKeyApi.RemoveAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_RemoveAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.RemoveAsync(System.String,System.Threading.CancellationToken)">RemoveAsync(String, CancellationToken)</h4>
@@ -390,7 +392,8 @@ the password protected PEM string.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
-        <td><p>A sequence of IPFS keys that were deleted.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+the key that was deleted.</p>
 </td>
       </tr>
     </tbody>
@@ -400,7 +403,7 @@ the password protected PEM string.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IKeyApi_RenameAsync_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IKeyApi.RenameAsync(System.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L85">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IKeyApi.cs/#L89">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IKeyApi_RenameAsync_" data-uid="Ipfs.CoreApi.IKeyApi.RenameAsync*"></a>
   <h4 id="Ipfs_CoreApi_IKeyApi_RenameAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IKeyApi.RenameAsync(System.String,System.String,System.Threading.CancellationToken)">RenameAsync(String, String, CancellationToken)</h4>
@@ -452,7 +455,8 @@ the password protected PEM string.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.IKey.html">IKey</a>&gt;</td>
-        <td><p>A sequence of IPFS keys that were deleted.</p>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+a sequence of IPFS keys that were renamed.</p>
 </td>
       </tr>
     </tbody>
