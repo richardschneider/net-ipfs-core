@@ -17,7 +17,8 @@ namespace Ipfs
         ///   Universally unique identifier.
         /// </summary>
         /// <value>
-        ///   This is the <see cref="MultiHash"/> of the peer's <see cref="PublicKey"/>.
+        ///   This is the <see cref="MultiHash"/> of the peer's protobuf encoded
+        ///   <see cref="PublicKey"/>.
         /// </value>
         public MultiHash Id { get; set; }
 
