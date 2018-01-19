@@ -27,6 +27,11 @@ namespace Ipfs
         /// <value>
         ///   The base 64 encoding of the node's public key.  The default is <b>null</b>
         /// </value>
+        /// <remarks>
+        ///   The IPFS public key is the base-64 encoding of a protobuf encoding containing 
+        ///   a type and the DER encoding of the PKCS Subject Public Key Info.
+        /// </remarks>
+        /// <seealso href="https://tools.ietf.org/html/rfc5280#section-4.1.2.7"/>
         public string PublicKey { get; set; }
 
         /// <summary>
