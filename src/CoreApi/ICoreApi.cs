@@ -30,6 +30,14 @@ namespace Ipfs.CoreApi
         IBlockApi Block { get;  }
 
         /// <summary>
+        ///   Provides access to the Bootstrap API.
+        /// </summary>
+        /// <value>
+        ///   An object that implements <see cref="IBootstrapApi"/>.
+        /// </value>
+        IBootstrapApi Bootstrap { get; }
+
+        /// <summary>
         ///   Provides access to the Config API.
         /// </summary>
         /// <value>
