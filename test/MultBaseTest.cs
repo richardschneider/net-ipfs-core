@@ -102,12 +102,12 @@ namespace Ipfs
             },
             new TestVector {
                 Algorithm = "base64",
-                Input = "χοÿ",
+                Input = "\u00f7\u00ef\u00ff",
                 Output = "mw7fDr8O/"
             },
             new TestVector {
                 Algorithm = "base64url",
-                Input = "χοÿ",
+                Input = "\u00f7\u00ef\u00ff",
                 Output = "uw7fDr8O_"
             },
             new TestVector {
