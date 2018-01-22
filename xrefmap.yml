@@ -544,6 +544,72 @@ references:
   commentId: Overload:Ipfs.CoreApi.IBlockApi.StatAsync
   fullName: Ipfs.CoreApi.IBlockApi.StatAsync
   nameWithType: IBlockApi.StatAsync
+- uid: Ipfs.CoreApi.IBootstrapApi
+  name: IBootstrapApi
+  href: api/Ipfs.CoreApi.IBootstrapApi.html
+  commentId: T:Ipfs.CoreApi.IBootstrapApi
+  fullName: Ipfs.CoreApi.IBootstrapApi
+  nameWithType: IBootstrapApi
+- uid: Ipfs.CoreApi.IBootstrapApi.AddAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: AddAsync(MultiAddress, CancellationToken)
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_AddAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBootstrapApi.AddAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBootstrapApi.AddAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: IBootstrapApi.AddAsync(MultiAddress, CancellationToken)
+- uid: Ipfs.CoreApi.IBootstrapApi.AddAsync*
+  name: AddAsync
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_AddAsync_
+  commentId: Overload:Ipfs.CoreApi.IBootstrapApi.AddAsync
+  fullName: Ipfs.CoreApi.IBootstrapApi.AddAsync
+  nameWithType: IBootstrapApi.AddAsync
+- uid: Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync(System.Threading.CancellationToken)
+  name: AddDefaultsAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_AddDefaultsAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync(System.Threading.CancellationToken)
+  nameWithType: IBootstrapApi.AddDefaultsAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync*
+  name: AddDefaultsAsync
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_AddDefaultsAsync_
+  commentId: Overload:Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync
+  fullName: Ipfs.CoreApi.IBootstrapApi.AddDefaultsAsync
+  nameWithType: IBootstrapApi.AddDefaultsAsync
+- uid: Ipfs.CoreApi.IBootstrapApi.ListAsync(System.Threading.CancellationToken)
+  name: ListAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_ListAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBootstrapApi.ListAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBootstrapApi.ListAsync(System.Threading.CancellationToken)
+  nameWithType: IBootstrapApi.ListAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IBootstrapApi.ListAsync*
+  name: ListAsync
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_ListAsync_
+  commentId: Overload:Ipfs.CoreApi.IBootstrapApi.ListAsync
+  fullName: Ipfs.CoreApi.IBootstrapApi.ListAsync
+  nameWithType: IBootstrapApi.ListAsync
+- uid: Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync(System.Threading.CancellationToken)
+  name: RemoveAllAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_RemoveAllAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync(System.Threading.CancellationToken)
+  nameWithType: IBootstrapApi.RemoveAllAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync*
+  name: RemoveAllAsync
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_RemoveAllAsync_
+  commentId: Overload:Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync
+  fullName: Ipfs.CoreApi.IBootstrapApi.RemoveAllAsync
+  nameWithType: IBootstrapApi.RemoveAllAsync
+- uid: Ipfs.CoreApi.IBootstrapApi.RemoveAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: RemoveAsync(MultiAddress, CancellationToken)
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_RemoveAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBootstrapApi.RemoveAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBootstrapApi.RemoveAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: IBootstrapApi.RemoveAsync(MultiAddress, CancellationToken)
+- uid: Ipfs.CoreApi.IBootstrapApi.RemoveAsync*
+  name: RemoveAsync
+  href: api/Ipfs.CoreApi.IBootstrapApi.html#Ipfs_CoreApi_IBootstrapApi_RemoveAsync_
+  commentId: Overload:Ipfs.CoreApi.IBootstrapApi.RemoveAsync
+  fullName: Ipfs.CoreApi.IBootstrapApi.RemoveAsync
+  nameWithType: IBootstrapApi.RemoveAsync
 - uid: Ipfs.CoreApi.IConfigApi
   name: IConfigApi
   href: api/Ipfs.CoreApi.IConfigApi.html
@@ -628,6 +694,18 @@ references:
   commentId: Overload:Ipfs.CoreApi.ICoreApi.Block
   fullName: Ipfs.CoreApi.ICoreApi.Block
   nameWithType: ICoreApi.Block
+- uid: Ipfs.CoreApi.ICoreApi.Bootstrap
+  name: Bootstrap
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Bootstrap
+  commentId: P:Ipfs.CoreApi.ICoreApi.Bootstrap
+  fullName: Ipfs.CoreApi.ICoreApi.Bootstrap
+  nameWithType: ICoreApi.Bootstrap
+- uid: Ipfs.CoreApi.ICoreApi.Bootstrap*
+  name: Bootstrap
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Bootstrap_
+  commentId: Overload:Ipfs.CoreApi.ICoreApi.Bootstrap
+  fullName: Ipfs.CoreApi.ICoreApi.Bootstrap
+  nameWithType: ICoreApi.Bootstrap
 - uid: Ipfs.CoreApi.ICoreApi.Config
   name: Config
   href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Config
