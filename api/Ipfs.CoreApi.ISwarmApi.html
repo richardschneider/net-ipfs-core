@@ -89,6 +89,68 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/ISwarmApi.cs/#L81">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_" data-uid="Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync*"></a>
+  <h4 id="Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)">AddAddressFilterAsync(MultiAddress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Adds a new address filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;MultiAddress&gt; AddAddressFilterAsync(MultiAddress address, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>An allowed address.  For example &quot;/ip4/104.131.131.82&quot; or
+&quot;/ip4/192.168.0.0/ipcidr/16&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+the address filter that was added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_ISwarmApi_AddressesAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.ISwarmApi.AddressesAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -252,6 +314,60 @@ is a sequence of peer nodes.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/ISwarmApi.cs/#L91">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_" data-uid="Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync*"></a>
+  <h4 id="Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Threading.CancellationToken)">ListAddressFiltersAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>List all the address filters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;MultiAddress&gt;&gt; ListAddressFiltersAsync(CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a>&gt;&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+a sequence of addresses filters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_System_Threading_CancellationToken__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing</a></span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_ISwarmApi_PeersAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.ISwarmApi.PeersAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -301,6 +417,68 @@ is a sequence of <a class="xref" href="Ipfs.Peer.html">Peer</a>.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/ISwarmApi.cs/#L108">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_" data-uid="Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync*"></a>
+  <h4 id="Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)">RemoveAddressFilterAsync(MultiAddress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Delete the specified address filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;MultiAddress&gt; RemoveAddressFilterAsync(MultiAddress address, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>For example &quot;/ip4/104.131.131.82&quot; or
+&quot;/ip4/192.168.0.0/ipcidr/16&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
+the address filter that was removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing</a></span></div>
+  </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/SWARM.md">Swarm API spec</a></span></div>
