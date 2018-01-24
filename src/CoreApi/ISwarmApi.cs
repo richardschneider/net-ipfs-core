@@ -62,5 +62,50 @@ namespace Ipfs.CoreApi
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         Task DisconnectAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Adds a new address filter.
+        /// </summary>
+        /// <param name="address">
+        ///   An allowed address.  For example "/ip4/104.131.131.82" or
+        ///   "/ip4/192.168.0.0/ipcidr/16".
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
+        ///   the address filter that was added.
+        /// </returns>
+        /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
+        Task<MultiAddress> AddAddressFilterAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   List all the address filters.
+        /// </summary>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
+        ///   a sequence of addresses filters.
+        /// </returns>
+        /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
+        Task<IEnumerable<MultiAddress>> ListAddressFiltersAsync(CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Delete the specified address filter.
+        /// </summary>
+        /// <param name="address">
+        ///   For example "/ip4/104.131.131.82" or
+        ///   "/ip4/192.168.0.0/ipcidr/16".
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result is
+        ///   the address filter that was removed.
+        /// </returns>
+        /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
+        Task<MultiAddress> RemoveAddressFilterAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+
     }
 }
