@@ -46,6 +46,7 @@ namespace Ipfs
             NetworkProtocol.Register<Dns6NetworkProtocol>();
             NetworkProtocol.Register<DnsAddrNetworkProtocol>();
             NetworkProtocol.Register<WssNetworkProtocol>();
+            NetworkProtocol.Register<IpcidrNetworkProtocol>();
         }
 
         /// <summary>
@@ -454,4 +455,36 @@ namespace Ipfs
         public override string Name { get { return "dnsaddr"; } }
         public override uint Code { get { return 12345; } }
     }
+
+    class IpcidrNetworkProtocol : NetworkProtocol
+    {
+        public UInt16 RoutingPrefix { get; set; }
+        public override string Name { get { return "ipcidr"; } }
+        // TODO: https://github.com/multiformats/multiaddr/issues/60
+        public override uint Code { get { return 999; } }
+        public override void ReadValue(TextReader stream)
+        {
+            base.ReadValue(stream);
+            try
+            {
+                RoutingPrefix = UInt16.Parse(Value);
+            }
+            catch (Exception e)
+            {
+                throw new FormatException(string.Format("'{0}' is not a valid routing prefix.", Value), e);
+            }
+        }
+        public override void ReadValue(CodedInputStream stream)
+        {
+            var bytes = stream.ReadSomeBytes(2);
+            RoutingPrefix = (UInt16)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(bytes, 0));
+            Value = RoutingPrefix.ToString(CultureInfo.InvariantCulture);
+        }
+        public override void WriteValue(CodedOutputStream stream)
+        {
+            var bytes = BitConverter.GetBytes(IPAddress.HostToNetworkOrder((Int16)RoutingPrefix));
+            stream.WriteSomeBytes(bytes);
+        }
+    }
+
 }
