@@ -1327,12 +1327,12 @@ references:
   commentId: T:Ipfs.CoreApi.ISwarmApi
   fullName: Ipfs.CoreApi.ISwarmApi
   nameWithType: ISwarmApi
-- uid: Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: AddAddressFilterAsync(MultiAddress, CancellationToken)
-  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: ISwarmApi.AddAddressFilterAsync(MultiAddress, CancellationToken)
+- uid: Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress,System.Boolean,System.Threading.CancellationToken)
+  name: AddAddressFilterAsync(MultiAddress, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_Ipfs_MultiAddress_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync(Ipfs.MultiAddress, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: ISwarmApi.AddAddressFilterAsync(MultiAddress, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.ISwarmApi.AddAddressFilterAsync*
   name: AddAddressFilterAsync
   href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_AddAddressFilterAsync_
@@ -1375,12 +1375,12 @@ references:
   commentId: Overload:Ipfs.CoreApi.ISwarmApi.DisconnectAsync
   fullName: Ipfs.CoreApi.ISwarmApi.DisconnectAsync
   nameWithType: ISwarmApi.DisconnectAsync
-- uid: Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Threading.CancellationToken)
-  name: ListAddressFiltersAsync(CancellationToken)
-  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Threading.CancellationToken)
-  nameWithType: ISwarmApi.ListAddressFiltersAsync(CancellationToken)
+- uid: Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Boolean,System.Threading.CancellationToken)
+  name: ListAddressFiltersAsync(Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync(System.Boolean, System.Threading.CancellationToken)
+  nameWithType: ISwarmApi.ListAddressFiltersAsync(Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.ISwarmApi.ListAddressFiltersAsync*
   name: ListAddressFiltersAsync
   href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_ListAddressFiltersAsync_
@@ -1399,12 +1399,12 @@ references:
   commentId: Overload:Ipfs.CoreApi.ISwarmApi.PeersAsync
   fullName: Ipfs.CoreApi.ISwarmApi.PeersAsync
   nameWithType: ISwarmApi.PeersAsync
-- uid: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: RemoveAddressFilterAsync(MultiAddress, CancellationToken)
-  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: ISwarmApi.RemoveAddressFilterAsync(MultiAddress, CancellationToken)
+- uid: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress,System.Boolean,System.Threading.CancellationToken)
+  name: RemoveAddressFilterAsync(MultiAddress, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_Ipfs_MultiAddress_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync(Ipfs.MultiAddress, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: ISwarmApi.RemoveAddressFilterAsync(MultiAddress, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync*
   name: RemoveAddressFilterAsync
   href: api/Ipfs.CoreApi.ISwarmApi.html#Ipfs_CoreApi_ISwarmApi_RemoveAddressFilterAsync_
