@@ -70,6 +70,9 @@ namespace Ipfs.CoreApi
         ///   An allowed address.  For example "/ip4/104.131.131.82" or
         ///   "/ip4/192.168.0.0/ipcidr/16".
         /// </param>
+        /// <param name="persist">
+        ///   If <b>true</b> the filter will persist across daemon reboots. 
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
@@ -78,17 +81,23 @@ namespace Ipfs.CoreApi
         ///   the address filter that was added.
         /// </returns>
         /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
-        Task<MultiAddress> AddAddressFilterAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+        Task<MultiAddress> AddAddressFilterAsync(MultiAddress address, bool persist = false, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   List all the address filters.
         /// </summary>
+        /// <param name="persist">
+        ///   If <b>true</b> only persisted filters are listed.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's result is
         ///   a sequence of addresses filters.
         /// </returns>
         /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
-        Task<IEnumerable<MultiAddress>> ListAddressFiltersAsync(CancellationToken cancel = default(CancellationToken));
+        Task<IEnumerable<MultiAddress>> ListAddressFiltersAsync(bool persist = false, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Delete the specified address filter.
@@ -96,6 +105,9 @@ namespace Ipfs.CoreApi
         /// <param name="address">
         ///   For example "/ip4/104.131.131.82" or
         ///   "/ip4/192.168.0.0/ipcidr/16".
+        /// </param>
+        /// <param name="persist">
+        ///   If <b>true</b> the filter is also removed from the persistent store. 
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -105,7 +117,7 @@ namespace Ipfs.CoreApi
         ///   the address filter that was removed.
         /// </returns>
         /// <seealso href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing"/>
-        Task<MultiAddress> RemoveAddressFilterAsync(MultiAddress address, CancellationToken cancel = default(CancellationToken));
+        Task<MultiAddress> RemoveAddressFilterAsync(MultiAddress address, bool persist = false, CancellationToken cancel = default(CancellationToken));
 
     }
 }

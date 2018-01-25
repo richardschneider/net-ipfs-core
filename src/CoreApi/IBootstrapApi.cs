@@ -50,6 +50,9 @@ namespace Ipfs.CoreApi
         /// <summary>
         ///   List all the peers.
         /// </summary>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's result is
         ///   a sequence of addresses.
