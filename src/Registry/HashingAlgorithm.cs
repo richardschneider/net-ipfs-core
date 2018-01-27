@@ -35,6 +35,7 @@ namespace Ipfs.Registry
             Register("sha1", 0x11, 20, () => SHA1.Create());
             Register("sha2-256", 0x12, 32, () => SHA256.Create());
             Register("sha2-512", 0x13, 64, () => SHA512.Create());
+            Register("dbl-sha2-256", 0x56, 32, () => new DoubleSha256());
             Register("keccak-224", 0x1A, 224 / 8, () => new KeccakManaged(224));
             Register("keccak-256", 0x1B, 256 / 8, () => new KeccakManaged(256));
             Register("keccak-384", 0x1C, 384 / 8, () => new KeccakManaged(384));

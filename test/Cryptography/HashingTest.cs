@@ -18,6 +18,27 @@ namespace Ipfs.Cryptography
 
         TestVector[] TestVectors = new TestVector[]
         {
+            new TestVector
+            {
+                Algorithm = "sha1",
+                Input = "68656c6c6f", // "hello" in hex
+                Digest = "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d"
+            },
+
+            // From https://bitcoin.stackexchange.com/questions/5671/how-do-you-perform-double-sha-256-encoding/5677
+            new TestVector
+            {
+                Algorithm = "sha2-256",
+                Input = "68656c6c6f", // "hello" in hex
+                Digest = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+            },
+            new TestVector
+            {
+                Algorithm = "dbl-sha2-256",
+                Input = "68656c6c6f", // "hello" in hex
+                Digest = "9595c9df90075148eb06860365df33584b75bff782a510c6cd4883a419833d50"
+            },
+
             // From <see href="http://asecuritysite.com/encryption/sha3"/>
             new TestVector {
                 Algorithm = "keccak-512",
