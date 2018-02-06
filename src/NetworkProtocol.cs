@@ -12,8 +12,9 @@ using System.Globalization;
 namespace Ipfs
 {
     /// <summary>
-    ///   Metadata on an IPFS network protocol.
+    ///   Metadata on an IPFS network address protocol.
     /// </summary>
+    /// <seealso cref="MultiAddress"/>
     public abstract class NetworkProtocol
     {
         static readonly ILog log = LogManager.GetLogger<NetworkProtocol>();
@@ -30,6 +31,7 @@ namespace Ipfs
             NetworkProtocol.Register<TcpNetworkProtocol>();
             NetworkProtocol.Register<UdpNetworkProtocol>();
             NetworkProtocol.Register<IpfsNetworkProtocol>();
+            NetworkProtocol.Register<P2pNetworkProtocol>();
             NetworkProtocol.Register<HttpNetworkProtocol>();
             NetworkProtocol.Register<HttpsNetworkProtocol>();
             NetworkProtocol.Register<DccpNetworkProtocol>();
@@ -44,7 +46,6 @@ namespace Ipfs
             NetworkProtocol.Register<DnsNetworkProtocol>();
             NetworkProtocol.Register<Dns4NetworkProtocol>();
             NetworkProtocol.Register<Dns6NetworkProtocol>();
-            NetworkProtocol.Register<DnsAddrNetworkProtocol>();
             NetworkProtocol.Register<WssNetworkProtocol>();
             NetworkProtocol.Register<IpcidrNetworkProtocol>();
         }
@@ -305,6 +306,12 @@ namespace Ipfs
         }
     }
 
+    class P2pNetworkProtocol : IpfsNetworkProtocol
+    {
+        public override string Name { get { return "p2p"; } }
+        public override uint Code { get { return 420; } }
+    }
+
     class OnionNetworkProtocol : NetworkProtocol
     {
         public byte[] Address { get; private set; }
@@ -448,12 +455,6 @@ namespace Ipfs
     {
         public override string Name { get { return "dns6"; } }
         public override uint Code { get { return 55; } }
-    }
-
-    class DnsAddrNetworkProtocol : DomainNameNetworkProtocol
-    {
-        public override string Name { get { return "dnsaddr"; } }
-        public override uint Code { get { return 12345; } }
     }
 
     class IpcidrNetworkProtocol : NetworkProtocol

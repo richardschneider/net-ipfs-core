@@ -150,7 +150,7 @@ namespace Ipfs
                 "/ip6/3ffe:1900:4545:3:200:f8ff:fe21:67cf/dccp/8001",
                 "/ip4/1.2.3.4/tcp/80/ws",
                 "/libp2p-webrtc-star/ip4/127.0.0.1/tcp/9090/ws/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC",
-                "/ip4/127.0.0.1/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC/tcp/1234",
+                "/ip4/127.0.0.1/tcp/1234/ipfs/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC",
                 "/ip4/1.2.3.4/tcp/80/udt",
                 "/ip4/1.2.3.4/tcp/80/utp",
                 "/onion/aaimaq4ygg2iegci:80",
@@ -160,8 +160,8 @@ namespace Ipfs
                 "/dns4/ipfs.io",
                 "/dns6/ipfs.io",
                 "/dns4/wss0.bootstrap.libp2p.io/tcp/443/wss/ipfs/QmZMxNdpMkewiVZLMRxaNxUeZpDUb34pWjZ1kZvsd16Zic",
-                "/dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
                 "/ip4/127.0.0.0/ipcidr/16",
+                "/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
             };
             foreach (var a in addresses)
             {
@@ -230,7 +230,6 @@ namespace Ipfs
             Assert.AreEqual(
                new MultiAddress("/onion/aaimaq4ygg2iegci:80").ToArray().ToHexString(),
                "bc030010c0439831b48218480050");
-            // testString("/onion/aaimaq4ygg2iegci:80", "bc030010c0439831b48218480050")
         }
 
     }
