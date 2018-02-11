@@ -129,7 +129,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_DecodeInt32_System_Byte___System_Int32_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.DecodeInt32(System.Byte%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L72">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L73">View Source</a>
   </span>
   <a id="Ipfs_Varint_DecodeInt32_" data-uid="Ipfs.Varint.DecodeInt32*"></a>
   <h4 id="Ipfs_Varint_DecodeInt32_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt32(System.Byte[],System.Int32)">DecodeInt32(Byte[], Int32)</h4>
@@ -185,7 +185,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.DecodeInt64(System.Byte%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L91">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L92">View Source</a>
   </span>
   <a id="Ipfs_Varint_DecodeInt64_" data-uid="Ipfs.Varint.DecodeInt64*"></a>
   <h4 id="Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt64(System.Byte[],System.Int32)">DecodeInt64(Byte[], Int32)</h4>
@@ -241,7 +241,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_Encode_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.Encode(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L41">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L42">View Source</a>
   </span>
   <a id="Ipfs_Varint_Encode_" data-uid="Ipfs.Varint.Encode*"></a>
   <h4 id="Ipfs_Varint_Encode_System_Int64_" data-uid="Ipfs.Varint.Encode(System.Int64)">Encode(Int64)</h4>
@@ -292,7 +292,7 @@ a variable integer.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_ReadVarint32_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.ReadVarint32(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L138">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L129">View Source</a>
   </span>
   <a id="Ipfs_Varint_ReadVarint32_" data-uid="Ipfs.Varint.ReadVarint32*"></a>
   <h4 id="Ipfs_Varint_ReadVarint32_System_IO_Stream_" data-uid="Ipfs.Varint.ReadVarint32(System.IO.Stream)">ReadVarint32(Stream)</h4>
@@ -355,10 +355,83 @@ a variable integer.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_ReadVarint32Async_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.ReadVarint32Async(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L202">View Source</a>
+  </span>
+  <a id="Ipfs_Varint_ReadVarint32Async_" data-uid="Ipfs.Varint.ReadVarint32Async*"></a>
+  <h4 id="Ipfs_Varint_ReadVarint32Async_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Ipfs.Varint.ReadVarint32Async(System.IO.Stream,System.Threading.CancellationToken)">ReadVarint32Async(Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads a variable integer from the stream. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; ReadVarint32Async(this Stream stream, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result
+is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/92chhbf3(v=vs.110).aspx">MaxValue</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_ReadVarint64_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.ReadVarint64(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L156">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L144">View Source</a>
   </span>
   <a id="Ipfs_Varint_ReadVarint64_" data-uid="Ipfs.Varint.ReadVarint64*"></a>
   <h4 id="Ipfs_Varint_ReadVarint64_System_IO_Stream_" data-uid="Ipfs.Varint.ReadVarint64(System.IO.Stream)">ReadVarint64(Stream)</h4>
@@ -421,10 +494,83 @@ a variable integer.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_ReadVarint64Async_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.ReadVarint64Async(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L226">View Source</a>
+  </span>
+  <a id="Ipfs_Varint_ReadVarint64Async_" data-uid="Ipfs.Varint.ReadVarint64Async*"></a>
+  <h4 id="Ipfs_Varint_ReadVarint64Async_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Ipfs.Varint.ReadVarint64Async(System.IO.Stream,System.Threading.CancellationToken)">ReadVarint64Async(Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads a variable integer from the stream. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; ReadVarint64Async(this Stream stream, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s result
+is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/xkeewe20(v=vs.110).aspx">MaxValue</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_RequiredBytes_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.RequiredBytes(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L57">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L58">View Source</a>
   </span>
   <a id="Ipfs_Varint_RequiredBytes_" data-uid="Ipfs.Varint.RequiredBytes*"></a>
   <h4 id="Ipfs_Varint_RequiredBytes_System_Int64_" data-uid="Ipfs.Varint.RequiredBytes(System.Int64)">RequiredBytes(Int64)</h4>
@@ -474,7 +620,7 @@ a variable integer.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.WriteVarint(System.IO.Stream%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L113">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L114">View Source</a>
   </span>
   <a id="Ipfs_Varint_WriteVarint_" data-uid="Ipfs.Varint.WriteVarint*"></a>
   <h4 id="Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_" data-uid="Ipfs.Varint.WriteVarint(System.IO.Stream,System.Int64)">WriteVarint(Stream, Int64)</h4>
@@ -526,6 +672,85 @@ a stream.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint_WriteVarintAsync_System_IO_Stream_System_Int64_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.Varint.WriteVarintAsync(System.IO.Stream%2CSystem.Int64%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L168">View Source</a>
+  </span>
+  <a id="Ipfs_Varint_WriteVarintAsync_" data-uid="Ipfs.Varint.WriteVarintAsync*"></a>
+  <h4 id="Ipfs_Varint_WriteVarintAsync_System_IO_Stream_System_Int64_System_Threading_CancellationToken_" data-uid="Ipfs.Varint.WriteVarintAsync(System.IO.Stream,System.Int64,System.Threading.CancellationToken)">WriteVarintAsync(Stream, Int64, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Writes the variable integer encoding of the value to
+a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task WriteVarintAsync(this Stream stream, long value, CancellationToken cancel = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> to write to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A non-negative value to write.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a></td>
+        <td><p>When <code data-dev-comment-type="paramref" class="paramref">value</code> is negative.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://developers.google.com/protocol-buffers/docs/encoding#varints">https://developers.google.com/protocol-buffers/docs/encoding#varints</a></span></div>
@@ -541,7 +766,7 @@ a stream.</p>
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Varint.md&amp;value=---%0Auid%3A%20Ipfs.Varint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/VarInt.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

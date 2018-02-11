@@ -3177,6 +3177,18 @@ references:
   commentId: Overload:Ipfs.Varint.ReadVarint32
   fullName: Ipfs.Varint.ReadVarint32
   nameWithType: Varint.ReadVarint32
+- uid: Ipfs.Varint.ReadVarint32Async(System.IO.Stream,System.Threading.CancellationToken)
+  name: ReadVarint32Async(Stream, CancellationToken)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint32Async_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Ipfs.Varint.ReadVarint32Async(System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Ipfs.Varint.ReadVarint32Async(System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: Varint.ReadVarint32Async(Stream, CancellationToken)
+- uid: Ipfs.Varint.ReadVarint32Async*
+  name: ReadVarint32Async
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint32Async_
+  commentId: Overload:Ipfs.Varint.ReadVarint32Async
+  fullName: Ipfs.Varint.ReadVarint32Async
+  nameWithType: Varint.ReadVarint32Async
 - uid: Ipfs.Varint.ReadVarint64(System.IO.Stream)
   name: ReadVarint64(Stream)
   href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint64_System_IO_Stream_
@@ -3189,6 +3201,18 @@ references:
   commentId: Overload:Ipfs.Varint.ReadVarint64
   fullName: Ipfs.Varint.ReadVarint64
   nameWithType: Varint.ReadVarint64
+- uid: Ipfs.Varint.ReadVarint64Async(System.IO.Stream,System.Threading.CancellationToken)
+  name: ReadVarint64Async(Stream, CancellationToken)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint64Async_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Ipfs.Varint.ReadVarint64Async(System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Ipfs.Varint.ReadVarint64Async(System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: Varint.ReadVarint64Async(Stream, CancellationToken)
+- uid: Ipfs.Varint.ReadVarint64Async*
+  name: ReadVarint64Async
+  href: api/Ipfs.Varint.html#Ipfs_Varint_ReadVarint64Async_
+  commentId: Overload:Ipfs.Varint.ReadVarint64Async
+  fullName: Ipfs.Varint.ReadVarint64Async
+  nameWithType: Varint.ReadVarint64Async
 - uid: Ipfs.Varint.RequiredBytes(System.Int64)
   name: RequiredBytes(Int64)
   href: api/Ipfs.Varint.html#Ipfs_Varint_RequiredBytes_System_Int64_
@@ -3213,3 +3237,15 @@ references:
   commentId: Overload:Ipfs.Varint.WriteVarint
   fullName: Ipfs.Varint.WriteVarint
   nameWithType: Varint.WriteVarint
+- uid: Ipfs.Varint.WriteVarintAsync(System.IO.Stream,System.Int64,System.Threading.CancellationToken)
+  name: WriteVarintAsync(Stream, Int64, CancellationToken)
+  href: api/Ipfs.Varint.html#Ipfs_Varint_WriteVarintAsync_System_IO_Stream_System_Int64_System_Threading_CancellationToken_
+  commentId: M:Ipfs.Varint.WriteVarintAsync(System.IO.Stream,System.Int64,System.Threading.CancellationToken)
+  fullName: Ipfs.Varint.WriteVarintAsync(System.IO.Stream, System.Int64, System.Threading.CancellationToken)
+  nameWithType: Varint.WriteVarintAsync(Stream, Int64, CancellationToken)
+- uid: Ipfs.Varint.WriteVarintAsync*
+  name: WriteVarintAsync
+  href: api/Ipfs.Varint.html#Ipfs_Varint_WriteVarintAsync_
+  commentId: Overload:Ipfs.Varint.WriteVarintAsync
+  fullName: Ipfs.Varint.WriteVarintAsync
+  nameWithType: Varint.WriteVarintAsync
