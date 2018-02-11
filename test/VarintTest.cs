@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Ipfs
 {
@@ -76,6 +78,52 @@ namespace Ipfs
         {
             var bytes = new byte[0];
             ExceptionAssert.Throws<InvalidDataException>(() => Varint.DecodeInt64(bytes));
+        }
+
+        [TestMethod]
+        public async Task WriteAsync()
+        {
+            using (var ms = new MemoryStream())
+            {
+                await ms.WriteVarintAsync(long.MaxValue);
+                ms.Position = 0;
+                Assert.AreEqual(long.MaxValue, ms.ReadVarint64());
+            }
+        }
+
+        [TestMethod]
+        public void WriteAsync_Negative()
+        {
+            var ms = new MemoryStream();
+            ExceptionAssert.Throws<Exception>(() => ms.WriteVarintAsync(-1).Wait());
+        }
+
+        [TestMethod]
+        public void WriteAsync_Cancel()
+        {
+            var ms = new MemoryStream();
+            var cs = new CancellationTokenSource();
+            cs.Cancel();
+            ExceptionAssert.Throws<TaskCanceledException>(() => ms.WriteVarintAsync(0, cs.Token).Wait());
+        }
+
+        [TestMethod]
+        public async Task ReadAsync()
+        {
+            using (var ms = new MemoryStream("ffffffffffffffff7f".ToHexBuffer()))
+            {
+                var v = await ms.ReadVarint64Async();
+                Assert.AreEqual(long.MaxValue, v);
+            }
+        }
+
+        [TestMethod]
+        public void ReadAsync_Cancel()
+        {
+            var ms = new MemoryStream(new byte[] { 0 });
+            var cs = new CancellationTokenSource();
+            cs.Cancel();
+            ExceptionAssert.Throws<TaskCanceledException>(() => ms.ReadVarint32Async(cs.Token).Wait());
         }
     }
 }

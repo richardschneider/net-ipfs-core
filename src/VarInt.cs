@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ipfs
@@ -112,17 +113,7 @@ namespace Ipfs
         /// </exception>
         public static void WriteVarint(this Stream stream, long value)
         {
-            if (value < 0)
-                throw new NotSupportedException("Negative values are not allowed for a Varint");
-
-            do
-            {
-                byte v = (byte) (value & 0x7F);
-                if (value > 0x7F)
-                    v |= 0x80;
-                stream.WriteByte(v);
-                value >>= 7;
-            } while (value != 0);
+            stream.WriteVarintAsync(value).Wait();
         }
 
         /// <summary>
@@ -137,10 +128,7 @@ namespace Ipfs
         /// <returns>The integer value.</returns>
         public static int ReadVarint32(this Stream stream)
         {
-            var value = stream.ReadVarint64();
-            if (value > int.MaxValue)
-                throw new InvalidDataException("Varint value is bigger than an Int32.MaxValue");
-            return (int)value;
+            return stream.ReadVarint32Async().Result;
         }
 
         /// <summary>
@@ -155,22 +143,106 @@ namespace Ipfs
         /// <returns>The integer value.</returns>
         public static long ReadVarint64(this Stream stream)
         {
+            return stream.ReadVarint64Async().Result;
+        }
+
+        /// <summary>
+        ///   Writes the variable integer encoding of the value to
+        ///   a stream.
+        /// </summary>
+        /// <param name="stream">
+        ///   The <see cref="Stream"/> to write to.
+        /// </param>
+        /// <param name="value">
+        ///   A non-negative value to write.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation.
+        /// </returns>
+        /// <exception cref="NotSupportedException">
+        ///   When <paramref name="value"/> is negative.
+        /// </exception>
+        public static async Task WriteVarintAsync(this Stream stream, long value, CancellationToken cancel = default(CancellationToken))
+        {
+            if (value < 0)
+                throw new NotSupportedException("Negative values are not allowed for a Varint");
+
+            var bytes = new byte[10];
+            int i = 0;
+            do
+            {
+                byte v = (byte)(value & 0x7F);
+                if (value > 0x7F)
+                    v |= 0x80;
+                bytes[i++] = v;
+                value >>= 7;
+            } while (value != 0);
+            await stream.WriteAsync(bytes, 0, i, cancel);
+        }
+
+        /// <summary>
+        ///   Reads a variable integer from the stream. 
+        /// </summary>
+        /// <param name="stream">
+        ///   A varint encoded <see cref="Stream"/>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result
+        ///   is the integer value in the <paramref name="stream"/>.
+        /// </returns>
+        /// <exception cref="InvalidDataException">
+        ///   When the varint value is greater than <see cref="Int32.MaxValue"/>.
+        /// </exception>
+        public static async Task<int> ReadVarint32Async(this Stream stream, CancellationToken cancel = default(CancellationToken))
+        {
+            var value = await stream.ReadVarint64Async(cancel);
+            if (value > int.MaxValue)
+                throw new InvalidDataException("Varint value is bigger than an Int32.MaxValue");
+            return (int)value;
+        }
+
+        /// <summary>
+        ///   Reads a variable integer from the stream. 
+        /// </summary>
+        /// <param name="stream">
+        ///   A varint encoded <see cref="Stream"/>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <exception cref="InvalidDataException">
+        ///   When the varint value is greater than <see cref="Int64.MaxValue"/>.
+        /// </exception>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's result
+        ///   is the integer value in the <paramref name="stream"/>.
+        /// </returns>
+        public static async Task<long> ReadVarint64Async(this Stream stream, CancellationToken cancel = default(CancellationToken))
+        {
             long value = 0;
             int shift = 0;
             int bytesRead = 0;
+            var buffer = new byte[1];
             while (true)
             {
-                var b = stream.ReadByte();
-                if (b == -1)
+                if (0 == await stream.ReadAsync(buffer, 0, 1, cancel))
+                {
                     throw new InvalidDataException("Varint is not terminated");
+                }
                 if (++bytesRead > 9)
                     throw new InvalidDataException("Varint value is bigger than an Int64.MaxValue");
+                var b = buffer[0];
                 value |= (long)(b & 0x7F) << shift;
                 if (b < 0x80)
                     return value;
                 shift += 7;
             }
-
         }
 
     }
