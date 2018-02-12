@@ -231,7 +231,7 @@ namespace Ipfs
             var buffer = new byte[1];
             while (true)
             {
-                if (0 == await stream.ReadAsync(buffer, 0, 1, cancel))
+                if (1 != await stream.ReadAsync(buffer, 0, 1, cancel))
                 {
                     throw new InvalidDataException("Varint is not terminated");
                 }
