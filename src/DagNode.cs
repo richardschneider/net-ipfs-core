@@ -18,7 +18,7 @@ namespace Ipfs
     public class DagNode : IMerkleNode<IMerkleLink>
     {
         Cid id;
-        string hashAlgorithm;
+        string hashAlgorithm = MultiHash.DefaultAlgorithmName;
         long? size;
 
         /// <summary>
