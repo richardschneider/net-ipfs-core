@@ -213,6 +213,23 @@ namespace Ipfs
             Assert.AreEqual(11, link.Size);
         }
 
+        [TestMethod]
+        public void Setting_Id()
+        {
+            var a = new DagNode((byte[])null);
+            var b = new DagNode((byte[])null)
+            {
+                // Wrong hash but allowed.
+                Id = "QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1m"
+            };
+            Assert.AreEqual(a.DataBytes.Length, b.DataBytes.Length);
+            Assert.AreEqual(a.Links.Count(), b.Links.Count());
+            Assert.AreEqual(a.Size, b.Size);
+            Assert.AreNotEqual(a.Id, b.Id);
+
+            RoundtripTest(b);
+        }
+
         void RoundtripTest(DagNode a)
         {
             var ms = new MemoryStream();

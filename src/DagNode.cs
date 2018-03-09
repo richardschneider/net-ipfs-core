@@ -93,7 +93,7 @@ namespace Ipfs
             {
                 if (!size.HasValue)
                 {
-                    ComputeHash();
+                    ComputeSize();
                 }
                 return size.Value;
             }
@@ -109,6 +109,10 @@ namespace Ipfs
                    ComputeHash();
                 }
                 return id;
+            }
+            set
+            {
+                id = value;
             }
         }
 
@@ -307,6 +311,15 @@ namespace Ipfs
                 size = ms.Position;
                 ms.Position = 0;
                 id = MultiHash.ComputeHash(ms, hashAlgorithm);
+            }
+        }
+
+        void ComputeSize()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                size = ms.Position;
             }
         }
     }
