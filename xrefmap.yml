@@ -499,21 +499,21 @@ references:
   commentId: Overload:Ipfs.CoreApi.IBlockApi.GetAsync
   fullName: Ipfs.CoreApi.IBlockApi.GetAsync
   nameWithType: IBlockApi.GetAsync
-- uid: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Threading.CancellationToken)
-  name: PutAsync(Byte[], String, String, CancellationToken)
-  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_System_Byte___System_String_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Threading.CancellationToken)
-  name.vb: PutAsync(Byte(), String, String, CancellationToken)
-  fullName: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[], System.String, System.String, System.Threading.CancellationToken)
-  fullName.vb: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte(), System.String, System.String, System.Threading.CancellationToken)
-  nameWithType: IBlockApi.PutAsync(Byte[], String, String, CancellationToken)
-  nameWithType.vb: IBlockApi.PutAsync(Byte(), String, String, CancellationToken)
-- uid: Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream,System.String,System.String,System.Threading.CancellationToken)
-  name: PutAsync(Stream, String, String, CancellationToken)
-  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_System_IO_Stream_System_String_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream,System.String,System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream, System.String, System.String, System.Threading.CancellationToken)
-  nameWithType: IBlockApi.PutAsync(Stream, String, String, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: PutAsync(Byte[], String, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_System_Byte___System_String_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[],System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: PutAsync(Byte(), String, String, Boolean, CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte[], System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IBlockApi.PutAsync(System.Byte(), System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.PutAsync(Byte[], String, String, Boolean, CancellationToken)
+  nameWithType.vb: IBlockApi.PutAsync(Byte(), String, String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: PutAsync(Stream, String, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_System_IO_Stream_System_String_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockApi.PutAsync(System.IO.Stream, System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IBlockApi.PutAsync(Stream, String, String, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.IBlockApi.PutAsync*
   name: PutAsync
   href: api/Ipfs.CoreApi.IBlockApi.html#Ipfs_CoreApi_IBlockApi_PutAsync_
@@ -904,12 +904,12 @@ references:
   commentId: T:Ipfs.CoreApi.IFileSystemApi
   fullName: Ipfs.CoreApi.IFileSystemApi
   nameWithType: IFileSystemApi
-- uid: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Threading.CancellationToken)
-  name: AddAsync(Stream, String, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_System_IO_Stream_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream, System.String, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddAsync(Stream, String, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: AddAsync(Stream, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_System_IO_Stream_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddAsync(Stream, String, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddAsync*
   name: AddAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_
@@ -928,24 +928,24 @@ references:
   commentId: Overload:Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync
   fullName: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync
   nameWithType: IFileSystemApi.AddDirectoryAsync
-- uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Threading.CancellationToken)
-  name: AddFileAsync(String, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddFileAsync(String, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: AddFileAsync(String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddFileAsync(String, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync*
   name: AddFileAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_
   commentId: Overload:Ipfs.CoreApi.IFileSystemApi.AddFileAsync
   fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync
   nameWithType: IFileSystemApi.AddFileAsync
-- uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Threading.CancellationToken)
-  name: AddTextAsync(String, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddTextAsync(String, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: AddTextAsync(String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddTextAsync(String, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync*
   name: AddTextAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_

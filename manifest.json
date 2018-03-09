@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.IBlockApi.html",
-          "hash": "TahoLvWRsqa5KCvIBsM1hQ=="
+          "hash": "B9cF2wvm7BQR28wr+B0LWQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.IFileSystemApi.html",
-          "hash": "NJr1tyUFWxHkdYoUW88uSw=="
+          "hash": "cwAKPrbJv2slB8wVXkBMhQ=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.DagNode.html",
-          "hash": "sx2fXxfmL4W+8mWuD9M38A=="
+          "hash": "ABGuEPBuXSy/M6yPpDebKw=="
         }
       },
       "is_incremental": false,
