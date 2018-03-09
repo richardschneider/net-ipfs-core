@@ -52,6 +52,10 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="pin">
+        ///   If <b>true</b> the block is pinned to local storage and will not be
+        ///   garbage collected.  The default is <b>false</b>.
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
@@ -63,6 +67,7 @@ namespace Ipfs.CoreApi
             byte[] data,
             string contentType = Cid.DefaultContentType,
             string multiHash = MultiHash.DefaultAlgorithmName,
+            bool pin = false,
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
@@ -78,6 +83,10 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="pin">
+        ///   If <b>true</b> the block is pinned to local storage and will not be
+        ///   garbage collected.  The default is <b>false</b>.
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
@@ -89,6 +98,7 @@ namespace Ipfs.CoreApi
             Stream data,
             string contentType = Cid.DefaultContentType,
             string multiHash = MultiHash.DefaultAlgorithmName,
+            bool pin = false,
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>

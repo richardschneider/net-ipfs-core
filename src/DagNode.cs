@@ -113,6 +113,10 @@ namespace Ipfs
             set
             {
                 id = value;
+                if (id != null)
+                {
+                    hashAlgorithm = id.Hash.Algorithm.Name;
+                }
             }
         }
 
