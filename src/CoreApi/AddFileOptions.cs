@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Ipfs.CoreApi
+{
+    /// <summary>
+    ///   The options when adding data to the IPFS file system.
+    /// </summary>
+    /// <seealso cref="IFileSystemApi"/>
+    public class AddFileOptions
+    {
+        /// <summary>
+        ///   Determines if the data is pinned to local storage.
+        /// </summary>
+        /// <value>
+        ///   If <b>true</b> the data is pinned to local storage and will not be
+        ///   garbage collected.  The default is <b>true</b>.
+        /// </value>
+        public bool Pin { get; set; } = true;
+
+        /// <summary>
+        ///   The maximum number of data bytes in a block.
+        /// </summary>
+        /// <value>
+        ///   The default is 255 * 1024 (‭262,144) bytes.‬
+        /// </value>
+        public int ChunkSize { get; set; } = 256 * 1024;
+
+        /// <summary>
+        ///   Determines if the trickle-dag format is used for dag generation.
+        /// </summary>
+        /// <value>
+        ///   The default is <b>false</b>.
+        /// </value>
+        public bool Trickle { get; set; } = false;
+
+        /// <summary>
+        ///   Determines if added file(s) are wrapped in a directory object.
+        /// </summary>
+        /// <value>
+        ///   The default is <b>false</b>.
+        /// </value>
+        public bool Wrap { get; set; } = false;
+
+        /// <summary>
+        ///   Determines if raw blocks are used for leaf data blocks.
+        /// </summary>
+        /// <value>
+        ///   The default is <b>false</b>.
+        /// </value>
+        public bool RawLeaves { get; set; } = false;
+
+        /// <summary>
+        ///   The hashing algorithm name to use.
+        /// </summary>
+        /// <value>
+        ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
+        ///   Defaults to <see cref="MultiHash.DefaultAlgorithmName"/>.
+        /// </value>
+        public string Hash { get; set; } = MultiHash.DefaultAlgorithmName;
+
+        /// <summary>
+        ///   Determines if only file information is produced.
+        /// </summary>
+        /// <value>
+        ///   If <b>true</b> no data is added to IPFS.  The default is <b>false</b>.
+        /// </value>
+        public bool OnlyHash { get; set; } = false;
+    }
+}
