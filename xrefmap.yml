@@ -475,6 +475,96 @@ references:
   commentId: N:Ipfs.CoreApi
   fullName: Ipfs.CoreApi
   nameWithType: Ipfs.CoreApi
+- uid: Ipfs.CoreApi.AddFileOptions
+  name: AddFileOptions
+  href: api/Ipfs.CoreApi.AddFileOptions.html
+  commentId: T:Ipfs.CoreApi.AddFileOptions
+  fullName: Ipfs.CoreApi.AddFileOptions
+  nameWithType: AddFileOptions
+- uid: Ipfs.CoreApi.AddFileOptions.ChunkSize
+  name: ChunkSize
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ChunkSize
+  commentId: P:Ipfs.CoreApi.AddFileOptions.ChunkSize
+  fullName: Ipfs.CoreApi.AddFileOptions.ChunkSize
+  nameWithType: AddFileOptions.ChunkSize
+- uid: Ipfs.CoreApi.AddFileOptions.ChunkSize*
+  name: ChunkSize
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ChunkSize_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.ChunkSize
+  fullName: Ipfs.CoreApi.AddFileOptions.ChunkSize
+  nameWithType: AddFileOptions.ChunkSize
+- uid: Ipfs.CoreApi.AddFileOptions.Hash
+  name: Hash
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Hash
+  commentId: P:Ipfs.CoreApi.AddFileOptions.Hash
+  fullName: Ipfs.CoreApi.AddFileOptions.Hash
+  nameWithType: AddFileOptions.Hash
+- uid: Ipfs.CoreApi.AddFileOptions.Hash*
+  name: Hash
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Hash_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.Hash
+  fullName: Ipfs.CoreApi.AddFileOptions.Hash
+  nameWithType: AddFileOptions.Hash
+- uid: Ipfs.CoreApi.AddFileOptions.OnlyHash
+  name: OnlyHash
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_OnlyHash
+  commentId: P:Ipfs.CoreApi.AddFileOptions.OnlyHash
+  fullName: Ipfs.CoreApi.AddFileOptions.OnlyHash
+  nameWithType: AddFileOptions.OnlyHash
+- uid: Ipfs.CoreApi.AddFileOptions.OnlyHash*
+  name: OnlyHash
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_OnlyHash_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.OnlyHash
+  fullName: Ipfs.CoreApi.AddFileOptions.OnlyHash
+  nameWithType: AddFileOptions.OnlyHash
+- uid: Ipfs.CoreApi.AddFileOptions.Pin
+  name: Pin
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Pin
+  commentId: P:Ipfs.CoreApi.AddFileOptions.Pin
+  fullName: Ipfs.CoreApi.AddFileOptions.Pin
+  nameWithType: AddFileOptions.Pin
+- uid: Ipfs.CoreApi.AddFileOptions.Pin*
+  name: Pin
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Pin_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.Pin
+  fullName: Ipfs.CoreApi.AddFileOptions.Pin
+  nameWithType: AddFileOptions.Pin
+- uid: Ipfs.CoreApi.AddFileOptions.RawLeaves
+  name: RawLeaves
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_RawLeaves
+  commentId: P:Ipfs.CoreApi.AddFileOptions.RawLeaves
+  fullName: Ipfs.CoreApi.AddFileOptions.RawLeaves
+  nameWithType: AddFileOptions.RawLeaves
+- uid: Ipfs.CoreApi.AddFileOptions.RawLeaves*
+  name: RawLeaves
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_RawLeaves_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.RawLeaves
+  fullName: Ipfs.CoreApi.AddFileOptions.RawLeaves
+  nameWithType: AddFileOptions.RawLeaves
+- uid: Ipfs.CoreApi.AddFileOptions.Trickle
+  name: Trickle
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Trickle
+  commentId: P:Ipfs.CoreApi.AddFileOptions.Trickle
+  fullName: Ipfs.CoreApi.AddFileOptions.Trickle
+  nameWithType: AddFileOptions.Trickle
+- uid: Ipfs.CoreApi.AddFileOptions.Trickle*
+  name: Trickle
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Trickle_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.Trickle
+  fullName: Ipfs.CoreApi.AddFileOptions.Trickle
+  nameWithType: AddFileOptions.Trickle
+- uid: Ipfs.CoreApi.AddFileOptions.Wrap
+  name: Wrap
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Wrap
+  commentId: P:Ipfs.CoreApi.AddFileOptions.Wrap
+  fullName: Ipfs.CoreApi.AddFileOptions.Wrap
+  nameWithType: AddFileOptions.Wrap
+- uid: Ipfs.CoreApi.AddFileOptions.Wrap*
+  name: Wrap
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Wrap_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.Wrap
+  fullName: Ipfs.CoreApi.AddFileOptions.Wrap
+  nameWithType: AddFileOptions.Wrap
 - uid: Ipfs.CoreApi.IBitswapApi
   name: IBitswapApi
   href: api/Ipfs.CoreApi.IBitswapApi.html
@@ -904,24 +994,24 @@ references:
   commentId: T:Ipfs.CoreApi.IFileSystemApi
   fullName: Ipfs.CoreApi.IFileSystemApi
   nameWithType: IFileSystemApi
-- uid: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Boolean,System.Threading.CancellationToken)
-  name: AddAsync(Stream, String, Boolean, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_System_IO_Stream_System_String_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,System.Boolean,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream, System.String, System.Boolean, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddAsync(Stream, String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  name: AddAsync(Stream, String, AddFileOptions, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_System_IO_Stream_System_String_Ipfs_CoreApi_AddFileOptions_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream,System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddAsync(System.IO.Stream, System.String, Ipfs.CoreApi.AddFileOptions, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddAsync(Stream, String, AddFileOptions, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddAsync*
   name: AddAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddAsync_
   commentId: Overload:Ipfs.CoreApi.IFileSystemApi.AddAsync
   fullName: Ipfs.CoreApi.IFileSystemApi.AddAsync
   nameWithType: IFileSystemApi.AddAsync
-- uid: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  name: AddDirectoryAsync(String, Boolean, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddDirectoryAsync_System_String_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String, System.Boolean, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddDirectoryAsync(String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String,System.Boolean,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  name: AddDirectoryAsync(String, Boolean, AddFileOptions, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddDirectoryAsync_System_String_System_Boolean_Ipfs_CoreApi_AddFileOptions_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String,System.Boolean,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync(System.String, System.Boolean, Ipfs.CoreApi.AddFileOptions, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddDirectoryAsync(String, Boolean, AddFileOptions, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync*
   name: AddDirectoryAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddDirectoryAsync_
@@ -940,12 +1030,12 @@ references:
   commentId: Overload:Ipfs.CoreApi.IFileSystemApi.AddFileAsync
   fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync
   nameWithType: IFileSystemApi.AddFileAsync
-- uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  name: AddTextAsync(String, Boolean, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_System_String_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String, System.Boolean, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddTextAsync(String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  name: AddTextAsync(String, AddFileOptions, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_System_String_Ipfs_CoreApi_AddFileOptions_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddTextAsync(System.String, Ipfs.CoreApi.AddFileOptions, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddTextAsync(String, AddFileOptions, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddTextAsync*
   name: AddTextAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddTextAsync_
