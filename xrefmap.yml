@@ -1018,12 +1018,12 @@ references:
   commentId: Overload:Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync
   fullName: Ipfs.CoreApi.IFileSystemApi.AddDirectoryAsync
   nameWithType: IFileSystemApi.AddDirectoryAsync
-- uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  name: AddFileAsync(String, Boolean, CancellationToken)
-  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_System_String_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,System.Boolean,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String, System.Boolean, System.Threading.CancellationToken)
-  nameWithType: IFileSystemApi.AddFileAsync(String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  name: AddFileAsync(String, AddFileOptions, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_System_String_Ipfs_CoreApi_AddFileOptions_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String,Ipfs.CoreApi.AddFileOptions,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.AddFileAsync(System.String, Ipfs.CoreApi.AddFileOptions, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.AddFileAsync(String, AddFileOptions, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.AddFileAsync*
   name: AddFileAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_AddFileAsync_
