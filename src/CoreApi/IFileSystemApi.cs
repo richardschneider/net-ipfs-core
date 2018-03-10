@@ -19,9 +19,8 @@ namespace Ipfs.CoreApi
         /// <param name="path">
         ///   The name of the local file.
         /// </param>
-        /// <param name="pin">
-        ///   If <b>true</b> the file is pinned to local storage and will not be
-        ///   garbage collected.  The default is <b>true</b>.
+        /// <param name="options">
+        ///   The options when adding data to the IPFS file system.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -30,7 +29,7 @@ namespace Ipfs.CoreApi
         ///    A task that represents the asynchronous operation. The task's value is
         ///    the file's node.
         /// </returns>
-        Task<IFileSystemNode> AddFileAsync(string path, bool pin = true, CancellationToken cancel = default(CancellationToken));
+        Task<IFileSystemNode> AddFileAsync(string path, AddFileOptions options = default(AddFileOptions), CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Add some text to the interplanetary file system.
