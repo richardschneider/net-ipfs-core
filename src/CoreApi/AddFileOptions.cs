@@ -23,7 +23,7 @@ namespace Ipfs.CoreApi
         ///   The maximum number of data bytes in a block.
         /// </summary>
         /// <value>
-        ///   The default is 255 * 1024 (‭262,144) bytes.‬
+        ///   The default is 256 * 1024 (‭262,144) bytes.‬
         /// </value>
         public int ChunkSize { get; set; } = 256 * 1024;
 
