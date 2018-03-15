@@ -108,6 +108,22 @@ namespace Ipfs.CoreApi
         Task<String> ReadAllTextAsync(string path, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
+        ///   Reads an existing IPFS file.
+        /// </summary>
+        /// <param name="path">
+        ///   A path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
+        ///   or "QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V"
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   a <see cref="Stream"/> to the file contents.
+        /// </returns>
+        Task<Stream> ReadFileAsync(string path, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
         ///   Reads an existing IPFS file with the specified offset.
         /// </summary>
         /// <param name="path">
