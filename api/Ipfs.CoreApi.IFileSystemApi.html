@@ -353,7 +353,7 @@ the text&apos;s node.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IFileSystemApi_ListFileAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IFileSystemApi.ListFileAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IFileSystemApi.cs/#L137">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IFileSystemApi.cs/#L144">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IFileSystemApi_ListFileAsync_" data-uid="Ipfs.CoreApi.IFileSystemApi.ListFileAsync*"></a>
   <h4 id="Ipfs_CoreApi_IFileSystemApi_ListFileAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IFileSystemApi.ListFileAsync(System.String,System.Threading.CancellationToken)">ListFileAsync(String, CancellationToken)</h4>
@@ -464,19 +464,19 @@ the contents of the <code data-dev-comment-type="paramref" class="paramref">path
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_System_String_System_Int64_System_Int64_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String%2CSystem.Int64%2CSystem.Int64%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IFileSystemApi.cs/#L124">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IFileSystemApi.cs/#L131">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_" data-uid="Ipfs.CoreApi.IFileSystemApi.ReadFileAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String,System.Threading.CancellationToken)">ReadFileAsync(String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Reads an existing IPFS file.</p>
+  <h4 id="Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_System_String_System_Int64_System_Int64_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String,System.Int64,System.Int64,System.Threading.CancellationToken)">ReadFileAsync(String, Int64, Int64, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads an existing IPFS file with the specified offset.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Stream&gt; ReadFileAsync(string path, CancellationToken cancel = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Stream&gt; ReadFileAsync(string path, long offset, long count = 0L, CancellationToken cancel = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,6 +493,19 @@ the contents of the <code data-dev-comment-type="paramref" class="paramref">path
         <td><span class="parametername">path</span></td>
         <td><p>A path to an existing file, such as &quot;QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about&quot;
 or &quot;QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The position to start reading from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>The number of bytes to read.  If zero, then the remaining bytes
+from <code data-dev-comment-type="paramref" class="paramref">offset</code> are read.  Defaults to zero.</p>
 </td>
       </tr>
       <tr>

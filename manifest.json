@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.IFileSystemApi.html",
-          "hash": "5+4sq+smJh7XncljnnojrQ=="
+          "hash": "DnNaUFb09G4ccFroNi5fww=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.IGenericApi.html",
-          "hash": "jpo+TxIcETsSQXqmtjq7Cw=="
+          "hash": "gEuhmsWbTrQPJncpc3fANA=="
         }
       },
       "is_incremental": false,
