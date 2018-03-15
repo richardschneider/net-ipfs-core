@@ -1072,6 +1072,12 @@ references:
   commentId: M:Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String,System.Int64,System.Int64,System.Threading.CancellationToken)
   fullName: Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String, System.Int64, System.Int64, System.Threading.CancellationToken)
   nameWithType: IFileSystemApi.ReadFileAsync(String, Int64, Int64, CancellationToken)
+- uid: Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String,System.Threading.CancellationToken)
+  name: ReadFileAsync(String, CancellationToken)
+  href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IFileSystemApi.ReadFileAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: IFileSystemApi.ReadFileAsync(String, CancellationToken)
 - uid: Ipfs.CoreApi.IFileSystemApi.ReadFileAsync*
   name: ReadFileAsync
   href: api/Ipfs.CoreApi.IFileSystemApi.html#Ipfs_CoreApi_IFileSystemApi_ReadFileAsync_
