@@ -23,14 +23,26 @@ namespace Ipfs.CoreApi
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
-        ///   Information on the peer node.
+        ///    A task that represents the asynchronous operation. The task's value is
+        ///    the <see cref="Peer"/> information.
         /// </returns>
         Task<Peer> IdAsync(MultiHash peer = null, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Get the version information.
         /// </summary>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value is
+        ///    a <see cref="Dictionary{TKey, TValue}"/> of values.
+        /// </returns>
         Task<Dictionary<string, string>> VersionAsync(CancellationToken cancel = default(CancellationToken));
 
+        /// <summary>
+        ///   Stop the IPFS peer.
+        /// </summary>
+        /// <returns>
+        ///    A task that represents the asynchronous operation.
+        /// </returns>
+        Task ShutdownAsync();
     }
 }
