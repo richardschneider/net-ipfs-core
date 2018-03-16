@@ -112,8 +112,12 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///    A task that represents the asynchronous operation. The task's value
-        ///    contains the block's id and size.
+        ///    contains the block's id and size or <b>null</b>.
         /// </returns>
+        /// <remarks>
+        ///   Only the local repository is consulted for the block.  If <paramref name="id"/>
+        ///   does not exist, then <b>null</b> is retuned.
+        /// </remarks>
         Task<IDataBlock> StatAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
