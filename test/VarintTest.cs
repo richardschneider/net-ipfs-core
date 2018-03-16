@@ -77,7 +77,7 @@ namespace Ipfs
         public void Empty()
         {
             var bytes = new byte[0];
-            ExceptionAssert.Throws<InvalidDataException>(() => Varint.DecodeInt64(bytes));
+            ExceptionAssert.Throws<EndOfStreamException>(() => Varint.DecodeInt64(bytes));
         }
 
         [TestMethod]

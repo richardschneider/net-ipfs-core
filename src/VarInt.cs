@@ -122,6 +122,9 @@ namespace Ipfs
         /// <param name="stream">
         ///   A varint encoded <see cref="Stream"/>.
         /// </param>
+        /// <exception cref="EndOfStreamException">
+        ///   When the no bytes exist in the <paramref name="stream"/>.
+        /// </exception>
         /// <exception cref="InvalidDataException">
         ///   When the varint value is greater than <see cref="Int32.MaxValue"/>.
         /// </exception>
@@ -137,6 +140,9 @@ namespace Ipfs
         /// <param name="stream">
         ///   A varint encoded <see cref="Stream"/>.
         /// </param>
+        /// <exception cref="EndOfStreamException">
+        ///   When the no bytes exist in the <paramref name="stream"/>.
+        /// </exception>
         /// <exception cref="InvalidDataException">
         ///   When the varint value is greater than <see cref="Int64.MaxValue"/>.
         /// </exception>
@@ -196,6 +202,9 @@ namespace Ipfs
         ///   A task that represents the asynchronous operation. The task's result
         ///   is the integer value in the <paramref name="stream"/>.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When the no bytes exist in the <paramref name="stream"/>.
+        /// </exception>
         /// <exception cref="InvalidDataException">
         ///   When the varint value is greater than <see cref="Int32.MaxValue"/>.
         /// </exception>
@@ -219,6 +228,9 @@ namespace Ipfs
         /// <exception cref="InvalidDataException">
         ///   When the varint value is greater than <see cref="Int64.MaxValue"/>.
         /// </exception>
+        /// <exception cref="EndOfStreamException">
+        ///   When the no bytes exist in the <paramref name="stream"/>.
+        /// </exception>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's result
         ///   is the integer value in the <paramref name="stream"/>.
@@ -233,6 +245,9 @@ namespace Ipfs
             {
                 if (1 != await stream.ReadAsync(buffer, 0, 1, cancel))
                 {
+                    if (bytesRead == 0)
+                        throw new EndOfStreamException();
+
                     throw new InvalidDataException("Varint is not terminated");
                 }
                 if (++bytesRead > 9)
