@@ -449,7 +449,7 @@ namespace Ipfs
     class DnsAddrNetworkProtocol : DomainNameNetworkProtocol
     {
         public override string Name { get { return "dnsaddr"; } }
-        public override uint Code { get { return 12345; } }
+        public override uint Code { get { return 56; } }
     }
 
     class Dns4NetworkProtocol : DomainNameNetworkProtocol
