@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Varint
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.33.1.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,25 +84,25 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.html">Ipfs</a></h6>
@@ -115,7 +115,7 @@
   <div class="markdown level0 remarks"><p>A <strong>VarInt</strong> is encoded in network byte order (Big Endian). Each byte (except the last) contains 7 bits
 of information with the most significant bit set to 1.  The last byte has MSB set to 0.
 <p>
-Negative values are not allowed.  When encountered a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a> is thrown.
+Negative values are not allowed.  When encountered a <span class="xref">System.NotSupportedException</span> is thrown.
 </p>
 <p>
 Adds the following extension methods to <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
@@ -151,7 +151,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>A varint encoded byte array containing the variable integer.</p>
 </td>
@@ -207,7 +207,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>A varint encoded byte array containing the variable integer.</p>
 </td>
@@ -280,7 +280,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td><p>A byte array representing the <code data-dev-comment-type="paramref" class="paramref">value</code> as
 a variable integer.</p>
 </td>
@@ -347,13 +347,13 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><span class="xref">System.IO.EndOfStreamException</span></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/92chhbf3(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><span class="xref">System.IO.InvalidDataException</span></td>
+        <td><p>When the varint value is greater than <span class="xref">System.Int32.MaxValue</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -393,7 +393,7 @@ a variable integer.</p>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <span class="xref">System.Threading.Tasks.TaskCanceledException</span> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -408,7 +408,7 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</td>
         <td><p>A task that represents the asynchronous operation. The task&apos;s result
 is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
@@ -425,13 +425,13 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><span class="xref">System.IO.EndOfStreamException</span></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/92chhbf3(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><span class="xref">System.IO.InvalidDataException</span></td>
+        <td><p>When the varint value is greater than <span class="xref">System.Int32.MaxValue</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -496,13 +496,13 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><span class="xref">System.IO.EndOfStreamException</span></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/xkeewe20(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><span class="xref">System.IO.InvalidDataException</span></td>
+        <td><p>When the varint value is greater than <span class="xref">System.Int64.MaxValue</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -542,7 +542,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <span class="xref">System.Threading.Tasks.TaskCanceledException</span> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -557,7 +557,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>&gt;</td>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>&gt;</td>
         <td><p>A task that represents the asynchronous operation. The task&apos;s result
 is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
@@ -574,12 +574,12 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/xkeewe20(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><span class="xref">System.IO.InvalidDataException</span></td>
+        <td><p>When the varint value is greater than <span class="xref">System.Int64.MaxValue</span>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><span class="xref">System.IO.EndOfStreamException</span></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
@@ -686,7 +686,7 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a></td>
+        <td><span class="xref">System.NotSupportedException</span></td>
         <td><p>When <code data-dev-comment-type="paramref" class="paramref">value</code> is negative.</p>
 </td>
       </tr>
@@ -734,7 +734,7 @@ a stream.</p>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <span class="xref">System.Threading.Tasks.TaskCanceledException</span> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -765,7 +765,7 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a></td>
+        <td><span class="xref">System.NotSupportedException</span></td>
         <td><p>When <code data-dev-comment-type="paramref" class="paramref">value</code> is negative.</p>
 </td>
       </tr>
