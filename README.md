@@ -29,16 +29,16 @@ For the latest build or older non-released builds see [Continuous Integration](h
 ## Major objects
 
 - [MerkleDag](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
-- [MultiAddress](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
-- [MultiHash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
+- [Multiaddr](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
+- [Multihash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
 
 See the [API Documentation](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.html) for a list of all objects.
 
-### MultiHash
+### Multihash
 
 All hashes in IPFS are encoded with [multihash](https://github.com/multiformats/multihash), a self-describing hash format. The actual hash function used depends on security requirements. The cryptosystem of IPFS is upgradeable, meaning that as hash functions are broken, networks can shift to stronger hashes. There is no free lunch, as objects may need to be rehashed, or links duplicated. But ensuring that tools built do not assume a pre-defined length of hash digest means tools that work with today's hash functions will also work with tomorrows longer hash functions too.
 
-### MultiAddress
+### Multiaddr
 
 A standard way to represent a networks address that supports [multiple network protocols](https://github.com/multiformats/multiaddr). It is represented as a series of tuples, a protocol code and an optional value.  For example, an IPFS file at a sepcific address over ipv4 and tcp is 
 
