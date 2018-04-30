@@ -160,6 +160,26 @@ namespace Ipfs
                 Input = "f",
                 Output = "TCO======"
             },
+            new TestVector {
+                Algorithm = "base32z",
+                Input="Decentralize everything!!",
+                Output ="het1sg3mqqt3gn5djxj11y3msci3817depfzgqejb"
+            },
+            new TestVector {
+                Algorithm = "base32z",
+                Input ="yes mani !",
+                Output ="hxf1zgedpcfzg1ebb"
+            },
+            new TestVector {
+                Algorithm = "base32z",
+                Input ="hello world",
+                Output ="hpb1sa5dxrb5s6hucco"
+            },
+            new TestVector {
+                Algorithm = "base32z",
+                Input ="\x00\x00yes mani !",
+                Output ="hyyy813murbssn5ujryoo"
+            },
 
         };
 
