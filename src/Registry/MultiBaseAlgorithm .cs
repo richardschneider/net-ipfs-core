@@ -13,7 +13,7 @@ namespace Ipfs.Registry
     ///   the currently defined multi-base algorithms.
     ///   <para>
     ///   These algorithms are supported: base58btc, base58flickr, base64,
-    ///   base64pad, base64url, base16, base32, base32pad, base32hex
+    ///   base64pad, base64url, base16, base32, base32z, base32pad, base32hex
     ///   and base32hexpad.
     ///   </para>
     /// </remarks>
@@ -73,14 +73,15 @@ namespace Ipfs.Registry
             Register("BASE32HEXPAD", 'T',
                 bytes => SimpleBase.Base32.ExtendedHex.Encode(bytes, true),
                 s => SimpleBase.Base32.ExtendedHex.Decode(s));
-
+            Register("base32z", 'h',
+                bytes => Base32z.Codec.Encode(bytes, false),
+                s => Base32z.Codec.Decode(s));
             // Not supported
 #if false
             Register("base1", '1');
             Register("base2", '0');
             Register("base8", '7');
             Register("base10", '9');
-            Register("base32z", 'h');
 #endif
         }
 
