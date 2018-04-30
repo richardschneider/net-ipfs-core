@@ -71,6 +71,18 @@ references:
   isSpec: "True"
   fullName: Ipfs.Base32.ToBase32
   nameWithType: Base32.ToBase32
+- uid: Ipfs.Base32z
+  name: Base32z
+  href: api/Ipfs.Base32z.html
+  commentId: T:Ipfs.Base32z
+  fullName: Ipfs.Base32z
+  nameWithType: Base32z
+- uid: Ipfs.Base32z.Codec
+  name: Codec
+  href: api/Ipfs.Base32z.html#Ipfs_Base32z_Codec
+  commentId: F:Ipfs.Base32z.Codec
+  fullName: Ipfs.Base32z.Codec
+  nameWithType: Base32z.Codec
 - uid: Ipfs.Base58
   name: Base58
   href: api/Ipfs.Base58.html
