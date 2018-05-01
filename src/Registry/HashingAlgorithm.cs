@@ -46,8 +46,14 @@ namespace Ipfs.Registry
             Register("sha3-512", 0x14, 512 / 8, () => new BouncyDigest(new BC.Sha3Digest(512)));
             Register("shake-128", 0x18, 128 / 8, () => new BouncyDigest(new BC.ShakeDigest(128)));
             Register("shake-256", 0x19, 256 / 8, () => new BouncyDigest(new BC.ShakeDigest(256)));
-            Register("blake2b", 0x40, 64);
-            Register("blake2s", 0x41, 32);
+            Register("blake2b-160", 0xb214, 160 / 8, () => new BouncyDigest(new BC.Blake2bDigest(160)));
+            Register("blake2b-256", 0xb220, 256 / 8, () => new BouncyDigest(new BC.Blake2bDigest(256)));
+            Register("blake2b-384", 0xb230, 384 / 8, () => new BouncyDigest(new BC.Blake2bDigest(384)));
+            Register("blake2b-512", 0xb240, 512 / 8, () => new BouncyDigest(new BC.Blake2bDigest(512)));
+            Register("blake2s-128", 0xb250, 128 / 8, () => new BouncyDigest(new BC.Blake2sDigest(128)));
+            Register("blake2s-160", 0xb254, 160 / 8, () => new BouncyDigest(new BC.Blake2sDigest(160)));
+            Register("blake2s-224", 0xb25c, 224 / 8, () => new BouncyDigest(new BC.Blake2sDigest(224)));
+            Register("blake2s-256", 0xb260, 256 / 8, () => new BouncyDigest(new BC.Blake2sDigest(256)));
         }
 
         /// <summary>
