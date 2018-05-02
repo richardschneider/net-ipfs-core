@@ -56,6 +56,8 @@ namespace Ipfs.Registry
             Register("blake2s-256", 0xb260, 256 / 8, () => new BouncyDigest(new BC.Blake2sDigest(256)));
             Register("murmur3-32", 0x23, 32 / 8);
             Register("murmur3-128", 0x22, 128 / 8);
+            Register("md4", 0xd4, 128 / 8, () => new BouncyDigest(new BC.MD4Digest()));
+            Register("md5", 0xd5, 128 / 8, () => MD5.Create());
         }
 
         /// <summary>

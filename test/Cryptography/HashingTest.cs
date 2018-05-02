@@ -75,6 +75,22 @@ namespace Ipfs.Cryptography
                 Input = "fd6dd3b63dc7b9664895c51fc17c57d59c349621dd3c5694a3cc404c660c2cc47d83d2f0e3d2a28a3aa2f0a710db54",
                 Digest = "c8db32bf81bf75621db30264750954f8"
             },
+
+            // From https://en.wikipedia.org/wiki/MD4
+            new TestVector
+            {
+                Algorithm = "md4",
+                Input = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog").ToHexString(),
+                Digest = "1bee69a46ba811185c194762abaeae90",
+            },
+
+            // From https://en.wikipedia.org/wiki/MD5
+            new TestVector
+            {
+                Algorithm = "md5",
+                Input = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog").ToHexString(),
+                Digest = "9e107d9d372bb6826bd81d3542a419d6",
+            },
         };
 
         /// <summary>
