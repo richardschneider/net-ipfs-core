@@ -19,7 +19,6 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(false, options.RawLeaves);
             Assert.AreEqual(false, options.Trickle);
             Assert.AreEqual(false, options.Wrap);
-
         }
     }
 }
