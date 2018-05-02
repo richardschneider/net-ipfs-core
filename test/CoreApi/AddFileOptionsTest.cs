@@ -14,6 +14,12 @@ namespace Ipfs.CoreApi
 
             Assert.AreEqual(true, options.Pin);
             Assert.AreEqual(256 * 1024, options.ChunkSize);
+            Assert.AreEqual(MultiHash.DefaultAlgorithmName, options.Hash);
+            Assert.AreEqual(false, options.OnlyHash);
+            Assert.AreEqual(false, options.RawLeaves);
+            Assert.AreEqual(false, options.Trickle);
+            Assert.AreEqual(false, options.Wrap);
+
         }
     }
 }
