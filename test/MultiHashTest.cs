@@ -398,5 +398,19 @@ namespace Ipfs
             }
         }
 
+        [TestMethod]
+        public void Murmur3_Decode()
+        {
+            var hash = "2304243ddb9e".ToHexBuffer().ToBase58();
+            var mh = new MultiHash(hash);
+            Assert.AreEqual("murmur3-32", mh.Algorithm.Name);
+            Assert.AreEqual("243ddb9e", mh.Digest.ToHexString());
+
+            hash = "2210acfe9c5bbf88f075c0c4df0464430ead".ToHexBuffer().ToBase58();
+            mh = new MultiHash(hash);
+            Assert.AreEqual("murmur3-128", mh.Algorithm.Name);
+            Assert.AreEqual("acfe9c5bbf88f075c0c4df0464430ead", mh.Digest.ToHexString());
+        }
+
     }
 }
