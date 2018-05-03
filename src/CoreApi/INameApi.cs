@@ -58,16 +58,17 @@ namespace Ipfs.CoreApi
         ///   Resolve until the result is not an IPNS name. Defaults to <b>false</b>.
         /// </param>
         /// <param name="nocache">
-        ///   Do not use cached entries. Defaulst to <b>false</b>.
+        ///   Do not use cached entries. Defaults to <b>false</b>.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   the resolved <see cref="Cid"/>.
+        ///   the resolved path as a <see cref="string"/>, such as 
+        ///   <c>/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao</c>.
         /// </returns>
-        Task<Cid> ResolveAsync(
+        Task<string> ResolveAsync(
             string name,
             bool recursive = false,
             bool nocache = false,
