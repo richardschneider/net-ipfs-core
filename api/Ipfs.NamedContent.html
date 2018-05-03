@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IMerkleLink
+    <title>Class NamedContent
    | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IMerkleLink
+    <meta name="title" content="Class NamedContent
    | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.35.4.0">
     
@@ -68,69 +68,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ipfs.IMerkleLink">
+            <article class="content wrap" id="_content" data-uid="Ipfs.NamedContent">
   
   
-  <h1 id="Ipfs_IMerkleLink" data-uid="Ipfs.IMerkleLink" class="text-break">Interface IMerkleLink
+  <h1 id="Ipfs_NamedContent" data-uid="Ipfs.NamedContent" class="text-break">Class NamedContent
   </h1>
-  <div class="markdown level0 summary"><p>A link to another node in IPFS.</p>
+  <div class="markdown level0 summary"><p>Content that has an associated name.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level1"><span class="xref">NamedContent</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.html">Ipfs</a></h6>
   <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
-  <h5 id="Ipfs_IMerkleLink_syntax">Syntax</h5>
+  <h5 id="Ipfs_NamedContent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMerkleLink</code></pre>
+    <pre><code class="lang-csharp hljs">public class NamedContent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleLink_Id.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleLink.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_NamedContent_ContentPath.md&amp;value=---%0Auid%3A%20Ipfs.NamedContent.ContentPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleLink.cs/#L29">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/NamedContent.cs/#L27">View Source</a>
   </span>
-  <a id="Ipfs_IMerkleLink_Id_" data-uid="Ipfs.IMerkleLink.Id*"></a>
-  <h4 id="Ipfs_IMerkleLink_Id" data-uid="Ipfs.IMerkleLink.Id">Id</h4>
-  <div class="markdown level1 summary"><p>The unique ID of the link.</p>
+  <a id="Ipfs_NamedContent_ContentPath_" data-uid="Ipfs.NamedContent.ContentPath*"></a>
+  <h4 id="Ipfs_NamedContent_ContentPath" data-uid="Ipfs.NamedContent.ContentPath">ContentPath</h4>
+  <div class="markdown level1 summary"><p>Path to the content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Cid Id { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
-        <td><p>A <a class="xref" href="Ipfs.Cid.html">Cid</a> of the content.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleLink_Name.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleLink.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleLink.cs/#L21">View Source</a>
-  </span>
-  <a id="Ipfs_IMerkleLink_Name_" data-uid="Ipfs.IMerkleLink.Name*"></a>
-  <h4 id="Ipfs_IMerkleLink_Name" data-uid="Ipfs.IMerkleLink.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A name associated with the linked node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ContentPath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,32 +140,26 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-        <td><p>A <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a> or <strong>null</strong>.</p>
+        <td><p>Typically <code>/ipfs/...</code>.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Ipfs_IMerkleLink_Name_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-IPFS considers a <strong>null</strong> name different from a <span class="xref">System.String.Empty</span>
-name;
-</p></div>
-</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleLink_Size.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleLink.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_NamedContent_NamePath.md&amp;value=---%0Auid%3A%20Ipfs.NamedContent.NamePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleLink.cs/#L35">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/NamedContent.cs/#L19">View Source</a>
   </span>
-  <a id="Ipfs_IMerkleLink_Size_" data-uid="Ipfs.IMerkleLink.Size*"></a>
-  <h4 id="Ipfs_IMerkleLink_Size" data-uid="Ipfs.IMerkleLink.Size">Size</h4>
-  <div class="markdown level1 summary"><p>The serialised size (in bytes) of the linked node.</p>
+  <a id="Ipfs_NamedContent_NamePath_" data-uid="Ipfs.NamedContent.NamePath*"></a>
+  <h4 id="Ipfs_NamedContent_NamePath" data-uid="Ipfs.NamedContent.NamePath">NamePath</h4>
+  <div class="markdown level1 summary"><p>Path to the name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long Size { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string NamePath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,12 +171,16 @@ name;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
-        <td><p>Number of bytes.</p>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><p>Typically <code>/ipns/...</code>.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Ipfs.CoreApi.INameApi.html">INameApi</a></div>
+  </div>
 </article>
           </div>
           
@@ -194,10 +189,10 @@ name;
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_IMerkleLink.md&amp;value=---%0Auid%3A%20Ipfs.IMerkleLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_NamedContent.md&amp;value=---%0Auid%3A%20Ipfs.NamedContent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/IMerkleLink.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/NamedContent.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

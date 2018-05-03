@@ -1311,6 +1311,15 @@ references:
   commentId: T:Ipfs.CoreApi.INameApi
   fullName: Ipfs.CoreApi.INameApi
   nameWithType: INameApi
+- uid: Ipfs.CoreApi.INameApi.PublishAsync(Ipfs.Cid,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+  name: PublishAsync(Cid, String, Nullable<TimeSpan>, CancellationToken)
+  href: api/Ipfs.CoreApi.INameApi.html#Ipfs_CoreApi_INameApi_PublishAsync_Ipfs_Cid_System_String_System_Nullable_System_TimeSpan__System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.INameApi.PublishAsync(Ipfs.Cid,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+  name.vb: PublishAsync(Cid, String, Nullable(Of TimeSpan), CancellationToken)
+  fullName: Ipfs.CoreApi.INameApi.PublishAsync(Ipfs.Cid, System.String, System.Nullable<System.TimeSpan>, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.INameApi.PublishAsync(Ipfs.Cid, System.String, System.Nullable(Of System.TimeSpan), System.Threading.CancellationToken)
+  nameWithType: INameApi.PublishAsync(Cid, String, Nullable<TimeSpan>, CancellationToken)
+  nameWithType.vb: INameApi.PublishAsync(Cid, String, Nullable(Of TimeSpan), CancellationToken)
 - uid: Ipfs.CoreApi.INameApi.PublishAsync(System.String,System.Boolean,System.String,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
   name: PublishAsync(String, Boolean, String, Nullable<TimeSpan>, CancellationToken)
   href: api/Ipfs.CoreApi.INameApi.html#Ipfs_CoreApi_INameApi_PublishAsync_System_String_System_Boolean_System_String_System_Nullable_System_TimeSpan__System_Threading_CancellationToken_
@@ -2807,6 +2816,38 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiHash.Write
   nameWithType: MultiHash.Write
+- uid: Ipfs.NamedContent
+  name: NamedContent
+  href: api/Ipfs.NamedContent.html
+  commentId: T:Ipfs.NamedContent
+  fullName: Ipfs.NamedContent
+  nameWithType: NamedContent
+- uid: Ipfs.NamedContent.ContentPath
+  name: ContentPath
+  href: api/Ipfs.NamedContent.html#Ipfs_NamedContent_ContentPath
+  commentId: P:Ipfs.NamedContent.ContentPath
+  fullName: Ipfs.NamedContent.ContentPath
+  nameWithType: NamedContent.ContentPath
+- uid: Ipfs.NamedContent.ContentPath*
+  name: ContentPath
+  href: api/Ipfs.NamedContent.html#Ipfs_NamedContent_ContentPath_
+  commentId: Overload:Ipfs.NamedContent.ContentPath
+  isSpec: "True"
+  fullName: Ipfs.NamedContent.ContentPath
+  nameWithType: NamedContent.ContentPath
+- uid: Ipfs.NamedContent.NamePath
+  name: NamePath
+  href: api/Ipfs.NamedContent.html#Ipfs_NamedContent_NamePath
+  commentId: P:Ipfs.NamedContent.NamePath
+  fullName: Ipfs.NamedContent.NamePath
+  nameWithType: NamedContent.NamePath
+- uid: Ipfs.NamedContent.NamePath*
+  name: NamePath
+  href: api/Ipfs.NamedContent.html#Ipfs_NamedContent_NamePath_
+  commentId: Overload:Ipfs.NamedContent.NamePath
+  isSpec: "True"
+  fullName: Ipfs.NamedContent.NamePath
+  nameWithType: NamedContent.NamePath
 - uid: Ipfs.NetworkProtocol
   name: NetworkProtocol
   href: api/Ipfs.NetworkProtocol.html
