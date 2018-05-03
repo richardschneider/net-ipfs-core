@@ -11,8 +11,8 @@ namespace Ipfs.CoreApi
     /// </summary>
     /// <remarks>
     ///   IPNS is a PKI namespace, where names are the hashes of public keys, and
-    ///   the private key enables publishing new(signed) values. In both <see cref="PublishAsync"/>
-    ///   and <see cref="ResolveAsync"/>, the default name used is the node's own <see cref="Peer.Id"/>,
+    ///   the private key enables publishing new(signed) values. The default name
+    ///   is the node's own <see cref="Peer.Id"/>,
     ///   which is the hash of its public key.
     /// </remarks>
     /// <seealso href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/NAME.md">Name API spec</seealso>
@@ -28,7 +28,7 @@ namespace Ipfs.CoreApi
         ///   Resolve <paramref name="path"/> before publishing. Defaults to <b>true</b>.
         /// </param>
         /// <param name="key">
-        ///   The local key name used to sign the content.  Defauts to "self".
+        ///   The local key name used to sign the content.  Defaults to "self".
         /// </param>
         /// <param name="lifetime">
         ///   Duration that the record will be valid for.  Defaults to 24 hours.
@@ -38,11 +38,37 @@ namespace Ipfs.CoreApi
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   the <see cref="Cid"/> of the published content.
+        ///   the <see cref="NamedContent"/> of the published content.
         /// </returns>
-        Task<Cid> PublishAsync(
+        Task<NamedContent> PublishAsync(
             string path,
             bool resolve = true,
+            string key = "self",
+            TimeSpan? lifetime = null,
+            CancellationToken cancel = default(CancellationToken)
+            );
+
+        /// <summary>
+        ///   Publish an IPFS name.
+        /// </summary>
+        /// <param name="id">
+        ///   The <see cref="Cid"/> of the content to publish.
+        /// </param>
+        /// <param name="key">
+        ///   The local key name used to sign the content.  Defaults to "self".
+        /// </param>
+        /// <param name="lifetime">
+        ///   Duration that the record will be valid for.  Defaults to 24 hours.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   the <see cref="NamedContent"/> of the published content.
+        /// </returns>
+        Task<NamedContent> PublishAsync(
+            Cid id,
             string key = "self",
             TimeSpan? lifetime = null,
             CancellationToken cancel = default(CancellationToken)
