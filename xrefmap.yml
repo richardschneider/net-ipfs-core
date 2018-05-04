@@ -1221,6 +1221,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IGenericApi.IdAsync
   nameWithType: IGenericApi.IdAsync
+- uid: Ipfs.CoreApi.IGenericApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: ResolveAsync(String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IGenericApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IGenericApi.ResolveAsync(System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IGenericApi.ResolveAsync(String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IGenericApi.ResolveAsync*
+  name: ResolveAsync
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_ResolveAsync_
+  commentId: Overload:Ipfs.CoreApi.IGenericApi.ResolveAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IGenericApi.ResolveAsync
+  nameWithType: IGenericApi.ResolveAsync
 - uid: Ipfs.CoreApi.IGenericApi.ShutdownAsync
   name: ShutdownAsync()
   href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_ShutdownAsync
