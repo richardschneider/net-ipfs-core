@@ -899,6 +899,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.ICoreApi.Dht
   nameWithType: ICoreApi.Dht
+- uid: Ipfs.CoreApi.ICoreApi.Dns
+  name: Dns
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Dns
+  commentId: P:Ipfs.CoreApi.ICoreApi.Dns
+  fullName: Ipfs.CoreApi.ICoreApi.Dns
+  nameWithType: ICoreApi.Dns
+- uid: Ipfs.CoreApi.ICoreApi.Dns*
+  name: Dns
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Dns_
+  commentId: Overload:Ipfs.CoreApi.ICoreApi.Dns
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ICoreApi.Dns
+  nameWithType: ICoreApi.Dns
 - uid: Ipfs.CoreApi.ICoreApi.FileSystem
   name: FileSystem
   href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_FileSystem
@@ -1067,6 +1080,25 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IDhtApi.FindProvidersAsync
   nameWithType: IDhtApi.FindProvidersAsync
+- uid: Ipfs.CoreApi.IDnsApi
+  name: IDnsApi
+  href: api/Ipfs.CoreApi.IDnsApi.html
+  commentId: T:Ipfs.CoreApi.IDnsApi
+  fullName: Ipfs.CoreApi.IDnsApi
+  nameWithType: IDnsApi
+- uid: Ipfs.CoreApi.IDnsApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  name: ResolveAsync(String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IDnsApi.html#Ipfs_CoreApi_IDnsApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDnsApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDnsApi.ResolveAsync(System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IDnsApi.ResolveAsync(String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IDnsApi.ResolveAsync*
+  name: ResolveAsync
+  href: api/Ipfs.CoreApi.IDnsApi.html#Ipfs_CoreApi_IDnsApi_ResolveAsync_
+  commentId: Overload:Ipfs.CoreApi.IDnsApi.ResolveAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IDnsApi.ResolveAsync
+  nameWithType: IDnsApi.ResolveAsync
 - uid: Ipfs.CoreApi.IFileSystemApi
   name: IFileSystemApi
   href: api/Ipfs.CoreApi.IFileSystemApi.html
