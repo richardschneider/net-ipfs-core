@@ -44,5 +44,32 @@ namespace Ipfs.CoreApi
         ///    A task that represents the asynchronous operation.
         /// </returns>
         Task ShutdownAsync();
+
+        /// <summary>
+        ///   Resolve a name.
+        /// </summary>
+        /// <param name="name">
+        ///   The name to resolve.
+        /// </param>
+        /// <param name="recursive">
+        ///   Resolve until the result is an IPFS name. Defaults to <b>false</b>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   the resolved path as a <see cref="string"/>.
+        /// </returns>
+        /// <remarks>
+        ///   The <paramref name="name"/> can be <see cref="Cid"/> + [path], "/ipfs/..." or
+        ///   "/ipns/...".
+        /// </remarks>
+        Task<string> ResolveAsync(
+            string name,
+            bool recursive = false,
+            CancellationToken cancel = default(CancellationToken)
+            );
+
     }
 }
