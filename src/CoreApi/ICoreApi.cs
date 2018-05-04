@@ -46,7 +46,7 @@ namespace Ipfs.CoreApi
         IConfigApi Config { get; }
 
         /// <summary>
-        ///   Provides access to the Daglock API.
+        ///   Provides access to the Dag API.
         /// </summary>
         /// <value>
         ///   An object that implements <see cref="IDagApi"/>.
@@ -60,6 +60,14 @@ namespace Ipfs.CoreApi
         ///   An object that implements <see cref="IDhtApi"/>.
         /// </value>
         IDhtApi Dht { get; }
+
+        /// <summary>
+        ///   Provides access to the DNS API.
+        /// </summary>
+        /// <value>
+        ///   An object that implements <see cref="IDnsApi"/>.
+        /// </value>
+        IDnsApi Dns { get; }
 
         /// <summary>
         ///   Provides access to the File System API.
