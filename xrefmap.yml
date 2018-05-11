@@ -2000,6 +2000,25 @@ references:
   isSpec: "True"
   fullName: Ipfs.DagNode.Write
   nameWithType: DagNode.Write
+- uid: Ipfs.Duration
+  name: Duration
+  href: api/Ipfs.Duration.html
+  commentId: T:Ipfs.Duration
+  fullName: Ipfs.Duration
+  nameWithType: Duration
+- uid: Ipfs.Duration.Parse(System.String)
+  name: Parse(String)
+  href: api/Ipfs.Duration.html#Ipfs_Duration_Parse_System_String_
+  commentId: M:Ipfs.Duration.Parse(System.String)
+  fullName: Ipfs.Duration.Parse(System.String)
+  nameWithType: Duration.Parse(String)
+- uid: Ipfs.Duration.Parse*
+  name: Parse
+  href: api/Ipfs.Duration.html#Ipfs_Duration_Parse_
+  commentId: Overload:Ipfs.Duration.Parse
+  isSpec: "True"
+  fullName: Ipfs.Duration.Parse
+  nameWithType: Duration.Parse
 - uid: Ipfs.HexString
   name: HexString
   href: api/Ipfs.HexString.html
