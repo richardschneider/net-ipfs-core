@@ -46,13 +46,22 @@ namespace Ipfs
                 return TimeSpan.Zero;
 
             var result = TimeSpan.Zero;
+            var negative = false;
             using (var sr = new StringReader(s))
             {
+                if (sr.Peek() == '-')
+                {
+                    negative = true;
+                    sr.Read();
+                }
                 while (sr.Peek() != -1)
                 {
                     result += ParseComponent(sr);
                 }
             }
+
+            if (negative)
+                return TimeSpan.FromTicks(-result.Ticks);
 
             return result;
         }
@@ -74,9 +83,9 @@ namespace Ipfs
                     return TimeSpan.FromMilliseconds(value);
                 case "us":
                 case "µs":
-                    return TimeSpan.FromMilliseconds(value * 0.001);
+                    return TimeSpan.FromTicks((long)(value * (double)TimeSpan.TicksPerMillisecond * 0.001));
                 case "ns":
-                    return TimeSpan.FromMilliseconds(value * 0.000001);
+                    return TimeSpan.FromTicks((long)(value * (double)TimeSpan.TicksPerMillisecond * 0.000001));
                 case "":
                     throw new FormatException("Missing IPFS duration unit.");
                 default:
@@ -90,7 +99,7 @@ namespace Ipfs
             while (true)
             {
                 var c = (char)reader.Peek();
-                if (char.IsDigit(c) || c == '+' || c == '-' || c == '.')
+                if (char.IsDigit(c) || c == '.')
                 {
                     s.Append(c);
                     reader.Read();
@@ -106,7 +115,7 @@ namespace Ipfs
             while (true)
             {
                 var c = (char)reader.Peek();
-                if (char.IsDigit(c) || c == '+' || c == '-' || c == '.' || c == (char)0xFFFF)
+                if (char.IsDigit(c) || c == '.' || c == (char)0xFFFF)
                     break;
                 s.Append(c);
                 reader.Read();

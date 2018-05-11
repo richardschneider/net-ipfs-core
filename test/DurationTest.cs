@@ -32,6 +32,21 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Parsing_Negative()
+        {
+            Assert.AreEqual(TimeSpan.FromHours(-2), Duration.Parse("-1.5h30m"));
+        }
+
+        [TestMethod]
+        public void Parsing_Submilliseconds()
+        {
+            // Note: resolution of TimeSpan is 100ns, e.g. 1 tick.
+            Assert.AreEqual(TimeSpan.FromTicks(2), Duration.Parse("200ns"));
+            Assert.AreEqual(TimeSpan.FromTicks(2000), Duration.Parse("200us"));
+            Assert.AreEqual(TimeSpan.FromTicks(2000), Duration.Parse("200µs"));
+        }
+
+        [TestMethod]
         public void Parsing_MissingNumber()
         {
             ExceptionAssert.Throws<FormatException>(() =>
