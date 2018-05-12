@@ -19,6 +19,9 @@ namespace Ipfs
     /// </remarks>
     public static class Duration
     {
+        const double TicksPerNanosecond = (double)TimeSpan.TicksPerMillisecond * 0.000001;
+        const double TicksPerMicrosecond = (double)TimeSpan.TicksPerMillisecond * 0.001;
+
         /// <summary>
         ///   Converts the string representation of an IPFS duration
         ///   into its <see cref="TimeSpan"/> equivalent.
@@ -83,9 +86,9 @@ namespace Ipfs
                     return TimeSpan.FromMilliseconds(value);
                 case "us":
                 case "µs":
-                    return TimeSpan.FromTicks((long)(value * (double)TimeSpan.TicksPerMillisecond * 0.001));
+                    return TimeSpan.FromTicks((long)(value * TicksPerMicrosecond));
                 case "ns":
-                    return TimeSpan.FromTicks((long)(value * (double)TimeSpan.TicksPerMillisecond * 0.000001));
+                    return TimeSpan.FromTicks((long)(value * TicksPerNanosecond));
                 case "":
                     throw new FormatException("Missing IPFS duration unit.");
                 default:
@@ -122,6 +125,50 @@ namespace Ipfs
             }
 
             return s.ToString();
+        }
+
+        /// <summary>
+        ///   Converts the <see cref="TimeSpan"/> to the equivalent string representation of an 
+        ///   IPFS duration.
+        /// </summary>
+        /// <param name="duration">
+        ///   The <see cref="TimeSpan"/> to convert.
+        /// </param>
+        /// <param name="zeroValue">
+        ///   The string representation, when the <paramref name="duration"/> 
+        ///   is equal to <see cref="TimeSpan.Zero"/>/
+        /// </param>
+        /// <returns>
+        ///   The IPFS duration string representation.
+        /// </returns>
+        public static string Stringify(TimeSpan duration, string zeroValue = "0s")
+        {
+            if (duration.Ticks == 0)
+                return zeroValue;
+
+            var s = new StringBuilder();
+            if (duration.Ticks < 0)
+            {
+                s.Append('-');
+                duration = TimeSpan.FromTicks(-duration.Ticks);
+            }
+
+            Stringify(Math.Floor(duration.TotalHours), "h", s);
+            Stringify(duration.Minutes, "m", s);
+            Stringify(duration.Seconds, "s", s);
+            Stringify(duration.Milliseconds, "ms", s);
+            Stringify((long)((double)duration.Ticks / TicksPerMicrosecond) % 1000, "us", s);
+            Stringify((long)((double)duration.Ticks / TicksPerNanosecond) % 1000, "ns", s);
+
+            return s.ToString();
+        }
+
+        static void Stringify(double value, string unit, StringBuilder sb)
+        {
+            if (value == 0)
+                return;
+            sb.Append(value.ToString(CultureInfo.InvariantCulture));
+            sb.Append(unit);
         }
     }
 }
