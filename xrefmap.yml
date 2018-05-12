@@ -2019,6 +2019,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.Duration.Parse
   nameWithType: Duration.Parse
+- uid: Ipfs.Duration.Stringify(System.TimeSpan,System.String)
+  name: Stringify(TimeSpan, String)
+  href: api/Ipfs.Duration.html#Ipfs_Duration_Stringify_System_TimeSpan_System_String_
+  commentId: M:Ipfs.Duration.Stringify(System.TimeSpan,System.String)
+  fullName: Ipfs.Duration.Stringify(System.TimeSpan, System.String)
+  nameWithType: Duration.Stringify(TimeSpan, String)
+- uid: Ipfs.Duration.Stringify*
+  name: Stringify
+  href: api/Ipfs.Duration.html#Ipfs_Duration_Stringify_
+  commentId: Overload:Ipfs.Duration.Stringify
+  isSpec: "True"
+  fullName: Ipfs.Duration.Stringify
+  nameWithType: Duration.Stringify
 - uid: Ipfs.HexString
   name: HexString
   href: api/Ipfs.HexString.html
