@@ -1028,6 +1028,12 @@ references:
   commentId: M:Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)
   fullName: Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid, System.Threading.CancellationToken)
   nameWithType: IDagApi.GetAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IDagApi.GetAsync(System.String,System.Threading.CancellationToken)
+  name: GetAsync(String, CancellationToken)
+  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_GetAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDagApi.GetAsync(System.String,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDagApi.GetAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: IDagApi.GetAsync(String, CancellationToken)
 - uid: Ipfs.CoreApi.IDagApi.GetAsync*
   name: GetAsync
   href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_GetAsync_
@@ -1035,12 +1041,33 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IDagApi.GetAsync
   nameWithType: IDagApi.GetAsync
-- uid: Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.Threading.CancellationToken)
-  name: PutAsync(JObject, String, String, CancellationToken)
-  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject, System.String, System.String, System.Threading.CancellationToken)
-  nameWithType: IDagApi.PutAsync(JObject, String, String, CancellationToken)
+- uid: Ipfs.CoreApi.IDagApi.GetAsync``1(Ipfs.Cid,System.Threading.CancellationToken)
+  name: GetAsync<T>(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_GetAsync__1_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDagApi.GetAsync``1(Ipfs.Cid,System.Threading.CancellationToken)
+  name.vb: GetAsync(Of T)(Cid, CancellationToken)
+  fullName: Ipfs.CoreApi.IDagApi.GetAsync<T>(Ipfs.Cid, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IDagApi.GetAsync(Of T)(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IDagApi.GetAsync<T>(Cid, CancellationToken)
+  nameWithType.vb: IDagApi.GetAsync(Of T)(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: PutAsync(JObject, String, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject, System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IDagApi.PutAsync(JObject, String, String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IDagApi.PutAsync(System.IO.Stream,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: PutAsync(Stream, String, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_PutAsync_System_IO_Stream_System_String_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDagApi.PutAsync(System.IO.Stream,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDagApi.PutAsync(System.IO.Stream, System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IDagApi.PutAsync(Stream, String, String, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IDagApi.PutAsync(System.Object,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: PutAsync(Object, String, String, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_PutAsync_System_Object_System_String_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDagApi.PutAsync(System.Object,System.String,System.String,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDagApi.PutAsync(System.Object, System.String, System.String, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IDagApi.PutAsync(Object, String, String, Boolean, CancellationToken)
 - uid: Ipfs.CoreApi.IDagApi.PutAsync*
   name: PutAsync
   href: api/Ipfs.CoreApi.IDagApi.html#Ipfs_CoreApi_IDagApi_PutAsync_
