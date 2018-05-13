@@ -64,5 +64,20 @@ namespace Ipfs.CoreApi
         ///   contains the node's content as JSON.
         /// </returns>
         Task<JObject> GetAsync(Cid id, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Gets the content of an IPLD node.
+        /// </summary>
+        /// <param name="path">
+        ///   A path, such as "cid", "/ipfs/cid/" or "cid/a".
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous get operation. The task's value
+        ///   contains the path's value.
+        /// </returns>
+        Task<JToken> GetAsync(string path, CancellationToken cancel = default(CancellationToken));
     }
 }
