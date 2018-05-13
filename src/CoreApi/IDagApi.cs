@@ -52,7 +52,7 @@ namespace Ipfs.CoreApi
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///  Put a stream JSON data as an IPLD node.
+        ///  Put a stream of JSON as an IPLD node.
         /// </summary>
         /// <param name="data">
         ///   The stream of JSON.
@@ -77,6 +77,37 @@ namespace Ipfs.CoreApi
         /// </returns>
         Task<Cid> PutAsync(
             Stream data,
+            string contentType = "cbor",
+            string multiHash = MultiHash.DefaultAlgorithmName,
+            bool pin = true,
+            CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///  Put an object as an IPLD node.
+        /// </summary>
+        /// <param name="data">
+        ///   The object to add.
+        /// </param>
+        /// <param name="contentType">
+        ///   The content type or format of the <paramref name="data"/>; such as "raw" or "cbor".
+        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "cbor".
+        /// </param>
+        /// <param name="multiHash">
+        ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
+        /// <param name="pin">
+        ///   If <b>true</b> the <paramref name="data"/> is pinned to local storage and will not be
+        ///   garbage collected.  The default is <b>true</b>.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous put operation. The task's value is
+        ///   the data's <see cref="Cid"/>.
+        /// </returns>
+        Task<Cid> PutAsync(
+            Object data,
             string contentType = "cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
             bool pin = true,
@@ -111,5 +142,23 @@ namespace Ipfs.CoreApi
         ///   contains the path's value.
         /// </returns>
         Task<JToken> GetAsync(string path, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Get an IPLD node of a specific type.
+        /// </summary>
+        /// <typeparam name="T">
+        ///   The object type.
+        /// </typeparam>
+        /// <param name="id">
+        ///   The <see cref="Cid"/> of the IPLD node.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous get operation. The task's value
+        ///   is a new instance of the <typeparamref name="T"/> class.
+        /// </returns>
+        Task<T> GetAsync<T>(Cid id, CancellationToken cancel = default(CancellationToken));
     }
 }
