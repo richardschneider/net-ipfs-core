@@ -73,7 +73,7 @@
   
   <h1 id="Ipfs_CoreApi_IDagApi" data-uid="Ipfs.CoreApi.IDagApi" class="text-break">Interface IDagApi
   </h1>
-  <div class="markdown level0 summary"><p>Manages the IPLD Directed Acrylic Graph.</p>
+  <div class="markdown level0 summary"><p>Manages the IPLD (linked data) Directed Acrylic Graph.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.CoreApi.html">Ipfs.CoreApi</a></h6>
@@ -83,26 +83,26 @@
     <pre><code class="lang-csharp hljs">public interface IDagApi</code></pre>
   </div>
   <h5 id="Ipfs_CoreApi_IDagApi_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>The dag API is a replacement of the <a class="xref" href="Ipfs.CoreApi.IObjectApi.html">IObjectApi</a>, which only supported &apos;dag-pb&apos;.
-This API supports other IPLD formats, such as dag-cbor, ethereum-block, git, ...</p>
+  <div class="markdown level0 remarks"><p>The DAG API is a replacement of the <a class="xref" href="Ipfs.CoreApi.IObjectApi.html">IObjectApi</a>, which only supported &apos;dag-pb&apos;.
+This API supports other IPLD formats, such as cbor, ethereum-block, git, ...</p>
 </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_GetAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.GetAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L60">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L61">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IDagApi_GetAsync_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IDagApi_GetAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync(System.String,System.Threading.CancellationToken)">GetAsync(String, CancellationToken)</h4>
+  <h4 id="Ipfs_CoreApi_IDagApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync(Cid, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Get an IPLD node.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ILinkedNode&gt; GetAsync(string path, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;JObject&gt; GetAsync(Cid id, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,9 +115,9 @@ This API supports other IPLD formats, such as dag-cbor, ethereum-block, git, ...
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The CID or path to an IPLD node.</p>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="Ipfs.Cid.html">Cid</a> of the IPLD node.</p>
 </td>
       </tr>
       <tr>
@@ -138,28 +138,28 @@ This API supports other IPLD formats, such as dag-cbor, ethereum-block, git, ...
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="Ipfs.ILinkedNode.html">ILinkedNode</a>&gt;</td>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Newtonsoft.Json.Linq.JObject</span>&gt;</td>
         <td><p>A task that represents the asynchronous get operation. The task&apos;s value
-contains the node&apos;s content.</p>
+contains the node&apos;s content as JSON.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_PutAsync_Ipfs_ILinkedNode_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.PutAsync(Ipfs.ILinkedNode%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L41">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L42">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IDagApi_PutAsync_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IDagApi_PutAsync_Ipfs_ILinkedNode_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync(Ipfs.ILinkedNode,System.String,System.String,System.Threading.CancellationToken)">PutAsync(ILinkedNode, String, String, CancellationToken)</h4>
+  <h4 id="Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.Threading.CancellationToken)">PutAsync(JObject, String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Put an IPLD node.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(ILinkedNode data, string contentType, string multiHash = &quot;sha2-256&quot;, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(JObject data, string contentType = &quot;cbor&quot;, string multiHash = &quot;sha2-256&quot;, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,16 +172,16 @@ contains the node&apos;s content.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Ipfs.ILinkedNode.html">ILinkedNode</a></td>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
         <td><span class="parametername">data</span></td>
-        <td><p>The data to send to the network.</p>
+        <td><p>The JSON data to send to the network.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">contentType</span></td>
-        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;dag-db&quot;.
-See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.</p>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;cbor&quot;.</p>
 </td>
       </tr>
       <tr>
@@ -232,7 +232,7 @@ the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
