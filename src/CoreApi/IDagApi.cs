@@ -32,6 +32,10 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="pin">
+        ///   If <b>true</b> the <paramref name="data"/> is pinned to local storage and will not be
+        ///   garbage collected.  The default is <b>true</b>.
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
@@ -43,6 +47,7 @@ namespace Ipfs.CoreApi
             JObject data,
             string contentType = "cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
+            bool pin = true,
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
