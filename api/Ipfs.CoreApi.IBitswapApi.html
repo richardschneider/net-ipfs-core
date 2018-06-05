@@ -73,7 +73,8 @@
   
   <h1 id="Ipfs_CoreApi_IBitswapApi" data-uid="Ipfs.CoreApi.IBitswapApi" class="text-break">Interface IBitswapApi
   </h1>
-  <div class="markdown level0 summary"><p>Interact with the bitswap agent.</p>
+  <div class="markdown level0 summary"><p>Data trading module for IPFS. Its purpose is to request blocks from and 
+send blocks to other peers in the network.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.CoreApi.html">Ipfs.CoreApi</a></h6>
@@ -83,11 +84,133 @@
     <pre><code class="lang-csharp hljs">public interface IBitswapApi</code></pre>
   </div>
   <h5 id="Ipfs_CoreApi_IBitswapApi_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><div class="NOTE"><h5>note</h5><p>Not yet ready for prime time.</p></div>
+  <div class="markdown level0 remarks"><p>Bitswap has two primary jobs (1) Attempt to acquire blocks from the network that 
+have been requested by the client and (2) Judiciously(though strategically)
+send blocks in its possession to other peers who want them.</p>
 </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L37">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IBitswapApi_GetAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.GetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync(Cid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets a block from the IPFS network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IDataBlock&gt; GetAsync(Cid id, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="Ipfs.Cid.html">Cid</a> of the <a class="xref" href="Ipfs.IDataBlock.html">IDataBlock</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="Ipfs.IDataBlock.html">IDataBlock</a>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task&apos;s value
+contains the block&apos;s id and data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Waits for another peer to supply the block with the <code data-dev-comment-type="paramref" class="paramref">id</code>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L53">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IBitswapApi_WantsAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.WantsAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash,System.Threading.CancellationToken)">WantsAsync(MultiHash, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>The blocks that are needed by a peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;Cid&gt;&gt; WantsAsync(MultiHash peer = null, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">peer</span></td>
+        <td><p>The id of an IPFS peer. If not specified (e.g. null), then the local
+peer is used.        </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+contains the sequence of blocks needed by the <code data-dev-comment-type="paramref" class="paramref">peer</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
-      <div><span><a href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/BITSWAP.md">Bitswap API spec</a></span></div>
+      <div><span><a href="https://github.com/ipfs/specs/tree/master/bitswap">Bitswap spec</a></span></div>
   </div>
 </article>
           </div>
@@ -100,7 +223,7 @@
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

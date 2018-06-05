@@ -620,6 +620,32 @@ references:
   commentId: T:Ipfs.CoreApi.IBitswapApi
   fullName: Ipfs.CoreApi.IBitswapApi
   nameWithType: IBitswapApi
+- uid: Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  name: GetAsync(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IBitswapApi.GetAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IBitswapApi.GetAsync*
+  name: GetAsync
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_GetAsync_
+  commentId: Overload:Ipfs.CoreApi.IBitswapApi.GetAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBitswapApi.GetAsync
+  nameWithType: IBitswapApi.GetAsync
+- uid: Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
+  name: WantsAsync(MultiHash, CancellationToken)
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash, System.Threading.CancellationToken)
+  nameWithType: IBitswapApi.WantsAsync(MultiHash, CancellationToken)
+- uid: Ipfs.CoreApi.IBitswapApi.WantsAsync*
+  name: WantsAsync
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_WantsAsync_
+  commentId: Overload:Ipfs.CoreApi.IBitswapApi.WantsAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBitswapApi.WantsAsync
+  nameWithType: IBitswapApi.WantsAsync
 - uid: Ipfs.CoreApi.IBlockApi
   name: IBlockApi
   href: api/Ipfs.CoreApi.IBlockApi.html
