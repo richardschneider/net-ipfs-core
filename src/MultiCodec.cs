@@ -13,7 +13,7 @@ namespace Ipfs
     ///   Wraps other formats with a tiny bit of self-description.
     /// </summary>
     /// <remarks>
-    ///   <b>MultiCode</b> is a self-describing multiformat, it wraps other formats with a 
+    ///   <b>MultiCodec</b> is a self-describing multiformat, it wraps other formats with a 
     ///   tiny bit of self-description. A multicodec identifier is both a varint and the code 
     ///   identifying the following data.
     ///   <para>

@@ -144,10 +144,10 @@ namespace Ipfs.CoreApi
         Task<JToken> GetAsync(string path, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Get an IPLD node of a specific type.
+        ///   Get an IPLD node of the specific type.
         /// </summary>
         /// <typeparam name="T">
-        ///   The object type.
+        ///   The object's type.
         /// </typeparam>
         /// <param name="id">
         ///   The <see cref="Cid"/> of the IPLD node.
