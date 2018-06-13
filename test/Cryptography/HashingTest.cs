@@ -91,6 +91,24 @@ namespace Ipfs.Cryptography
                 Input = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog").ToHexString(),
                 Digest = "9e107d9d372bb6826bd81d3542a419d6",
             },
+            new TestVector
+            {
+                Algorithm = "identity",
+                Input = "",
+                Digest = ""
+            },
+            new TestVector
+            {
+                Algorithm = "identity",
+                Input = "00",
+                Digest = "00"
+            },
+            new TestVector
+            {
+                Algorithm = "identity",
+                Input = "0001",
+                Digest = "0001"
+            },
         };
 
         /// <summary>

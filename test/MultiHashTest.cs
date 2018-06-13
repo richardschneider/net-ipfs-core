@@ -384,6 +384,12 @@ namespace Ipfs
                 Input = "beep boop",
                 Output = "56209cd9115d76945c2455b1450295b05f4edeba2e7286bc24c23e266b48faf578c0"
             },
+            new TestVector
+            {
+                Algorithm = "identity",
+                Input = "ab",
+                Output = "00026162"
+            }
         };
 
         [TestMethod]

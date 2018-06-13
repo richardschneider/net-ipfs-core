@@ -61,6 +61,13 @@ namespace Ipfs
         /// <value>
         ///   The <see cref="MultiHash"/> of the content being addressed.
         /// </value>
+        /// <remarks>
+        ///   <note>
+        ///   If the <see cref="MultiHash.Algorithm"/> equals <c>identity</c>, then
+        ///   the <see cref="MultiHash.Digest"/> is also the content.  This is commonly
+        ///   referred to as 'CID inlining'.
+        ///   </note>
+        /// </remarks>
         public MultiHash Hash { get; set; }
 
         /// <summary>

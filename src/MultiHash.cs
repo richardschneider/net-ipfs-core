@@ -74,7 +74,7 @@ namespace Ipfs
                 throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
             Algorithm = a;
 
-            if (Algorithm.DigestSize != digest.Length)
+            if (Algorithm.DigestSize != 0 && Algorithm.DigestSize != digest.Length)
                 throw new ArgumentException(string.Format("The digest size for '{0}' is {1} bytes, not {2}.", algorithmName, Algorithm.DigestSize, digest.Length));
             Digest = digest;
         }
@@ -90,8 +90,8 @@ namespace Ipfs
         /// <remarks>
         ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
         ///   <para>
-        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
-        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> of the <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> of the <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
         ///   <para>
         ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
@@ -117,8 +117,8 @@ namespace Ipfs
         /// <remarks>
         ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
         ///   <para>
-        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
-        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> of the <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> of the <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         ///   </para>
         ///   <para>
         ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
@@ -210,8 +210,8 @@ namespace Ipfs
         ///   The <see cref="CodedOutputStream"/> to write to.
         /// </param>
         /// <remarks>
-        ///   The binary representation is a <see cref="Varint"/> <see cref="HashingAlgorithm.Code"/>,
-        ///   <see cref="Varint"/> <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   The binary representation is a <see cref="Varint"/> of the <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> of the <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
         /// </remarks>
         public void Write(CodedOutputStream stream)
         {
@@ -219,7 +219,7 @@ namespace Ipfs
                 throw new ArgumentNullException("stream");
 
             stream.WriteInt32(Algorithm.Code);
-            stream.WriteLength(Algorithm.DigestSize);
+            stream.WriteLength(Digest.Length);
             stream.WriteSomeBytes(Digest);
         }
 

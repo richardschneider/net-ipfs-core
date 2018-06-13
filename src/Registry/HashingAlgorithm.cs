@@ -16,7 +16,7 @@ namespace Ipfs.Registry
     ///   See <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</see>
     ///   for the currently defined hashing algorithms.
     ///   <para>
-    ///   These algorithms are supported:
+    ///   These algorithms are implemented:
     ///   <list type="bullet">
     ///   <item><description>blake2b-160, blake2b-256 blake2b-384 and blake2b-512</description></item>
     ///   <item><description>blake2s-128, blake2s-160, blake2s-224 a nd blake2s-256</description></item>
@@ -27,6 +27,10 @@ namespace Ipfs.Registry
     ///   <item><description>sha3-224, sha3-256, sha3-384 and sha3-512</description></item>
     ///   <item><description>shake-128 and shake-256</description></item>
     ///   </list>
+    ///   </para>
+    ///   <para>
+    ///   The <c>identity</c> hash is also implemented;  which just returns the input bytes.
+    ///   This is used to inline a small amount of data into a <see cref="Cid"/>.
     ///   </para>
     ///   <para>
     ///     Use <see cref="Register(string, int, int, Func{HashAlgorithm})"/> to add a new
@@ -70,6 +74,7 @@ namespace Ipfs.Registry
             Register("murmur3-128", 0x22, 128 / 8);
             Register("md4", 0xd4, 128 / 8, () => new BouncyDigest(new BC.MD4Digest()));
             Register("md5", 0xd5, 128 / 8, () => MD5.Create());
+            Register("identity", 0, 0, () => new IdentityHash());
         }
 
         /// <summary>
@@ -92,7 +97,8 @@ namespace Ipfs.Registry
         ///   The size, in bytes, of the digest value.
         /// </summary>
         /// <value>
-        ///   The digest value size in bytes.
+        ///   The digest value size in bytes. Zero indicates that the digest
+        ///   is non fixed.
         /// </value>
         public int DigestSize { get; private set; }
 
