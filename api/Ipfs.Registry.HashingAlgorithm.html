@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HashingAlgorithm
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="Ipfs_Registry_HashingAlgorithm" data-uid="Ipfs.Registry.HashingAlgorithm" class="text-break">Class HashingAlgorithm
   </h1>
-  <div class="markdown level0 summary"><p>Metadata and implemetations of an IPFS hashing algorithm.</p>
+  <div class="markdown level0 summary"><p>Metadata and implemetations of a IPFS hashing algorithms.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -109,13 +109,20 @@
     <pre><code class="lang-csharp hljs">public class HashingAlgorithm</code></pre>
   </div>
   <h5 id="Ipfs_Registry_HashingAlgorithm_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>IPFS assigns a unique <a class="xref" href="Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name">Name</a> and <a class="xref" href="Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code">Code</a> to hashing algorithm.
-See <a href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">https://github.com/multiformats/multihash/blob/master/hashtable.csv</a> for
-the currently defined hashing algorithms.
+  <div class="markdown level0 remarks"><p>IPFS assigns a unique <a class="xref" href="Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name">Name</a> and <a class="xref" href="Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code">Code</a> to a hashing algorithm. 
+See <a href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</a>
+for the currently defined hashing algorithms.
 <p>
-These algorithms are supported: sha1, sha2-256, sha2-512, keccak-224, keccak-256,
-keccak-384, keccak-512, sha3-224, sha3-256, sha3-384, sha3-512,
-shake-128 and shake-256.
+These algorithms are implemented:
+<ul><li>blake2b-160, blake2b-256 blake2b-384 and blake2b-512</li><li>blake2s-128, blake2s-160, blake2s-224 a nd blake2s-256</li><li>keccak-224, keccak-256, keccak-384 and keccak-512</li><li>md4 and md5</li><li>sha1</li><li>sha2-256, sha2-512 and dbl-sha2-256</li><li>sha3-224, sha3-256, sha3-384 and sha3-512</li><li>shake-128 and shake-256</li></ul>
+</p>
+<p>
+The <code>identity</code> hash is also implemented;  which just returns the input bytes.
+This is used to inline a small amount of data into a <a class="xref" href="Ipfs.Cid.html">Cid</a>.
+</p>
+<p>
+  Use <a class="xref" href="Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__">Register(String, Int32, Int32, Func&lt;HashAlgorithm&gt;)</a> to add a new
+  hashing algorithm.
 </p></p>
 </div>
   <h3 id="properties">Properties
@@ -125,7 +132,7 @@ shake-128 and shake-256.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_All.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.All%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L166">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L187">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_All_" data-uid="Ipfs.Registry.HashingAlgorithm.All*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_All" data-uid="Ipfs.Registry.HashingAlgorithm.All">All</h4>
@@ -147,7 +154,8 @@ shake-128 and shake-256.
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="Ipfs.Registry.HashingAlgorithm.html">HashingAlgorithm</a>&gt;</td>
-        <td></td>
+        <td><p>The currently registered hashing algorithms.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -156,7 +164,7 @@ shake-128 and shake-256.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_Code.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.Code%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L77">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L94">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_Code_" data-uid="Ipfs.Registry.HashingAlgorithm.Code*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_Code" data-uid="Ipfs.Registry.HashingAlgorithm.Code">Code</h4>
@@ -188,7 +196,7 @@ shake-128 and shake-256.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_DigestSize.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.DigestSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L85">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L103">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_DigestSize_" data-uid="Ipfs.Registry.HashingAlgorithm.DigestSize*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_DigestSize" data-uid="Ipfs.Registry.HashingAlgorithm.DigestSize">DigestSize</h4>
@@ -210,7 +218,8 @@ shake-128 and shake-256.
     <tbody>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
-        <td><p>The digest value size in bytes.</p>
+        <td><p>The digest value size in bytes. Zero indicates that the digest
+is non fixed.</p>
 </td>
       </tr>
     </tbody>
@@ -220,7 +229,7 @@ shake-128 and shake-256.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_Hasher.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.Hasher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L91">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L109">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_Hasher_" data-uid="Ipfs.Registry.HashingAlgorithm.Hasher*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_Hasher" data-uid="Ipfs.Registry.HashingAlgorithm.Hasher">Hasher</h4>
@@ -252,7 +261,7 @@ a hash (digest).</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_Name.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L69">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L86">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_Name_" data-uid="Ipfs.Registry.HashingAlgorithm.Name*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_Name" data-uid="Ipfs.Registry.HashingAlgorithm.Name">Name</h4>
@@ -286,7 +295,7 @@ a hash (digest).</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_Deregister_Ipfs_Registry_HashingAlgorithm_.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.Deregister(Ipfs.Registry.HashingAlgorithm)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L157">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L175">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_Deregister_" data-uid="Ipfs.Registry.HashingAlgorithm.Deregister*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_Deregister_Ipfs_Registry_HashingAlgorithm_" data-uid="Ipfs.Registry.HashingAlgorithm.Deregister(Ipfs.Registry.HashingAlgorithm)">Deregister(HashingAlgorithm)</h4>
@@ -320,7 +329,7 @@ a hash (digest).</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.Register(System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Func%7BSystem.Security.Cryptography.HashAlgorithm%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L127">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L145">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_Register_" data-uid="Ipfs.Registry.HashingAlgorithm.Register*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_Register_System_String_System_Int32_System_Int32_System_Func_System_Security_Cryptography_HashAlgorithm__" data-uid="Ipfs.Registry.HashingAlgorithm.Register(System.String,System.Int32,System.Int32,System.Func{System.Security.Cryptography.HashAlgorithm})">Register(String, Int32, Int32, Func&lt;HashAlgorithm&gt;)</h4>
@@ -389,7 +398,7 @@ throw a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.no
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm_ToString.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L103">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L121">View Source</a>
   </span>
   <a id="Ipfs_Registry_HashingAlgorithm_ToString_" data-uid="Ipfs.Registry.HashingAlgorithm.ToString*"></a>
   <h4 id="Ipfs_Registry_HashingAlgorithm_ToString" data-uid="Ipfs.Registry.HashingAlgorithm.ToString">ToString()</h4>
@@ -428,7 +437,7 @@ throw a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.no
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_Registry_HashingAlgorithm.md&amp;value=---%0Auid%3A%20Ipfs.Registry.HashingAlgorithm%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/Registry/HashingAlgorithm.cs/#L40" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
