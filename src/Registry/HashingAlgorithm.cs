@@ -9,16 +9,28 @@ using BC = Org.BouncyCastle.Crypto.Digests;
 namespace Ipfs.Registry
 {
     /// <summary>
-    ///   Metadata and implemetations of an IPFS hashing algorithm.
+    ///   Metadata and implemetations of a IPFS hashing algorithms.
     /// </summary>
     /// <remarks>
-    ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to hashing algorithm.
-    ///   See <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/> for
-    ///   the currently defined hashing algorithms.
+    ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to a hashing algorithm. 
+    ///   See <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</see>
+    ///   for the currently defined hashing algorithms.
     ///   <para>
-    ///   These algorithms are supported: sha1, sha2-256, sha2-512, keccak-224, keccak-256,
-    ///   keccak-384, keccak-512, sha3-224, sha3-256, sha3-384, sha3-512,
-    ///   shake-128 and shake-256.
+    ///   These algorithms are supported:
+    ///   <list type="bullet">
+    ///   <item><description>blake2b-160, blake2b-256 blake2b-384 and blake2b-512</description></item>
+    ///   <item><description>blake2s-128, blake2s-160, blake2s-224 a nd blake2s-256</description></item>
+    ///   <item><description>keccak-224, keccak-256, keccak-384 and keccak-512</description></item>
+    ///   <item><description>md4 and md5</description></item>
+    ///   <item><description>sha1</description></item>
+    ///   <item><description>sha2-256, sha2-512 and dbl-sha2-256</description></item>
+    ///   <item><description>sha3-224, sha3-256, sha3-384 and sha3-512</description></item>
+    ///   <item><description>shake-128 and shake-256</description></item>
+    ///   </list>
+    ///   </para>
+    ///   <para>
+    ///     Use <see cref="Register(string, int, int, Func{HashAlgorithm})"/> to add a new
+    ///     hashing algorithm.
     ///   </para>
     /// </remarks>
     public class HashingAlgorithm
@@ -163,6 +175,9 @@ namespace Ipfs.Registry
         /// <summary>
         ///   A sequence consisting of all <see cref="HashingAlgorithm">hashing algorithms</see>.
         /// </summary>
+        /// <value>
+        ///   The currently registered hashing algorithms.
+        /// </value>
         public static IEnumerable<HashingAlgorithm> All
         {
             get { return Names.Values; }
