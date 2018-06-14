@@ -171,12 +171,32 @@ namespace Ipfs
         ///   For <see cref="Version"/> 0, this is equalivalent to the 
         ///   <see cref="MultiHash.ToBase58()">base58btc encoding</see>
         ///   of the <see cref="Hash"/>.
+        ///   <para>
+        ///   When the <see cref="Version"/> is 0 and the following properties
+        ///   are not matched, then the version is upgraded to version 1.
+        ///   <list type="bullet">
+        ///   <item><description><see cref="ContentType"/> equals "dag-pb"</description></item>
+        ///   <item><description><see cref="Encoding"/> equals "base58btc"</description></item>
+        ///   <item><description><see cref="Hash"/> algorithm name equals "sha2-256"</description></item>
+        ///   </list>
+        ///   </para>
         /// </remarks>
         /// <seealso cref="Decode"/>
         public string Encode()
         {
             if (encodedValue != null)
                 return encodedValue;
+
+            // Can only use v0 under specific conditions.
+            if (version == 0)
+            {
+                if (ContentType != "dag-pb" || 
+                    Encoding != "base58btc" ||
+                    Hash.Algorithm.Name != "sha2-256")
+                {
+                    Version = 1;
+                }
+            }
 
             if (Version == 0)
             {

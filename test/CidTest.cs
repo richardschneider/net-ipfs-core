@@ -63,6 +63,55 @@ namespace Ipfs
                 Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
             };
             Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+
+            cid = new Cid
+            {
+                ContentType = "raw",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+        }
+
+        [TestMethod]
+        public void Encode_Upgrade_to_V1_ContentType()
+        {
+
+            var cid = new Cid
+            {
+                ContentType = "raw",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.AreEqual(0, cid.Version);
+            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+            Assert.AreEqual(1, cid.Version);
+        }
+
+        [TestMethod]
+        public void Encode_Upgrade_to_V1_Encoding()
+        {
+
+            var cid = new Cid
+            {
+                Encoding = "base64",
+                Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
+            };
+            Assert.AreEqual(0, cid.Version);
+            Assert.AreEqual("mAXASILlNJ7mTTT4IpS5S19p9q/rEhO/jelOA7pCI96zi783p", cid.Encode());
+            Assert.AreEqual(1, cid.Version);
+        }
+
+        [TestMethod]
+        public void Encode_Upgrade_to_V1_Hash()
+        {
+            var hello = Encoding.UTF8.GetBytes("Hello, world.");
+            var mh = MultiHash.ComputeHash(hello, "sha2-512");
+            var cid = new Cid
+            {
+                Hash = mh
+            };
+            Assert.AreEqual(0, cid.Version);
+            Assert.AreEqual("zBunRFxZVcKeu8wAbUg92z2JK6UukiL7EnPR1D6TZaQCsPpRe7KzcmioKFyi2oEZd9ffwpbKTib1pucMQrDyRnAdaqwbB", cid.Encode());
+            Assert.AreEqual(1, cid.Version);
         }
 
         [TestMethod]
