@@ -57,6 +57,18 @@ namespace Ipfs
         /// <value>
         ///   0 or 1.
         /// </value>
+        /// <remarks>
+        ///   <para>
+        ///   When the <see cref="Version"/> is 0 and the following properties
+        ///   are not matched, then the version is upgraded to version 1 when the 
+        ///   propety is set.
+        ///   <list type="bullet">
+        ///   <item><description><see cref="ContentType"/> equals "dag-pb"</description></item>
+        ///   <item><description><see cref="Encoding"/> equals "base58btc"</description></item>
+        ///   <item><description><see cref="Hash"/> algorithm name equals "sha2-256"</description></item>
+        ///   </list>
+        ///   </para>
+        /// </remarks>
         public int Version
         {
             get
@@ -76,6 +88,10 @@ namespace Ipfs
         /// <value>
         ///   base58btc, base64, etc.  Defaults to "base58btc",
         /// </value>
+        /// <remarks>
+        ///    Sets <see cref="Version"/> to 1, when setting a value that
+        ///    is not equal to "base58btc".
+        /// </remarks>
         /// <seealso cref="MultiBase"/>
         public string Encoding
         {
@@ -87,6 +103,10 @@ namespace Ipfs
             {
                 EnsureMutable();
                 encoding = value;
+                if (Version == 0 && value != "base58btc")
+                {
+                    Version = 1;
+                }
             }
         }
 
@@ -96,6 +116,10 @@ namespace Ipfs
         /// <value>
         ///   dag-pb, dag-cbor, eth-block, etc.  Defaults to "dag-pb".
         /// </value>
+        /// <remarks>
+        ///    Sets <see cref="Version"/> to 1, when setting a value that
+        ///    is not equal to "dag-pb".
+        /// </remarks>
         /// <seealso cref="MultiCodec"/>
         public string ContentType
         {
@@ -107,6 +131,10 @@ namespace Ipfs
             {
                 EnsureMutable();
                 contentType = value;
+                if (Version == 0 && value != "dag-pb")
+                {
+                    Version = 1;
+                }
             }
         }
 
@@ -117,6 +145,8 @@ namespace Ipfs
         ///   The <see cref="MultiHash"/> of the content being addressed.
         /// </value>
         /// <remarks>
+        ///   Sets <see cref="Version"/> to 1, when setting a hashing algorithm that
+        ///   is not equal to "sha2-256".
         ///   <note>
         ///   If the <see cref="MultiHash.Algorithm"/> equals <c>identity</c>, then
         ///   the <see cref="MultiHash.Digest"/> is also the content.  This is commonly
@@ -133,6 +163,10 @@ namespace Ipfs
             {
                 EnsureMutable();
                 hash = value;
+                if (Version == 0 && Hash.Algorithm.Name != "sha2-256")
+                {
+                    Version = 1;
+                }
             }
         }
 
@@ -171,32 +205,12 @@ namespace Ipfs
         ///   For <see cref="Version"/> 0, this is equalivalent to the 
         ///   <see cref="MultiHash.ToBase58()">base58btc encoding</see>
         ///   of the <see cref="Hash"/>.
-        ///   <para>
-        ///   When the <see cref="Version"/> is 0 and the following properties
-        ///   are not matched, then the version is upgraded to version 1.
-        ///   <list type="bullet">
-        ///   <item><description><see cref="ContentType"/> equals "dag-pb"</description></item>
-        ///   <item><description><see cref="Encoding"/> equals "base58btc"</description></item>
-        ///   <item><description><see cref="Hash"/> algorithm name equals "sha2-256"</description></item>
-        ///   </list>
-        ///   </para>
         /// </remarks>
         /// <seealso cref="Decode"/>
         public string Encode()
         {
             if (encodedValue != null)
                 return encodedValue;
-
-            // Can only use v0 under specific conditions.
-            if (version == 0)
-            {
-                if (ContentType != "dag-pb" || 
-                    Encoding != "base58btc" ||
-                    Hash.Algorithm.Name != "sha2-256")
-                {
-                    Version = 1;
-                }
-            }
 
             if (Version == 0)
             {

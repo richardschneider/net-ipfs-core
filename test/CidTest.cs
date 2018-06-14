@@ -81,9 +81,8 @@ namespace Ipfs
                 ContentType = "raw",
                 Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
             };
-            Assert.AreEqual(0, cid.Version);
-            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
             Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
         }
 
         [TestMethod]
@@ -95,9 +94,8 @@ namespace Ipfs
                 Encoding = "base64",
                 Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
             };
-            Assert.AreEqual(0, cid.Version);
-            Assert.AreEqual("mAXASILlNJ7mTTT4IpS5S19p9q/rEhO/jelOA7pCI96zi783p", cid.Encode());
             Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("mAXASILlNJ7mTTT4IpS5S19p9q/rEhO/jelOA7pCI96zi783p", cid.Encode());
         }
 
         [TestMethod]
@@ -109,9 +107,8 @@ namespace Ipfs
             {
                 Hash = mh
             };
-            Assert.AreEqual(0, cid.Version);
-            Assert.AreEqual("zBunRFxZVcKeu8wAbUg92z2JK6UukiL7EnPR1D6TZaQCsPpRe7KzcmioKFyi2oEZd9ffwpbKTib1pucMQrDyRnAdaqwbB", cid.Encode());
             Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("zBunRFxZVcKeu8wAbUg92z2JK6UukiL7EnPR1D6TZaQCsPpRe7KzcmioKFyi2oEZd9ffwpbKTib1pucMQrDyRnAdaqwbB", cid.Encode());
         }
 
         [TestMethod]
