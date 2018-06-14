@@ -29,22 +29,66 @@ namespace Ipfs
         /// </summary>
         public const string DefaultContentType = "dag-pb";
 
+        string encodedValue;
+        int version;
+        string encoding = "base58btc";
+        string contentType = DefaultContentType;
+        MultiHash hash;
+ 
+        /// <summary>
+        ///   Throws if a property cannot be set.
+        /// </summary>
+        /// <exception cref="NotSupportedException">
+        ///   When a property cannot be set.
+        /// </exception>
+        /// <remarks>
+        ///   Once <see cref="Encode"/> is invoked, the CID's properties
+        ///   cannot be set.
+        /// </remarks>
+        void EnsureMutable()
+        {
+            if (encodedValue != null)
+                throw new NotSupportedException("CID cannot be changed.");
+        }
+
         /// <summary>
         ///   The version of the CID.
         /// </summary>
         /// <value>
         ///   0 or 1.
         /// </value>
-        public int Version { get; set; }
+        public int Version
+        {
+            get
+            {
+                return version;
+            }
+            set
+            {
+                EnsureMutable();
+                version = value;
+            }
+        }
 
         /// <summary>
-        ///   The encoding of the CID.
+        ///   The <see cref="MultiBase"/> encoding of the CID.
         /// </summary>
         /// <value>
         ///   base58btc, base64, etc.  Defaults to "base58btc",
         /// </value>
         /// <seealso cref="MultiBase"/>
-        public string Encoding { get; set; } = "base58btc";
+        public string Encoding
+        {
+            get
+            {
+                return encoding;
+            }
+            set
+            {
+                EnsureMutable();
+                encoding = value;
+            }
+        }
 
         /// <summary>
         ///   The content type or format of the data being addressed.
@@ -53,7 +97,18 @@ namespace Ipfs
         ///   dag-pb, dag-cbor, eth-block, etc.  Defaults to "dag-pb".
         /// </value>
         /// <seealso cref="MultiCodec"/>
-        public string ContentType { get; set; } = DefaultContentType;
+        public string ContentType
+        {
+            get
+            {
+                return contentType;
+            }
+            set
+            {
+                EnsureMutable();
+                contentType = value;
+            }
+        }
 
         /// <summary>
         ///   The cryptographic hash of the content being addressed.
@@ -68,7 +123,18 @@ namespace Ipfs
         ///   referred to as 'CID inlining'.
         ///   </note>
         /// </remarks>
-        public MultiHash Hash { get; set; }
+        public MultiHash Hash
+        {
+            get
+            {
+                return hash;
+            }
+            set
+            {
+                EnsureMutable();
+                hash = value;
+            }
+        }
 
         /// <summary>
         ///   A CID that is readable by a human.
@@ -109,18 +175,24 @@ namespace Ipfs
         /// <seealso cref="Decode"/>
         public string Encode()
         {
+            if (encodedValue != null)
+                return encodedValue;
+
             if (Version == 0)
             {
-                return Hash.ToBase58();
+                encodedValue = Hash.ToBase58();
             }
-
-            using (var ms = new MemoryStream())
+            else
             {
-                ms.WriteVarint(Version);
-                ms.WriteMultiCodec(ContentType);
-                Hash.Write(ms);
-                return MultiBase.Encode(ms.ToArray(), Encoding);
+                using (var ms = new MemoryStream())
+                {
+                    ms.WriteVarint(Version);
+                    ms.WriteMultiCodec(ContentType);
+                    Hash.Write(ms);
+                    encodedValue = MultiBase.Encode(ms.ToArray(), Encoding);
+                }
             }
+            return encodedValue;
         }
 
         /// <summary>

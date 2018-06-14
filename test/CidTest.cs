@@ -292,5 +292,16 @@ namespace Ipfs
             Assert.AreEqual(cid.ContentType, clone.ContentType);
             Assert.AreEqual(cid.Hash, clone.Hash);
         }
+
+        [TestMethod]
+        public void Immutable()
+        {
+            Cid cid = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            Assert.AreEqual("QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4", cid.Encode());
+            ExceptionAssert.Throws<NotSupportedException>(() => cid.ContentType = "dag-cbor");
+            ExceptionAssert.Throws<NotSupportedException>(() => cid.Encoding = "base64");
+            ExceptionAssert.Throws<NotSupportedException>(() => cid.Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L5");
+            ExceptionAssert.Throws<NotSupportedException>(() => cid.Version = 0);
+        }
     }
 }
