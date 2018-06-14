@@ -264,7 +264,7 @@ namespace Ipfs
                 Algorithm = HashingAlgorithm.Register("ipfs-" + code, code, digestSize);
                 RaiseUnknownHashingAlgorithm(Algorithm);
             }
-            else if (digestSize != Algorithm.DigestSize)
+            else if (Algorithm.DigestSize != 0 && digestSize != Algorithm.DigestSize)
             {
                 throw new InvalidDataException(string.Format("The digest size {0} is wrong for {1}; it should be {2}.", digestSize, Algorithm.Name, Algorithm.DigestSize));
             }

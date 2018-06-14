@@ -429,6 +429,9 @@ namespace Ipfs
             mh = MultiHash.ComputeHash(hello, "identity");
             Assert.IsTrue(mh.IsIdentityHash);
             CollectionAssert.AreEqual(hello, mh.Digest);
+
+            var mh1 = new MultiHash(mh.ToBase58());
+            Assert.AreEqual(mh, mh1);
         }
 
 
