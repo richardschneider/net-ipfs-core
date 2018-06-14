@@ -2815,6 +2815,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiHash.GetHashCode
   nameWithType: MultiHash.GetHashCode
+- uid: Ipfs.MultiHash.IsIdentityHash
+  name: IsIdentityHash
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_IsIdentityHash
+  commentId: P:Ipfs.MultiHash.IsIdentityHash
+  fullName: Ipfs.MultiHash.IsIdentityHash
+  nameWithType: MultiHash.IsIdentityHash
+- uid: Ipfs.MultiHash.IsIdentityHash*
+  name: IsIdentityHash
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_IsIdentityHash_
+  commentId: Overload:Ipfs.MultiHash.IsIdentityHash
+  isSpec: "True"
+  fullName: Ipfs.MultiHash.IsIdentityHash
+  nameWithType: MultiHash.IsIdentityHash
 - uid: Ipfs.MultiHash.Matches(System.Byte[])
   name: Matches(Byte[])
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_Matches_System_Byte___
