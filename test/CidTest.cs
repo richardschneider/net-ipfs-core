@@ -50,9 +50,19 @@ namespace Ipfs
             var hash = "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V";
             Cid cid = new MultiHash(hash);
             Assert.AreEqual(hash, cid.Encode());
+            Assert.AreEqual(0, cid.Version);
+
+            cid = new Cid
+            {
+                ContentType = "dag-pb",
+                Encoding = "base58btc",             
+                Hash = hash
+            };
+            Assert.AreEqual(hash, cid.Encode());
+            Assert.AreEqual(0, cid.Version);
         }
 
-        [TestMethod]
+    [TestMethod]
         public void Encode_V1()
         {
             var cid = new Cid

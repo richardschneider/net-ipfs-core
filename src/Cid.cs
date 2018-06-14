@@ -60,8 +60,8 @@ namespace Ipfs
         /// <remarks>
         ///   <para>
         ///   When the <see cref="Version"/> is 0 and the following properties
-        ///   are not matched, then the version is upgraded to version 1 when the 
-        ///   propety is set.
+        ///   are not matched, then the version is upgraded to version 1 when any 
+        ///   of the properties is set.
         ///   <list type="bullet">
         ///   <item><description><see cref="ContentType"/> equals "dag-pb"</description></item>
         ///   <item><description><see cref="Encoding"/> equals "base58btc"</description></item>
