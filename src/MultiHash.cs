@@ -178,12 +178,33 @@ namespace Ipfs
         /// <summary>
         ///   The hashing algorithm.
         /// </summary>
+        /// <value>
+        ///   Details on the hashing algorithm.
+        /// </value>
         public HashingAlgorithm Algorithm { get; private set; }
 
         /// <summary>
         ///   The hashing algorithm's digest value.
         /// </summary>
+        /// <value>
+        ///   The output of the hashing algorithm.
+        /// </value>
         public byte[] Digest { get; private set; }
+
+        /// <summary>
+        ///   Determines if the identity hash algorithm is in use.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> if the identity hash algorithm is used; otherwise, <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   The identity hash is used to inline a small amount of data into a <see cref="Cid"/>.
+        ///   When <b>true</b>, the <see cref="Digest"/> is also the content.
+        /// </remarks>
+        public bool IsIdentityHash
+        {
+            get { return Algorithm.Code == 0; }
+        }
 
         /// <summary>
         ///   Writes the binary representation of the multihash to the specified <see cref="Stream"/>.

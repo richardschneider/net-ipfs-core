@@ -418,5 +418,19 @@ namespace Ipfs
             Assert.AreEqual("acfe9c5bbf88f075c0c4df0464430ead", mh.Digest.ToHexString());
         }
 
+        [TestMethod]
+        public void IdentityHash()
+        {
+            var hello = Encoding.UTF8.GetBytes("Hello, world.");
+            var mh = MultiHash.ComputeHash(hello);
+            Assert.IsFalse(mh.IsIdentityHash);
+            CollectionAssert.AreNotEqual(hello, mh.Digest);
+
+            mh = MultiHash.ComputeHash(hello, "identity");
+            Assert.IsTrue(mh.IsIdentityHash);
+            CollectionAssert.AreEqual(hello, mh.Digest);
+        }
+
+
     }
 }
