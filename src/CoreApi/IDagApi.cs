@@ -27,8 +27,8 @@ namespace Ipfs.CoreApi
         ///   The JSON data to send to the network.
         /// </param>
         /// <param name="contentType">
-        ///   The content type or format of the <paramref name="data"/>; such as "raw" or "cbor".
-        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "cbor".
+        ///   The content type or format of the <paramref name="data"/>; such as "dag-pb" or "dag-cbor".
+        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "dag-cbor".
         /// </param>
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
@@ -46,7 +46,7 @@ namespace Ipfs.CoreApi
         /// </returns>
         Task<Cid> PutAsync(
             JObject data,
-            string contentType = "cbor",
+            string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
@@ -58,8 +58,8 @@ namespace Ipfs.CoreApi
         ///   The stream of JSON.
         /// </param>
         /// <param name="contentType">
-        ///   The content type or format of the <paramref name="data"/>; such as "raw" or "cbor".
-        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "cbor".
+        ///   The content type or format of the <paramref name="data"/>; such as "dag-pb" or "dag-cbor".
+        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "dag-cbor".
         /// </param>
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
@@ -77,7 +77,7 @@ namespace Ipfs.CoreApi
         /// </returns>
         Task<Cid> PutAsync(
             Stream data,
-            string contentType = "cbor",
+            string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
@@ -89,8 +89,8 @@ namespace Ipfs.CoreApi
         ///   The object to add.
         /// </param>
         /// <param name="contentType">
-        ///   The content type or format of the <paramref name="data"/>; such as "raw" or "cbor".
-        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "cbor".
+        ///   The content type or format of the <paramref name="data"/>; such as "dag-pb" or "dag-cbor".
+        ///   See <see cref="MultiCodec"/> for more details.  Defaults to "dag-cbor".
         /// </param>
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
@@ -108,7 +108,7 @@ namespace Ipfs.CoreApi
         /// </returns>
         Task<Cid> PutAsync(
             Object data,
-            string contentType = "cbor",
+            string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
