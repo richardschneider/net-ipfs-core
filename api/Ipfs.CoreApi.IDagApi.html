@@ -289,7 +289,7 @@ is a new instance of the <code data-dev-comment-type="typeparamref" class="typep
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(JObject data, string contentType = &quot;cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(JObject data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,8 +310,8 @@ is a new instance of the <code data-dev-comment-type="typeparamref" class="typep
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">contentType</span></td>
-        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;cbor&quot;.
-See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;cbor&quot;.</p>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
 </td>
       </tr>
       <tr>
@@ -366,7 +366,7 @@ the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(Stream data, string contentType = &quot;cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(Stream data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,8 +387,8 @@ the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">contentType</span></td>
-        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;cbor&quot;.
-See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;cbor&quot;.</p>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
 </td>
       </tr>
       <tr>
@@ -443,7 +443,7 @@ the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(object data, string contentType = &quot;cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(object data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,8 +464,8 @@ the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">contentType</span></td>
-        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;raw&quot; or &quot;cbor&quot;.
-See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;cbor&quot;.</p>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
 </td>
       </tr>
       <tr>
