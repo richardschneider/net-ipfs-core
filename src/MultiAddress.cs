@@ -95,6 +95,34 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Gets the peer ID of the multiaddress.
+        /// </summary>
+        /// <value>
+        ///   The <see cref="Peer.Id"/> as a <see cref="MultiHash"/>.
+        /// </value>
+        /// <exception cref="Exception">
+        ///   When the last <see cref="Protocols">protocol</see>
+        ///   is not "ipfs" nor "p2p".
+        /// </exception>
+        /// <remarks>
+        ///   The peer ID is contained in the last protocol that
+        ///   is "ipfs" or "p2p".  For example, <c>/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC</c>.
+        /// </remarks>
+        public MultiHash PeerId
+        {
+            get
+            {
+                var protocol = Protocols
+                    .LastOrDefault(p => p.Name == "ipfs" || p.Name == "p2p");
+                if (protocol == null)
+                {
+                    throw new Exception($"'{this}' is missing the peer ID. Add the 'ipfs' or 'p2p' protocol.");
+                }
+                return protocol.Value;
+            }
+        }
+
+        /// <summary>
         ///   Writes the binary representation to the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">

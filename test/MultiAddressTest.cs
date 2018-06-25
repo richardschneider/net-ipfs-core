@@ -232,6 +232,29 @@ namespace Ipfs
                "bc030010c0439831b48218480050");
         }
 
+        [TestMethod]
+        public void PeerID_With_ipfs()
+        {
+            var ma = new MultiAddress("/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            Assert.AreEqual("QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC", ma.PeerId.ToBase58());
+        }
+
+        [TestMethod]
+        public void PeerID_With_p2p()
+        {
+            var ma = new MultiAddress("/ip4/10.1.10.10/tcp/29087/p2p/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            Assert.AreEqual("QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC", ma.PeerId.ToBase58());
+        }
+
+        [TestMethod]
+        public void PeerID_Missing()
+        {
+            var ma = new MultiAddress("/ip4/10.1.10.10/tcp/29087");
+            ExceptionAssert.Throws<Exception>(() =>
+            {
+                var _ = ma.PeerId;
+            });
+        }
     }
 }
 
