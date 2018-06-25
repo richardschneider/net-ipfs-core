@@ -389,7 +389,13 @@ namespace Ipfs
                 Algorithm = "identity",
                 Input = "ab",
                 Output = "00026162"
-            }
+            },
+            new TestVector
+            {
+                Algorithm = "id",
+                Input = "ab",
+                Output = "00026162"
+            },
         };
 
         [TestMethod]
@@ -431,6 +437,13 @@ namespace Ipfs
             CollectionAssert.AreEqual(hello, mh.Digest);
 
             var mh1 = new MultiHash(mh.ToBase58());
+            Assert.AreEqual(mh, mh1);
+
+            mh = MultiHash.ComputeHash(hello, "id");
+            Assert.IsTrue(mh.IsIdentityHash);
+            CollectionAssert.AreEqual(hello, mh.Digest);
+
+            mh1 = new MultiHash(mh.ToBase58());
             Assert.AreEqual(mh, mh1);
         }
 

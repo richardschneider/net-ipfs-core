@@ -37,5 +37,30 @@ namespace Ipfs.Registry
             Assert.IsTrue(5 <= HashingAlgorithm.All.Count());
         }
 
+        [TestMethod]
+        public void HashingAlgorithm_Bad_Alias()
+        {
+            ExceptionAssert.Throws<ArgumentNullException>(() => HashingAlgorithm.RegisterAlias(null, "sha1"));
+            ExceptionAssert.Throws<ArgumentNullException>(() => HashingAlgorithm.RegisterAlias("", "sha1"));
+            ExceptionAssert.Throws<ArgumentNullException>(() => HashingAlgorithm.RegisterAlias("   ", "sha1"));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithm_Alias_Already_Exists()
+        {
+            ExceptionAssert.Throws<ArgumentException>(() => HashingAlgorithm.RegisterAlias("id", "identity"));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithm_Alias_Target_Does_Not_Exist()
+        {
+            ExceptionAssert.Throws<ArgumentException>(() => HashingAlgorithm.RegisterAlias("foo", "sha1-x"));
+        }
+
+        [TestMethod]
+        public void HashingAlgorithm_Alias_Target_Is_Bad()
+        {
+            ExceptionAssert.Throws<ArgumentException>(() => HashingAlgorithm.RegisterAlias("foo", "  "));
+        }
     }
 }

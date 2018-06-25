@@ -109,6 +109,12 @@ namespace Ipfs.Cryptography
                 Input = "0001",
                 Digest = "0001"
             },
+            new TestVector
+            {
+                Algorithm = "id",
+                Input = "0001",
+                Digest = "0001"
+            },
         };
 
         /// <summary>

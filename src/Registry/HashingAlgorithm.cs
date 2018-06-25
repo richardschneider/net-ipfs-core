@@ -75,6 +75,7 @@ namespace Ipfs.Registry
             Register("md4", 0xd4, 128 / 8, () => new BouncyDigest(new BC.MD4Digest()));
             Register("md5", 0xd5, 128 / 8, () => MD5.Create());
             Register("identity", 0, 0, () => new IdentityHash());
+            RegisterAlias("id", "identity");
         }
 
         /// <summary>
@@ -162,6 +163,41 @@ namespace Ipfs.Registry
             };
             Names[name] = a;
             Codes[code] = a;
+
+            return a;
+        }
+
+        /// <summary>
+        ///   Register an alias for an IPFS hashing algorithm.
+        /// </summary>
+        /// <param name="alias">
+        ///   The alias name.
+        /// </param>
+        /// <param name="name">
+        ///   The name of the existing algorithm.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="HashingAlgorithm"/>.
+        /// </returns>
+        public static HashingAlgorithm RegisterAlias(string alias, string name)
+        {
+            if (string.IsNullOrWhiteSpace(alias))
+                throw new ArgumentNullException("alias");
+            if (Names.ContainsKey(alias))
+                throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is already defined and cannot be used as an alias.", alias));
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException("name");
+            if (!Names.TryGetValue(name, out HashingAlgorithm existing))
+                throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is not defined.", name));
+
+            var a = new HashingAlgorithm
+            {
+                Name = name,
+                Code = existing.Code,
+                DigestSize = existing.DigestSize,
+                Hasher = existing.Hasher
+            };
+            Names[alias] = a;
 
             return a;
         }
