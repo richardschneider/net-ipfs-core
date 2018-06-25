@@ -123,7 +123,7 @@ namespace Ipfs
         {
             foreach (var protocol in Protocols)
             {
-                stream.WriteTag(protocol.Code);
+                stream.WriteInt64(protocol.Code);
                 protocol.WriteValue(stream);
             }
         }
@@ -175,7 +175,7 @@ namespace Ipfs
             Protocols.Clear();
             do
             {
-                uint code = stream.ReadTag();
+                uint code = (uint)stream.ReadInt64();
                 Type protocolType;
                 if (!NetworkProtocol.Codes.TryGetValue(code, out protocolType))
                     throw new InvalidDataException(string.Format("The IPFS network protocol code '{0}' is unknown.", code));
