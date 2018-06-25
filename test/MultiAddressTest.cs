@@ -255,6 +255,25 @@ namespace Ipfs
                 var _ = ma.PeerId;
             });
         }
+
+        [TestMethod]
+        public void Cloning()
+        {
+            var ma1 = new MultiAddress("/ip4/10.1.10.10/tcp/29087");
+            var ma2 = ma1.Clone();
+            Assert.AreEqual(ma1, ma2);
+            Assert.AreNotSame(ma1, ma2);
+            Assert.AreNotSame(ma1.Protocols, ma2.Protocols);
+            for (int i = 0; i < ma1.Protocols.Count; ++i)
+            {
+                var p1 = ma1.Protocols[i];
+                var p2 = ma2.Protocols[i];
+                Assert.AreEqual(p1.Code, p2.Code);
+                Assert.AreEqual(p1.Name, p2.Name);
+                Assert.AreEqual(p1.Value, p2.Value);
+                Assert.AreNotSame(p1, p2);
+            }
+        }
     }
 }
 

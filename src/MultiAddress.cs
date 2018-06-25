@@ -21,7 +21,7 @@ namespace Ipfs
     ///   "/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC".
     ///   </para>
     ///   <para>
-    ///   Value type equality is implemented.
+    ///   A multi address is considered immutablle and value type equality is implemented.
     ///   </para>
     /// </remarks>
     /// <seealso href="https://github.com/jbenet/multiaddr"/>
@@ -72,6 +72,17 @@ namespace Ipfs
             : this()
         {
             Read(stream);
+        }
+
+        /// <summary>
+        ///   Creates a deep copy of the multi address.
+        /// </summary>
+        /// <returns>
+        ///   A new deep copy.
+        /// </returns>
+        public MultiAddress Clone()
+        {
+            return new MultiAddress(ToString());
         }
 
         /// <summary>
