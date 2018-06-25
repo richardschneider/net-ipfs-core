@@ -3493,6 +3493,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.Registry.HashingAlgorithm.Register
   nameWithType: HashingAlgorithm.Register
+- uid: Ipfs.Registry.HashingAlgorithm.RegisterAlias(System.String,System.String)
+  name: RegisterAlias(String, String)
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_RegisterAlias_System_String_System_String_
+  commentId: M:Ipfs.Registry.HashingAlgorithm.RegisterAlias(System.String,System.String)
+  fullName: Ipfs.Registry.HashingAlgorithm.RegisterAlias(System.String, System.String)
+  nameWithType: HashingAlgorithm.RegisterAlias(String, String)
+- uid: Ipfs.Registry.HashingAlgorithm.RegisterAlias*
+  name: RegisterAlias
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_RegisterAlias_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.RegisterAlias
+  isSpec: "True"
+  fullName: Ipfs.Registry.HashingAlgorithm.RegisterAlias
+  nameWithType: HashingAlgorithm.RegisterAlias
 - uid: Ipfs.Registry.HashingAlgorithm.ToString
   name: ToString()
   href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_ToString
