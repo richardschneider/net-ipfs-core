@@ -68,6 +68,6 @@ namespace Ipfs.CoreApi
         ///   Any outstanding <see cref="GetAsync(Cid, CancellationToken)"/> for the
         ///   <paramref name="id"/> are cancelled.
         /// </remarks>
-        Task Unwant(Cid id, CancellationToken cancel = default(CancellationToken));
+        Task UnwantAsync(Cid id, CancellationToken cancel = default(CancellationToken));
     }
 }
