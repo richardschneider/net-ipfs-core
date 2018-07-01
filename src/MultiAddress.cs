@@ -9,7 +9,7 @@ using Google.Protobuf;
 namespace Ipfs
 {
     /// <summary>
-    ///   A standard way to represent a networks address that supports multiple network protocols.
+    ///   A set of steps describing how to build up a connection.
     /// </summary>
     /// <remarks>
     ///   A multi address emphasizes explicitness, self-description, and
