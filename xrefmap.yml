@@ -633,6 +633,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IBitswapApi.GetAsync
   nameWithType: IBitswapApi.GetAsync
+- uid: Ipfs.CoreApi.IBitswapApi.Unwant(Ipfs.Cid,System.Threading.CancellationToken)
+  name: Unwant(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_Unwant_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBitswapApi.Unwant(Ipfs.Cid,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBitswapApi.Unwant(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IBitswapApi.Unwant(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IBitswapApi.Unwant*
+  name: Unwant
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_Unwant_
+  commentId: Overload:Ipfs.CoreApi.IBitswapApi.Unwant
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBitswapApi.Unwant
+  nameWithType: IBitswapApi.Unwant
 - uid: Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
   name: WantsAsync(MultiHash, CancellationToken)
   href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
