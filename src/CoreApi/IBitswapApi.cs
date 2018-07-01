@@ -51,5 +51,23 @@ namespace Ipfs.CoreApi
         ///   contains the sequence of blocks needed by the <paramref name="peer"/>.
         /// </returns>
         Task<IEnumerable<Cid>> WantsAsync(MultiHash peer = null, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Remove the CID from the want list.
+        /// </summary>
+        /// <param name="id">
+        ///   The content that is no longer needed.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation.
+        /// </returns>
+        /// <remarks>
+        ///   Any outstanding <see cref="GetAsync(Cid, CancellationToken)"/> for the
+        ///   <paramref name="id"/> are cancelled.
+        /// </remarks>
+        Task Unwant(Cid id, CancellationToken cancel = default(CancellationToken));
     }
 }
