@@ -274,13 +274,22 @@ namespace Ipfs
             var that = obj as MultiAddress;
             return (that == null)
                 ? false
-                : this.ToString() == that.ToString();
+                : this.Equals(that);
         }
 
         /// <inheritdoc />
         public bool Equals(MultiAddress that)
         {
-            return this.ToString() == that.ToString();
+            if (this.Protocols.Count != that.Protocols.Count)
+                return false;
+            for (int i = 0; i < Protocols.Count; ++i)
+            {
+                if (this.Protocols[i].Code != that.Protocols[i].Code)
+                    return false;
+                if (this.Protocols[i].Value != that.Protocols[i].Value)
+                    return false;
+            }
+            return true;
         }
 
         /// <summary>

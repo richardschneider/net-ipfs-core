@@ -247,6 +247,20 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void PeerID_ipfs_p2p_are_equal()
+        {
+            var ipfs = new MultiAddress("/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            var p2p = new MultiAddress("/ip4/10.1.10.10/tcp/29087/p2p/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            Assert.AreEqual(ipfs, p2p);
+
+            var p2p1 = new MultiAddress("/ip4/10.1.10.10/tcp/29087/p2p/QmVCSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            Assert.AreNotEqual(p2p, p2p1);
+
+            var p2p2 = new MultiAddress("/p2p/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC");
+            Assert.AreNotEqual(p2p, p2p2);
+        }
+
+        [TestMethod]
         public void PeerID_Missing()
         {
             var ma = new MultiAddress("/ip4/10.1.10.10/tcp/29087");

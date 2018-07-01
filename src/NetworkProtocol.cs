@@ -30,8 +30,8 @@ namespace Ipfs
             NetworkProtocol.Register<Ipv6NetworkProtocol>();
             NetworkProtocol.Register<TcpNetworkProtocol>();
             NetworkProtocol.Register<UdpNetworkProtocol>();
-            NetworkProtocol.Register<IpfsNetworkProtocol>();
             NetworkProtocol.Register<P2pNetworkProtocol>();
+            NetworkProtocol.RegisterAlias<IpfsNetworkProtocol>();
             NetworkProtocol.Register<HttpNetworkProtocol>();
             NetworkProtocol.Register<HttpsNetworkProtocol>();
             NetworkProtocol.Register<DccpNetworkProtocol>();
@@ -68,6 +68,27 @@ namespace Ipfs
 
             Names.Add(protocol.Name, typeof(T));
             Codes.Add(protocol.Code, typeof(T));
+
+            if (log.IsDebugEnabled)
+                log.DebugFormat("Registered '{0}' ({1}).", protocol.Name, protocol.Code);
+        }
+
+        /// <summary>
+        ///   Register an alias to another network protocol.
+        /// </summary>
+        /// <typeparam name="T">
+        ///   A <see cref="NetworkProtocol"/> to register.
+        /// </typeparam>
+        public static void RegisterAlias<T>() where T : NetworkProtocol, new()
+        {
+            var protocol = new T();
+
+            if (Names.ContainsKey(protocol.Name))
+                throw new ArgumentException(string.Format("The IPFS network protocol '{0}' is already defined.", protocol.Name));
+            if (!Codes.ContainsKey(protocol.Code))
+                throw new ArgumentException(string.Format("The IPFS network protocol code ({0}) is not defined.", protocol.Code));
+
+            Names.Add(protocol.Name, typeof(T));
 
             if (log.IsDebugEnabled)
                 log.DebugFormat("Registered '{0}' ({1}).", protocol.Name, protocol.Code);
@@ -283,10 +304,10 @@ namespace Ipfs
         }
     }
 
-    class IpfsNetworkProtocol : NetworkProtocol
+    class P2pNetworkProtocol : NetworkProtocol
     {
         public MultiHash MultiHash { get; private set; }
-        public override string Name { get { return "ipfs"; } }
+        public override string Name { get { return "p2p"; } }
         public override uint Code { get { return 421; } }
         public override void ReadValue(TextReader stream)
         {
@@ -307,10 +328,9 @@ namespace Ipfs
         }
     }
 
-    class P2pNetworkProtocol : IpfsNetworkProtocol
+    class IpfsNetworkProtocol : P2pNetworkProtocol
     {
-        public override string Name { get { return "p2p"; } }
-        public override uint Code { get { return 420; } }
+        public override string Name { get { return "ipfs"; } }
     }
 
     class OnionNetworkProtocol : NetworkProtocol
