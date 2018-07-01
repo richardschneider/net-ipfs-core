@@ -2456,6 +2456,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.MultiAddress
   nameWithType: MultiAddress.MultiAddress
+- uid: Ipfs.MultiAddress.Clone
+  name: Clone()
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Clone
+  commentId: M:Ipfs.MultiAddress.Clone
+  fullName: Ipfs.MultiAddress.Clone()
+  nameWithType: MultiAddress.Clone()
+- uid: Ipfs.MultiAddress.Clone*
+  name: Clone
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Clone_
+  commentId: Overload:Ipfs.MultiAddress.Clone
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.Clone
+  nameWithType: MultiAddress.Clone
 - uid: Ipfs.MultiAddress.Equals(Ipfs.MultiAddress)
   name: Equals(MultiAddress)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Equals_Ipfs_MultiAddress_
@@ -2533,6 +2546,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.Inequality
   nameWithType: MultiAddress.Inequality
+- uid: Ipfs.MultiAddress.PeerId
+  name: PeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_PeerId
+  commentId: P:Ipfs.MultiAddress.PeerId
+  fullName: Ipfs.MultiAddress.PeerId
+  nameWithType: MultiAddress.PeerId
+- uid: Ipfs.MultiAddress.PeerId*
+  name: PeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_PeerId_
+  commentId: Overload:Ipfs.MultiAddress.PeerId
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.PeerId
+  nameWithType: MultiAddress.PeerId
 - uid: Ipfs.MultiAddress.Protocols
   name: Protocols
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Protocols
