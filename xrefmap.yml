@@ -3084,6 +3084,22 @@ references:
   fullName.vb: Ipfs.NetworkProtocol.Register(Of T)()
   nameWithType: NetworkProtocol.Register<T>()
   nameWithType.vb: NetworkProtocol.Register(Of T)()
+- uid: Ipfs.NetworkProtocol.RegisterAlias*
+  name: RegisterAlias
+  href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_RegisterAlias_
+  commentId: Overload:Ipfs.NetworkProtocol.RegisterAlias
+  isSpec: "True"
+  fullName: Ipfs.NetworkProtocol.RegisterAlias
+  nameWithType: NetworkProtocol.RegisterAlias
+- uid: Ipfs.NetworkProtocol.RegisterAlias``1
+  name: RegisterAlias<T>()
+  href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_RegisterAlias__1
+  commentId: M:Ipfs.NetworkProtocol.RegisterAlias``1
+  name.vb: RegisterAlias(Of T)()
+  fullName: Ipfs.NetworkProtocol.RegisterAlias<T>()
+  fullName.vb: Ipfs.NetworkProtocol.RegisterAlias(Of T)()
+  nameWithType: NetworkProtocol.RegisterAlias<T>()
+  nameWithType.vb: NetworkProtocol.RegisterAlias(Of T)()
 - uid: Ipfs.NetworkProtocol.ToString
   name: ToString()
   href: api/Ipfs.NetworkProtocol.html#Ipfs_NetworkProtocol_ToString
