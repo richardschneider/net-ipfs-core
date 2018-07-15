@@ -33,6 +33,9 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="encoding">
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
         /// <param name="pin">
         ///   If <b>true</b> the <paramref name="data"/> is pinned to local storage and will not be
         ///   garbage collected.  The default is <b>true</b>.
@@ -48,6 +51,7 @@ namespace Ipfs.CoreApi
             JObject data,
             string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
+            string encoding = MultiBase.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
 
@@ -64,6 +68,9 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="encoding">
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
         /// <param name="pin">
         ///   If <b>true</b> the <paramref name="data"/> is pinned to local storage and will not be
         ///   garbage collected.  The default is <b>true</b>.
@@ -79,6 +86,7 @@ namespace Ipfs.CoreApi
             Stream data,
             string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
+            string encoding = MultiBase.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
 
@@ -95,6 +103,9 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="encoding">
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
         /// <param name="pin">
         ///   If <b>true</b> the <paramref name="data"/> is pinned to local storage and will not be
         ///   garbage collected.  The default is <b>true</b>.
@@ -110,6 +121,7 @@ namespace Ipfs.CoreApi
             Object data,
             string contentType = "dag-cbor",
             string multiHash = MultiHash.DefaultAlgorithmName,
+            string encoding = MultiBase.DefaultAlgorithmName,
             bool pin = true,
             CancellationToken cancel = default(CancellationToken));
 

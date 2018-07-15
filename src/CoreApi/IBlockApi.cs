@@ -52,6 +52,9 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="encoding">
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
         /// <param name="pin">
         ///   If <b>true</b> the block is pinned to local storage and will not be
         ///   garbage collected.  The default is <b>false</b>.
@@ -67,6 +70,7 @@ namespace Ipfs.CoreApi
             byte[] data,
             string contentType = Cid.DefaultContentType,
             string multiHash = MultiHash.DefaultAlgorithmName,
+            string encoding = MultiBase.DefaultAlgorithmName,
             bool pin = false,
             CancellationToken cancel = default(CancellationToken));
 
@@ -83,6 +87,9 @@ namespace Ipfs.CoreApi
         /// <param name="multiHash">
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         /// </param>
+        /// <param name="encoding">
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        /// </param>
         /// <param name="pin">
         ///   If <b>true</b> the block is pinned to local storage and will not be
         ///   garbage collected.  The default is <b>false</b>.
@@ -98,6 +105,7 @@ namespace Ipfs.CoreApi
             Stream data,
             string contentType = Cid.DefaultContentType,
             string multiHash = MultiHash.DefaultAlgorithmName,
+            string encoding = MultiBase.DefaultAlgorithmName,
             bool pin = false,
             CancellationToken cancel = default(CancellationToken));
 

@@ -25,13 +25,13 @@ namespace Ipfs
     public class Cid : IEquatable<Cid>
     {
         /// <summary>
-        ///   The default <see cref="ContentType"/>, "dag-pb".
+        ///   The default <see cref="ContentType"/>.
         /// </summary>
         public const string DefaultContentType = "dag-pb";
 
         string encodedValue;
         int version;
-        string encoding = "base58btc";
+        string encoding = MultiBase.DefaultAlgorithmName;
         string contentType = DefaultContentType;
         MultiHash hash;
  
@@ -86,7 +86,7 @@ namespace Ipfs
         ///   The <see cref="MultiBase"/> encoding of the CID.
         /// </summary>
         /// <value>
-        ///   base58btc, base64, etc.  Defaults to "base58btc",
+        ///   base58btc, base64, etc.  Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
         /// </value>
         /// <remarks>
         ///    Sets <see cref="Version"/> to 1, when setting a value that

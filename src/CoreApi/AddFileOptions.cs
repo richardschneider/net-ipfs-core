@@ -58,7 +58,18 @@ namespace Ipfs.CoreApi
         ///   The <see cref="MultiHash"/> algorithm name used to produce the <see cref="Cid"/>.
         ///   Defaults to <see cref="MultiHash.DefaultAlgorithmName"/>.
         /// </value>
+        /// <seealso cref="MultiHash"/>
         public string Hash { get; set; } = MultiHash.DefaultAlgorithmName;
+
+        /// <summary>
+        ///   The encoding algorithm name to use.
+        /// </summary>
+        /// <value>
+        ///   The <see cref="MultiBase"/> algorithm name used to produce the <see cref="Cid"/>.
+        ///   Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
+        /// </value>
+        /// <seealso cref="MultiBase"/>
+        public string Encoding { get; set; } = MultiBase.DefaultAlgorithmName;
 
         /// <summary>
         ///   Determines if only file information is produced.
