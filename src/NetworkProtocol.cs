@@ -1,5 +1,4 @@
-﻿using Common.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,6 @@ namespace Ipfs
     /// <seealso cref="MultiAddress"/>
     public abstract class NetworkProtocol
     {
-        static readonly ILog log = LogManager.GetLogger<NetworkProtocol>();
         internal static Dictionary<string, Type> Names = new Dictionary<string, Type>();
         internal static Dictionary<uint, Type> Codes = new Dictionary<uint, Type>();
 
@@ -68,9 +66,6 @@ namespace Ipfs
 
             Names.Add(protocol.Name, typeof(T));
             Codes.Add(protocol.Code, typeof(T));
-
-            if (log.IsDebugEnabled)
-                log.DebugFormat("Registered '{0}' ({1}).", protocol.Name, protocol.Code);
         }
 
         /// <summary>
@@ -89,9 +84,6 @@ namespace Ipfs
                 throw new ArgumentException(string.Format("The IPFS network protocol code ({0}) is not defined.", protocol.Code));
 
             Names.Add(protocol.Name, typeof(T));
-
-            if (log.IsDebugEnabled)
-                log.DebugFormat("Registered '{0}' ({1}).", protocol.Name, protocol.Code);
         }
 
         /// <summary>
