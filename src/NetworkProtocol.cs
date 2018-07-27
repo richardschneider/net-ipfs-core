@@ -236,6 +236,11 @@ namespace Ipfs
             base.ReadValue(stream);
             try
             {
+                // Remove the scope id.
+                int i = Value.LastIndexOf('%');
+                if (i != -1)
+                    Value = Value.Substring(0, i);
+
                 Address = IPAddress.Parse(Value);
             }
             catch (Exception e)

@@ -288,6 +288,15 @@ namespace Ipfs
                 Assert.AreNotSame(p1, p2);
             }
         }
+
+        [TestMethod]
+        public void Ipv6ScopeId_Ignored()
+        {
+            var ma1 = new MultiAddress("/ip6/fe80::7573:b0a8:46b0:0bad%17/tcp/4009");
+            var ma2 = new MultiAddress("/ip6/fe80::7573:b0a8:46b0:0bad/tcp/4009");
+            Assert.AreEqual(ma2, ma1);
+            Assert.AreEqual(ma2.ToString(), ma1.ToString());
+        }
     }
 }
 
