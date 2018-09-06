@@ -2624,6 +2624,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.ToString
   nameWithType: MultiAddress.ToString
+- uid: Ipfs.MultiAddress.TryCreate(System.String)
+  name: TryCreate(String)
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_TryCreate_System_String_
+  commentId: M:Ipfs.MultiAddress.TryCreate(System.String)
+  fullName: Ipfs.MultiAddress.TryCreate(System.String)
+  nameWithType: MultiAddress.TryCreate(String)
+- uid: Ipfs.MultiAddress.TryCreate*
+  name: TryCreate
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_TryCreate_
+  commentId: Overload:Ipfs.MultiAddress.TryCreate
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.TryCreate
+  nameWithType: MultiAddress.TryCreate
 - uid: Ipfs.MultiAddress.Write(Google.Protobuf.CodedOutputStream)
   name: Write(CodedOutputStream)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Write_Google_Protobuf_CodedOutputStream_
