@@ -13,6 +13,9 @@ namespace Ipfs
     /// <summary>
     ///   Metadata on an IPFS network address protocol.
     /// </summary>
+    /// <remarks>
+    ///   Protocols are defined at <see href="https://github.com/multiformats/multiaddr/blob/master/protocols.csv"/>.
+    /// </remarks>
     /// <seealso cref="MultiAddress"/>
     public abstract class NetworkProtocol
     {

@@ -24,7 +24,7 @@ namespace Ipfs
     ///   A multi address is considered immutablle and value type equality is implemented.
     ///   </para>
     /// </remarks>
-    /// <seealso href="https://github.com/jbenet/multiaddr"/>
+    /// <seealso href="https://github.com/multiformats/multiaddr"/>
     public class MultiAddress : IEquatable<MultiAddress>
     {
         /// <summary>
@@ -357,7 +357,27 @@ namespace Ipfs
             return new MultiAddress(s);
         }
 
-
+        /// <summary>
+        ///   Try to create a <see cref="MultiAddress"/> from the specified
+        ///   string.
+        /// </summary>
+        /// <param name="s">
+        ///   The string representation of a multi address, such as "/ip4/1270.0.01/tcp/5001".
+        /// </param>
+        /// <returns>
+        ///   <b>null</b> if the string cannot be parsed; otherwise a <see cref="MultiAddress"/>.
+        /// </returns>
+        public static MultiAddress TryCreate(string s)
+        {
+            try
+            {
+                return new MultiAddress(s);
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
     }
 

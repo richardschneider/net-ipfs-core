@@ -297,6 +297,16 @@ namespace Ipfs
             Assert.AreEqual(ma2, ma1);
             Assert.AreEqual(ma2.ToString(), ma1.ToString());
         }
+
+        [TestMethod]
+        public void TryCreate()
+        {
+            Assert.IsNotNull(MultiAddress.TryCreate("/ip4/1.2.3.4/tcp/80"));
+            Assert.IsNull(MultiAddress.TryCreate(null));
+            Assert.IsNull(MultiAddress.TryCreate(" "));
+            Assert.IsNull(MultiAddress.TryCreate("/tcp/alpha")); // bad port
+            Assert.IsNull(MultiAddress.TryCreate("/foobar")); // bad protocol
+        }
     }
 }
 
