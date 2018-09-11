@@ -321,8 +321,9 @@ namespace Ipfs
         ///   Returns the <see cref="Base58"/> encoding of the <see cref="MultiHash"/>.
         /// </summary>
         /// <returns>
-        ///   A Base58 representaton of the MultiHash.
+        ///   A base-58 representaton of the MultiHash.
         /// </returns>
+        /// <seealso cref="ToBase58"/>
         public override string ToString()
         {
             return this.ToBase58();
@@ -332,8 +333,8 @@ namespace Ipfs
         ///   Returns the <see cref="Base58"/> encoding of the <see cref="MultiHash"/>.
         /// </summary>
         /// <returns>
-        ///   The base-58 representation of the <see cref="Multihash"/>.
-        /// /returns>
+        ///   The <see cref="Base58"/> representation of the <see cref="MultiHash"/>.
+        /// </returns>
         public string ToBase58()
         {
             using (var ms = new MemoryStream())
@@ -347,8 +348,8 @@ namespace Ipfs
         ///   Returns the <see cref="Base32"/> encoding of the <see cref="MultiHash"/>.
         /// </summary>
         /// <returns>
-        ///   The base-32 representation of the <see cref="Multihash"/>.
-        /// /returns>
+        ///   The <see cref="Base32"/> representation of the <see cref="MultiHash"/>.
+        /// </returns>
         public string ToBase32()
         {
             using (var ms = new MemoryStream())
