@@ -331,13 +331,30 @@ namespace Ipfs
         /// <summary>
         ///   Returns the <see cref="Base58"/> encoding of the <see cref="MultiHash"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        ///   The base-58 representation of the <see cref="Multihash"/>.
+        /// /returns>
         public string ToBase58()
         {
             using (var ms = new MemoryStream())
             {
                 Write(ms);
                 return ms.ToArray().ToBase58();
+            }
+        }
+
+        /// <summary>
+        ///   Returns the <see cref="Base32"/> encoding of the <see cref="MultiHash"/>.
+        /// </summary>
+        /// <returns>
+        ///   The base-32 representation of the <see cref="Multihash"/>.
+        /// /returns>
+        public string ToBase32()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                return ms.ToArray().ToBase32();
             }
         }
 

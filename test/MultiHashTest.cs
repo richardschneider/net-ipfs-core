@@ -88,6 +88,15 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void Base32_Encode()
+        {
+            var mh = new MultiHash("QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB");
+            Assert.AreEqual("sha2-256", mh.Algorithm.Name);
+            Assert.AreEqual(32, mh.Digest.Length);
+            Assert.AreEqual("ciqbed3k6ya5i3qqwljochwxdrk5exzqilbckapedujenz5b5hj5r3a", mh.ToBase32());
+        }
+
+        [TestMethod]
         public void Compute_Hash_Array()
         {
             var hello = Encoding.UTF8.GetBytes("Hello, world.");

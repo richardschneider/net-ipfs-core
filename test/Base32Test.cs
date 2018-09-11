@@ -21,37 +21,37 @@ namespace Ipfs
         [TestMethod]
         public void Vector2()
         {
-            Assert.AreEqual("MY======", Base32.Encode(getStringBytes("f")));
+            Assert.AreEqual("my", Base32.Encode(getStringBytes("f")));
         }
 
         [TestMethod]
         public void Vector3()
         {
-            Assert.AreEqual("MZXQ====", Base32.Encode(getStringBytes("fo")));
+            Assert.AreEqual("mzxq", Base32.Encode(getStringBytes("fo")));
         }
 
         [TestMethod]
         public void Vector4()
         {
-            Assert.AreEqual("MZXW6===", Base32.Encode(getStringBytes("foo")));
+            Assert.AreEqual("mzxw6", Base32.Encode(getStringBytes("foo")));
         }
 
         [TestMethod]
         public void Vector5()
         {
-            Assert.AreEqual("MZXW6YQ=", Base32.Encode(getStringBytes("foob")));
+            Assert.AreEqual("mzxw6yq", Base32.Encode(getStringBytes("foob")));
         }
 
         [TestMethod]
         public void Vector6()
         {
-            Assert.AreEqual("MZXW6YTB", Base32.Encode(getStringBytes("fooba")));
+            Assert.AreEqual("mzxw6ytb", Base32.Encode(getStringBytes("fooba")));
         }
 
         [TestMethod]
         public void Vector7()
         {
-            Assert.AreEqual("MZXW6YTBOI======", Base32.Encode(getStringBytes("foobar")));
+            Assert.AreEqual("mzxw6ytboi", Base32.Encode(getStringBytes("foobar")));
         }
     }
 

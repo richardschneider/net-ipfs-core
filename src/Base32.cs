@@ -14,16 +14,17 @@ namespace Ipfs
     ///   to encode a byte array and <see cref="FromBase32"/> to decode a Base-32 string.
     ///   </para>
     ///   <para>
+    ///   <see cref="Encode"/> and <see cref="ToBase32"/> produce the lower case form of 
+    ///   <see href="https://tools.ietf.org/html/rfc4648"/> with no padding.
+    ///   <see cref="Decode"/> and <see cref="FromBase32"/> are case-insensitive and
+    ///   allow optional padding.
+    ///   </para>
+    ///   <para>
     ///   A thin wrapper around <see href="https://github.com/ssg/SimpleBase"/>.
     ///   </para>
     /// </remarks>
     public static class Base32
     {
-        const byte BitsInBlock = 5;
-        const byte BitsInByte = 8;
-        const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
-        const char Padding = '=';
-
         /// <summary>
         ///   Converts an array of 8-bit unsigned integers to its equivalent string representation that is 
         ///   encoded with base-32 characters.
@@ -36,7 +37,7 @@ namespace Ipfs
         /// </returns>
         public static string Encode(byte[] input)
         {
-            return SimpleBase.Base32.Rfc4648.Encode(input, true);
+            return SimpleBase.Base32.Rfc4648.Encode(input, false).ToLowerInvariant();
         }
 
         /// <summary>
@@ -64,6 +65,9 @@ namespace Ipfs
         /// <returns>
         ///   An array of 8-bit unsigned integers that is equivalent to <paramref name="input"/>.
         /// </returns>
+        /// <remarks>
+        ///   <paramref name="input"/> is case-insensitive and allows padding.
+        /// </remarks>
         public static byte[] Decode(string input)
         {
             return SimpleBase.Base32.Rfc4648.Decode(input);
@@ -74,7 +78,7 @@ namespace Ipfs
         ///   to an equivalent 8-bit unsigned integer array.
         /// </summary>
         /// <param name="s">
-        ///   The base 32 string to convert.
+        ///   The base 32 string to convert; case-insensitive and allows padding.
         /// </param>
         /// <returns>
         ///   An array of 8-bit unsigned integers that is equivalent to <paramref name="s"/>.
