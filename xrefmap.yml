@@ -2973,6 +2973,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiHash.ToArray
   nameWithType: MultiHash.ToArray
+- uid: Ipfs.MultiHash.ToBase32
+  name: ToBase32()
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase32
+  commentId: M:Ipfs.MultiHash.ToBase32
+  fullName: Ipfs.MultiHash.ToBase32()
+  nameWithType: MultiHash.ToBase32()
+- uid: Ipfs.MultiHash.ToBase32*
+  name: ToBase32
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase32_
+  commentId: Overload:Ipfs.MultiHash.ToBase32
+  isSpec: "True"
+  fullName: Ipfs.MultiHash.ToBase32
+  nameWithType: MultiHash.ToBase32
 - uid: Ipfs.MultiHash.ToBase58
   name: ToBase58()
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase58
