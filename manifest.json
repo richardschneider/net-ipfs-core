@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.MultiHash.html",
-          "hash": "jWxme4sq21tMp8LCUntNGQ=="
+          "hash": "PZmuD+oTdzCygYAhCVs84g=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.UnknownHashingAlgorithmEventArgs.html",
-          "hash": "oTRzWtI+704UJKDP8XpCFw=="
+          "hash": "JTaivZgm1ydJqJB0+A1Byw=="
         }
       },
       "is_incremental": false,
@@ -705,11 +705,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -721,6 +716,11 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
