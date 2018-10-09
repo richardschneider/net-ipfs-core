@@ -88,7 +88,7 @@ namespace Ipfs
         ///   <b>MultiHash</b>.
         /// </param>
         /// <remarks>
-        ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
+        ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="buffer"/>.
         ///   <para>
         ///   The binary representation is a <see cref="Varint"/> of the <see cref="HashingAlgorithm.Code"/>,
         ///   <see cref="Varint"/> of the <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
