@@ -2753,6 +2753,15 @@ references:
   commentId: M:Ipfs.MultiHash.#ctor(Google.Protobuf.CodedInputStream)
   fullName: Ipfs.MultiHash.MultiHash(Google.Protobuf.CodedInputStream)
   nameWithType: MultiHash.MultiHash(CodedInputStream)
+- uid: Ipfs.MultiHash.#ctor(System.Byte[])
+  name: MultiHash(Byte[])
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash__ctor_System_Byte___
+  commentId: M:Ipfs.MultiHash.#ctor(System.Byte[])
+  name.vb: MultiHash(Byte())
+  fullName: Ipfs.MultiHash.MultiHash(System.Byte[])
+  fullName.vb: Ipfs.MultiHash.MultiHash(System.Byte())
+  nameWithType: MultiHash.MultiHash(Byte[])
+  nameWithType.vb: MultiHash.MultiHash(Byte())
 - uid: Ipfs.MultiHash.#ctor(System.IO.Stream)
   name: MultiHash(Stream)
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash__ctor_System_IO_Stream_
