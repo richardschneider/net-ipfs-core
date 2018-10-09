@@ -81,6 +81,37 @@ namespace Ipfs
 
         /// <summary>
         ///   Creates a new instance of the <see cref="MultiHash"/> class from the
+        ///   specified byte array.
+        /// </summary>
+        /// <param name="buffer">
+        ///   A sequence of bytes containing the binary representation of the
+        ///   <b>MultiHash</b>.
+        /// </param>
+        /// <remarks>
+        ///   Reads the binary representation of <see cref="MultiHash"/> from the <paramref name="stream"/>.
+        ///   <para>
+        ///   The binary representation is a <see cref="Varint"/> of the <see cref="HashingAlgorithm.Code"/>,
+        ///   <see cref="Varint"/> of the <see cref="HashingAlgorithm.DigestSize"/> followed by the <see cref="Digest"/>.
+        ///   </para>
+        ///   <para>
+        ///   When an unknown <see cref="HashingAlgorithm.Code">hashing algorithm number</see> is encountered
+        ///   a new hashing algorithm is <see cref="HashingAlgorithm.Register">registered</see>.  This new algorithm does not support
+        ///   matching nor computing a hash.
+        ///   This behaviour allows parsing of any well formed <see cref="MultiHash"/> even when
+        ///   the hashing algorithm is unknown.
+        ///   </para>
+        /// </remarks>
+        /// <seealso cref="ToArray"/>
+        public MultiHash(byte[] buffer)
+        {
+            using (var ms = new MemoryStream(buffer, false))
+            {
+                Read(ms);
+            }
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="MultiHash"/> class from the
         ///   specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
@@ -352,11 +383,7 @@ namespace Ipfs
         /// </returns>
         public string ToBase32()
         {
-            using (var ms = new MemoryStream())
-            {
-                Write(ms);
-                return ms.ToArray().ToBase32();
-            }
+            return ToArray().ToBase32();
         }
 
         /// <summary>

@@ -456,6 +456,18 @@ namespace Ipfs
             Assert.AreEqual(mh, mh1);
         }
 
+        [TestMethod]
+        public void Binary()
+        {
+            var mh = new MultiHash("QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB");
+            Assert.AreEqual("sha2-256", mh.Algorithm.Name);
+            Assert.AreEqual(32, mh.Digest.Length);
+
+            var binary = mh.ToArray();
+            var mh1 = new MultiHash(binary);
+            Assert.AreEqual(mh.Algorithm.Name, mh1.Algorithm.Name);
+            CollectionAssert.AreEqual(mh.Digest, mh1.Digest);
+        }
 
     }
 }
