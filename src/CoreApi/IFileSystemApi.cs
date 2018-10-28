@@ -156,7 +156,11 @@ namespace Ipfs.CoreApi
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
-        /// <returns></returns>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   an <see cref="IFileSystemNode"/>  The <see cref="IDataBlock.DataBytes"/>
+        ///   and <see cref="IDataBlock.DataStream"/> are set to <b>null</b>.
+        /// </returns>
         Task<IFileSystemNode> ListFileAsync(string path, CancellationToken cancel = default(CancellationToken));
     }
 }
