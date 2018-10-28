@@ -1,7 +1,9 @@
 ﻿using Google.Protobuf;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Ipfs
@@ -22,6 +24,7 @@ namespace Ipfs
     ///   </note>
     /// </remarks>
     /// <seealso href="https://github.com/ipld/cid"/>
+    [JsonConverter(typeof(Cid.Json))]
     public class Cid : IEquatable<Cid>
     {
         /// <summary>
@@ -482,5 +485,33 @@ namespace Ipfs
         {
             return id.Encode();
         }
+
+        /// <summary>
+        ///   Conversion of a <see cref="Cid"/> to and from JSON.
+        /// </summary>
+        /// <remarks>
+        ///   The JSON is just a single string value.
+        /// </remarks>
+        class Json : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return true;
+            }
+            public override bool CanRead => true;
+            public override bool CanWrite => true;
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                var cid = value as Cid;
+                writer.WriteValue(cid?.Encode());
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                var s = reader.Value as string;
+                return s == null ? null : Cid.Decode(s);
+            }
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using Common.Logging;
 using Google.Protobuf;
+using Newtonsoft.Json;
 
 namespace Ipfs
 {
@@ -25,6 +26,7 @@ namespace Ipfs
     ///   </para>
     /// </remarks>
     /// <seealso href="https://github.com/multiformats/multiaddr"/>
+    [JsonConverter(typeof(MultiAddress.Json))]
     public class MultiAddress : IEquatable<MultiAddress>
     {
         /// <summary>
@@ -378,6 +380,34 @@ namespace Ipfs
                 return null;
             }
         }
+
+        /// <summary>
+        ///   Conversion of a <see cref="MultiAddress"/> to and from JSON.
+        /// </summary>
+        /// <remarks>
+        ///   The JSON is just a single string value.
+        /// </remarks>
+        class Json : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return true;
+            }
+            public override bool CanRead => true;
+            public override bool CanWrite => true;
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                var ma = value as MultiAddress;
+                writer.WriteValue(ma?.ToString());
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                var s = reader.Value as string;
+                return s == null ? null : new MultiAddress(s);
+            }
+        }
+
 
     }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Ipfs
 {
@@ -307,6 +308,22 @@ namespace Ipfs
             Assert.IsNull(MultiAddress.TryCreate("/tcp/alpha")); // bad port
             Assert.IsNull(MultiAddress.TryCreate("/foobar")); // bad protocol
         }
+
+        [TestMethod]
+        public void JsonSerialization()
+        {
+            var a = new MultiAddress("/ip6/fe80::7573:b0a8:46b0:0bad/tcp/4009");
+            string json = JsonConvert.SerializeObject(a);
+            Assert.AreEqual($"\"{a.ToString()}\"", json);
+            var b = JsonConvert.DeserializeObject<MultiAddress>(json);
+            Assert.AreEqual(a.ToString(), b.ToString());
+
+            a = null;
+            json = JsonConvert.SerializeObject(a);
+            b = JsonConvert.DeserializeObject<MultiAddress>(json);
+            Assert.IsNull(b);
+        }
+
     }
 }
 

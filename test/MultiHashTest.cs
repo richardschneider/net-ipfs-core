@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using Google.Protobuf;
+using Newtonsoft.Json;
 
 namespace Ipfs
 {
@@ -467,6 +468,21 @@ namespace Ipfs
             var mh1 = new MultiHash(binary);
             Assert.AreEqual(mh.Algorithm.Name, mh1.Algorithm.Name);
             CollectionAssert.AreEqual(mh.Digest, mh1.Digest);
+        }
+
+        [TestMethod]
+        public void JsonSerialization()
+        {
+            var a = new MultiHash("QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB");
+            string json = JsonConvert.SerializeObject(a);
+            Assert.AreEqual($"\"{a.ToString()}\"", json);
+            var b = JsonConvert.DeserializeObject<MultiHash>(json);
+            Assert.AreEqual(a, b);
+
+            a = null;
+            json = JsonConvert.SerializeObject(a);
+            b = JsonConvert.DeserializeObject<MultiHash>(json);
+            Assert.IsNull(b);
         }
 
     }

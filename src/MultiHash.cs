@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using Common.Logging;
 using Google.Protobuf;
 using Ipfs.Registry;
+using Newtonsoft.Json;
 
 namespace Ipfs
 {
@@ -18,6 +19,7 @@ namespace Ipfs
     ///   See the <see cref="HashingAlgorithm">registry</see> for supported algorithms.
     /// </remarks>
     /// <seealso href="https://github.com/jbenet/multihash"/>
+    [JsonConverter(typeof(MultiHash.Json))]
     public class MultiHash : IEquatable<MultiHash>
     {
         static readonly ILog log = LogManager.GetLogger<MultiHash>();
@@ -497,6 +499,32 @@ namespace Ipfs
             return new MultiHash(algorithmName, GetHashAlgorithm(algorithmName).ComputeHash(data));
         }
 
+        /// <summary>
+        ///   Conversion of a <see cref="MultiHash"/> to and from JSON.
+        /// </summary>
+        /// <remarks>
+        ///   The JSON is just a single string value.
+        /// </remarks>
+        class Json : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return true;
+            }
+            public override bool CanRead => true;
+            public override bool CanWrite => true;
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                var mh = value as MultiHash;
+                writer.WriteValue(mh?.ToString());
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                var s = reader.Value as string;
+                return s == null ? null : new MultiHash(s);
+            }
+        }
     }
 
     /// <summary>
@@ -510,4 +538,5 @@ namespace Ipfs
         /// </summary>
         public HashingAlgorithm Algorithm { get; set; }
     }
+
 }

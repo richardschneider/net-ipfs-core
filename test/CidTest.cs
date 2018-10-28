@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using Google.Protobuf;
+using Newtonsoft.Json;
 
 namespace Ipfs
 {
@@ -358,6 +359,39 @@ namespace Ipfs
             ExceptionAssert.Throws<NotSupportedException>(() => cid.Encoding = "base64");
             ExceptionAssert.Throws<NotSupportedException>(() => cid.Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L5");
             ExceptionAssert.Throws<NotSupportedException>(() => cid.Version = 0);
+        }
+
+        class CidAndX
+        {
+            public Cid Cid;
+            public int X;
+        }
+
+        [TestMethod]
+        public void JsonSerialization()
+        {
+            Cid a = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4";
+            string json = JsonConvert.SerializeObject(a);
+            Assert.AreEqual($"\"{a.Encode()}\"", json);
+            var b = JsonConvert.DeserializeObject<Cid>(json);
+            Assert.AreEqual(a, b);
+
+            a = null;
+            json = JsonConvert.SerializeObject(a);
+            b = JsonConvert.DeserializeObject<Cid>(json);
+            Assert.IsNull(b);
+
+            var x = new CidAndX { Cid = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4", X = 42 };
+            json = JsonConvert.SerializeObject(x);
+            var y = JsonConvert.DeserializeObject<CidAndX>(json);
+            Assert.AreEqual(x.Cid, y.Cid);
+            Assert.AreEqual(x.X, y.X);
+
+            x.Cid = null;
+            json = JsonConvert.SerializeObject(x);
+            y = JsonConvert.DeserializeObject<CidAndX>(json);
+            Assert.AreEqual(x.Cid, y.Cid);
+            Assert.AreEqual(x.X, y.X);
         }
     }
 }
