@@ -2527,6 +2527,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.GetHashCode
   nameWithType: MultiAddress.GetHashCode
+- uid: Ipfs.MultiAddress.HasPeerId
+  name: HasPeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_HasPeerId
+  commentId: P:Ipfs.MultiAddress.HasPeerId
+  fullName: Ipfs.MultiAddress.HasPeerId
+  nameWithType: MultiAddress.HasPeerId
+- uid: Ipfs.MultiAddress.HasPeerId*
+  name: HasPeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_HasPeerId_
+  commentId: Overload:Ipfs.MultiAddress.HasPeerId
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.HasPeerId
+  nameWithType: MultiAddress.HasPeerId
 - uid: Ipfs.MultiAddress.op_Equality(Ipfs.MultiAddress,Ipfs.MultiAddress)
   name: Equality(MultiAddress, MultiAddress)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_op_Equality_Ipfs_MultiAddress_Ipfs_MultiAddress_
