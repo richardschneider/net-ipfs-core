@@ -136,6 +136,24 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Determines if the peer ID is present.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> if the peer ID present; otherwise, <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   The peer ID is contained in the last protocol that
+        ///   is "ipfs" or "p2p".  For example, <c>/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC</c>.
+        /// </remarks>
+        public bool HasPeerId
+        {
+            get
+            {
+                return Protocols.Any(p => p.Name == "ipfs" || p.Name == "p2p");
+            }
+        }
+
+        /// <summary>
         ///   Writes the binary representation to the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">

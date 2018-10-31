@@ -272,6 +272,14 @@ namespace Ipfs
         }
 
         [TestMethod]
+        public void PeerId_IsPresent()
+        {
+            Assert.IsTrue(new MultiAddress("/ip4/10.1.10.10/tcp/29087/ipfs/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC").HasPeerId);
+            Assert.IsTrue(new MultiAddress("/ip4/10.1.10.10/tcp/29087/p2p/QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC").HasPeerId);
+            Assert.IsFalse(new MultiAddress("/ip4/10.1.10.10/tcp/29087").HasPeerId);
+        }
+
+        [TestMethod]
         public void Cloning()
         {
             var ma1 = new MultiAddress("/ip4/10.1.10.10/tcp/29087");
