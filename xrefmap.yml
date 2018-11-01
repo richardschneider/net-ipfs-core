@@ -1630,35 +1630,35 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IPubSubApi.PeersAsync
   nameWithType: IPubSubApi.PeersAsync
-- uid: Ipfs.CoreApi.IPubSubApi.Publish(System.String,System.String,System.Threading.CancellationToken)
-  name: Publish(String, String, CancellationToken)
-  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_Publish_System_String_System_String_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IPubSubApi.Publish(System.String,System.String,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IPubSubApi.Publish(System.String, System.String, System.Threading.CancellationToken)
-  nameWithType: IPubSubApi.Publish(String, String, CancellationToken)
-- uid: Ipfs.CoreApi.IPubSubApi.Publish*
-  name: Publish
-  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_Publish_
-  commentId: Overload:Ipfs.CoreApi.IPubSubApi.Publish
+- uid: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: PublishAsync(String, String, CancellationToken)
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.String,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: IPubSubApi.PublishAsync(String, String, CancellationToken)
+- uid: Ipfs.CoreApi.IPubSubApi.PublishAsync*
+  name: PublishAsync
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_PublishAsync_
+  commentId: Overload:Ipfs.CoreApi.IPubSubApi.PublishAsync
   isSpec: "True"
-  fullName: Ipfs.CoreApi.IPubSubApi.Publish
-  nameWithType: IPubSubApi.Publish
-- uid: Ipfs.CoreApi.IPubSubApi.Subscribe(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
-  name: Subscribe(String, Action<IPublishedMessage>, CancellationToken)
-  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_Subscribe_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IPubSubApi.Subscribe(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
-  name.vb: Subscribe(String, Action(Of IPublishedMessage), CancellationToken)
-  fullName: Ipfs.CoreApi.IPubSubApi.Subscribe(System.String, System.Action<Ipfs.IPublishedMessage>, System.Threading.CancellationToken)
-  fullName.vb: Ipfs.CoreApi.IPubSubApi.Subscribe(System.String, System.Action(Of Ipfs.IPublishedMessage), System.Threading.CancellationToken)
-  nameWithType: IPubSubApi.Subscribe(String, Action<IPublishedMessage>, CancellationToken)
-  nameWithType.vb: IPubSubApi.Subscribe(String, Action(Of IPublishedMessage), CancellationToken)
-- uid: Ipfs.CoreApi.IPubSubApi.Subscribe*
-  name: Subscribe
-  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_Subscribe_
-  commentId: Overload:Ipfs.CoreApi.IPubSubApi.Subscribe
+  fullName: Ipfs.CoreApi.IPubSubApi.PublishAsync
+  nameWithType: IPubSubApi.PublishAsync
+- uid: Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
+  name: SubscribeAsync(String, Action<IPublishedMessage>, CancellationToken)
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_SubscribeAsync_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
+  name.vb: SubscribeAsync(String, Action(Of IPublishedMessage), CancellationToken)
+  fullName: Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String, System.Action<Ipfs.IPublishedMessage>, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String, System.Action(Of Ipfs.IPublishedMessage), System.Threading.CancellationToken)
+  nameWithType: IPubSubApi.SubscribeAsync(String, Action<IPublishedMessage>, CancellationToken)
+  nameWithType.vb: IPubSubApi.SubscribeAsync(String, Action(Of IPublishedMessage), CancellationToken)
+- uid: Ipfs.CoreApi.IPubSubApi.SubscribeAsync*
+  name: SubscribeAsync
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_SubscribeAsync_
+  commentId: Overload:Ipfs.CoreApi.IPubSubApi.SubscribeAsync
   isSpec: "True"
-  fullName: Ipfs.CoreApi.IPubSubApi.Subscribe
-  nameWithType: IPubSubApi.Subscribe
+  fullName: Ipfs.CoreApi.IPubSubApi.SubscribeAsync
+  nameWithType: IPubSubApi.SubscribeAsync
 - uid: Ipfs.CoreApi.IPubSubApi.SubscribedTopicsAsync(System.Threading.CancellationToken)
   name: SubscribedTopicsAsync(CancellationToken)
   href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_SubscribedTopicsAsync_System_Threading_CancellationToken_

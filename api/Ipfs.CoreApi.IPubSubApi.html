@@ -123,7 +123,7 @@ To use, the daemon must be run with &apos;--enable-pubsub-experiment&apos;.
       <tr>
         <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
         <td><span class="parametername">topic</span></td>
-        <td><p>When specified, only peers pubsubing on the topic are returned.</p>
+        <td><p>When specified, only peers subscribing on the topic are returned.</p>
 </td>
       </tr>
       <tr>
@@ -153,19 +153,19 @@ a sequence of <a class="xref" href="Ipfs.Peer.html">Peer</a>.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IPubSubApi_Publish_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IPubSubApi.Publish(System.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IPubSubApi.cs/#L67">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IPubSubApi_Publish_" data-uid="Ipfs.CoreApi.IPubSubApi.Publish*"></a>
-  <h4 id="Ipfs_CoreApi_IPubSubApi_Publish_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IPubSubApi.Publish(System.String,System.String,System.Threading.CancellationToken)">Publish(String, String, CancellationToken)</h4>
+  <a id="Ipfs_CoreApi_IPubSubApi_PublishAsync_" data-uid="Ipfs.CoreApi.IPubSubApi.PublishAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.String,System.Threading.CancellationToken)">PublishAsync(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Publish a message to a given topic.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task Publish(string topic, string message, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task PublishAsync(string topic, string message, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,19 +215,19 @@ a sequence of <a class="xref" href="Ipfs.Peer.html">Peer</a>.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IPubSubApi_Subscribe_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IPubSubApi.Subscribe(System.String%2CSystem.Action%7BIpfs.IPublishedMessage%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IPubSubApi_SubscribeAsync_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String%2CSystem.Action%7BIpfs.IPublishedMessage%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IPubSubApi.cs/#L88">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IPubSubApi_Subscribe_" data-uid="Ipfs.CoreApi.IPubSubApi.Subscribe*"></a>
-  <h4 id="Ipfs_CoreApi_IPubSubApi_Subscribe_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IPubSubApi.Subscribe(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)">Subscribe(String, Action&lt;IPublishedMessage&gt;, CancellationToken)</h4>
+  <a id="Ipfs_CoreApi_IPubSubApi_SubscribeAsync_" data-uid="Ipfs.CoreApi.IPubSubApi.SubscribeAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IPubSubApi_SubscribeAsync_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IPubSubApi.SubscribeAsync(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)">SubscribeAsync(String, Action&lt;IPublishedMessage&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Subscribe to messages on a given topic.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task Subscribe(string topic, Action&lt;IPublishedMessage&gt; handler, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SubscribeAsync(string topic, Action&lt;IPublishedMessage&gt; handler, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,7 +276,7 @@ is <strong>NOT</strong> raised.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Ipfs_CoreApi_IPubSubApi_Subscribe_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken__remarks">Remarks</h5>
+  <h5 id="Ipfs_CoreApi_IPubSubApi_SubscribeAsync_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The <code data-dev-comment-type="paramref" class="paramref">handler</code> is invoked on the topic listener thread.</p>
 </div>
   <span class="small pull-right mobile-hide">
