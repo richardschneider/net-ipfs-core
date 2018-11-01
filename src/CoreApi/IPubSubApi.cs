@@ -38,7 +38,7 @@ namespace Ipfs.CoreApi
         ///   Get the peers that are pubsubing with us.
         /// </summary>
         /// <param name="topic">
-        ///   When specified, only peers pubsubing on the topic are returned.
+        ///   When specified, only peers subscribing on the topic are returned.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -64,7 +64,7 @@ namespace Ipfs.CoreApi
         /// <returns>
         ///   A task that represents the asynchronous operation.
         /// </returns>
-        Task Publish(string topic, string message, CancellationToken cancel = default(CancellationToken));
+        Task PublishAsync(string topic, string message, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Subscribe to messages on a given topic.
@@ -85,7 +85,7 @@ namespace Ipfs.CoreApi
         /// <remarks>
         ///   The <paramref name="handler"/> is invoked on the topic listener thread.
         /// </remarks>
-        Task Subscribe(string topic, Action<IPublishedMessage> handler, CancellationToken cancellationToken);
+        Task SubscribeAsync(string topic, Action<IPublishedMessage> handler, CancellationToken cancellationToken);
 
     }
 }
