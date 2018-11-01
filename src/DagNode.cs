@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace Ipfs
     ///   A <b>DagNode</b> has opaque <see cref="DagNode.DataBytes"/>
     ///   and a set of navigable <see cref="DagNode.Links"/>.
     /// </remarks>
+    [DataContract]
     public class DagNode : IMerkleNode<IMerkleLink>
     {
         Cid id;
@@ -70,9 +72,11 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
+        [DataMember]
         public IEnumerable<IMerkleLink> Links { get; private set; }
 
         /// <inheritdoc />
+        [DataMember]
         public byte[] DataBytes { get; private set; }
 
         /// <inheritdoc />
@@ -87,6 +91,7 @@ namespace Ipfs
         /// <summary>
         ///   The serialised size in bytes of the node.
         /// </summary>
+        [DataMember]
         public long Size
         {
             get
@@ -100,6 +105,7 @@ namespace Ipfs
         }
 
         /// <inheritdoc />
+        [DataMember]
         public Cid Id
         {
             get
