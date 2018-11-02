@@ -33,12 +33,15 @@ namespace Ipfs.CoreApi
         /// <param name="id">
         ///   The <see cref="Cid"/> of the content.
         /// </param>
+        /// <param name="limit">
+        ///   The maximum number of peers to return.  Defaults to 20.
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
         ///   A sequence of IPFS <see cref="Peer"/>.
         /// </returns>
-        Task<IEnumerable<Peer>> FindProvidersAsync(Cid id, CancellationToken cancel = default(CancellationToken));
+        Task<IEnumerable<Peer>> FindProvidersAsync(Cid id, int limit = 20, CancellationToken cancel = default(CancellationToken));
     }
 }
