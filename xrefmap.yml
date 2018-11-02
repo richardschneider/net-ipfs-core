@@ -1146,12 +1146,12 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IDhtApi.FindPeerAsync
   nameWithType: IDhtApi.FindPeerAsync
-- uid: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Threading.CancellationToken)
-  name: FindProvidersAsync(Cid, CancellationToken)
-  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindProvidersAsync_Ipfs_Cid_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid, System.Threading.CancellationToken)
-  nameWithType: IDhtApi.FindProvidersAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Threading.CancellationToken)
+  name: FindProvidersAsync(Cid, Int32, CancellationToken)
+  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindProvidersAsync_Ipfs_Cid_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid, System.Int32, System.Threading.CancellationToken)
+  nameWithType: IDhtApi.FindProvidersAsync(Cid, Int32, CancellationToken)
 - uid: Ipfs.CoreApi.IDhtApi.FindProvidersAsync*
   name: FindProvidersAsync
   href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindProvidersAsync_
