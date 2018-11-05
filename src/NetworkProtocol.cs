@@ -33,6 +33,7 @@ namespace Ipfs
             NetworkProtocol.Register<UdpNetworkProtocol>();
             NetworkProtocol.Register<P2pNetworkProtocol>();
             NetworkProtocol.RegisterAlias<IpfsNetworkProtocol>();
+            NetworkProtocol.Register<QuicNetworkProtocol>();
             NetworkProtocol.Register<HttpNetworkProtocol>();
             NetworkProtocol.Register<HttpsNetworkProtocol>();
             NetworkProtocol.Register<DccpNetworkProtocol>();
@@ -379,6 +380,12 @@ namespace Ipfs
         public override void ReadValue(CodedInputStream stream) { }
         public override void ReadValue(TextReader stream) { }
         public override void WriteValue(CodedOutputStream stream) { }
+    }
+
+    class QuicNetworkProtocol : ValuelessNetworkProtocol
+    {
+        public override string Name { get { return "quic"; } }
+        public override uint Code { get { return 460; } }
     }
 
     class HttpNetworkProtocol : ValuelessNetworkProtocol

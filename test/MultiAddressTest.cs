@@ -163,6 +163,7 @@ namespace Ipfs
                 "/dns4/wss0.bootstrap.libp2p.io/tcp/443/wss/ipfs/QmZMxNdpMkewiVZLMRxaNxUeZpDUb34pWjZ1kZvsd16Zic",
                 "/ip4/127.0.0.0/ipcidr/16",
                 "/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
+                "/ip4/127.0.0.1/udp/4023/quic",
             };
             foreach (var a in addresses)
             {
