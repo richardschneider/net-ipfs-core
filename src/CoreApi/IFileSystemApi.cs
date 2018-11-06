@@ -121,10 +121,13 @@ namespace Ipfs.CoreApi
         ///   A task that represents the asynchronous operation. The task's value is
         ///   a <see cref="Stream"/> to the file contents.
         /// </returns>
+        /// <remarks>
+        ///   The returned <see cref="Stream"/> must be disposed.
+        /// </remarks>
         Task<Stream> ReadFileAsync(string path, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Reads an existing IPFS file with the specified offset.
+        ///   Reads an existing IPFS file with the specified offset and length.
         /// </summary>
         /// <param name="path">
         ///   A path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
@@ -144,6 +147,9 @@ namespace Ipfs.CoreApi
         ///   A task that represents the asynchronous operation. The task's value is
         ///   a <see cref="Stream"/> to the file contents.
         /// </returns>
+        /// <remarks>
+        ///   The returned <see cref="Stream"/> must be disposed.
+        /// </remarks>
         Task<Stream> ReadFileAsync(string path, long offset, long count = 0, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
