@@ -11,21 +11,15 @@ namespace Ipfs.CoreApi
     /// </summary>
     /// <remarks>
     ///   An IPFS Block is a byte sequence that represents an IPFS Object 
-    ///   (i.e. serialized byte buffers). It is useful to talk about them as "blocks" in Bitswap 
+    ///   (i.e. serialized byte buffers). It is useful to talk about them as 
+    ///   "blocks" in <see cref="IBitswapApi">Bitswap</see>
     ///   and other things that do not care about what is being stored. 
-    ///   <para>
-    ///   It is also possible to store arbitrary stuff using ipfs block put/get as the API 
-    ///   does not check for proper IPFS Object formatting.
-    ///   </para>
-    ///   <note>
-    ///   This may be very good or bad, we haven't decided yet 😄
-    ///   </note>
     /// </remarks>
     /// <seealso href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/BLOCK.md">Block API spec</seealso>
     public interface IBlockApi
     {
         /// <summary>
-        ///   Gets a IPFS block.
+        ///   Gets an IPFS block.
         /// </summary>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -40,7 +34,7 @@ namespace Ipfs.CoreApi
         Task<IDataBlock> GetAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Stores a byte array as a IPFS block.
+        ///   Stores a byte array as an IPFS block.
         /// </summary>
         /// <param name="data">
         ///   The byte array to send to the IPFS network.
@@ -75,7 +69,7 @@ namespace Ipfs.CoreApi
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Stores a stream as a IPFS block.
+        ///   Stores a stream as an IPFS block.
         /// </summary>
         /// <param name="data">
         ///   The <see cref="Stream"/> of data to send to the IPFS network.
@@ -110,7 +104,7 @@ namespace Ipfs.CoreApi
             CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Information on a IPFS block.
+        ///   Information on an IPFS block.
         /// </summary>
         /// <param name="id">
         ///   The <see cref="Cid"/> of the block.
@@ -129,7 +123,7 @@ namespace Ipfs.CoreApi
         Task<IDataBlock> StatAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Remove a IPFS block.
+        ///   Remove an IPFS block.
         /// </summary>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
