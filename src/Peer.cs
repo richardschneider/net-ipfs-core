@@ -6,7 +6,7 @@ using System.Text;
 namespace Ipfs
 {
     /// <summary>
-    ///   A node on the IPFS network.
+    ///   A daemon node on the IPFS network.
     /// </summary>
     public class Peer : IEquatable<Peer>
     {
@@ -20,6 +20,7 @@ namespace Ipfs
         ///   This is the <see cref="MultiHash"/> of the peer's protobuf encoded
         ///   <see cref="PublicKey"/>.
         /// </value>
+        /// <seealso href="https://github.com/libp2p/specs/pull/100"/>
         public MultiHash Id { get; set; }
 
         /// <summary>
