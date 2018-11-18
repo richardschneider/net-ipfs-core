@@ -400,6 +400,28 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Try to create a <see cref="MultiAddress"/> from the specified
+        ///   the binary encoding.
+        /// </summary>
+        /// <param name="bytes">
+        ///   The binary encoding of a multiaddress.
+        /// </param>
+        /// <returns>
+        ///   <b>null</b> if the bytes cannot be parsed; otherwise a <see cref="MultiAddress"/>.
+        /// </returns>
+        public static MultiAddress TryCreate(byte[] bytes)
+        {
+            try
+            {
+                return new MultiAddress(bytes);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         ///   Conversion of a <see cref="MultiAddress"/> to and from JSON.
         /// </summary>
         /// <remarks>

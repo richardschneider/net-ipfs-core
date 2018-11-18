@@ -309,13 +309,23 @@ namespace Ipfs
         }
 
         [TestMethod]
-        public void TryCreate()
+        public void TryCreate_FromString()
         {
             Assert.IsNotNull(MultiAddress.TryCreate("/ip4/1.2.3.4/tcp/80"));
-            Assert.IsNull(MultiAddress.TryCreate(null));
+            Assert.IsNull(MultiAddress.TryCreate((string)null));
             Assert.IsNull(MultiAddress.TryCreate(" "));
             Assert.IsNull(MultiAddress.TryCreate("/tcp/alpha")); // bad port
             Assert.IsNull(MultiAddress.TryCreate("/foobar")); // bad protocol
+        }
+
+        [TestMethod]
+        public void TryCreate_FromBytes()
+        {
+            var good = MultiAddress.TryCreate("/ip4/1.2.3.4/tcp/80");
+            var good1 = MultiAddress.TryCreate(good.ToArray());
+            Assert.AreEqual(good, good1);
+
+            Assert.IsNull(MultiAddress.TryCreate(new byte[0]));
         }
 
         [TestMethod]
