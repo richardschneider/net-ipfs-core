@@ -453,6 +453,15 @@ references:
   commentId: M:Ipfs.Cid.Read(Google.Protobuf.CodedInputStream)
   fullName: Ipfs.Cid.Read(Google.Protobuf.CodedInputStream)
   nameWithType: Cid.Read(CodedInputStream)
+- uid: Ipfs.Cid.Read(System.Byte[])
+  name: Read(Byte[])
+  href: api/Ipfs.Cid.html#Ipfs_Cid_Read_System_Byte___
+  commentId: M:Ipfs.Cid.Read(System.Byte[])
+  name.vb: Read(Byte())
+  fullName: Ipfs.Cid.Read(System.Byte[])
+  fullName.vb: Ipfs.Cid.Read(System.Byte())
+  nameWithType: Cid.Read(Byte[])
+  nameWithType.vb: Cid.Read(Byte())
 - uid: Ipfs.Cid.Read(System.IO.Stream)
   name: Read(Stream)
   href: api/Ipfs.Cid.html#Ipfs_Cid_Read_System_IO_Stream_
@@ -466,6 +475,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.Cid.Read
   nameWithType: Cid.Read
+- uid: Ipfs.Cid.ToArray
+  name: ToArray()
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ToArray
+  commentId: M:Ipfs.Cid.ToArray
+  fullName: Ipfs.Cid.ToArray()
+  nameWithType: Cid.ToArray()
+- uid: Ipfs.Cid.ToArray*
+  name: ToArray
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ToArray_
+  commentId: Overload:Ipfs.Cid.ToArray
+  isSpec: "True"
+  fullName: Ipfs.Cid.ToArray
+  nameWithType: Cid.ToArray
 - uid: Ipfs.Cid.ToString
   name: ToString()
   href: api/Ipfs.Cid.html#Ipfs_Cid_ToString
