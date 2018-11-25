@@ -393,5 +393,17 @@ namespace Ipfs
             Assert.AreEqual(x.Cid, y.Cid);
             Assert.AreEqual(x.X, y.X);
         }
+
+        [TestMethod]
+        public void ByteArrays()
+        {
+            Cid cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
+            var buffer = cid.ToArray();
+            var clone = Cid.Read(buffer);
+            Assert.AreEqual(cid.Version, clone.Version);
+            Assert.AreEqual(cid.ContentType, clone.ContentType);
+            Assert.AreEqual(cid.Hash.Algorithm.Name, clone.Hash.Algorithm.Name);
+            Assert.AreEqual(cid.Hash, clone.Hash);
+        }
     }
 }

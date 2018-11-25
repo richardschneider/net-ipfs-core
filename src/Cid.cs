@@ -379,6 +379,38 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Reads the binary representation of the CID from the specified byte array.
+        /// </summary>
+        /// <param name="buffer">
+        ///   The souce of a CID.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="Cid"/>.
+        /// </returns>
+        public static Cid Read(byte[] buffer)
+        {
+            using (var ms = new MemoryStream(buffer, false))
+            {
+                return Read(ms);
+            }
+        }
+
+        /// <summary>
+        ///   Returns the binary representation of the CID as a byte array.
+        /// </summary>
+        /// <returns>
+        ///   A new buffer containing the CID>
+        /// </returns>
+        public byte[] ToArray()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                return ms.ToArray();
+            }
+        }
+
+        /// <summary>
         ///   Implicit casting of a <see cref="MultiHash"/> to a <see cref="Cid"/>.
         /// </summary>
         /// <param name="hash">
