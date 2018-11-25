@@ -485,5 +485,12 @@ namespace Ipfs
             Assert.IsNull(b);
         }
 
+        [TestMethod]
+        public void CodeToName()
+        {
+            Assert.AreEqual("sha2-512", MultiHash.GetHashAlgorithmName(0x13));
+            ExceptionAssert.Throws<KeyNotFoundException>(
+                () => MultiHash.GetHashAlgorithmName(0xbadbad));
+        }
     }
 }

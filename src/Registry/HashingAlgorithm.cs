@@ -13,7 +13,7 @@ namespace Ipfs.Registry
     /// </summary>
     /// <remarks>
     ///   IPFS assigns a unique <see cref="Name"/> and <see cref="Code"/> to a hashing algorithm. 
-    ///   See <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</see>
+    ///   See <see href="https://github.com/multiformats/multicodec/blob/master/table.csv">hashtable.csv</see>
     ///   for the currently defined hashing algorithms.
     ///   <para>
     ///   These algorithms are implemented:
@@ -45,7 +45,7 @@ namespace Ipfs.Registry
         /// <summary>
         ///   Register the standard hash algorithms for IPFS.
         /// </summary>
-        /// <seealso href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/>
+        /// <seealso href="https://github.com/multiformats/multicodec/blob/master/table.csv"/>
         static HashingAlgorithm()
         {
             Register("sha1", 0x11, 20, () => SHA1.Create());
@@ -90,7 +90,7 @@ namespace Ipfs.Registry
         ///   The IPFS number assigned to the hashing algorithm.
         /// </summary>
         /// <value>
-        ///   Valid hash codes at <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv">hashtable.csv</see>.
+        ///   Valid hash codes at <see href="https://github.com/multiformats/multicodec/blob/master/table.csv">hashtable.csv</see>.
         /// </value>
         public int Code { get; private set; }
 

@@ -33,9 +33,15 @@ namespace Ipfs
         ///   Gets the <see cref="HashAlgorithm"/> with the specified IPFS multi-hash name.
         /// </summary>
         /// <param name="name">
-        ///   The name of a hashing algorithm, see <see href="https://github.com/multiformats/multihash/blob/master/hashtable.csv"/>
+        ///   The name of a hashing algorithm, see <see href="https://github.com/multiformats/multicodec/blob/master/table.csv"/>
         ///   for IPFS defined names.
         /// </param>
+        /// <returns>
+        ///   The hashing implementation associated with the <paramref name="name"/>.
+        /// </returns>
+        /// <exception cref="KeyNotFoundException">
+        ///   When <paramref name="name"/> is not registered.
+        /// </exception>
         public static HashAlgorithm GetHashAlgorithm(string name = DefaultAlgorithmName)
         {
             try
@@ -48,6 +54,30 @@ namespace Ipfs
             }
         }
 
+        /// <summary>
+        ///   Gets the name of hashing algorithm name with the specified code.
+        /// </summary>
+        /// <param name="code">
+        ///   The code of a hashing algorithm, see <see href="https://github.com/multiformats/multicodec/blob/master/table.csv"/>
+        ///   for IPFS defined codes.
+        /// </param>
+        /// <returns>
+        ///   The name assigned to <paramref name="code"/>.
+        /// </returns>
+        /// <exception cref="KeyNotFoundException">
+        ///   When <paramref name="code"/> is not registered.
+        /// </exception>
+        public static string GetHashAlgorithmName(int code)
+        {
+            try
+            {
+                return HashingAlgorithm.Codes[code].Name;
+            }
+            catch (KeyNotFoundException)
+            {
+                throw new KeyNotFoundException($"Hash algorithm with code '{code}' is not registered");
+            }
+        }
 
         /// <summary>
         ///   Occurs when an unknown hashing algorithm number is parsed.
