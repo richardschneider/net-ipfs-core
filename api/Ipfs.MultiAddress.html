@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MultiAddress
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.40.1.0">
+    <meta name="generator" content="docfx 2.40.3.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -610,6 +610,57 @@ to a human.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_TryCreate_System_Byte___.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.TryCreate(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L412">View Source</a>
+  </span>
+  <a id="Ipfs_MultiAddress_TryCreate_" data-uid="Ipfs.MultiAddress.TryCreate*"></a>
+  <h4 id="Ipfs_MultiAddress_TryCreate_System_Byte___" data-uid="Ipfs.MultiAddress.TryCreate(System.Byte[])">TryCreate(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Try to create a <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a> from the specified
+the binary encoding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MultiAddress TryCreate(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>The binary encoding of a multiaddress.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td><p><strong>null</strong> if the bytes cannot be parsed; otherwise a <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_TryCreate_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.TryCreate(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

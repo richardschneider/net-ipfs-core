@@ -2637,6 +2637,15 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.ToString
   nameWithType: MultiAddress.ToString
+- uid: Ipfs.MultiAddress.TryCreate(System.Byte[])
+  name: TryCreate(Byte[])
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_TryCreate_System_Byte___
+  commentId: M:Ipfs.MultiAddress.TryCreate(System.Byte[])
+  name.vb: TryCreate(Byte())
+  fullName: Ipfs.MultiAddress.TryCreate(System.Byte[])
+  fullName.vb: Ipfs.MultiAddress.TryCreate(System.Byte())
+  nameWithType: MultiAddress.TryCreate(Byte[])
+  nameWithType.vb: MultiAddress.TryCreate(Byte())
 - uid: Ipfs.MultiAddress.TryCreate(System.String)
   name: TryCreate(String)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_TryCreate_System_String_
@@ -2889,6 +2898,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiHash.GetHashAlgorithm
   nameWithType: MultiHash.GetHashAlgorithm
+- uid: Ipfs.MultiHash.GetHashAlgorithmName(System.Int32)
+  name: GetHashAlgorithmName(Int32)
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashAlgorithmName_System_Int32_
+  commentId: M:Ipfs.MultiHash.GetHashAlgorithmName(System.Int32)
+  fullName: Ipfs.MultiHash.GetHashAlgorithmName(System.Int32)
+  nameWithType: MultiHash.GetHashAlgorithmName(Int32)
+- uid: Ipfs.MultiHash.GetHashAlgorithmName*
+  name: GetHashAlgorithmName
+  href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashAlgorithmName_
+  commentId: Overload:Ipfs.MultiHash.GetHashAlgorithmName
+  isSpec: "True"
+  fullName: Ipfs.MultiHash.GetHashAlgorithmName
+  nameWithType: MultiHash.GetHashAlgorithmName
 - uid: Ipfs.MultiHash.GetHashCode
   name: GetHashCode()
   href: api/Ipfs.MultiHash.html#Ipfs_MultiHash_GetHashCode
