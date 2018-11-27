@@ -387,11 +387,25 @@ namespace Ipfs
         /// <returns>
         ///   A new <see cref="Cid"/>.
         /// </returns>
+        /// <remarks>
+        ///   The buffer does NOT start with a varint length prefix.
+        /// </remarks>
         public static Cid Read(byte[] buffer)
         {
+            var cid = new Cid();
+            if (buffer.Length == 34)
+            {
+                cid.Version = 0;
+                cid.Hash = new MultiHash(buffer);
+                return cid;
+            }
+
             using (var ms = new MemoryStream(buffer, false))
             {
-                return Read(ms);
+                cid.Version = ms.ReadVarint32();
+                cid.ContentType = ms.ReadMultiCodec().Name;
+                cid.Hash = new MultiHash(ms);
+                return cid;
             }
         }
 
@@ -399,13 +413,21 @@ namespace Ipfs
         ///   Returns the binary representation of the CID as a byte array.
         /// </summary>
         /// <returns>
-        ///   A new buffer containing the CID>
+        ///   A new buffer containing the CID.
         /// </returns>
+        /// <remarks>
+        ///   The buffer does NOT start with a varint length prefix.
+        /// </remarks>
         public byte[] ToArray()
         {
+            if (Version == 0)
+                return Hash.ToArray();
+
             using (var ms = new MemoryStream())
             {
-                Write(ms);
+                ms.WriteVarint(Version);
+                ms.WriteMultiCodec(this.ContentType);
+                Hash.Write(ms);
                 return ms.ToArray();
             }
         }

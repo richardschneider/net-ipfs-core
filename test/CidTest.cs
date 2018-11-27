@@ -395,7 +395,7 @@ namespace Ipfs
         }
 
         [TestMethod]
-        public void ByteArrays()
+        public void ByteArrays_V1()
         {
             Cid cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
             var buffer = cid.ToArray();
@@ -404,6 +404,19 @@ namespace Ipfs
             Assert.AreEqual(cid.ContentType, clone.ContentType);
             Assert.AreEqual(cid.Hash.Algorithm.Name, clone.Hash.Algorithm.Name);
             Assert.AreEqual(cid.Hash, clone.Hash);
+        }
+
+        [TestMethod]
+        public void ByteArrays_V0()
+        {
+            var buffer = "1220a4edf38611d7d4a2d3ff2d97f88a7256eba31b57982f803b4de7bbeb0343c37b".ToHexBuffer();
+            var cid = Cid.Read(buffer);
+            Assert.AreEqual(0, cid.Version);
+            Assert.AreEqual("dag-pb", cid.ContentType);
+            Assert.AreEqual("QmZSU1xNFsBtCnzK2Nk9N4bAxQiVNdmugU9DQDE3ntkTpe", cid.Hash.ToString());
+
+            var clone = cid.ToArray();
+            CollectionAssert.AreEqual(buffer, clone);
         }
     }
 }
