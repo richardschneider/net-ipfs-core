@@ -217,7 +217,7 @@ namespace Ipfs
     class UdpNetworkProtocol : TcpNetworkProtocol
     {
         public override string Name { get { return "udp"; } }
-        public override uint Code { get { return 17; } }
+        public override uint Code { get { return 273; } }
     }
 
     class DccpNetworkProtocol : TcpNetworkProtocol
