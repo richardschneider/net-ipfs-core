@@ -51,7 +51,7 @@ namespace Ipfs
         public MultiAddress(string s) : this()
         {
             if (string.IsNullOrWhiteSpace(s))
-                throw new ArgumentNullException("s");
+                return;
 
             Read(new StringReader(s));
         }
@@ -104,6 +104,9 @@ namespace Ipfs
         public MultiAddress(byte[] buffer)
             : this()
         {
+            if (buffer == null || buffer.Length == 0)
+                return;
+
             Read(new MemoryStream(buffer, false));
         }
 

@@ -27,9 +27,9 @@ namespace Ipfs
             Assert.AreEqual("ipfs", a.Protocols[2].Name);
             Assert.AreEqual("QmVcSqVEsvm5RR9mBLjwpb2XjFVn5bPdPL69mL8PH45pPC", a.Protocols[2].Value);
 
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress((string)null));
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress(""));
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("   "));
+            Assert.AreEqual(0, new MultiAddress((string)null).Protocols.Count);
+            Assert.AreEqual(0, new MultiAddress("").Protocols.Count);
+            Assert.AreEqual(0, new MultiAddress("  ").Protocols.Count);
         }
 
         [TestMethod]
@@ -189,18 +189,10 @@ namespace Ipfs
             ExceptionAssert.Throws<InvalidDataException>(() => new MultiAddress(new byte[] { 0x7F }));
         }
 
-        [TestMethod]
-        public void Reading_Empty()
-        {
-            ExceptionAssert.Throws<Exception>(() => new MultiAddress(new byte[0]));
-        }
 
         [TestMethod]
         public void Reading_Invalid_Text()
         {
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress((string)null));
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress(""));
-            ExceptionAssert.Throws<ArgumentNullException>(() => new MultiAddress("  "));
             ExceptionAssert.Throws<FormatException>(() => new MultiAddress("tcp/80"));
         }
 
@@ -312,8 +304,6 @@ namespace Ipfs
         public void TryCreate_FromString()
         {
             Assert.IsNotNull(MultiAddress.TryCreate("/ip4/1.2.3.4/tcp/80"));
-            Assert.IsNull(MultiAddress.TryCreate((string)null));
-            Assert.IsNull(MultiAddress.TryCreate(" "));
             Assert.IsNull(MultiAddress.TryCreate("/tcp/alpha")); // bad port
             Assert.IsNull(MultiAddress.TryCreate("/foobar")); // bad protocol
         }
@@ -325,7 +315,7 @@ namespace Ipfs
             var good1 = MultiAddress.TryCreate(good.ToArray());
             Assert.AreEqual(good, good1);
 
-            Assert.IsNull(MultiAddress.TryCreate(new byte[0]));
+            Assert.IsNull(MultiAddress.TryCreate(new byte[] { 0x7f }));
         }
 
         [TestMethod]
