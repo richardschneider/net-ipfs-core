@@ -8,6 +8,9 @@ namespace Ipfs
     /// <summary>
     ///   A daemon node on the IPFS network.
     /// </summary>
+    /// <remarks>
+    ///   Equality is based solely on the peer's <see cref="Id"/>.
+    /// </remarks>
     public class Peer : IEquatable<Peer>
     {
         static MultiAddress[] noAddress = new MultiAddress[0];
@@ -116,13 +119,13 @@ namespace Ipfs
             var that = obj as Peer;
             return (that == null)
                 ? false
-                : this.ToString() == that.ToString();
+               : this.Equals(that);
         }
 
         /// <inheritdoc />
         public bool Equals(Peer that)
         {
-            return this.ToString() == that.ToString();
+            return this.Id == that.Id;
         }
 
         /// <summary>
@@ -131,8 +134,8 @@ namespace Ipfs
         public static bool operator ==(Peer a, Peer b)
         {
             if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
+            if (a is null) return false;
+            if (b is null) return false;
 
             return a.Equals(b);
         }
@@ -142,11 +145,7 @@ namespace Ipfs
         /// </summary>
         public static bool operator !=(Peer a, Peer b)
         {
-            if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
-
-            return !a.Equals(b);
+            return !(a == b);
         }
 
         /// <summary>
