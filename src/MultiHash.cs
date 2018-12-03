@@ -25,6 +25,11 @@ namespace Ipfs
         static readonly ILog log = LogManager.GetLogger<MultiHash>();
 
         /// <summary>
+        ///   The cached base-58 encoding of the multihash.
+        /// </summary>
+        string b58String;
+
+        /// <summary>
         ///   The default hashing algorithm is "sha2-256".
         /// </summary>
         public const string DefaultAlgorithmName = "sha2-256";
@@ -396,10 +401,16 @@ namespace Ipfs
         /// </returns>
         public string ToBase58()
         {
+            if (b58String != null)
+            {
+                return b58String;
+            }
+
             using (var ms = new MemoryStream())
             {
                 Write(ms);
-                return ms.ToArray().ToBase58();
+                b58String = ms.ToArray().ToBase58();
+                return b58String;
             }
         }
 
