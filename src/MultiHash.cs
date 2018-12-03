@@ -55,7 +55,7 @@ namespace Ipfs
             }
             catch (KeyNotFoundException)
             {
-                throw new KeyNotFoundException($"Hash algorithm '{name}' is not registered");
+                throw new KeyNotFoundException($"Hash algorithm '{name}' is not registered.");
             }
         }
 
@@ -80,7 +80,7 @@ namespace Ipfs
             }
             catch (KeyNotFoundException)
             {
-                throw new KeyNotFoundException($"Hash algorithm with code '{code}' is not registered");
+                throw new KeyNotFoundException($"Hash algorithm with code '{code}' is not registered.");
             }
         }
 

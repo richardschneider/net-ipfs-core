@@ -492,5 +492,16 @@ namespace Ipfs
             ExceptionAssert.Throws<KeyNotFoundException>(
                 () => MultiHash.GetHashAlgorithmName(0xbadbad));
         }
+
+        [TestMethod]
+        public void GetAlgorithmByName()
+        {
+            Assert.IsNotNull(MultiHash.GetHashAlgorithm());
+            Assert.IsNotNull(MultiHash.GetHashAlgorithm("sha2-512"));
+            var e = ExceptionAssert.Throws<KeyNotFoundException>(() =>
+            {
+                var _ = MultiHash.GetHashAlgorithm("unknown");
+            });
+        }
     }
 }
