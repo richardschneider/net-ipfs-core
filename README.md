@@ -23,6 +23,11 @@ More information is on the [Documentation](https://richardschneider.github.io/ne
 Published releases of IPFS Core are available on [NuGet](https://www.nuget.org/packages/ipfs.core/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
     PM> Install-Package Ipfs.Core
+
+Or using [dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet?tabs=netcore21)
+
+    > dotnet add package Ipfs.Core
+
     
 For the latest build or older non-released builds see [Continuous Integration](https://github.com/richardschneider/net-ipfs-core/wiki/Continuous-Integration).
 
@@ -62,7 +67,7 @@ Most binary data (objects) in IPFS is represented as a [Base-58](https://en.wiki
 # Related Projects
 
 - [IPFS DSL](https://github.com/cloveekprojeqt/ipfs-dsl) - A declarative embedded language for building compositional programs and protocols over the InterPlanetary File System.
-- [IPFS API](https://github.com/richardschneider/net-ipfs-api) - A .Net client library for the IPFS HTTP API.
+- [IPFS HTTP Client](https://github.com/richardschneider/net-ipfs-http-client) - A .Net client library for the IPFS HTTP API.
 - [IPFS Engine](https://github.com/richardschneider/net-ipfs-engine) - Implements the Core API.
 
 # License
