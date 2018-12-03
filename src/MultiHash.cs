@@ -101,8 +101,7 @@ namespace Ipfs
             if (digest == null)
                 throw new ArgumentNullException("digest");
 
-            HashingAlgorithm a;
-            if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out a))
+            if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out HashingAlgorithm a))
                 throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
             Algorithm = a;
 
@@ -347,13 +346,14 @@ namespace Ipfs
             var that = obj as MultiHash;
             return (that == null)
                 ? false
-                : this.ToString() == that.ToString();
+                : this.Equals(that);
         }
 
         /// <inheritdoc />
         public bool Equals(MultiHash that)
         {
-            return this.ToString() == that.ToString();
+            return this.Algorithm.Code == that.Algorithm.Code
+                && this.Digest.SequenceEqual(that.Digest);
         }
 
         /// <summary>
@@ -362,8 +362,8 @@ namespace Ipfs
         public static bool operator ==(MultiHash a, MultiHash b)
         {
             if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
+            if (a is null) return false;
+            if (b is null) return false;
 
             return a.Equals(b);
         }
@@ -373,11 +373,7 @@ namespace Ipfs
         /// </summary>
         public static bool operator !=(MultiHash a, MultiHash b)
         {
-            if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
-
-            return !a.Equals(b);
+            return !(a == b);
         }
 
         /// <summary>
