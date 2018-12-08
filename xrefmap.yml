@@ -2681,6 +2681,32 @@ references:
   isSpec: "True"
   fullName: Ipfs.MultiAddress.TryCreate
   nameWithType: MultiAddress.TryCreate
+- uid: Ipfs.MultiAddress.WithoutPeerId
+  name: WithoutPeerId()
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_WithoutPeerId
+  commentId: M:Ipfs.MultiAddress.WithoutPeerId
+  fullName: Ipfs.MultiAddress.WithoutPeerId()
+  nameWithType: MultiAddress.WithoutPeerId()
+- uid: Ipfs.MultiAddress.WithoutPeerId*
+  name: WithoutPeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_WithoutPeerId_
+  commentId: Overload:Ipfs.MultiAddress.WithoutPeerId
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.WithoutPeerId
+  nameWithType: MultiAddress.WithoutPeerId
+- uid: Ipfs.MultiAddress.WithPeerId(Ipfs.MultiHash)
+  name: WithPeerId(MultiHash)
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_WithPeerId_Ipfs_MultiHash_
+  commentId: M:Ipfs.MultiAddress.WithPeerId(Ipfs.MultiHash)
+  fullName: Ipfs.MultiAddress.WithPeerId(Ipfs.MultiHash)
+  nameWithType: MultiAddress.WithPeerId(MultiHash)
+- uid: Ipfs.MultiAddress.WithPeerId*
+  name: WithPeerId
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_WithPeerId_
+  commentId: Overload:Ipfs.MultiAddress.WithPeerId
+  isSpec: "True"
+  fullName: Ipfs.MultiAddress.WithPeerId
+  nameWithType: MultiAddress.WithPeerId
 - uid: Ipfs.MultiAddress.Write(Google.Protobuf.CodedOutputStream)
   name: Write(CodedOutputStream)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress_Write_Google_Protobuf_CodedOutputStream_
