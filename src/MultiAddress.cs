@@ -157,6 +157,54 @@ namespace Ipfs
         }
 
         /// <summary>
+        ///   Gets a multiaddress that ends with the peer ID.
+        /// </summary>
+        /// <param name="peerId">
+        ///   The peer ID to end the multiaddress with.
+        /// </param>
+        /// <returns>
+        ///   Either the <c>this</c> multiadddress when it contains the
+        ///   <paramref name="peerId"/> or a new <see cref="MultiAddress"/>
+        ///   ending the <paramref name="peerId"/>.
+        /// </returns>
+        /// <exception cref="Exception">
+        ///   When the mulltiaddress has the wrong peer ID.
+        /// </exception>
+        public MultiAddress WithPeerId(MultiHash peerId)
+        {
+            if (HasPeerId)
+            {
+                var id = PeerId;
+                if (id != peerId)
+                {
+                    throw new Exception($"Expected a multiaddress with peer ID of '{peerId}', not '{id}'.");
+                }
+                return this;
+            }
+
+            return new MultiAddress(this.ToString() + $"/p2p/{peerId}");
+        }
+
+        /// <summary>
+        ///   Gets a multiaddress without the peer ID.
+        /// </summary>
+        /// <returns>
+        ///   Either the this multiaddress when it does not contain
+        ///   a peer ID; or a new <see cref="MultiAddress"/> without the peer ID.
+        /// </returns>
+        public MultiAddress WithoutPeerId()
+        {
+            if (!HasPeerId)
+            {
+                return this;
+            }
+            var clone = Clone();
+            clone.Protocols
+                .RemoveAll(p => p.Name == "p2p" || p.Name == "ipfs");
+            return clone;
+        }
+
+        /// <summary>
         ///   Writes the binary representation to the specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
