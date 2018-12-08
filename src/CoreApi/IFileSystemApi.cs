@@ -168,5 +168,31 @@ namespace Ipfs.CoreApi
         ///   and <see cref="IDataBlock.DataStream"/> are set to <b>null</b>.
         /// </returns>
         Task<IFileSystemNode> ListFileAsync(string path, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Download IPFS objects as a TAR archive.
+        /// </summary>
+        /// <param name="path">
+        ///   A path to an existing file or directory, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
+        ///   or "QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V"
+        /// </param>
+        /// <param name="compress">
+        ///   If <b>true</b>, the returned stream is compressed with the GZIP algorithm.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   a <see cref="Stream"/> containing a TAR archive.
+        /// </returns>
+        /// <remarks>
+        ///   The returned TAR <see cref="Stream"/> must be disposed.
+        ///   <para>
+        ///   If the <paramref name="path"/> is a directory, then all files and all
+        ///   sub-directories are returned; e.g. it is recursive.
+        ///   </para>
+        /// </remarks>
+        Task<Stream> GetAsync(string path, bool compress = false, CancellationToken cancel = default(CancellationToken));
     }
 }
