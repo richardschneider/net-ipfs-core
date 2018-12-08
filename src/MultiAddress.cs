@@ -286,8 +286,7 @@ namespace Ipfs
             do
             {
                 uint code = (uint)stream.ReadInt64();
-                Type protocolType;
-                if (!NetworkProtocol.Codes.TryGetValue(code, out protocolType))
+                if (!NetworkProtocol.Codes.TryGetValue(code, out Type protocolType))
                     throw new InvalidDataException(string.Format("The IPFS network protocol code '{0}' is unknown.", code));
                 var p = (NetworkProtocol)Activator.CreateInstance(protocolType);
                 p.ReadValue(stream);
@@ -321,8 +320,7 @@ namespace Ipfs
                 }
                 if (name.Length == 0)
                     break;
-                Type protocolType;
-                if (!NetworkProtocol.Names.TryGetValue(name.ToString(), out protocolType))
+                if (!NetworkProtocol.Names.TryGetValue(name.ToString(), out Type protocolType))
                     throw new FormatException(string.Format("The IPFS network protocol '{0}' is unknown.", name.ToString()));
                 var p = (NetworkProtocol)Activator.CreateInstance(protocolType);
                 p.ReadValue(stream);
@@ -369,8 +367,8 @@ namespace Ipfs
         public static bool operator ==(MultiAddress a, MultiAddress b)
         {
             if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
+            if (a is null) return false;
+            if (b is null) return false;
 
             return a.Equals(b);
         }
@@ -381,8 +379,8 @@ namespace Ipfs
         public static bool operator !=(MultiAddress a, MultiAddress b)
         {
             if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
+            if (a is null) return true;
+            if (b is null) return true;
 
             return !a.Equals(b);
         }
