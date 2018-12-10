@@ -727,18 +727,18 @@ references:
   commentId: F:Ipfs.CoreApi.BitswapData.Peers
   fullName: Ipfs.CoreApi.BitswapData.Peers
   nameWithType: BitswapData.Peers
-- uid: Ipfs.CoreApi.BitswapData.ProviderBufLen
-  name: ProviderBufLen
-  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_ProviderBufLen
-  commentId: F:Ipfs.CoreApi.BitswapData.ProviderBufLen
-  fullName: Ipfs.CoreApi.BitswapData.ProviderBufLen
-  nameWithType: BitswapData.ProviderBufLen
-- uid: Ipfs.CoreApi.BitswapData.WantList
-  name: WantList
-  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_WantList
-  commentId: F:Ipfs.CoreApi.BitswapData.WantList
-  fullName: Ipfs.CoreApi.BitswapData.WantList
-  nameWithType: BitswapData.WantList
+- uid: Ipfs.CoreApi.BitswapData.ProvideBufLen
+  name: ProvideBufLen
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_ProvideBufLen
+  commentId: F:Ipfs.CoreApi.BitswapData.ProvideBufLen
+  fullName: Ipfs.CoreApi.BitswapData.ProvideBufLen
+  nameWithType: BitswapData.ProvideBufLen
+- uid: Ipfs.CoreApi.BitswapData.Wantlist
+  name: Wantlist
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_Wantlist
+  commentId: F:Ipfs.CoreApi.BitswapData.Wantlist
+  fullName: Ipfs.CoreApi.BitswapData.Wantlist
+  nameWithType: BitswapData.Wantlist
 - uid: Ipfs.CoreApi.IBitswapApi
   name: IBitswapApi
   href: api/Ipfs.CoreApi.IBitswapApi.html
