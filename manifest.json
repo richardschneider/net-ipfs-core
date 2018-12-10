@@ -89,6 +89,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.CoreApi.BandwidthData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.CoreApi.BandwidthData.html",
+          "hash": "G/HFfvs8a3xU0nz9FeI9ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.CoreApi.BitswapData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.CoreApi.BitswapData.html",
+          "hash": "klfJHiEgNV02fzyg8G/ByQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.CoreApi.IBitswapApi.yml",
       "output": {
         ".html": {
@@ -141,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.ICoreApi.html",
-          "hash": "7p3gjuQSEyRanEfxuexvMw=="
+          "hash": "vciqX/WKKzYfCTesNPDJfw=="
         }
       },
       "is_incremental": false,
@@ -269,6 +293,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.CoreApi.IStatsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.CoreApi.IStatsApi.html",
+          "hash": "KemDb7zKMqW3RCurUhWxfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.CoreApi.ISwarmApi.yml",
       "output": {
         ".html": {
@@ -281,11 +317,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.CoreApi.RepositoryData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.CoreApi.RepositoryData.html",
+          "hash": "pKj72jwEFeVaHvctuX8IuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.CoreApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.html",
-          "hash": "8q4Z+QdrY1soR/7XHkozOA=="
+          "hash": "3fqIlJOH/j+oXOlK4PBCMw=="
         }
       },
       "is_incremental": false,
@@ -609,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Cs19vIBsljqFROB943qDCA=="
+          "hash": "/6P60iVncGOO2TpaieXNVg=="
         }
       },
       "is_incremental": false,
@@ -710,11 +758,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },

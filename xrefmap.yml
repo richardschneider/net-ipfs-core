@@ -649,6 +649,96 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.AddFileOptions.Wrap
   nameWithType: AddFileOptions.Wrap
+- uid: Ipfs.CoreApi.BandwidthData
+  name: BandwidthData
+  href: api/Ipfs.CoreApi.BandwidthData.html
+  commentId: T:Ipfs.CoreApi.BandwidthData
+  fullName: Ipfs.CoreApi.BandwidthData
+  nameWithType: BandwidthData
+- uid: Ipfs.CoreApi.BandwidthData.RateIn
+  name: RateIn
+  href: api/Ipfs.CoreApi.BandwidthData.html#Ipfs_CoreApi_BandwidthData_RateIn
+  commentId: F:Ipfs.CoreApi.BandwidthData.RateIn
+  fullName: Ipfs.CoreApi.BandwidthData.RateIn
+  nameWithType: BandwidthData.RateIn
+- uid: Ipfs.CoreApi.BandwidthData.RateOut
+  name: RateOut
+  href: api/Ipfs.CoreApi.BandwidthData.html#Ipfs_CoreApi_BandwidthData_RateOut
+  commentId: F:Ipfs.CoreApi.BandwidthData.RateOut
+  fullName: Ipfs.CoreApi.BandwidthData.RateOut
+  nameWithType: BandwidthData.RateOut
+- uid: Ipfs.CoreApi.BandwidthData.TotalIn
+  name: TotalIn
+  href: api/Ipfs.CoreApi.BandwidthData.html#Ipfs_CoreApi_BandwidthData_TotalIn
+  commentId: F:Ipfs.CoreApi.BandwidthData.TotalIn
+  fullName: Ipfs.CoreApi.BandwidthData.TotalIn
+  nameWithType: BandwidthData.TotalIn
+- uid: Ipfs.CoreApi.BandwidthData.TotalOut
+  name: TotalOut
+  href: api/Ipfs.CoreApi.BandwidthData.html#Ipfs_CoreApi_BandwidthData_TotalOut
+  commentId: F:Ipfs.CoreApi.BandwidthData.TotalOut
+  fullName: Ipfs.CoreApi.BandwidthData.TotalOut
+  nameWithType: BandwidthData.TotalOut
+- uid: Ipfs.CoreApi.BitswapData
+  name: BitswapData
+  href: api/Ipfs.CoreApi.BitswapData.html
+  commentId: T:Ipfs.CoreApi.BitswapData
+  fullName: Ipfs.CoreApi.BitswapData
+  nameWithType: BitswapData
+- uid: Ipfs.CoreApi.BitswapData.BlocksReceived
+  name: BlocksReceived
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_BlocksReceived
+  commentId: F:Ipfs.CoreApi.BitswapData.BlocksReceived
+  fullName: Ipfs.CoreApi.BitswapData.BlocksReceived
+  nameWithType: BitswapData.BlocksReceived
+- uid: Ipfs.CoreApi.BitswapData.BlocksSent
+  name: BlocksSent
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_BlocksSent
+  commentId: F:Ipfs.CoreApi.BitswapData.BlocksSent
+  fullName: Ipfs.CoreApi.BitswapData.BlocksSent
+  nameWithType: BitswapData.BlocksSent
+- uid: Ipfs.CoreApi.BitswapData.DataReceived
+  name: DataReceived
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_DataReceived
+  commentId: F:Ipfs.CoreApi.BitswapData.DataReceived
+  fullName: Ipfs.CoreApi.BitswapData.DataReceived
+  nameWithType: BitswapData.DataReceived
+- uid: Ipfs.CoreApi.BitswapData.DataSent
+  name: DataSent
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_DataSent
+  commentId: F:Ipfs.CoreApi.BitswapData.DataSent
+  fullName: Ipfs.CoreApi.BitswapData.DataSent
+  nameWithType: BitswapData.DataSent
+- uid: Ipfs.CoreApi.BitswapData.DupBlksReceived
+  name: DupBlksReceived
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_DupBlksReceived
+  commentId: F:Ipfs.CoreApi.BitswapData.DupBlksReceived
+  fullName: Ipfs.CoreApi.BitswapData.DupBlksReceived
+  nameWithType: BitswapData.DupBlksReceived
+- uid: Ipfs.CoreApi.BitswapData.DupDataReceived
+  name: DupDataReceived
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_DupDataReceived
+  commentId: F:Ipfs.CoreApi.BitswapData.DupDataReceived
+  fullName: Ipfs.CoreApi.BitswapData.DupDataReceived
+  nameWithType: BitswapData.DupDataReceived
+- uid: Ipfs.CoreApi.BitswapData.Peers
+  name: Peers
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_Peers
+  commentId: F:Ipfs.CoreApi.BitswapData.Peers
+  fullName: Ipfs.CoreApi.BitswapData.Peers
+  nameWithType: BitswapData.Peers
+- uid: Ipfs.CoreApi.BitswapData.ProviderBufLen
+  name: ProviderBufLen
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_ProviderBufLen
+  commentId: F:Ipfs.CoreApi.BitswapData.ProviderBufLen
+  fullName: Ipfs.CoreApi.BitswapData.ProviderBufLen
+  nameWithType: BitswapData.ProviderBufLen
+- uid: Ipfs.CoreApi.BitswapData.WantList
+  name: WantList
+  href: api/Ipfs.CoreApi.BitswapData.html#Ipfs_CoreApi_BitswapData_WantList
+  commentId: F:Ipfs.CoreApi.BitswapData.WantList
+  fullName: Ipfs.CoreApi.BitswapData.WantList
+  nameWithType: BitswapData.WantList
 - uid: Ipfs.CoreApi.IBitswapApi
   name: IBitswapApi
   href: api/Ipfs.CoreApi.IBitswapApi.html
@@ -1077,6 +1167,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.ICoreApi.PubSub
   nameWithType: ICoreApi.PubSub
+- uid: Ipfs.CoreApi.ICoreApi.Stats
+  name: Stats
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Stats
+  commentId: P:Ipfs.CoreApi.ICoreApi.Stats
+  fullName: Ipfs.CoreApi.ICoreApi.Stats
+  nameWithType: ICoreApi.Stats
+- uid: Ipfs.CoreApi.ICoreApi.Stats*
+  name: Stats
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Stats_
+  commentId: Overload:Ipfs.CoreApi.ICoreApi.Stats
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ICoreApi.Stats
+  nameWithType: ICoreApi.Stats
 - uid: Ipfs.CoreApi.ICoreApi.Swarm
   name: Swarm
   href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Swarm
@@ -1707,6 +1810,51 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IPubSubApi.SubscribedTopicsAsync
   nameWithType: IPubSubApi.SubscribedTopicsAsync
+- uid: Ipfs.CoreApi.IStatsApi
+  name: IStatsApi
+  href: api/Ipfs.CoreApi.IStatsApi.html
+  commentId: T:Ipfs.CoreApi.IStatsApi
+  fullName: Ipfs.CoreApi.IStatsApi
+  nameWithType: IStatsApi
+- uid: Ipfs.CoreApi.IStatsApi.BandwidthAsync(System.Threading.CancellationToken)
+  name: BandwidthAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_BandwidthAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IStatsApi.BandwidthAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IStatsApi.BandwidthAsync(System.Threading.CancellationToken)
+  nameWithType: IStatsApi.BandwidthAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IStatsApi.BandwidthAsync*
+  name: BandwidthAsync
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_BandwidthAsync_
+  commentId: Overload:Ipfs.CoreApi.IStatsApi.BandwidthAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IStatsApi.BandwidthAsync
+  nameWithType: IStatsApi.BandwidthAsync
+- uid: Ipfs.CoreApi.IStatsApi.BitswapAsync(System.Threading.CancellationToken)
+  name: BitswapAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_BitswapAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IStatsApi.BitswapAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IStatsApi.BitswapAsync(System.Threading.CancellationToken)
+  nameWithType: IStatsApi.BitswapAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IStatsApi.BitswapAsync*
+  name: BitswapAsync
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_BitswapAsync_
+  commentId: Overload:Ipfs.CoreApi.IStatsApi.BitswapAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IStatsApi.BitswapAsync
+  nameWithType: IStatsApi.BitswapAsync
+- uid: Ipfs.CoreApi.IStatsApi.RepositoryAsync(System.Threading.CancellationToken)
+  name: RepositoryAsync(CancellationToken)
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_RepositoryAsync_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IStatsApi.RepositoryAsync(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IStatsApi.RepositoryAsync(System.Threading.CancellationToken)
+  nameWithType: IStatsApi.RepositoryAsync(CancellationToken)
+- uid: Ipfs.CoreApi.IStatsApi.RepositoryAsync*
+  name: RepositoryAsync
+  href: api/Ipfs.CoreApi.IStatsApi.html#Ipfs_CoreApi_IStatsApi_RepositoryAsync_
+  commentId: Overload:Ipfs.CoreApi.IStatsApi.RepositoryAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IStatsApi.RepositoryAsync
+  nameWithType: IStatsApi.RepositoryAsync
 - uid: Ipfs.CoreApi.ISwarmApi
   name: ISwarmApi
   href: api/Ipfs.CoreApi.ISwarmApi.html
@@ -1804,6 +1952,42 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync
   nameWithType: ISwarmApi.RemoveAddressFilterAsync
+- uid: Ipfs.CoreApi.RepositoryData
+  name: RepositoryData
+  href: api/Ipfs.CoreApi.RepositoryData.html
+  commentId: T:Ipfs.CoreApi.RepositoryData
+  fullName: Ipfs.CoreApi.RepositoryData
+  nameWithType: RepositoryData
+- uid: Ipfs.CoreApi.RepositoryData.NumObjects
+  name: NumObjects
+  href: api/Ipfs.CoreApi.RepositoryData.html#Ipfs_CoreApi_RepositoryData_NumObjects
+  commentId: F:Ipfs.CoreApi.RepositoryData.NumObjects
+  fullName: Ipfs.CoreApi.RepositoryData.NumObjects
+  nameWithType: RepositoryData.NumObjects
+- uid: Ipfs.CoreApi.RepositoryData.RepoPath
+  name: RepoPath
+  href: api/Ipfs.CoreApi.RepositoryData.html#Ipfs_CoreApi_RepositoryData_RepoPath
+  commentId: F:Ipfs.CoreApi.RepositoryData.RepoPath
+  fullName: Ipfs.CoreApi.RepositoryData.RepoPath
+  nameWithType: RepositoryData.RepoPath
+- uid: Ipfs.CoreApi.RepositoryData.RepoSize
+  name: RepoSize
+  href: api/Ipfs.CoreApi.RepositoryData.html#Ipfs_CoreApi_RepositoryData_RepoSize
+  commentId: F:Ipfs.CoreApi.RepositoryData.RepoSize
+  fullName: Ipfs.CoreApi.RepositoryData.RepoSize
+  nameWithType: RepositoryData.RepoSize
+- uid: Ipfs.CoreApi.RepositoryData.StorageMax
+  name: StorageMax
+  href: api/Ipfs.CoreApi.RepositoryData.html#Ipfs_CoreApi_RepositoryData_StorageMax
+  commentId: F:Ipfs.CoreApi.RepositoryData.StorageMax
+  fullName: Ipfs.CoreApi.RepositoryData.StorageMax
+  nameWithType: RepositoryData.StorageMax
+- uid: Ipfs.CoreApi.RepositoryData.Version
+  name: Version
+  href: api/Ipfs.CoreApi.RepositoryData.html#Ipfs_CoreApi_RepositoryData_Version
+  commentId: F:Ipfs.CoreApi.RepositoryData.Version
+  fullName: Ipfs.CoreApi.RepositoryData.Version
+  nameWithType: RepositoryData.Version
 - uid: Ipfs.DagLink
   name: DagLink
   href: api/Ipfs.DagLink.html
