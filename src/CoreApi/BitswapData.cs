@@ -12,12 +12,12 @@ namespace Ipfs.CoreApi
         /// <summary>
         ///   TODO: Unknown.
         /// </summary>
-        public int ProviderBufLen;
+        public int ProvideBufLen;
 
         /// <summary>
         ///   The content that is wanted.
         /// </summary>
-        public IEnumerable<Cid> WantList;
+        public IEnumerable<Cid> Wantlist;
 
         /// <summary>
         ///   The known peers.
