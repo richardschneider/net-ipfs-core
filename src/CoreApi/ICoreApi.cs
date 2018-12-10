@@ -126,6 +126,14 @@ namespace Ipfs.CoreApi
         IPubSubApi PubSub { get; }
 
         /// <summary>
+        ///   Provides access to the Stats (statistics) API.
+        /// </summary>
+        /// <value>
+        ///   An object that implements <see cref="IStatsApi"/>.
+        /// </value>
+        IStatsApi Stats { get; }
+
+        /// <summary>
         ///   Provides access to the Swarm API.
         /// </summary>
         /// <value>
