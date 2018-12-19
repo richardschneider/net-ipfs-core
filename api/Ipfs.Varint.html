@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Varint
    | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,31 +78,31 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Varint</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">Object.ReferenceEquals(Object, Object)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">Object.GetType()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">Object.MemberwiseClone()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.html">Ipfs</a></h6>
@@ -115,10 +115,10 @@
   <div class="markdown level0 remarks"><p>A <strong>VarInt</strong> is encoded in network byte order (Big Endian). Each byte (except the last) contains 7 bits
 of information with the most significant bit set to 1.  The last byte has MSB set to 0.
 <p>
-Negative values are not allowed.  When encountered a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a> is thrown.
+Negative values are not allowed.  When encountered a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a> is thrown.
 </p>
 <p>
-Adds the following extension methods to <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>
+Adds the following extension methods to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>
 <ul><li><a class="xref" href="Ipfs.Varint.html#Ipfs_Varint_ReadVarint32_System_IO_Stream_">ReadVarint32(Stream)</a></li><li><a class="xref" href="Ipfs.Varint.html#Ipfs_Varint_ReadVarint64_System_IO_Stream_">ReadVarint64(Stream)</a></li><li><a class="xref" href="Ipfs.Varint.html#Ipfs_Varint_WriteVarint_System_IO_Stream_System_Int64_">WriteVarint(Stream, Int64)</a></li></ul>
 </p></p>
 </div>
@@ -133,7 +133,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
   </span>
   <a id="Ipfs_Varint_DecodeInt32_" data-uid="Ipfs.Varint.DecodeInt32*"></a>
   <h4 id="Ipfs_Varint_DecodeInt32_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt32(System.Byte[],System.Int32)">DecodeInt32(Byte[], Int32)</h4>
-  <div class="markdown level1 summary"><p>Convert the byte array to an <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>.</p>
+  <div class="markdown level1 summary"><p>Convert the byte array to an <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,13 +151,13 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>A varint encoded byte array containing the variable integer.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">offset</span></td>
         <td><p>Offset into <code data-dev-comment-type="paramref" class="paramref">bytes</code> to start reading from.</p>
 </td>
@@ -174,7 +174,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><p>The integer value.</p>
 </td>
       </tr>
@@ -189,7 +189,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
   </span>
   <a id="Ipfs_Varint_DecodeInt64_" data-uid="Ipfs.Varint.DecodeInt64*"></a>
   <h4 id="Ipfs_Varint_DecodeInt64_System_Byte___System_Int32_" data-uid="Ipfs.Varint.DecodeInt64(System.Byte[],System.Int32)">DecodeInt64(Byte[], Int32)</h4>
-  <div class="markdown level1 summary"><p>Convert the byte array to a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>.</p>
+  <div class="markdown level1 summary"><p>Convert the byte array to a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -207,13 +207,13 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>A varint encoded byte array containing the variable integer.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">offset</span></td>
         <td><p>Offset into <code data-dev-comment-type="paramref" class="paramref">bytes</code> to start reading from.</p>
 </td>
@@ -230,7 +230,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><p>The integer value.</p>
 </td>
       </tr>
@@ -263,7 +263,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>The value to convert.</p>
 </td>
@@ -280,7 +280,7 @@ Adds the following extension methods to <a class="xref" href="https://msdn.micro
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><p>A byte array representing the <code data-dev-comment-type="paramref" class="paramref">value</code> as
 a variable integer.</p>
 </td>
@@ -314,9 +314,9 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+        <td><p>A varint encoded <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -331,7 +331,7 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><p>The integer value.</p>
 </td>
       </tr>
@@ -347,13 +347,13 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/92chhbf3(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue">MaxValue</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -385,15 +385,15 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+        <td><p>A varint encoded <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -408,7 +408,7 @@ a variable integer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><p>A task that represents the asynchronous operation. The task&apos;s result
 is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
@@ -425,13 +425,13 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/92chhbf3(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue">MaxValue</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -463,9 +463,9 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+        <td><p>A varint encoded <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -480,7 +480,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><p>The integer value.</p>
 </td>
       </tr>
@@ -496,13 +496,13 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/xkeewe20(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64.maxvalue">MaxValue</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -534,15 +534,15 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>A varint encoded <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a>.</p>
+        <td><p>A varint encoded <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -557,7 +557,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
         <td><p>A task that represents the asynchronous operation. The task&apos;s result
 is the integer value in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
@@ -574,12 +574,12 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.invaliddataexception(v=vs.110).aspx">InvalidDataException</a></td>
-        <td><p>When the varint value is greater than <a class="xref" href="https://msdn.microsoft.com/en-us/library/xkeewe20(v=vs.110).aspx">MaxValue</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></td>
+        <td><p>When the varint value is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64.maxvalue">MaxValue</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.endofstreamexception(v=vs.110).aspx">EndOfStreamException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></td>
         <td><p>When the no bytes exist in the <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
 </td>
       </tr>
@@ -612,7 +612,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>A positive integer value.</p>
 </td>
@@ -629,7 +629,7 @@ is the integer value in the <code data-dev-comment-type="paramref" class="paramr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><p>The number of bytes required to encode the value.</p>
 </td>
       </tr>
@@ -663,13 +663,13 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> to write to.</p>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a> to write to.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>A non-negative value to write.</p>
 </td>
@@ -686,7 +686,7 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
         <td><p>When <code data-dev-comment-type="paramref" class="paramref">value</code> is negative.</p>
 </td>
       </tr>
@@ -720,21 +720,21 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx">Stream</a> to write to.</p>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a> to write to.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">value</span></td>
         <td><p>A non-negative value to write.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcanceledexception(v=vs.110).aspx">TaskCanceledException</a> is raised.</p>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
 </td>
       </tr>
     </tbody>
@@ -749,7 +749,7 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>A task that represents the asynchronous operation.</p>
 </td>
       </tr>
@@ -765,7 +765,7 @@ a stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.notsupportedexception(v=vs.110).aspx">NotSupportedException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
         <td><p>When <code data-dev-comment-type="paramref" class="paramref">value</code> is negative.</p>
 </td>
       </tr>
