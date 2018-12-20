@@ -12,8 +12,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
-    <PackageReference Include="coveralls.net" version="0.6.0" />
-    <PackageReference Include="OpenCover" version="4.6.519" />
   </ItemGroup>
 
   <ItemGroup>
