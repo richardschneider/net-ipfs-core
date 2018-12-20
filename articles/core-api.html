@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>IPFS Core | IPFS Core documentation </title>
+    <title>Core API | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="IPFS Core | IPFS Core documentation ">
+    <meta name="title" content="Core API | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
@@ -67,13 +67,83 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="ipfs-core">IPFS Core</h1>
+<h1 id="core-api">Core API</h1>
 
-<p>The core objects and interfaces of the <a href="https://ipfs.io">IPFS</a> (Inter Planetary File System) for .Net (C#, VB, F# etc.)</p>
-<p>The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. 
-IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</p>
-<p>The source code is on <a href="https://github.com/richardschneider/net-ipfs-core">GitHub</a> and the 
-package is published on <a href="https://www.nuget.org/packages/Ipfs.Core">NuGet</a>.</p>
+<p><a class="xref" href="../api/Ipfs.CoreApi.ICoreApi.html">ICoreApi</a> is a set of interfaces to IPFS features.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IBitswapApi.html">Bitswap</a></td>
+<td>Block trading between peers</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IBlockApi.html">Block</a></td>
+<td>Manages the blocks</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IBootstrapApi.html">Bootstrap</a></td>
+<td>Trusted peers</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IConfigApi.html">Config</a></td>
+<td>Manages the configuration of the local peer</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IDagApi.html">Dag</a></td>
+<td>Manages the IPLD (linked data) Directed Acrylic Graph</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IDhtApi.html">Dht</a></td>
+<td>Manages the Distributed Hash Table</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IDnsApi.html">Dns</a></td>
+<td>DNS mapping to IPFS</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IFileSystemApi.html">FileSystem</a></td>
+<td>Manages the files/directories in IPFS</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IKeyApi.html">Key</a></td>
+<td>Manages the cryptographic keys</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IGenericApi.html">Misc</a></td>
+<td>Some miscellaneous methods</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.INameApi.html">Name</a></td>
+<td>Manages the Interplanetary Name Space (IPNS)</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IObjectApi.html">Object</a></td>
+<td>Manages the IPFS Directed Acrylic Graph</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IPinApi.html">Pin</a></td>
+<td>Manage objects that are locally stored and permanent</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IPubSubApi.html">PubSub</a></td>
+<td>Publish and subscribe topic messages</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.ISwarmApi.html">Swarm</a></td>
+<td>Manages the swarm of peers</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Ipfs.CoreApi.IStatsApi.html">Stats</a></td>
+<td>Statistics on IPFS components</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -82,7 +152,7 @@ package is published on <a href="https://www.nuget.org/packages/Ipfs.Core">NuGet
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/core-api.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

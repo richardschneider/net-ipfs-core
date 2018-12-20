@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>IPFS Core | IPFS Core documentation </title>
+    <title>Merkle DAG | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="IPFS Core | IPFS Core documentation ">
+    <meta name="title" content="Merkle DAG | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
@@ -67,14 +67,29 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="ipfs-core">IPFS Core</h1>
+<h1 id="merkle-dag">Merkle DAG</h1>
 
-<p>The core objects and interfaces of the <a href="https://ipfs.io">IPFS</a> (Inter Planetary File System) for .Net (C#, VB, F# etc.)</p>
-<p>The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. 
-IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</p>
-<p>The source code is on <a href="https://github.com/richardschneider/net-ipfs-core">GitHub</a> and the 
-package is published on <a href="https://www.nuget.org/packages/Ipfs.Core">NuGet</a>.</p>
-</article>
+<p>The <a class="xref" href="../api/Ipfs.DagNode.html">DagNode</a> is a directed acyclic graph whose edges are a 
+<a class="xref" href="../api/Ipfs.DagLink.html">DagLink</a>. This means that links to objects can authenticate 
+the objects themselves, and that every object contains a secure 
+representation of its children.</p>
+<p>Every Merkle node is a directed acyclic graph (DAG) because each child node is accessed via its <a href="cid.html">CID</a>, 
+basically the <a href="multihash.html">hash</a> of the child&#39;s dag node. It&#39;s <a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_Id">ID</a> 
+is the hash of its local content (<a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_DataBytes">data</a> and <a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_Links">links</a>). 
+So after creation there is no way to edit a DagNode. This prevents cycles (assuming there are no hash collisions) 
+since one can not link the first created node to the last node to create the last reference.</p>
+<pre><code class="lang-csharp">var a = Encoding.UTF8.GetBytes(&quot;a&quot;);
+var anode = new DagNode(a);
+var alink = anode.ToLink(&quot;a&quot;);
+
+var b = Encoding.UTF8.GetBytes(&quot;b&quot;);
+var bnode = new DagNode(b);
+var blink = bnode.ToLink(&quot;b&quot;);
+
+var node = new DagNode(null, new[] { alink, blink });
+Assert.AreEqual(2, node.Links.Count());
+Assert.AreEqual(&quot;QmbNgNPPykP4YTuAeSa3DsnBJWLVxccrqLUZDPNQfizGKs&quot;, (string)node.Id);
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -82,7 +97,7 @@ package is published on <a href="https://www.nuget.org/packages/Ipfs.Core">NuGet
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/dag.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
