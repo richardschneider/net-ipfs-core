@@ -49,9 +49,6 @@ nuget:
   project_feed: true
   disable_publish_on_pr: true
 
-before_build:
-  - nuget restore
-
 # Determine the version
   - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
   - echo %GitVersion_MajorMinorPatch%
