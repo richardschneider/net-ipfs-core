@@ -49,6 +49,9 @@ namespace Ipfs.CoreApi
         /// <value>
         ///   The default is <b>false</b>.
         /// </value>
+        /// <remarks>
+        ///   <b>RawLeaves</b> and <see cref="ProtectionKey"/> are mutually exclusive.
+        /// </remarks>
         public bool RawLeaves { get; set; } = false;
 
         /// <summary>
@@ -78,5 +81,17 @@ namespace Ipfs.CoreApi
         ///   If <b>true</b> no data is added to IPFS.  The default is <b>false</b>.
         /// </value>
         public bool OnlyHash { get; set; } = false;
+
+        /// <summary>
+        ///   The key name used to protect (encrypt) the file contents.
+        /// </summary>
+        /// <value>
+        ///   The name of an existing key.
+        /// </value>
+        /// <remarks>
+        ///   <b>ProtectionKey</b> and <see cref="RawLeaves"/> are mutually exclusive.
+        /// </remarks>
+        /// <seealso cref="IKeyApi"/>
+        public string ProtectionKey { get; set; }
     }
 }
