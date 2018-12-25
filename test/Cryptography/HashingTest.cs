@@ -9,6 +9,8 @@ namespace Ipfs.Cryptography
     [TestClass]
     public class HashingTest
     {
+        static readonly string Merkle = Encoding.UTF8.GetBytes("Merkle–Damgård").ToHexString();
+
         class TestVector
         {
             public string Algorithm { get; set; }
@@ -115,6 +117,15 @@ namespace Ipfs.Cryptography
                 Input = "0001",
                 Digest = "0001"
             },
+
+            // From https://github.com/multiformats/website/blob/master/content/multihash.md#examples
+            new TestVector { Algorithm = "sha1", Input = Merkle, Digest = "8a173fd3e32c0fa78b90fe42d305f202244e2739"},
+            new TestVector { Algorithm = "sha2-256", Input = Merkle, Digest = "41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"},
+            new TestVector { Algorithm = "sha2-512", Input = Merkle, Digest = "52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbbafd365f96fb12b1d98a0334870c2ce90355da25e6a1108a6e17c4aaebb0"},
+            new TestVector { Algorithm = "blake2b-512", Input = Merkle, Digest = "d91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a0496337b6f776a73c1742805c1cc15e792ddb3c92ee1fe300389456ef3dc97e2"},
+            new TestVector { Algorithm = "blake2b-256", Input = Merkle, Digest = "7d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030"},
+            new TestVector { Algorithm = "blake2s-256", Input = Merkle, Digest = "a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d"},
+            new TestVector { Algorithm = "blake2s-128", Input = Merkle, Digest = "0a4ec6f1629e49262d7093e2f82a3278"},
         };
 
         /// <summary>
