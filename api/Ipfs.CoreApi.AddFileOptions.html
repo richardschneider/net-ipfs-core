@@ -150,7 +150,7 @@
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_Encoding.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.Encoding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L72">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L75">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_AddFileOptions_Encoding_" data-uid="Ipfs.CoreApi.AddFileOptions.Encoding*"></a>
   <h4 id="Ipfs_CoreApi_AddFileOptions_Encoding" data-uid="Ipfs.CoreApi.AddFileOptions.Encoding">Encoding</h4>
@@ -187,7 +187,7 @@ Defaults to <a class="xref" href="Ipfs.MultiBase.html#Ipfs_MultiBase_DefaultAlgo
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_Hash.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L62">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L65">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_AddFileOptions_Hash_" data-uid="Ipfs.CoreApi.AddFileOptions.Hash*"></a>
   <h4 id="Ipfs_CoreApi_AddFileOptions_Hash" data-uid="Ipfs.CoreApi.AddFileOptions.Hash">Hash</h4>
@@ -224,7 +224,7 @@ Defaults to <a class="xref" href="Ipfs.MultiHash.html#Ipfs_MultiHash_DefaultAlgo
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_OnlyHash.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.OnlyHash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L80">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L83">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_AddFileOptions_OnlyHash_" data-uid="Ipfs.CoreApi.AddFileOptions.OnlyHash*"></a>
   <h4 id="Ipfs_CoreApi_AddFileOptions_OnlyHash" data-uid="Ipfs.CoreApi.AddFileOptions.OnlyHash">OnlyHash</h4>
@@ -286,10 +286,49 @@ garbage collected.  The default is <strong>true</strong>.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_ProtectionKey.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.ProtectionKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L95">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_AddFileOptions_ProtectionKey_" data-uid="Ipfs.CoreApi.AddFileOptions.ProtectionKey*"></a>
+  <h4 id="Ipfs_CoreApi_AddFileOptions_ProtectionKey" data-uid="Ipfs.CoreApi.AddFileOptions.ProtectionKey">ProtectionKey</h4>
+  <div class="markdown level1 summary"><p>The key name used to protect (encrypt) the file contents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProtectionKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The name of an existing key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Ipfs_CoreApi_AddFileOptions_ProtectionKey_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>ProtectionKey</strong> and <a class="xref" href="Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_RawLeaves">RawLeaves</a> are mutually exclusive.</p>
+</div>
+  <h5 id="Ipfs_CoreApi_AddFileOptions_ProtectionKey_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Ipfs.CoreApi.IKeyApi.html">IKeyApi</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_RawLeaves.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.RawLeaves%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L52">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/AddFileOptions.cs/#L55">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_AddFileOptions_RawLeaves_" data-uid="Ipfs.CoreApi.AddFileOptions.RawLeaves*"></a>
   <h4 id="Ipfs_CoreApi_AddFileOptions_RawLeaves" data-uid="Ipfs.CoreApi.AddFileOptions.RawLeaves">RawLeaves</h4>
@@ -316,6 +355,9 @@ garbage collected.  The default is <strong>true</strong>.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Ipfs_CoreApi_AddFileOptions_RawLeaves_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>RawLeaves</strong> and <a class="xref" href="Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ProtectionKey">ProtectionKey</a> are mutually exclusive.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_AddFileOptions_Trickle.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.AddFileOptions.Trickle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

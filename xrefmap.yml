@@ -610,6 +610,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.AddFileOptions.Pin
   nameWithType: AddFileOptions.Pin
+- uid: Ipfs.CoreApi.AddFileOptions.ProtectionKey
+  name: ProtectionKey
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ProtectionKey
+  commentId: P:Ipfs.CoreApi.AddFileOptions.ProtectionKey
+  fullName: Ipfs.CoreApi.AddFileOptions.ProtectionKey
+  nameWithType: AddFileOptions.ProtectionKey
+- uid: Ipfs.CoreApi.AddFileOptions.ProtectionKey*
+  name: ProtectionKey
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ProtectionKey_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.ProtectionKey
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.AddFileOptions.ProtectionKey
+  nameWithType: AddFileOptions.ProtectionKey
 - uid: Ipfs.CoreApi.AddFileOptions.RawLeaves
   name: RawLeaves
   href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_RawLeaves
