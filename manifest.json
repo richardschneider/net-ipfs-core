@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/multihash.html",
-          "hash": "9lBf9oTVKCvpuc1eDLxmLg=="
+          "hash": "Y+AR96VNRYCL1XyCzevLFA=="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "HXFADnby7VagEzKirH34zw=="
+          "hash": "CEqV4qN+P2d844C83vbVug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/varint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/varint.html",
+          "hash": "MFgcAxaAV/02DxmPFyn2sQ=="
         }
       },
       "is_incremental": false,

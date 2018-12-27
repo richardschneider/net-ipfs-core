@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MultiHash | IPFS Core documentation </title>
+    <title>Variable Integer | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="MultiHash | IPFS Core documentation ">
+    <meta name="title" content="Variable Integer | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
@@ -67,74 +67,49 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="multihash">MultiHash</h1>
+<h1 id="variable-integer">Variable Integer</h1>
 
-<p>All hashes in IPFS are encoded as a <a class="xref" href="../api/Ipfs.MultiHash.html">MultiHash</a>, a self-describing hash format. 
-The actual <a href="#algorithms">hash function</a> used depends on security requirements; &quot;sha2-256&quot; is todays default.</p>
-<p>A multihash is used to identify a <a class="xref" href="../api/Ipfs.Peer.html">peer</a>, <a class="xref" href="../api/Ipfs.IKey.html">key</a> and <a href="cid.html">content</a>. 
-For background information, see <a href="https://docs.ipfs.io/guides/concepts/hashes/">hash concept</a>.</p>
-<pre><code class="lang-csharp">var hello = Encoding.UTF8.GetBytes(&quot;Hello world&quot;);
-var mh = MultiHash.ComputeHash(hello, &quot;sha2-256&quot;);
-</code></pre><h2 id="format">Format</h2>
-<p>The binary representation consists of the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">hash code</a>, the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_Digest">digest&#39;s</a> 
-length and value. The code and length are encoded as <a href="varint.html">varints</a>.</p>
-<p>The textual representation is usually the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase58_">Base58</a> encoding of the 
-binary format. <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase32_">Base32</a> encoding is used when case insensity is required.</p>
-<p>From the above example, the following is produced</p>
+<p>A <a class="xref" href="../api/Ipfs.Varint.html">varint</a> is used to encode a non-negative integer of up to 64 bits. 
+It is encoded in network byte order (Big Endian). Each byte (except the last) contains 7 bits
+of information with the most significant bit set to 1.  The last byte has the MSB set to 0.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
 <th>Value</th>
+<th>Varint encoding</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>hash code</td>
-<td>0x12</td>
+<td>1 (0x1)</td>
+<td>01</td>
 </tr>
 <tr>
-<td>digest length</td>
-<td>0x20</td>
+<td>16 (0x10)</td>
+<td>10</td>
 </tr>
 <tr>
-<td>digest value</td>
-<td>64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c</td>
+<td>256 (0x100)</td>
+<td>80 02</td>
 </tr>
 <tr>
-<td>binary</td>
-<td>12 20 64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c</td>
+<td>4096 (0x1000)</td>
+<td>80 20</td>
 </tr>
 <tr>
-<td>base 58</td>
-<td>QmV8cfu6n4NT5xRr2AHdKxFMTZEJrA44qgrBCr739BN9Wb</td>
+<td>65536 (0x10000)</td>
+<td>80 80 04</td>
 </tr>
 <tr>
-<td>base 32</td>
-<td>ciqgj3eiziale2hfxindkz4kdnjrnuqs6tzwnmshoizfgsuk5srx6pa</td>
+<td>1048576 (0x100000)</td>
+<td>80 80 40</td>
+</tr>
+<tr>
+<td>16777216 (0x1000000)</td>
+<td>80 80 80 08</td>
 </tr>
 </tbody>
 </table>
-<h2 id="algorithms">Algorithms</h2>
-<p>IPFS assigns a unique <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name">Name</a> and <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code">Code</a> 
-to a hashing algorithm. See <a href="https://github.com/multiformats/multicodec/blob/master/table.csv&quot;">hashtable.csv</a> 
-for the currently defined hashing algorithms.</p>
-<p>These algorithms are implemented:</p>
-<ul>
-<li>blake2b-160, blake2b-256 blake2b-384 and blake2b-512</li>
-<li>blake2s-128, blake2s-160, blake2s-224 a nd blake2s-256</li>
-<li>keccak-224, keccak-256, keccak-384 and keccak-512</li>
-<li>md4 and md5</li>
-<li>sha1</li>
-<li>sha2-256, sha2-512 and dbl-sha2-256</li>
-<li>sha3-224, sha3-256, sha3-384 and sha3-512</li>
-<li>shake-128 and shake-256</li>
-</ul>
-<p>The identity hash is also implemented; which just returns the input bytes. This is used to inline a small amount of 
-data into a <a href="cid.html">CID</a>.</p>
-<h2 id="registry">Registry</h2>
-<p>The <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html">hashing registry</a> contains the metadata on a hashing algorithm.  You can use
-<a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_">Register</a> to add a new hashing algorithm.</p>
 </article>
           </div>
           
@@ -143,7 +118,7 @@ data into a <a href="cid.html">CID</a>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/multihash.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/varint.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
