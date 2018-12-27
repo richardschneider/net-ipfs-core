@@ -10,5 +10,7 @@
   href: multiaddress.md
 - name: MultiHash
   href: multihash.md
+- name: Varint
+  href: varint.md
 - name: Class Reference
   href: ../api/Ipfs.yml

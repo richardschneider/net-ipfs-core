@@ -286,6 +286,19 @@ namespace Ipfs
             }
         }
 
+        [TestMethod]
+        public void Example()
+        {
+            var hello = Encoding.UTF8.GetBytes("Hello world");
+            var mh = MultiHash.ComputeHash(hello, "sha2-256");
+            Console.WriteLine($"| hash code | 0x{mh.Algorithm.Code.ToString("x")} |");
+            Console.WriteLine($"| digest length | 0x{mh.Digest.Length.ToString("x")} |");
+            Console.WriteLine($"| digest value | {mh.Digest.ToHexString()} |");
+            Console.WriteLine($"| binary | {mh.ToArray().ToHexString()} |");
+            Console.WriteLine($"| base 58 | {mh.ToBase58()} |");
+            Console.WriteLine($"| base 32 | {mh.ToBase32()} |");
+
+        }
         class TestVector
         {
             public string Algorithm { get; set; }

@@ -125,5 +125,15 @@ namespace Ipfs
             cs.Cancel();
             ExceptionAssert.Throws<TaskCanceledException>(() => ms.ReadVarint32Async(cs.Token).Wait());
         }
+
+        [TestMethod]
+        public void Example()
+        {
+            for (long v = 1; v <= 0xFFFFFFFL; v = v << 4)
+            {
+                Console.Write($"| {v} (0x{v.ToString("x")}) ");
+                Console.WriteLine($"| {Varint.Encode(v).ToHexString()} |");
+            }
+        }
     }
 }
