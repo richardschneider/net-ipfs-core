@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -19,6 +20,7 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(false, options.RawLeaves);
             Assert.AreEqual(false, options.Trickle);
             Assert.AreEqual(false, options.Wrap);
+            Assert.IsNull(options.Progress);
         }
 
         [TestMethod]
@@ -31,6 +33,7 @@ namespace Ipfs.CoreApi
                 Hash = "sha2-512",
                 OnlyHash = true,
                 RawLeaves = true,
+                Progress = new Progress<TransferProgress>(),
                 Trickle = true,
                 Wrap = true
             };
@@ -42,6 +45,8 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(true, options.RawLeaves);
             Assert.AreEqual(true, options.Trickle);
             Assert.AreEqual(true, options.Wrap);
+            Assert.IsNotNull(options.Progress);
         }
+
     }
 }

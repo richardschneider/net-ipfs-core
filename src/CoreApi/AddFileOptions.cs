@@ -93,5 +93,10 @@ namespace Ipfs.CoreApi
         /// </remarks>
         /// <seealso cref="IKeyApi"/>
         public string ProtectionKey { get; set; }
+
+        /// <summary>
+        ///   Used to report the progress of a file transfer.
+        /// </summary>
+        public IProgress<TransferProgress> Progress { get; set; }
     }
 }
