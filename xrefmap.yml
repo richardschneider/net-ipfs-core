@@ -610,6 +610,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.AddFileOptions.Pin
   nameWithType: AddFileOptions.Pin
+- uid: Ipfs.CoreApi.AddFileOptions.Progress
+  name: Progress
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Progress
+  commentId: P:Ipfs.CoreApi.AddFileOptions.Progress
+  fullName: Ipfs.CoreApi.AddFileOptions.Progress
+  nameWithType: AddFileOptions.Progress
+- uid: Ipfs.CoreApi.AddFileOptions.Progress*
+  name: Progress
+  href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_Progress_
+  commentId: Overload:Ipfs.CoreApi.AddFileOptions.Progress
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.AddFileOptions.Progress
+  nameWithType: AddFileOptions.Progress
 - uid: Ipfs.CoreApi.AddFileOptions.ProtectionKey
   name: ProtectionKey
   href: api/Ipfs.CoreApi.AddFileOptions.html#Ipfs_CoreApi_AddFileOptions_ProtectionKey
@@ -2001,6 +2014,24 @@ references:
   commentId: F:Ipfs.CoreApi.RepositoryData.Version
   fullName: Ipfs.CoreApi.RepositoryData.Version
   nameWithType: RepositoryData.Version
+- uid: Ipfs.CoreApi.TransferProgress
+  name: TransferProgress
+  href: api/Ipfs.CoreApi.TransferProgress.html
+  commentId: T:Ipfs.CoreApi.TransferProgress
+  fullName: Ipfs.CoreApi.TransferProgress
+  nameWithType: TransferProgress
+- uid: Ipfs.CoreApi.TransferProgress.Bytes
+  name: Bytes
+  href: api/Ipfs.CoreApi.TransferProgress.html#Ipfs_CoreApi_TransferProgress_Bytes
+  commentId: F:Ipfs.CoreApi.TransferProgress.Bytes
+  fullName: Ipfs.CoreApi.TransferProgress.Bytes
+  nameWithType: TransferProgress.Bytes
+- uid: Ipfs.CoreApi.TransferProgress.Name
+  name: Name
+  href: api/Ipfs.CoreApi.TransferProgress.html#Ipfs_CoreApi_TransferProgress_Name
+  commentId: F:Ipfs.CoreApi.TransferProgress.Name
+  fullName: Ipfs.CoreApi.TransferProgress.Name
+  nameWithType: TransferProgress.Name
 - uid: Ipfs.DagLink
   name: DagLink
   href: api/Ipfs.DagLink.html

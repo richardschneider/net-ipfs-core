@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.AddFileOptions.html",
-          "hash": "bhY6t6qC6RvJ7gtI3K5szw=="
+          "hash": "B8aB91mOKHPHJBVDfkpbGg=="
         }
       },
       "is_incremental": false,
@@ -329,11 +329,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.CoreApi.TransferProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.CoreApi.TransferProgress.html",
+          "hash": "2PLT/2yX4q2AIB3WFsPugg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.CoreApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.CoreApi.html",
-          "hash": "JONrlFDwwr1zwIQnPrP1yQ=="
+          "hash": "6AUadqe8Kd1tbzfT0TNqWA=="
         }
       },
       "is_incremental": false,
@@ -657,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/6P60iVncGOO2TpaieXNVg=="
+          "hash": "xV1KI3lWumo2ma9XkKQffA=="
         }
       },
       "is_incremental": false,
