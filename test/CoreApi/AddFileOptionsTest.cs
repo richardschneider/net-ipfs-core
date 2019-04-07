@@ -21,6 +21,7 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(false, options.Trickle);
             Assert.AreEqual(false, options.Wrap);
             Assert.IsNull(options.Progress);
+            Assert.IsNull(options.ProtectionKey);
         }
 
         [TestMethod]
@@ -35,7 +36,8 @@ namespace Ipfs.CoreApi
                 RawLeaves = true,
                 Progress = new Progress<TransferProgress>(),
                 Trickle = true,
-                Wrap = true
+                Wrap = true,
+                ProtectionKey = "secret"
             };
 
             Assert.AreEqual(false, options.Pin);
@@ -46,6 +48,7 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(true, options.Trickle);
             Assert.AreEqual(true, options.Wrap);
             Assert.IsNotNull(options.Progress);
+            Assert.AreEqual("secret", options.ProtectionKey);
         }
 
     }
