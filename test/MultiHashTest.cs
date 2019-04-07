@@ -376,18 +376,6 @@ namespace Ipfs
                 Output = "1d40e161c54798f78eba3404ac5e7e12d27555b7b810e7fd0db3f25ffa0c785c438331b0fbb6156215f69edf403c642e5280f4521da9bd767296ec81f05100852e78"
             },
             new TestVector {
-                Ignore = true, // NYI
-                Algorithm = "murmur3-128",
-                Input = "beep boop",
-                Output = "2210acfe9c5bbf88f075c0c4df0464430ead"
-            },
-            new TestVector {
-                Ignore = true, // NYI
-                Algorithm = "murmur3-32",
-                Input = "beep boop",
-                Output = "2304243ddb9e"
-            },
-            new TestVector {
                 Algorithm = "blake2b-512",
                 Input = "beep boop",
                 Output = "c0e402400eac6255ba822373a0948122b8d295008419a8ab27842ee0d70eca39855621463c03ec75ac3610aacfdff89fa989d8d61fc00450148f289eb5b12ad1a954f659"
@@ -431,20 +419,6 @@ namespace Ipfs
                 var mh = MultiHash.ComputeHash(bytes, v.Algorithm);
                 Assert.AreEqual(v.Output, mh.ToArray().ToHexString(), v.Algorithm);
             }
-        }
-
-        [TestMethod]
-        public void Murmur3_Decode()
-        {
-            var hash = "2304243ddb9e".ToHexBuffer().ToBase58();
-            var mh = new MultiHash(hash);
-            Assert.AreEqual("murmur3-32", mh.Algorithm.Name);
-            Assert.AreEqual("243ddb9e", mh.Digest.ToHexString());
-
-            hash = "2210acfe9c5bbf88f075c0c4df0464430ead".ToHexBuffer().ToBase58();
-            mh = new MultiHash(hash);
-            Assert.AreEqual("murmur3-128", mh.Algorithm.Name);
-            Assert.AreEqual("acfe9c5bbf88f075c0c4df0464430ead", mh.Digest.ToHexString());
         }
 
         [TestMethod]
