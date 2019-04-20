@@ -1005,6 +1005,41 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IConfigApi.SetAsync
   nameWithType: IConfigApi.SetAsync
+- uid: Ipfs.CoreApi.IContentRouting
+  name: IContentRouting
+  href: api/Ipfs.CoreApi.IContentRouting.html
+  commentId: T:Ipfs.CoreApi.IContentRouting
+  fullName: Ipfs.CoreApi.IContentRouting
+  nameWithType: IContentRouting
+- uid: Ipfs.CoreApi.IContentRouting.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Action{Ipfs.Peer},System.Threading.CancellationToken)
+  name: FindProvidersAsync(Cid, Int32, Action<Peer>, CancellationToken)
+  href: api/Ipfs.CoreApi.IContentRouting.html#Ipfs_CoreApi_IContentRouting_FindProvidersAsync_Ipfs_Cid_System_Int32_System_Action_Ipfs_Peer__System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IContentRouting.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Action{Ipfs.Peer},System.Threading.CancellationToken)
+  name.vb: FindProvidersAsync(Cid, Int32, Action(Of Peer), CancellationToken)
+  fullName: Ipfs.CoreApi.IContentRouting.FindProvidersAsync(Ipfs.Cid, System.Int32, System.Action<Ipfs.Peer>, System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IContentRouting.FindProvidersAsync(Ipfs.Cid, System.Int32, System.Action(Of Ipfs.Peer), System.Threading.CancellationToken)
+  nameWithType: IContentRouting.FindProvidersAsync(Cid, Int32, Action<Peer>, CancellationToken)
+  nameWithType.vb: IContentRouting.FindProvidersAsync(Cid, Int32, Action(Of Peer), CancellationToken)
+- uid: Ipfs.CoreApi.IContentRouting.FindProvidersAsync*
+  name: FindProvidersAsync
+  href: api/Ipfs.CoreApi.IContentRouting.html#Ipfs_CoreApi_IContentRouting_FindProvidersAsync_
+  commentId: Overload:Ipfs.CoreApi.IContentRouting.FindProvidersAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IContentRouting.FindProvidersAsync
+  nameWithType: IContentRouting.FindProvidersAsync
+- uid: Ipfs.CoreApi.IContentRouting.ProvideAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)
+  name: ProvideAsync(Cid, Boolean, CancellationToken)
+  href: api/Ipfs.CoreApi.IContentRouting.html#Ipfs_CoreApi_IContentRouting_ProvideAsync_Ipfs_Cid_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IContentRouting.ProvideAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IContentRouting.ProvideAsync(Ipfs.Cid, System.Boolean, System.Threading.CancellationToken)
+  nameWithType: IContentRouting.ProvideAsync(Cid, Boolean, CancellationToken)
+- uid: Ipfs.CoreApi.IContentRouting.ProvideAsync*
+  name: ProvideAsync
+  href: api/Ipfs.CoreApi.IContentRouting.html#Ipfs_CoreApi_IContentRouting_ProvideAsync_
+  commentId: Overload:Ipfs.CoreApi.IContentRouting.ProvideAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IContentRouting.ProvideAsync
+  nameWithType: IContentRouting.ProvideAsync
 - uid: Ipfs.CoreApi.ICoreApi
   name: ICoreApi
   href: api/Ipfs.CoreApi.ICoreApi.html
@@ -1284,32 +1319,6 @@ references:
   commentId: T:Ipfs.CoreApi.IDhtApi
   fullName: Ipfs.CoreApi.IDhtApi
   nameWithType: IDhtApi
-- uid: Ipfs.CoreApi.IDhtApi.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
-  name: FindPeerAsync(MultiHash, CancellationToken)
-  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindPeerAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IDhtApi.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IDhtApi.FindPeerAsync(Ipfs.MultiHash, System.Threading.CancellationToken)
-  nameWithType: IDhtApi.FindPeerAsync(MultiHash, CancellationToken)
-- uid: Ipfs.CoreApi.IDhtApi.FindPeerAsync*
-  name: FindPeerAsync
-  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindPeerAsync_
-  commentId: Overload:Ipfs.CoreApi.IDhtApi.FindPeerAsync
-  isSpec: "True"
-  fullName: Ipfs.CoreApi.IDhtApi.FindPeerAsync
-  nameWithType: IDhtApi.FindPeerAsync
-- uid: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Threading.CancellationToken)
-  name: FindProvidersAsync(Cid, Int32, CancellationToken)
-  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindProvidersAsync_Ipfs_Cid_System_Int32_System_Threading_CancellationToken_
-  commentId: M:Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Threading.CancellationToken)
-  fullName: Ipfs.CoreApi.IDhtApi.FindProvidersAsync(Ipfs.Cid, System.Int32, System.Threading.CancellationToken)
-  nameWithType: IDhtApi.FindProvidersAsync(Cid, Int32, CancellationToken)
-- uid: Ipfs.CoreApi.IDhtApi.FindProvidersAsync*
-  name: FindProvidersAsync
-  href: api/Ipfs.CoreApi.IDhtApi.html#Ipfs_CoreApi_IDhtApi_FindProvidersAsync_
-  commentId: Overload:Ipfs.CoreApi.IDhtApi.FindProvidersAsync
-  isSpec: "True"
-  fullName: Ipfs.CoreApi.IDhtApi.FindProvidersAsync
-  nameWithType: IDhtApi.FindProvidersAsync
 - uid: Ipfs.CoreApi.IDnsApi
   name: IDnsApi
   href: api/Ipfs.CoreApi.IDnsApi.html
@@ -1730,6 +1739,25 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IObjectApi.PutAsync
   nameWithType: IObjectApi.PutAsync
+- uid: Ipfs.CoreApi.IPeerRouting
+  name: IPeerRouting
+  href: api/Ipfs.CoreApi.IPeerRouting.html
+  commentId: T:Ipfs.CoreApi.IPeerRouting
+  fullName: Ipfs.CoreApi.IPeerRouting
+  nameWithType: IPeerRouting
+- uid: Ipfs.CoreApi.IPeerRouting.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
+  name: FindPeerAsync(MultiHash, CancellationToken)
+  href: api/Ipfs.CoreApi.IPeerRouting.html#Ipfs_CoreApi_IPeerRouting_FindPeerAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IPeerRouting.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IPeerRouting.FindPeerAsync(Ipfs.MultiHash, System.Threading.CancellationToken)
+  nameWithType: IPeerRouting.FindPeerAsync(MultiHash, CancellationToken)
+- uid: Ipfs.CoreApi.IPeerRouting.FindPeerAsync*
+  name: FindPeerAsync
+  href: api/Ipfs.CoreApi.IPeerRouting.html#Ipfs_CoreApi_IPeerRouting_FindPeerAsync_
+  commentId: Overload:Ipfs.CoreApi.IPeerRouting.FindPeerAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IPeerRouting.FindPeerAsync
+  nameWithType: IPeerRouting.FindPeerAsync
 - uid: Ipfs.CoreApi.IPinApi
   name: IPinApi
   href: api/Ipfs.CoreApi.IPinApi.html
@@ -1978,6 +2006,60 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.ISwarmApi.RemoveAddressFilterAsync
   nameWithType: ISwarmApi.RemoveAddressFilterAsync
+- uid: Ipfs.CoreApi.IValueStore
+  name: IValueStore
+  href: api/Ipfs.CoreApi.IValueStore.html
+  commentId: T:Ipfs.CoreApi.IValueStore
+  fullName: Ipfs.CoreApi.IValueStore
+  nameWithType: IValueStore
+- uid: Ipfs.CoreApi.IValueStore.GetAsync(System.Byte[],System.Threading.CancellationToken)
+  name: GetAsync(Byte[], CancellationToken)
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_GetAsync_System_Byte___System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IValueStore.GetAsync(System.Byte[],System.Threading.CancellationToken)
+  name.vb: GetAsync(Byte(), CancellationToken)
+  fullName: Ipfs.CoreApi.IValueStore.GetAsync(System.Byte[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IValueStore.GetAsync(System.Byte(), System.Threading.CancellationToken)
+  nameWithType: IValueStore.GetAsync(Byte[], CancellationToken)
+  nameWithType.vb: IValueStore.GetAsync(Byte(), CancellationToken)
+- uid: Ipfs.CoreApi.IValueStore.GetAsync*
+  name: GetAsync
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_GetAsync_
+  commentId: Overload:Ipfs.CoreApi.IValueStore.GetAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IValueStore.GetAsync
+  nameWithType: IValueStore.GetAsync
+- uid: Ipfs.CoreApi.IValueStore.PutAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)
+  name: PutAsync(Byte[], out Byte[], CancellationToken)
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_PutAsync_System_Byte___System_Byte____System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IValueStore.PutAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)
+  name.vb: PutAsync(Byte(), ByRef Byte(), CancellationToken)
+  fullName: Ipfs.CoreApi.IValueStore.PutAsync(System.Byte[], out System.Byte[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IValueStore.PutAsync(System.Byte(), ByRef System.Byte(), System.Threading.CancellationToken)
+  nameWithType: IValueStore.PutAsync(Byte[], out Byte[], CancellationToken)
+  nameWithType.vb: IValueStore.PutAsync(Byte(), ByRef Byte(), CancellationToken)
+- uid: Ipfs.CoreApi.IValueStore.PutAsync*
+  name: PutAsync
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_PutAsync_
+  commentId: Overload:Ipfs.CoreApi.IValueStore.PutAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IValueStore.PutAsync
+  nameWithType: IValueStore.PutAsync
+- uid: Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)
+  name: TryGetAsync(Byte[], out Byte[], CancellationToken)
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_TryGetAsync_System_Byte___System_Byte____System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)
+  name.vb: TryGetAsync(Byte(), ByRef Byte(), CancellationToken)
+  fullName: Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte[], out System.Byte[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte(), ByRef System.Byte(), System.Threading.CancellationToken)
+  nameWithType: IValueStore.TryGetAsync(Byte[], out Byte[], CancellationToken)
+  nameWithType.vb: IValueStore.TryGetAsync(Byte(), ByRef Byte(), CancellationToken)
+- uid: Ipfs.CoreApi.IValueStore.TryGetAsync*
+  name: TryGetAsync
+  href: api/Ipfs.CoreApi.IValueStore.html#Ipfs_CoreApi_IValueStore_TryGetAsync_
+  commentId: Overload:Ipfs.CoreApi.IValueStore.TryGetAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IValueStore.TryGetAsync
+  nameWithType: IValueStore.TryGetAsync
 - uid: Ipfs.CoreApi.RepositoryData
   name: RepositoryData
   href: api/Ipfs.CoreApi.RepositoryData.html

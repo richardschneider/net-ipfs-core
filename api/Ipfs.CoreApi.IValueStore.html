@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IStatsApi
+    <title>Interface IValueStore
    | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IStatsApi
+    <meta name="title" content="Interface IValueStore
    | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.42.0.0">
     
@@ -68,37 +68,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ipfs.CoreApi.IStatsApi">
+            <article class="content wrap" id="_content" data-uid="Ipfs.CoreApi.IValueStore">
   
   
-  <h1 id="Ipfs_CoreApi_IStatsApi" data-uid="Ipfs.CoreApi.IStatsApi" class="text-break">Interface IStatsApi
+  <h1 id="Ipfs_CoreApi_IValueStore" data-uid="Ipfs.CoreApi.IValueStore" class="text-break">Interface IValueStore
   </h1>
-  <div class="markdown level0 summary"><p>Get statistics/diagnostics for the various core components.</p>
+  <div class="markdown level0 summary"><p>A basic Put/Get interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.CoreApi.html">Ipfs.CoreApi</a></h6>
   <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
-  <h5 id="Ipfs_CoreApi_IStatsApi_syntax">Syntax</h5>
+  <h5 id="Ipfs_CoreApi_IValueStore_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IStatsApi</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IValueStore</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IStatsApi_BandwidthAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IStatsApi.BandwidthAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IValueStore_GetAsync_System_Byte___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IValueStore.GetAsync(System.Byte%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IStatsApi.cs/#L25">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IValueStore.cs/#L27">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IStatsApi_BandwidthAsync_" data-uid="Ipfs.CoreApi.IStatsApi.BandwidthAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IStatsApi_BandwidthAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IStatsApi.BandwidthAsync(System.Threading.CancellationToken)">BandwidthAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Get statistics on network bandwidth.</p>
+  <a id="Ipfs_CoreApi_IValueStore_GetAsync_" data-uid="Ipfs.CoreApi.IValueStore.GetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IValueStore_GetAsync_System_Byte___System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IValueStore.GetAsync(System.Byte[],System.Threading.CancellationToken)">GetAsync(Byte[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets th value of a key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;BandwidthData&gt; BandwidthAsync(CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;byte[]&gt; GetAsync(byte[] key, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,6 +110,12 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A byte array representing the name of a key.</p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
@@ -128,32 +134,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
-the current <a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]&gt;</td>
+        <td><p>A task that represents the asynchronous operation that returns
+the value of the key as a byte array.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Ipfs_CoreApi_IStatsApi_BandwidthAsync_System_Threading_CancellationToken__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Ipfs.CoreApi.ISwarmApi.html">ISwarmApi</a></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IStatsApi_BitswapAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IStatsApi.BitswapAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IValueStore_PutAsync_System_Byte___System_Byte____System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IValueStore.PutAsync(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IStatsApi.cs/#L38">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IValueStore.cs/#L62">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IStatsApi_BitswapAsync_" data-uid="Ipfs.CoreApi.IStatsApi.BitswapAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IStatsApi_BitswapAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IStatsApi.BitswapAsync(System.Threading.CancellationToken)">BitswapAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Get statistics on the blocks exchanged with other peers.</p>
+  <a id="Ipfs_CoreApi_IValueStore_PutAsync_" data-uid="Ipfs.CoreApi.IValueStore.PutAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IValueStore_PutAsync_System_Byte___System_Byte____System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IValueStore.PutAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)">PutAsync(Byte[], out Byte[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Put the value of a key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;BitswapData&gt; BitswapAsync(CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task PutAsync(byte[] key, out byte[] value, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,6 +167,18 @@ the current <a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A byte array representing the name of a key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A byte array containing the value of the <code data-dev-comment-type="paramref" class="paramref">key</code></p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
@@ -183,32 +197,27 @@ the current <a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.CoreApi.BitswapData.html">BitswapData</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
-the current <a class="xref" href="Ipfs.CoreApi.BitswapData.html">BitswapData</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Ipfs_CoreApi_IStatsApi_BitswapAsync_System_Threading_CancellationToken__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Ipfs.CoreApi.IBitswapApi.html">IBitswapApi</a></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IStatsApi_RepositoryAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IStatsApi.RepositoryAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IValueStore_TryGetAsync_System_Byte___System_Byte____System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IStatsApi.cs/#L50">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IValueStore.cs/#L45">View Source</a>
   </span>
-  <a id="Ipfs_CoreApi_IStatsApi_RepositoryAsync_" data-uid="Ipfs.CoreApi.IStatsApi.RepositoryAsync*"></a>
-  <h4 id="Ipfs_CoreApi_IStatsApi_RepositoryAsync_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IStatsApi.RepositoryAsync(System.Threading.CancellationToken)">RepositoryAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Get statistics on repository.</p>
+  <a id="Ipfs_CoreApi_IValueStore_TryGetAsync_" data-uid="Ipfs.CoreApi.IValueStore.TryGetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IValueStore_TryGetAsync_System_Byte___System_Byte____System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IValueStore.TryGetAsync(System.Byte[],System.Byte[]@,System.Threading.CancellationToken)">TryGetAsync(Byte[], out Byte[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the value of a key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;RepositoryData&gt; RepositoryAsync(CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; TryGetAsync(byte[] key, out byte[] value, CancellationToken cancel = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,6 +229,18 @@ the current <a class="xref" href="Ipfs.CoreApi.BitswapData.html">BitswapData</a>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A byte array representing the name of a key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A byte array containing the value of the <code data-dev-comment-type="paramref" class="paramref">key</code></p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
@@ -238,9 +259,9 @@ the current <a class="xref" href="Ipfs.CoreApi.BitswapData.html">BitswapData</a>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.CoreApi.RepositoryData.html">RepositoryData</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation. The task&apos;s result is
-the current <a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData</a>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation that returns
+<strong>true</strong> if the key exists; otherwise, <strong>false</strong>.</p>
 </td>
       </tr>
     </tbody>
@@ -253,10 +274,10 @@ the current <a class="xref" href="Ipfs.CoreApi.BandwidthData.html">BandwidthData
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IStatsApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IStatsApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IValueStore.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IValueStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IStatsApi.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IValueStore.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
