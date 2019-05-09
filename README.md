@@ -70,6 +70,7 @@ Most binary data (objects) in IPFS is represented as a [Base-58](https://en.wiki
 - [IPFS HTTP Client](https://github.com/richardschneider/net-ipfs-http-client) - A .Net client library for the IPFS HTTP API.
 - [IPFS Engine](https://github.com/richardschneider/net-ipfs-engine) - Implements the Core API.
 - [Peer Talk](https://github.com/richardschneider/peer-talk) - Peer to peer communication
+
 # License
 Copyright © 2015-2018 Richard Schneider (makaretu@gmail.com)
 

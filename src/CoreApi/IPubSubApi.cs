@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -50,7 +51,7 @@ namespace Ipfs.CoreApi
         Task<IEnumerable<Peer>> PeersAsync(string topic = null, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Publish a message to a given topic.
+        ///   Publish a string message to a given topic.
         /// </summary>
         /// <param name="topic">
         ///   The topic name.
@@ -65,6 +66,40 @@ namespace Ipfs.CoreApi
         ///   A task that represents the asynchronous operation.
         /// </returns>
         Task PublishAsync(string topic, string message, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Publish a binary message to a given topic.
+        /// </summary>
+        /// <param name="topic">
+        ///   The topic name.
+        /// </param>
+        /// <param name="message">
+        ///   The message to publish.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation.
+        /// </returns>
+        Task PublishAsync(string topic, byte[] message, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Publish a binary message to a given topic.
+        /// </summary>
+        /// <param name="topic">
+        ///   The topic name.
+        /// </param>
+        /// <param name="message">
+        ///   The message to publish.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation.
+        /// </returns>
+        Task PublishAsync(string topic, Stream message, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
         ///   Subscribe to messages on a given topic.
