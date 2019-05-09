@@ -1822,6 +1822,21 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IPubSubApi.PeersAsync
   nameWithType: IPubSubApi.PeersAsync
+- uid: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name: PublishAsync(String, Byte[], CancellationToken)
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_Byte___System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name.vb: PublishAsync(String, Byte(), CancellationToken)
+  fullName: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String, System.Byte[], System.Threading.CancellationToken)
+  fullName.vb: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String, System.Byte(), System.Threading.CancellationToken)
+  nameWithType: IPubSubApi.PublishAsync(String, Byte[], CancellationToken)
+  nameWithType.vb: IPubSubApi.PublishAsync(String, Byte(), CancellationToken)
+- uid: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  name: PublishAsync(String, Stream, CancellationToken)
+  href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: IPubSubApi.PublishAsync(String, Stream, CancellationToken)
 - uid: Ipfs.CoreApi.IPubSubApi.PublishAsync(System.String,System.String,System.Threading.CancellationToken)
   name: PublishAsync(String, String, CancellationToken)
   href: api/Ipfs.CoreApi.IPubSubApi.html#Ipfs_CoreApi_IPubSubApi_PublishAsync_System_String_System_String_System_Threading_CancellationToken_
