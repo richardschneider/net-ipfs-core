@@ -107,7 +107,9 @@ namespace Ipfs
                 throw new ArgumentNullException("digest");
 
             if (!HashingAlgorithm.Names.TryGetValue(algorithmName, out HashingAlgorithm a))
+            {
                 throw new ArgumentException(string.Format("The IPFS hashing algorithm '{0}' is unknown.", algorithmName));
+            }
             Algorithm = a;
 
             if (Algorithm.DigestSize != 0 && Algorithm.DigestSize != digest.Length)

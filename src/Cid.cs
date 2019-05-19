@@ -51,7 +51,9 @@ namespace Ipfs
         void EnsureMutable()
         {
             if (encodedValue != null)
+            {
                 throw new NotSupportedException("CID cannot be changed.");
+            }
         }
 
         /// <summary>
@@ -213,8 +215,9 @@ namespace Ipfs
         public string Encode()
         {
             if (encodedValue != null)
+            {
                 return encodedValue;
-
+            }
             if (Version == 0)
             {
                 encodedValue = Hash.ToBase58();
@@ -421,7 +424,9 @@ namespace Ipfs
         public byte[] ToArray()
         {
             if (Version == 0)
+            {
                 return Hash.ToArray();
+            }
 
             using (var ms = new MemoryStream())
             {
@@ -487,10 +492,18 @@ namespace Ipfs
         /// </summary>
         public static bool operator ==(Cid a, Cid b)
         {
-            if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
-
+            if (object.ReferenceEquals(a, b))
+            {
+                return true;
+            }
+            if (object.ReferenceEquals(a, null))
+            {
+                return false;
+            }
+            if (object.ReferenceEquals(b, null))
+            {
+                return false;
+            }
             return a.Equals(b);
         }
 
@@ -499,10 +512,18 @@ namespace Ipfs
         /// </summary>
         public static bool operator !=(Cid a, Cid b)
         {
-            if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
-
+            if (object.ReferenceEquals(a, b))
+            {
+                return false;
+            }
+            if (object.ReferenceEquals(a, null))
+            {
+                return true;
+            }
+            if (object.ReferenceEquals(b, null))
+            {
+                return true;
+            }
             return !a.Equals(b);
         }
 
