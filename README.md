@@ -12,10 +12,9 @@ The core objects and interfaces of the [IPFS](https://github.com/ipfs/ipfs) (Int
 The interplanetary file system is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.
 
 It supports the following runtimes
-
-  - .NET Framework 4.5
-  - .NET Standard 1.4
-  - .NET Standard 2.0
+- .NET Framework 4.5
+- .NET Standard 1.4
+- .NET Standard 2.0
 
 More information is on the [Documentation](https://richardschneider.github.io/net-ipfs-core/) web site.
 
@@ -34,9 +33,9 @@ For the latest build or older non-released builds see [Continuous Integration](h
 
 ## Major objects
 
-  - [MerkleDag](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
-  - [MultiAddress](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
-  - [MultiHash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
+- [MerkleDag](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.DagNode.html)
+- [MultiAddress](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html)
+- [MultiHash](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html)
 
 See the [API Documentation](https://richardschneider.github.io/net-ipfs-core/api/Ipfs.html) for a list of all objects.
 
@@ -67,10 +66,10 @@ Most binary data (objects) in IPFS is represented as a [Base-58](https://en.wiki
 
 ## Related Projects
 
-  - [IPFS DSL](https://github.com/cloveekprojeqt/ipfs-dsl) - A declarative embedded language for building compositional programs and protocols over the InterPlanetary File System.
-  - [IPFS HTTP Client](https://github.com/richardschneider/net-ipfs-http-client) - A .Net client library for the IPFS HTTP API.
-  - [IPFS Engine](https://github.com/richardschneider/net-ipfs-engine) - Implements the Core API.
-  - [Peer Talk](https://github.com/richardschneider/peer-talk) - Peer to peer communication
+- [IPFS DSL](https://github.com/cloveekprojeqt/ipfs-dsl) - A declarative embedded language for building compositional programs and protocols over the InterPlanetary File System.
+- [IPFS HTTP Client](https://github.com/richardschneider/net-ipfs-http-client) - A .Net client library for the IPFS HTTP API.
+- [IPFS Engine](https://github.com/richardschneider/net-ipfs-engine) - Implements the Core API.
+- [Peer Talk](https://github.com/richardschneider/peer-talk) - Peer to peer communication
 
 ## License
 Copyright © 2015-2019 Richard Schneider (makaretu@gmail.com)
