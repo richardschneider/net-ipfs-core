@@ -20,7 +20,7 @@ namespace Ipfs.CoreApi
         ///   The <see cref="MultiHash"/> ID of the IPFS peer.  
         /// </param>
         /// <param name="cancel">
-        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is NOT raised.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation that returns

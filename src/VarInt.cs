@@ -186,7 +186,7 @@ namespace Ipfs
                 bytes[i++] = v;
                 value >>= 7;
             } while (value != 0);
-            await stream.WriteAsync(bytes, 0, i, cancel);
+            await stream.WriteAsync(bytes, 0, i, cancel).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Ipfs
         /// </exception>
         public static async Task<int> ReadVarint32Async(this Stream stream, CancellationToken cancel = default(CancellationToken))
         {
-            var value = await stream.ReadVarint64Async(cancel);
+            var value = await stream.ReadVarint64Async(cancel).ConfigureAwait(false);
             if (value > int.MaxValue)
                 throw new InvalidDataException("Varint value is bigger than an Int32.MaxValue");
             return (int)value;
@@ -243,7 +243,7 @@ namespace Ipfs
             var buffer = new byte[1];
             while (true)
             {
-                if (1 != await stream.ReadAsync(buffer, 0, 1, cancel))
+                if (1 != await stream.ReadAsync(buffer, 0, 1, cancel).ConfigureAwait(false))
                 {
                     if (bytesRead == 0)
                         throw new EndOfStreamException();
