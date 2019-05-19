@@ -24,7 +24,7 @@ namespace Ipfs
     ///   </note>
     /// </remarks>
     /// <seealso href="https://github.com/ipld/cid"/>
-    [JsonConverter(typeof(Cid.Json))]
+    [JsonConverter(typeof(Cid.CidJsonConverter))]
     public class Cid : IEquatable<Cid>
     {
         /// <summary>
@@ -261,14 +261,14 @@ namespace Ipfs
 
                 using (var ms = new MemoryStream(MultiBase.Decode(input), false))
                 {
-                    var version = ms.ReadVarint32();
-                    if (version != 1)
+                    var v = ms.ReadVarint32();
+                    if (v != 1)
                     {
-                        throw new InvalidDataException($"Unknown CID version '{version}'.");
+                        throw new InvalidDataException($"Unknown CID version '{v}'.");
                     }
                     return new Cid
                     {
-                        Version = version,
+                        Version = v,
                         Encoding = Registry.MultiBaseAlgorithm.Codes[input[0]].Name,
                         ContentType = ms.ReadMultiCodec().Name,
                         Hash = new MultiHash(ms)
@@ -567,20 +567,28 @@ namespace Ipfs
         /// <remarks>
         ///   The JSON is just a single string value.
         /// </remarks>
-        class Json : JsonConverter
+        public class CidJsonConverter : JsonConverter
         {
+            /// <inheritdoc />
             public override bool CanConvert(Type objectType)
             {
                 return true;
             }
+
+            /// <inheritdoc />
             public override bool CanRead => true;
+
+            /// <inheritdoc />
             public override bool CanWrite => true;
+
+            /// <inheritdoc />
             public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
             {
                 var cid = value as Cid;
                 writer.WriteValue(cid?.Encode());
             }
 
+            /// <inheritdoc />
             public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
             {
                 var s = reader.Value as string;
