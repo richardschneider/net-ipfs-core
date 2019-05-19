@@ -306,7 +306,9 @@ namespace Ipfs
         void Read(TextReader stream)
         {
             if (stream.Read() != '/')
+            {
                 throw new FormatException("An IFPS multiaddr must start with '/'.");
+            }
 
             var name = new StringBuilder();
             Protocols.Clear();

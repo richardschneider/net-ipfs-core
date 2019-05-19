@@ -421,7 +421,9 @@ namespace Ipfs
         public byte[] ToArray()
         {
             if (Version == 0)
+            {
                 return Hash.ToArray();
+            }
 
             using (var ms = new MemoryStream())
             {
