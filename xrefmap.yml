@@ -281,6 +281,77 @@ references:
   commentId: T:Ipfs.Cid
   fullName: Ipfs.Cid
   nameWithType: Cid
+- uid: Ipfs.Cid.CidJsonConverter
+  name: Cid.CidJsonConverter
+  href: api/Ipfs.Cid.CidJsonConverter.html
+  commentId: T:Ipfs.Cid.CidJsonConverter
+  fullName: Ipfs.Cid.CidJsonConverter
+  nameWithType: Cid.CidJsonConverter
+- uid: Ipfs.Cid.CidJsonConverter.CanConvert(System.Type)
+  name: CanConvert(Type)
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanConvert_System_Type_
+  commentId: M:Ipfs.Cid.CidJsonConverter.CanConvert(System.Type)
+  fullName: Ipfs.Cid.CidJsonConverter.CanConvert(System.Type)
+  nameWithType: Cid.CidJsonConverter.CanConvert(Type)
+- uid: Ipfs.Cid.CidJsonConverter.CanConvert*
+  name: CanConvert
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanConvert_
+  commentId: Overload:Ipfs.Cid.CidJsonConverter.CanConvert
+  isSpec: "True"
+  fullName: Ipfs.Cid.CidJsonConverter.CanConvert
+  nameWithType: Cid.CidJsonConverter.CanConvert
+- uid: Ipfs.Cid.CidJsonConverter.CanRead
+  name: CanRead
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanRead
+  commentId: P:Ipfs.Cid.CidJsonConverter.CanRead
+  fullName: Ipfs.Cid.CidJsonConverter.CanRead
+  nameWithType: Cid.CidJsonConverter.CanRead
+- uid: Ipfs.Cid.CidJsonConverter.CanRead*
+  name: CanRead
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanRead_
+  commentId: Overload:Ipfs.Cid.CidJsonConverter.CanRead
+  isSpec: "True"
+  fullName: Ipfs.Cid.CidJsonConverter.CanRead
+  nameWithType: Cid.CidJsonConverter.CanRead
+- uid: Ipfs.Cid.CidJsonConverter.CanWrite
+  name: CanWrite
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanWrite
+  commentId: P:Ipfs.Cid.CidJsonConverter.CanWrite
+  fullName: Ipfs.Cid.CidJsonConverter.CanWrite
+  nameWithType: Cid.CidJsonConverter.CanWrite
+- uid: Ipfs.Cid.CidJsonConverter.CanWrite*
+  name: CanWrite
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_CanWrite_
+  commentId: Overload:Ipfs.Cid.CidJsonConverter.CanWrite
+  isSpec: "True"
+  fullName: Ipfs.Cid.CidJsonConverter.CanWrite
+  nameWithType: Cid.CidJsonConverter.CanWrite
+- uid: Ipfs.Cid.CidJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_
+  commentId: M:Ipfs.Cid.CidJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  fullName: Ipfs.Cid.CidJsonConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
+  nameWithType: Cid.CidJsonConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
+- uid: Ipfs.Cid.CidJsonConverter.ReadJson*
+  name: ReadJson
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_ReadJson_
+  commentId: Overload:Ipfs.Cid.CidJsonConverter.ReadJson
+  isSpec: "True"
+  fullName: Ipfs.Cid.CidJsonConverter.ReadJson
+  nameWithType: Cid.CidJsonConverter.ReadJson
+- uid: Ipfs.Cid.CidJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  name: WriteJson(JsonWriter, Object, JsonSerializer)
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer_
+  commentId: M:Ipfs.Cid.CidJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  fullName: Ipfs.Cid.CidJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
+  nameWithType: Cid.CidJsonConverter.WriteJson(JsonWriter, Object, JsonSerializer)
+- uid: Ipfs.Cid.CidJsonConverter.WriteJson*
+  name: WriteJson
+  href: api/Ipfs.Cid.CidJsonConverter.html#Ipfs_Cid_CidJsonConverter_WriteJson_
+  commentId: Overload:Ipfs.Cid.CidJsonConverter.WriteJson
+  isSpec: "True"
+  fullName: Ipfs.Cid.CidJsonConverter.WriteJson
+  nameWithType: Cid.CidJsonConverter.WriteJson
 - uid: Ipfs.Cid.ContentType
   name: ContentType
   href: api/Ipfs.Cid.html#Ipfs_Cid_ContentType

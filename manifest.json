@@ -65,11 +65,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipfs.Cid.CidJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipfs.Cid.CidJsonConverter.html",
+          "hash": "7FDtkoV+Nk+MWPfWuHz2Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipfs.Cid.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.Cid.html",
-          "hash": "/7gBY3KkCVOTzBlTK4HajA=="
+          "hash": "q9LPkKMnhYC4eOvqls+7pg=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipfs.html",
-          "hash": "fCGZ//hvRwZ2/FxIPccFLg=="
+          "hash": "1RL4kZt+fJrbjM1iM81x3Q=="
         }
       },
       "is_incremental": false,
@@ -705,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HjesqNLmiQdAimBsyRc2dA=="
+          "hash": "tle1IjzX6UTKBI8HTDCXyQ=="
         }
       },
       "is_incremental": false,
@@ -886,7 +898,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 58,
+          "total_file_count": 59,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
