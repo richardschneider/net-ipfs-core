@@ -38,15 +38,19 @@ namespace Ipfs.CoreApi
         Task<BitswapData> BitswapAsync(CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
-        ///   Get statistics on repository.
+        ///   Get statistics on the repository.
         /// </summary>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's result is
-        ///   the current <see cref="BandwidthData"/>.
+        ///   the current <see cref="RepositoryData"/>.
         /// </returns>
+        /// <remarks>
+        ///   Same as <see cref="IBlockRepositoryApi.Statistics(CancellationToken)"/>.
+        /// </remarks>
+        /// <seealso cref="IBlockRepositoryApi"/>
         Task<RepositoryData> RepositoryAsync(CancellationToken cancel = default(CancellationToken));
     }
 }

@@ -15,6 +15,7 @@ namespace Ipfs.CoreApi
     ///   "blocks" in <see cref="IBitswapApi">Bitswap</see>
     ///   and other things that do not care about what is being stored. 
     /// </remarks>
+    /// <seealso cref="IBlockRepositoryApi"/>
     /// <seealso href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/BLOCK.md">Block API spec</seealso>
     public interface IBlockApi
     {
