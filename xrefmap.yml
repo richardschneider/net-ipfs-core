@@ -948,6 +948,64 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IBlockApi.StatAsync
   nameWithType: IBlockApi.StatAsync
+- uid: Ipfs.CoreApi.IBlockRepositoryApi
+  name: IBlockRepositoryApi
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html
+  commentId: T:Ipfs.CoreApi.IBlockRepositoryApi
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi
+  nameWithType: IBlockRepositoryApi
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage(System.Threading.CancellationToken)
+  name: RemoveGarage(CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_RemoveGarage_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage(System.Threading.CancellationToken)
+  nameWithType: IBlockRepositoryApi.RemoveGarage(CancellationToken)
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage*
+  name: RemoveGarage
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_RemoveGarage_
+  commentId: Overload:Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.RemoveGarage
+  nameWithType: IBlockRepositoryApi.RemoveGarage
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Statistics(System.Threading.CancellationToken)
+  name: Statistics(CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Statistics_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockRepositoryApi.Statistics(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Statistics(System.Threading.CancellationToken)
+  nameWithType: IBlockRepositoryApi.Statistics(CancellationToken)
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Statistics*
+  name: Statistics
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Statistics_
+  commentId: Overload:Ipfs.CoreApi.IBlockRepositoryApi.Statistics
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Statistics
+  nameWithType: IBlockRepositoryApi.Statistics
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Verify(System.Threading.CancellationToken)
+  name: Verify(CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Verify_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockRepositoryApi.Verify(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Verify(System.Threading.CancellationToken)
+  nameWithType: IBlockRepositoryApi.Verify(CancellationToken)
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Verify*
+  name: Verify
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Verify_
+  commentId: Overload:Ipfs.CoreApi.IBlockRepositoryApi.Verify
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Verify
+  nameWithType: IBlockRepositoryApi.Verify
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Version(System.Threading.CancellationToken)
+  name: Version(CancellationToken)
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Version_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBlockRepositoryApi.Version(System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Version(System.Threading.CancellationToken)
+  nameWithType: IBlockRepositoryApi.Version(CancellationToken)
+- uid: Ipfs.CoreApi.IBlockRepositoryApi.Version*
+  name: Version
+  href: api/Ipfs.CoreApi.IBlockRepositoryApi.html#Ipfs_CoreApi_IBlockRepositoryApi_Version_
+  commentId: Overload:Ipfs.CoreApi.IBlockRepositoryApi.Version
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBlockRepositoryApi.Version
+  nameWithType: IBlockRepositoryApi.Version
 - uid: Ipfs.CoreApi.IBootstrapApi
   name: IBootstrapApi
   href: api/Ipfs.CoreApi.IBootstrapApi.html
@@ -1143,6 +1201,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.ICoreApi.Block
   nameWithType: ICoreApi.Block
+- uid: Ipfs.CoreApi.ICoreApi.BlockRepository
+  name: BlockRepository
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_BlockRepository
+  commentId: P:Ipfs.CoreApi.ICoreApi.BlockRepository
+  fullName: Ipfs.CoreApi.ICoreApi.BlockRepository
+  nameWithType: ICoreApi.BlockRepository
+- uid: Ipfs.CoreApi.ICoreApi.BlockRepository*
+  name: BlockRepository
+  href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_BlockRepository_
+  commentId: Overload:Ipfs.CoreApi.ICoreApi.BlockRepository
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ICoreApi.BlockRepository
+  nameWithType: ICoreApi.BlockRepository
 - uid: Ipfs.CoreApi.ICoreApi.Bootstrap
   name: Bootstrap
   href: api/Ipfs.CoreApi.ICoreApi.html#Ipfs_CoreApi_ICoreApi_Bootstrap
