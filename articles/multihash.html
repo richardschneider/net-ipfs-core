@@ -8,7 +8,7 @@
     <title>MultiHash | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="MultiHash | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.0.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,17 +69,17 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="multihash">MultiHash</h1>
 
-<p>All hashes in IPFS are encoded as a <a class="xref" href="../api/Ipfs.MultiHash.html">MultiHash</a>, a self-describing hash format. 
+<p>All hashes in IPFS are encoded as a <a href="xref:Ipfs.MultiHash">MultiHash</a>, a self-describing hash format. 
 The actual <a href="#algorithms">hash function</a> used depends on security requirements; &quot;sha2-256&quot; is todays default.</p>
-<p>A multihash is used to identify a <a class="xref" href="../api/Ipfs.Peer.html">peer</a>, <a class="xref" href="../api/Ipfs.IKey.html">key</a> and <a href="cid.html">content</a>. 
+<p>A multihash is used to identify a <a href="xref:Ipfs.Peer">peer</a>, <a href="xref:Ipfs.IKey">key</a> and <a href="cid.html">content</a>. 
 For background information, see <a href="https://docs.ipfs.io/guides/concepts/hashes/">hash concept</a>.</p>
 <pre><code class="lang-csharp">var hello = Encoding.UTF8.GetBytes(&quot;Hello world&quot;);
 var mh = MultiHash.ComputeHash(hello, &quot;sha2-256&quot;);
 </code></pre><h2 id="format">Format</h2>
-<p>The binary representation consists of the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_Algorithm">hash code</a>, the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_Digest">digest&#39;s</a> 
+<p>The binary representation consists of the <a href="xref:Ipfs.MultiHash.Algorithm">hash code</a>, the <a href="xref:Ipfs.MultiHash.Digest">digest&#39;s</a> 
 length and value. The code and length are encoded as <a href="varint.html">varints</a>.</p>
-<p>The textual representation is usually the <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase58_">Base58</a> encoding of the 
-binary format. <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_ToBase32_">Base32</a> encoding is used when case insensity is required.</p>
+<p>The textual representation is usually the <a href="xref:Ipfs.MultiHash.ToBase58*">Base58</a> encoding of the 
+binary format. <a href="xref:Ipfs.MultiHash.ToBase32*">Base32</a> encoding is used when case insensity is required.</p>
 <p>From the above example, the following is produced</p>
 <table>
 <thead>
@@ -116,7 +116,7 @@ binary format. <a class="xref" href="../api/Ipfs.MultiHash.html#Ipfs_MultiHash_T
 </tbody>
 </table>
 <h2 id="algorithms">Algorithms</h2>
-<p>IPFS assigns a unique <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Name">Name</a> and <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Code">Code</a> 
+<p>IPFS assigns a unique <a href="xref:Ipfs.Registry.HashingAlgorithm.Name">Name</a> and <a href="xref:Ipfs.Registry.HashingAlgorithm.Code">Code</a> 
 to a hashing algorithm. See <a href="https://github.com/multiformats/multicodec/blob/master/table.csv&quot;">hashtable.csv</a> 
 for the currently defined hashing algorithms.</p>
 <p>These algorithms are implemented:</p>
@@ -133,8 +133,8 @@ for the currently defined hashing algorithms.</p>
 <p>The identity hash is also implemented; which just returns the input bytes. This is used to inline a small amount of 
 data into a <a href="cid.html">CID</a>.</p>
 <h2 id="registry">Registry</h2>
-<p>The <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html">hashing registry</a> contains the metadata on a hashing algorithm.  You can use
-<a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_">Register</a> to add a new hashing algorithm.</p>
+<p>The <a href="xref:Ipfs.Registry.HashingAlgorithm">hashing registry</a> contains the metadata on a hashing algorithm.  You can use
+<a href="xref:Ipfs.Registry.HashingAlgorithm.Register*">Register</a> to add a new hashing algorithm.</p>
 </article>
           </div>
           
