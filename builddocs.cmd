@@ -1,1 +1,1 @@
-docfx doc\docfx.json --logLevel Warning
+docfx doc\docfx.json --logLevel Warning --warningsAsErrors
