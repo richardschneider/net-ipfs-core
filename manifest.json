@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cid.html",
-          "hash": "bUVk8niJesG6/Q+4dXpHrw=="
+          "hash": "M+S3XGzWhGAgGMZw6diCEQ=="
         }
       },
       "is_incremental": false,
@@ -27,7 +27,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/core-api.html",
-          "hash": "d8yllIpuwg6t2AfUZsz8KQ=="
+          "hash": "P3PFWbWCV+FIbdfL8bdeHQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/dag.html",
-          "hash": "8vlIpyBU5dw9e9o0bxlbJw=="
+          "hash": "NWpgWD+TgSck41nQvUCw8A=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "/8go0YB3GZ2BBV4g2/QRCw=="
+          "hash": "tGjnLfHpffsPKe+ywvjd4A=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/multiaddress.html",
-          "hash": "DFlr1WbuQ0ipYw8E3f92Gg=="
+          "hash": "3rupmDbKaBTr7DZgptEcnw=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/multihash.html",
-          "hash": "NyXJD2e6RqjYXCNPS/I8hw=="
+          "hash": "6LO70n7aWZHECUtEjnvAkA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/varint.html",
-          "hash": "1gjn30eAOGlYsAI67OP3lg=="
+          "hash": "WvygVHY9peKbPEyYFByLXw=="
         }
       },
       "is_incremental": false,
@@ -126,6 +126,39 @@
       "output": {
         "resource": {
           "relative_path": "images/docs-latest-green.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ipfs-cs-logo-48x48.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ipfs-cs-logo-48x48.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ipfs-cs-logo-64x64.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ipfs-cs-logo-64x64.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ipfs-cs-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/ipfs-cs-logo.svg"
         }
       },
       "is_incremental": false,
@@ -162,7 +195,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OAoHHutLsNqKr32hHmiwrQ=="
+          "hash": "L+tqCgm5uQRyElvVJHwTGQ=="
         }
       },
       "is_incremental": false,
