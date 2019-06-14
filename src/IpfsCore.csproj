@@ -5,7 +5,7 @@
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <DebugType>full</DebugType>
+    <DebugType>portable</DebugType>
     
     <!-- developer build is always 0.42 -->
     <AssemblyVersion>0.42</AssemblyVersion>
@@ -20,23 +20,36 @@
 The InterPlanetary File System is the permanent web. It is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>https://github.com/richardschneider/net-ipfs-core/releases</PackageReleaseNotes>
-    <Copyright>© 2015-2018 Richard Schneider</Copyright>
+    <Copyright>© 2015-2019 Richard Schneider</Copyright>
     <PackageTags>ipfs peer-to-peer distributed file-system</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <PackageLicenseUrl>https://github.com/richardschneider/net-ipfs-core/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/richardschneider/net-ipfs-core</PackageProjectUrl>
     <PackageIconUrl>https://github.com/ipfs/logo/blob/master/platform-icons/osx-menu-bar.png</PackageIconUrl>
-
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
   </PropertyGroup>
- 
+
+  <PropertyGroup>
+    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+    <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>.pdb;$(AllowedOutputExtensionsInPackageBuildOutputFolder)</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Common.Logging" Version="3.4.1" />
     <PackageReference Include="Common.Logging.Core" Version="3.4.1" />
     <PackageReference Include="Google.Protobuf" Version="3.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
-    <PackageReference Include="SimpleBase" Version="1.3.1" />
+    <PackageReference Include="SimpleBase" Version="1.4.1" />
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.0.102" PrivateAssets="All" />
+    <PackageReference Include="Grpc.Tools" Version="1.21.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19270-01" PrivateAssets="All" />
   </ItemGroup>
  
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
