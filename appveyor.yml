@@ -36,6 +36,8 @@ install:
   - choco install gitversion.portable -y
   - npm install gh-pages -g
   - choco install docfx -y
+  - nuget install -OutputDirectory packages -Version 4.6.519 OpenCover
+  - nuget install -OutputDirectory packages -Version 0.6.0 coveralls.net
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
@@ -53,8 +55,10 @@ before_build:
 
 build_script:
   - dotnet build -c %CONFIGURATION% -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
+  - dotnet pack -c %CONFIGURATION% --no-build --no-restore -p:Version=%GitVersion_MajorMinorPatch% -p:AssemblyVersion=%GitVersion_MajorMinorPatch%
 
 after_build:
+  - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Ipfs.Core.%GitVersion_MajorMinorPatch%.nupkg"
 # Build documentation in doc\_site
   - cmd: builddocs.cmd
   - cmd: 7z a -tzip docs.zip doc\_site
@@ -66,19 +70,17 @@ test_script:
 
 after_test: 
 # Generate coverage report
-    - dotnet test -c %CONFIGURATION% -f netcoreapp2.1 --no-build --no-restore test /p:CollectCoverage=true
-    - choco install codecov -y
-    - codecov -f "test/coverage.opencover.xml"
-    - dotnet tool install --global coveralls.net --version 1.0.0
-    - if defined COVERALLS_REPO_TOKEN
-        csmacnz.coveralls.exe
-        --opencover -i test/coverage.opencover.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
-
-artifacts:
-  - path: 'src/**/*.nupkg'
-    name: nupkg
-  - path: 'src/**/*.snupkg'
-    name: snupkg
+    - packages\OpenCover.4.6.519\tools\OpenCover.Console.exe 
+        -register:user -filter:"+[Ipfs*]* -[*Tests]* -[Ipfs.Core]Ipfs.Cryptography.SHA3*" 
+        -target:"c:\Program Files\dotnet\dotnet.exe" 
+        -targetargs:"test -c Release --no-build --no-restore --framework netcoreapp2.0 test" 
+        -output:coverage.xml  
+        -mergeoutput 
+        -hideskipped:File 
+        -oldStyle 
+    - if defined COVERALLS_REPO_TOKEN 
+         packages\coveralls.net.0.6.0\tools\csmacnz.coveralls.exe
+        --opencover -i ./coverage.xml --useRelativePaths --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 
 # publish NuGet package on tag build
 deploy:
