@@ -35,7 +35,6 @@ environment:
 install:
   - choco install gitversion.portable -y
   - npm install gh-pages -g
-  - choco install docfx -y
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
@@ -56,6 +55,8 @@ build_script:
 
 after_build:
 # Build documentation in doc\_site
+# v2.43 is requiring VS 2019!!!
+  - cmd: choco install docfx -y --version 2.42 --force
   - cmd: builddocs.cmd
   - cmd: 7z a -tzip docs.zip doc\_site
   - cmd: appveyor PushArtifact docs.zip
