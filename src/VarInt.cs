@@ -113,7 +113,7 @@ namespace Ipfs
         /// </exception>
         public static void WriteVarint(this Stream stream, long value)
         {
-            stream.WriteVarintAsync(value).Wait();
+            stream.WriteVarintAsync(value).ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Ipfs
         /// <returns>The integer value.</returns>
         public static int ReadVarint32(this Stream stream)
         {
-            return stream.ReadVarint32Async().Result;
+            return stream.ReadVarint32Async().ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Ipfs
         /// <returns>The integer value.</returns>
         public static long ReadVarint64(this Stream stream)
         {
-            return stream.ReadVarint64Async().Result;
+            return stream.ReadVarint64Async().ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
