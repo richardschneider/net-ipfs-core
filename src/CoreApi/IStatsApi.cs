@@ -48,7 +48,7 @@ namespace Ipfs.CoreApi
         ///   the current <see cref="RepositoryData"/>.
         /// </returns>
         /// <remarks>
-        ///   Same as <see cref="IBlockRepositoryApi.Statistics(CancellationToken)"/>.
+        ///   Same as <see cref="IBlockRepositoryApi.StatisticsAsync(CancellationToken)"/>.
         /// </remarks>
         /// <seealso cref="IBlockRepositoryApi"/>
         Task<RepositoryData> RepositoryAsync(CancellationToken cancel = default(CancellationToken));
