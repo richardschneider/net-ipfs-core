@@ -15,7 +15,7 @@
         }
       ],
       "properties": {
-        "TargetFramework": "net45"
+        "TargetFramework": "netstandard2"
       },
 
       "dest": "api"
@@ -82,5 +82,4 @@
     "postProcessors": [],
     "noLangKeyword": false
   }
-}
 }
