@@ -8,7 +8,7 @@
     <title>Merkle DAG | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Merkle DAG | IPFS Core documentation ">
-    <meta name="generator" content="docfx 2.43.0.0">
+    <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,13 +69,13 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="merkle-dag">Merkle DAG</h1>
 
-<p>The <a href="xref:Ipfs.DagNode">DagNode</a> is a directed acyclic graph whose edges are a 
-<a href="xref:Ipfs.DagLink">DagLink</a>. This means that links to objects can authenticate 
+<p>The <a class="xref" href="../api/Ipfs.DagNode.html">DagNode</a> is a directed acyclic graph whose edges are a 
+<a class="xref" href="../api/Ipfs.DagLink.html">DagLink</a>. This means that links to objects can authenticate 
 the objects themselves, and that every object contains a secure 
 representation of its children.</p>
 <p>Every Merkle node is a directed acyclic graph (DAG) because each child node is accessed via its <a href="cid.html">CID</a>, 
-basically the <a href="multihash.html">hash</a> of the child&#39;s dag node. It&#39;s <a href="xref:Ipfs.DagNode.Id">ID</a> 
-is the hash of its local content (<a href="xref:Ipfs.DagNode.DataBytes">data</a> and <a href="xref:Ipfs.DagNode.Links">links</a>). 
+basically the <a href="multihash.html">hash</a> of the child&#39;s dag node. It&#39;s <a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_Id">ID</a> 
+is the hash of its local content (<a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_DataBytes">data</a> and <a class="xref" href="../api/Ipfs.DagNode.html#Ipfs_DagNode_Links">links</a>). 
 So after creation there is no way to edit a DagNode. This prevents cycles (assuming there are no hash collisions) 
 since one can not link the first created node to the last node to create the last reference.</p>
 <pre><code class="lang-csharp">var a = Encoding.UTF8.GetBytes(&quot;a&quot;);

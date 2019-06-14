@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Variable Integer | IPFS Core documentation </title>
+    <title>Namespace Ipfs.Registry
+   | IPFS Core documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Variable Integer | IPFS Core documentation ">
+    <meta name="title" content="Namespace Ipfs.Registry
+   | IPFS Core documentation ">
     <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
@@ -66,50 +68,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="variable-integer">Variable Integer</h1>
-
-<p>A <a class="xref" href="../api/Ipfs.Varint.html">varint</a> is used to encode a non-negative integer of up to 64 bits. 
-It is encoded in network byte order (Big Endian). Each byte (except the last) contains 7 bits
-of information with the most significant bit set to 1.  The last byte has the MSB set to 0.</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Varint encoding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 (0x1)</td>
-<td>01</td>
-</tr>
-<tr>
-<td>16 (0x10)</td>
-<td>10</td>
-</tr>
-<tr>
-<td>256 (0x100)</td>
-<td>80 02</td>
-</tr>
-<tr>
-<td>4096 (0x1000)</td>
-<td>80 20</td>
-</tr>
-<tr>
-<td>65536 (0x10000)</td>
-<td>80 80 04</td>
-</tr>
-<tr>
-<td>1048576 (0x100000)</td>
-<td>80 80 40</td>
-</tr>
-<tr>
-<td>16777216 (0x1000000)</td>
-<td>80 80 80 08</td>
-</tr>
-</tbody>
-</table>
+            <article class="content wrap" id="_content" data-uid="Ipfs.Registry">
+  
+  <h1 id="Ipfs_Registry" data-uid="Ipfs.Registry" class="text-break">Namespace Ipfs.Registry
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Ipfs.Registry.Codec.html">Codec</a></h4>
+      <section><p>Metadata for IPFS multi-codec.</p>
+</section>
+      <h4><a class="xref" href="Ipfs.Registry.HashingAlgorithm.html">HashingAlgorithm</a></h4>
+      <section><p>Metadata and implemetations of a IPFS hashing algorithms.</p>
+</section>
+      <h4><a class="xref" href="Ipfs.Registry.MultiBaseAlgorithm.html">MultiBaseAlgorithm</a></h4>
+      <section><p>Metadata and implemetations of an IPFS multi-base algorithm.</p>
+</section>
 </article>
           </div>
           
@@ -117,9 +93,6 @@ of information with the most significant bit set to 1.  The last byte has the MS
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/doc/articles/varint.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

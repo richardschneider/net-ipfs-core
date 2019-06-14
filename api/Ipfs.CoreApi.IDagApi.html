@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDagApi
+   | IPFS Core documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDagApi
+   | IPFS Core documentation ">
+    <meta name="generator" content="docfx 2.42.0.0">
+    
+    <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/ipfs-cs-logo-48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Ipfs.CoreApi.IDagApi">
+  
+  
+  <h1 id="Ipfs_CoreApi_IDagApi" data-uid="Ipfs.CoreApi.IDagApi" class="text-break">Interface IDagApi
+  </h1>
+  <div class="markdown level0 summary"><p>Manages the IPLD (linked data) Directed Acrylic Graph.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Ipfs.CoreApi.html">Ipfs.CoreApi</a></h6>
+  <h6><strong>Assembly</strong>: Ipfs.Core.dll</h6>
+  <h5 id="Ipfs_CoreApi_IDagApi_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDagApi</code></pre>
+  </div>
+  <h5 id="Ipfs_CoreApi_IDagApi_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The DAG API is a replacement of the <a class="xref" href="Ipfs.CoreApi.IObjectApi.html">IObjectApi</a>, which only supported &apos;dag-pb&apos;.
+This API supports other IPLD formats, such as cbor, ethereum-block, git, ...</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L141">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_GetAsync_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync(Cid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Get an IPLD node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;JObject&gt; GetAsync(Cid id, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="Ipfs.Cid.html">Cid</a> of the IPLD node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Newtonsoft.Json.Linq.JObject</span>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task&apos;s value
+contains the node&apos;s content as JSON.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_GetAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.GetAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L156">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_GetAsync_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_GetAsync_System_String_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync(System.String,System.Threading.CancellationToken)">GetAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the content of an IPLD node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;JToken&gt; GetAsync(string path, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>A path, such as &quot;cid&quot;, &quot;/ipfs/cid/&quot; or &quot;cid/a&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Newtonsoft.Json.Linq.JToken</span>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task&apos;s value
+contains the path&apos;s value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_GetAsync__1_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.GetAsync%60%601(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L174">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_GetAsync_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_GetAsync__1_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.GetAsync``1(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync&lt;T&gt;(Cid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Get an IPLD node of the specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;T&gt; GetAsync&lt;T&gt;(Cid id, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="Ipfs.Cid.html">Cid</a> of the IPLD node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task&apos;s value
+is a new instance of the <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The object&apos;s type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L50">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_PutAsync_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_PutAsync_Newtonsoft_Json_Linq_JObject_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync(Newtonsoft.Json.Linq.JObject,System.String,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">PutAsync(JObject, String, String, String, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Put JSON data as an IPLD node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(JObject data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, string encoding = &quot;base58btc&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The JSON data to send to the network.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">multiHash</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiBase.html">MultiBase</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pin</span></td>
+        <td><p>If <strong>true</strong> the <code data-dev-comment-type="paramref" class="paramref">data</code> is pinned to local storage and will not be
+garbage collected.  The default is <strong>true</strong>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>A task that represents the asynchronous put operation. The task&apos;s value is
+the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_PutAsync_System_IO_Stream_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.PutAsync(System.IO.Stream%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L85">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_PutAsync_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_PutAsync_System_IO_Stream_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync(System.IO.Stream,System.String,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">PutAsync(Stream, String, String, String, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Put a stream of JSON as an IPLD node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(Stream data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, string encoding = &quot;base58btc&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The stream of JSON.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">multiHash</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiBase.html">MultiBase</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pin</span></td>
+        <td><p>If <strong>true</strong> the <code data-dev-comment-type="paramref" class="paramref">data</code> is pinned to local storage and will not be
+garbage collected.  The default is <strong>true</strong>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>A task that represents the asynchronous put operation. The task&apos;s value is
+the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi_PutAsync_System_Object_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi.PutAsync(System.Object%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L120">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IDagApi_PutAsync_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IDagApi_PutAsync_System_Object_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDagApi.PutAsync(System.Object,System.String,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">PutAsync(Object, String, String, String, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Put an object as an IPLD node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Cid&gt; PutAsync(object data, string contentType = &quot;dag-cbor&quot;, string multiHash = &quot;sha2-256&quot;, string encoding = &quot;base58btc&quot;, bool pin = true, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The object to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>The content type or format of the <code data-dev-comment-type="paramref" class="paramref">data</code>; such as &quot;dag-pb&quot; or &quot;dag-cbor&quot;.
+See <a class="xref" href="Ipfs.MultiCodec.html">MultiCodec</a> for more details.  Defaults to &quot;dag-cbor&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">multiHash</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiHash.html">MultiHash</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The <a class="xref" href="Ipfs.MultiBase.html">MultiBase</a> algorithm name used to produce the <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">pin</span></td>
+        <td><p>If <strong>true</strong> the <code data-dev-comment-type="paramref" class="paramref">data</code> is pinned to local storage and will not be
+garbage collected.  The default is <strong>true</strong>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.Cid.html">Cid</a>&gt;</td>
+        <td><p>A task that represents the asynchronous put operation. The task&apos;s value is
+the data&apos;s <a class="xref" href="Ipfs.Cid.html">Cid</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Ipfs.CoreApi.IObjectApi.html">IObjectApi</a></div>
+      <div><a class="xref" href="Ipfs.ILinkedNode.html">ILinkedNode</a></div>
+      <div><span><a href="https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/DAG.md">Dag API spec</a></span></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDagApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDagApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDagApi.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
