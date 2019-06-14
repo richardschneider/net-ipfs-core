@@ -34,8 +34,6 @@ environment:
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -y
-  - npm install gh-pages -g
-  - choco install docfx -y
   - nuget install -OutputDirectory packages -Version 4.6.519 OpenCover
   - nuget install -OutputDirectory packages -Version 0.6.0 coveralls.net
   # No longer signing the assembly
@@ -59,10 +57,13 @@ build_script:
 
 after_build:
   - cmd: appveyor PushArtifact "src\bin\%CONFIGURATION%\Ipfs.Core.%GitVersion_MajorMinorPatch%.nupkg"
-# Build documentation in doc\_site
+# Build documentation in doc\_site 
+# v2.43 is requiring VS 2019!!!
+  - cmd: choco install docfx -y --version 2.42 --force
   - cmd: builddocs.cmd
   - cmd: 7z a -tzip docs.zip doc\_site
   - cmd: appveyor PushArtifact docs.zip
+  - npm install gh-pages -g
   - if defined git_token gh-pages -d doc\_site -m "new docs %GitVersion_FullSemVer%"
 
 test_script:
