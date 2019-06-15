@@ -51,5 +51,19 @@ namespace Ipfs.CoreApi
         /// </value>
         public ulong DataSent { get; set; }
 
+        /// <summary>
+        ///   The calculated debt to the peer.
+        /// </summary>
+        /// <value>
+        ///   <see cref="DataSent"/> divided by <see cref="DataReceived"/>.
+        /// </value>
+        public float DebtRatio
+        {
+            get
+            {
+                return (float)DataSent / (float)(DataReceived + 1); // +1 is to prevent division by zero
+            }
+        }
+
     }
 }
