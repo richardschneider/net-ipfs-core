@@ -842,6 +842,103 @@ references:
   commentId: F:Ipfs.CoreApi.BitswapData.Wantlist
   fullName: Ipfs.CoreApi.BitswapData.Wantlist
   nameWithType: BitswapData.Wantlist
+- uid: Ipfs.CoreApi.BitswapLedger
+  name: BitswapLedger
+  href: api/Ipfs.CoreApi.BitswapLedger.html
+  commentId: T:Ipfs.CoreApi.BitswapLedger
+  fullName: Ipfs.CoreApi.BitswapLedger
+  nameWithType: BitswapLedger
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksReceived
+  name: BlocksReceived
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksReceived
+  commentId: P:Ipfs.CoreApi.BitswapLedger.BlocksReceived
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksReceived
+  nameWithType: BitswapLedger.BlocksReceived
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksReceived*
+  name: BlocksReceived
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksReceived_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.BlocksReceived
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksReceived
+  nameWithType: BitswapLedger.BlocksReceived
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksSent
+  name: BlocksSent
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksSent
+  commentId: P:Ipfs.CoreApi.BitswapLedger.BlocksSent
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksSent
+  nameWithType: BitswapLedger.BlocksSent
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksSent*
+  name: BlocksSent
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksSent_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.BlocksSent
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksSent
+  nameWithType: BitswapLedger.BlocksSent
+- uid: Ipfs.CoreApi.BitswapLedger.DataReceived
+  name: DataReceived
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DataReceived
+  commentId: P:Ipfs.CoreApi.BitswapLedger.DataReceived
+  fullName: Ipfs.CoreApi.BitswapLedger.DataReceived
+  nameWithType: BitswapLedger.DataReceived
+- uid: Ipfs.CoreApi.BitswapLedger.DataReceived*
+  name: DataReceived
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DataReceived_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.DataReceived
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.DataReceived
+  nameWithType: BitswapLedger.DataReceived
+- uid: Ipfs.CoreApi.BitswapLedger.DataSent
+  name: DataSent
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DataSent
+  commentId: P:Ipfs.CoreApi.BitswapLedger.DataSent
+  fullName: Ipfs.CoreApi.BitswapLedger.DataSent
+  nameWithType: BitswapLedger.DataSent
+- uid: Ipfs.CoreApi.BitswapLedger.DataSent*
+  name: DataSent
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DataSent_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.DataSent
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.DataSent
+  nameWithType: BitswapLedger.DataSent
+- uid: Ipfs.CoreApi.BitswapLedger.DebtRatio
+  name: DebtRatio
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DebtRatio
+  commentId: P:Ipfs.CoreApi.BitswapLedger.DebtRatio
+  fullName: Ipfs.CoreApi.BitswapLedger.DebtRatio
+  nameWithType: BitswapLedger.DebtRatio
+- uid: Ipfs.CoreApi.BitswapLedger.DebtRatio*
+  name: DebtRatio
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DebtRatio_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.DebtRatio
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.DebtRatio
+  nameWithType: BitswapLedger.DebtRatio
+- uid: Ipfs.CoreApi.BitswapLedger.IsInDebt
+  name: IsInDebt
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_IsInDebt
+  commentId: P:Ipfs.CoreApi.BitswapLedger.IsInDebt
+  fullName: Ipfs.CoreApi.BitswapLedger.IsInDebt
+  nameWithType: BitswapLedger.IsInDebt
+- uid: Ipfs.CoreApi.BitswapLedger.IsInDebt*
+  name: IsInDebt
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_IsInDebt_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.IsInDebt
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.IsInDebt
+  nameWithType: BitswapLedger.IsInDebt
+- uid: Ipfs.CoreApi.BitswapLedger.Peer
+  name: Peer
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_Peer
+  commentId: P:Ipfs.CoreApi.BitswapLedger.Peer
+  fullName: Ipfs.CoreApi.BitswapLedger.Peer
+  nameWithType: BitswapLedger.Peer
+- uid: Ipfs.CoreApi.BitswapLedger.Peer*
+  name: Peer
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_Peer_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.Peer
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.BitswapLedger.Peer
+  nameWithType: BitswapLedger.Peer
 - uid: Ipfs.CoreApi.IBitswapApi
   name: IBitswapApi
   href: api/Ipfs.CoreApi.IBitswapApi.html
@@ -861,6 +958,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IBitswapApi.GetAsync
   nameWithType: IBitswapApi.GetAsync
+- uid: Ipfs.CoreApi.IBitswapApi.LedgerAsync(Ipfs.Peer,System.Threading.CancellationToken)
+  name: LedgerAsync(Peer, CancellationToken)
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_LedgerAsync_Ipfs_Peer_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IBitswapApi.LedgerAsync(Ipfs.Peer,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IBitswapApi.LedgerAsync(Ipfs.Peer, System.Threading.CancellationToken)
+  nameWithType: IBitswapApi.LedgerAsync(Peer, CancellationToken)
+- uid: Ipfs.CoreApi.IBitswapApi.LedgerAsync*
+  name: LedgerAsync
+  href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_LedgerAsync_
+  commentId: Overload:Ipfs.CoreApi.IBitswapApi.LedgerAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IBitswapApi.LedgerAsync
+  nameWithType: IBitswapApi.LedgerAsync
 - uid: Ipfs.CoreApi.IBitswapApi.UnwantAsync(Ipfs.Cid,System.Threading.CancellationToken)
   name: UnwantAsync(Cid, CancellationToken)
   href: api/Ipfs.CoreApi.IBitswapApi.html#Ipfs_CoreApi_IBitswapApi_UnwantAsync_Ipfs_Cid_System_Threading_CancellationToken_

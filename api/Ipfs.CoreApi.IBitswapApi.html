@@ -84,9 +84,12 @@ send blocks to other peers in the network.</p>
     <pre><code class="lang-csharp hljs">public interface IBitswapApi</code></pre>
   </div>
   <h5 id="Ipfs_CoreApi_IBitswapApi_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Bitswap has two primary jobs (1) Attempt to acquire blocks from the network that 
-have been requested by the client and (2) Judiciously(though strategically)
-send blocks in its possession to other peers who want them.</p>
+  <div class="markdown level0 remarks"><p>Bitswap has two primary jobs
+<ul><li>
+    Attempt to acquire blocks from the network that  have been requested by the client
+</li><li>
+Judiciously (though strategically) send blocks in its possession to other peers who want them
+</li></ul></p>
 </div>
   <h3 id="methods">Methods
   </h3>
@@ -95,7 +98,7 @@ send blocks in its possession to other peers who want them.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L37">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L47">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBitswapApi_GetAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.GetAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBitswapApi_GetAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.GetAsync(Ipfs.Cid,System.Threading.CancellationToken)">GetAsync(Cid, CancellationToken)</h4>
@@ -152,10 +155,68 @@ contains the block&apos;s id and data.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_LedgerAsync_Ipfs_Peer_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.LedgerAsync(Ipfs.Peer%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L97">View Source</a>
+  </span>
+  <a id="Ipfs_CoreApi_IBitswapApi_LedgerAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.LedgerAsync*"></a>
+  <h4 id="Ipfs_CoreApi_IBitswapApi_LedgerAsync_Ipfs_Peer_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.LedgerAsync(Ipfs.Peer,System.Threading.CancellationToken)">LedgerAsync(Peer, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets information on the blocks exchanged with a specific <a class="xref" href="Ipfs.Peer.html">Peer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;BitswapLedger&gt; LedgerAsync(Peer peer, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ipfs.Peer.html">Peer</a></td>
+        <td><span class="parametername">peer</span></td>
+        <td><p>The peer to get information on.  If the peer is unknown, then a ledger
+with zeros is returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Ipfs.CoreApi.BitswapLedger.html">BitswapLedger</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation. The task&apos;s value
+contains the <a class="xref" href="Ipfs.CoreApi.BitswapLedger.html">BitswapLedger</a> for the <code data-dev-comment-type="paramref" class="paramref">peer</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_UnwantAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.UnwantAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L71">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L81">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBitswapApi_UnwantAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.UnwantAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBitswapApi_UnwantAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.UnwantAsync(Ipfs.Cid,System.Threading.CancellationToken)">UnwantAsync(Cid, CancellationToken)</h4>
@@ -215,7 +276,7 @@ contains the block&apos;s id and data.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L53">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L63">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IBitswapApi_WantsAsync_" data-uid="Ipfs.CoreApi.IBitswapApi.WantsAsync*"></a>
   <h4 id="Ipfs_CoreApi_IBitswapApi_WantsAsync_Ipfs_MultiHash_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IBitswapApi.WantsAsync(Ipfs.MultiHash,System.Threading.CancellationToken)">WantsAsync(MultiHash, CancellationToken)</h4>
@@ -283,7 +344,7 @@ contains the sequence of blocks needed by the <code data-dev-comment-type="param
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IBitswapApi.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IBitswapApi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IBitswapApi.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
