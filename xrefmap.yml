@@ -565,6 +565,12 @@ references:
   commentId: M:Ipfs.Cid.ToString
   fullName: Ipfs.Cid.ToString()
   nameWithType: Cid.ToString()
+- uid: Ipfs.Cid.ToString(System.String)
+  name: ToString(String)
+  href: api/Ipfs.Cid.html#Ipfs_Cid_ToString_System_String_
+  commentId: M:Ipfs.Cid.ToString(System.String)
+  fullName: Ipfs.Cid.ToString(System.String)
+  nameWithType: Cid.ToString(String)
 - uid: Ipfs.Cid.ToString*
   name: ToString
   href: api/Ipfs.Cid.html#Ipfs_Cid_ToString_
