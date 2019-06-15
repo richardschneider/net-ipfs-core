@@ -19,6 +19,7 @@ namespace Ipfs.CoreApi
             Assert.AreEqual(0ul, ledger.DataReceived);
             Assert.AreEqual(0ul, ledger.DataSent);
             Assert.AreEqual(0f, ledger.DebtRatio);
+            Assert.IsTrue(ledger.IsInDebt);
         }
 
         [TestMethod]
@@ -26,6 +27,7 @@ namespace Ipfs.CoreApi
         {
             var ledger = new BitswapLedger { DataSent = 1024 * 1024 };
             Assert.IsTrue(ledger.DebtRatio >= 1);
+            Assert.IsFalse(ledger.IsInDebt);
         }
 
         [TestMethod]
@@ -33,6 +35,7 @@ namespace Ipfs.CoreApi
         {
             var ledger = new BitswapLedger { DataReceived = 1024 * 1024 };
             Assert.IsTrue(ledger.DebtRatio < 1);
+            Assert.IsTrue(ledger.IsInDebt);
         }
     }
 }
