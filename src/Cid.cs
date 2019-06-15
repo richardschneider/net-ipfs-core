@@ -73,6 +73,10 @@ namespace Ipfs
         ///   <item><description><see cref="Hash"/> algorithm name equals "sha2-256"</description></item>
         ///   </list>
         ///   </para>
+        ///   <para>
+        ///   </para>
+        ///   The default <see cref="Encoding"/> is "base32" when the
+        ///   <see cref="Version"/> is not zero.
         /// </remarks>
         public int Version
         {
@@ -83,6 +87,10 @@ namespace Ipfs
             set
             {
                 EnsureMutable();
+                if (version == 0 && value > 0 && Encoding == "base58btc")
+                {
+                    encoding = "base32";
+                }
                 version = value;
             }
         }
@@ -91,7 +99,7 @@ namespace Ipfs
         ///   The <see cref="MultiBase"/> encoding of the CID.
         /// </summary>
         /// <value>
-        ///   base58btc, base64, etc.  Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
+        ///   base58btc, base32, base64, etc.  Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
         /// </value>
         /// <remarks>
         ///    Sets <see cref="Version"/> to 1, when setting a value that
@@ -107,11 +115,11 @@ namespace Ipfs
             set
             {
                 EnsureMutable();
-                encoding = value;
                 if (Version == 0 && value != "base58btc")
                 {
                     Version = 1;
                 }
+                encoding = value;
             }
         }
 

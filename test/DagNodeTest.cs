@@ -118,9 +118,7 @@ namespace Ipfs
             var node = new DagNode(abc, null, "sha2-512");
             CollectionAssert.AreEqual(abc, node.DataBytes);
             Assert.AreEqual(0, node.Links.Count());
-            // Had to change the test, because sha2-512 always generates a CID V1.
-            // Assert.AreEqual("8Vv347foTHxpLZDdguzcTp7mjBmySjWK1VF36Je7io4ZKHo28fefMFr28LSv757yTcaRzn1dRqPB6WWFpYvbd5YXca", (string)node.Id);
-            Assert.AreEqual("zBunREkQwjzkZwU71RKBcv2n3XwkTehtzVLkeUPTKjtBDBs2pnGRHLcxt3bGqzX38BkuNom2bQquyPj5Fh7dBZV3UdXPU", (string)node.Id);
+            Assert.AreEqual("bafybgqdqrys7323fuivxoixir7nnsfqmsneuuseg6mkbmcjgj4xaq7suehcmbghv5sbtxu57ccnhqjggxx7iz5p77gkcrhv2i3pj3yhv7fi56", (string)node.Id);
             Assert.AreEqual(5, node.Size);
 
             RoundtripTest(node);
