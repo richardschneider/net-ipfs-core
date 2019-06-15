@@ -11,9 +11,19 @@ namespace Ipfs.CoreApi
     ///   send blocks to other peers in the network.
     /// </summary>
     /// <remarks>
-    ///   Bitswap has two primary jobs (1) Attempt to acquire blocks from the network that 
-    ///   have been requested by the client and (2) Judiciously(though strategically)
-    ///   send blocks in its possession to other peers who want them.
+    ///   Bitswap has two primary jobs
+    ///   <list type="bullet">
+    ///     <item>
+    ///       <description>
+    ///       Attempt to acquire blocks from the network that  have been requested by the client
+    ///       </description>
+    ///     </item>
+    ///     <item>
+    ///       <description>
+    ///       Judiciously (though strategically) send blocks in its possession to other peers who want them
+    ///       </description>
+    ///     </item>
+    ///   </list>
     /// </remarks>
     /// <seealso href="https://github.com/ipfs/specs/tree/master/bitswap">Bitswap spec</seealso>
     public interface IBitswapApi
@@ -69,5 +79,21 @@ namespace Ipfs.CoreApi
         ///   <paramref name="id"/> are cancelled.
         /// </remarks>
         Task UnwantAsync(Cid id, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
+        ///   Gets information on the blocks exchanged with a specific <see cref="Peer"/>.
+        /// </summary>
+        /// <param name="peer">
+        ///   The peer to get information on.  If the peer is unknown, then a ledger
+        ///   with zeros is returned.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value
+        ///   contains the <see cref="BitswapLedger"/> for the <paramref name="peer"/>.
+        /// </returns>
+        Task<BitswapLedger> LedgerAsync(Peer peer, CancellationToken cancel = default(CancellationToken));
     }
 }
