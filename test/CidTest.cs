@@ -13,13 +13,40 @@ namespace Ipfs
     public class CidTest
     {
         [TestMethod]
-        public void HumanReadable()
+        public void ToString_Default()
         {
             var cid = new Cid { Hash = new MultiHash("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V") };
-            Assert.AreEqual("base58btc cidv0 dag-pb sha2-256 QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString());
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString());
 
             cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
-            Assert.AreEqual("base58btc cidv1 dag-pb sha2-512 8Vx9QNCcSt39anEamkkSaNw5rDHQ7yuadq7ihZed477qQNXxYr3HReMamd1Q2EnUeL4oNtVAmNw1frEhEN1aoqFuKD", cid.ToString());
+            Assert.AreEqual("zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67", cid.ToString());
+        }
+
+        [TestMethod]
+        public void ToString_L()
+        {
+            var cid = new Cid { Hash = new MultiHash("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V") };
+            Assert.AreEqual("base58btc cidv0 dag-pb sha2-256 QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString("L"));
+
+            cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
+            Assert.AreEqual("base58btc cidv1 dag-pb sha2-512 8Vx9QNCcSt39anEamkkSaNw5rDHQ7yuadq7ihZed477qQNXxYr3HReMamd1Q2EnUeL4oNtVAmNw1frEhEN1aoqFuKD", cid.ToString("L"));
+        }
+
+        [TestMethod]
+        public void ToString_G()
+        {
+            var cid = new Cid { Hash = new MultiHash("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V") };
+            Assert.AreEqual("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V", cid.ToString("G"));
+
+            cid = "zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67";
+            Assert.AreEqual("zBunRGrmCGokA1oMESGGTfrtcMFsVA8aEtcNzM54akPWXF97uXCqTjF3GZ9v8YzxHrG66J8QhtPFWwZebRZ2zeUEELu67", cid.ToString("G"));
+        }
+
+        [TestMethod]
+        public void ToString_InvalidFormat()
+        {
+            var cid = new Cid { Hash = new MultiHash("QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V") };
+            ExceptionAssert.Throws<FormatException>(() => cid.ToString("?"));
         }
 
         [TestMethod]
@@ -41,7 +68,7 @@ namespace Ipfs
             Cid cid = mh;
             Assert.AreEqual(1, cid.Version);
             Assert.AreEqual("dag-pb", cid.ContentType);
-            Assert.AreEqual("base58btc", cid.Encoding);
+            Assert.AreEqual("base32", cid.Encoding);
             Assert.AreSame(mh, cid.Hash);
         }
 
@@ -80,7 +107,9 @@ namespace Ipfs
                 ContentType = "raw",
                 Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
             };
-            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+            Assert.AreEqual(1, cid.Version);
+            Assert.AreEqual("base32", cid.Encoding);
+            Assert.AreEqual("bafkreifzjut3te2nhyekklss27nh3k72ysco7y32koao5eei66wof36n5e", cid.Encode());
         }
 
         [TestMethod]
@@ -93,7 +122,8 @@ namespace Ipfs
                 Hash = "QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4"
             };
             Assert.AreEqual(1, cid.Version);
-            Assert.AreEqual("zb2rhj7crUKTQYRGCRATFaQ6YFLTde2YzdqbbhAASkL9uRDXn", cid.Encode());
+            Assert.AreEqual("base32", cid.Encoding);
+            Assert.AreEqual("bafkreifzjut3te2nhyekklss27nh3k72ysco7y32koao5eei66wof36n5e", cid.Encode());
         }
 
         [TestMethod]
@@ -119,7 +149,8 @@ namespace Ipfs
                 Hash = mh
             };
             Assert.AreEqual(1, cid.Version);
-            Assert.AreEqual("zBunRFxZVcKeu8wAbUg92z2JK6UukiL7EnPR1D6TZaQCsPpRe7KzcmioKFyi2oEZd9ffwpbKTib1pucMQrDyRnAdaqwbB", cid.Encode());
+            Assert.AreEqual("base32", cid.Encoding);
+            Assert.AreEqual("bafybgqfnbq34ghljwmk7hka7cpem3zybbffnsfzfxinq3qyztsuxcntbxaua23xx42hrgptcchrolkndcucelv3pc4eoarjbwdxagtylboxsm", cid.Encode());
         }
 
         [TestMethod]

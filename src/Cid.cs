@@ -73,6 +73,10 @@ namespace Ipfs
         ///   <item><description><see cref="Hash"/> algorithm name equals "sha2-256"</description></item>
         ///   </list>
         ///   </para>
+        ///   <para>
+        ///   </para>
+        ///   The default <see cref="Encoding"/> is "base32" when the
+        ///   <see cref="Version"/> is not zero.
         /// </remarks>
         public int Version
         {
@@ -83,6 +87,10 @@ namespace Ipfs
             set
             {
                 EnsureMutable();
+                if (version == 0 && value > 0 && Encoding == "base58btc")
+                {
+                    encoding = "base32";
+                }
                 version = value;
             }
         }
@@ -91,7 +99,7 @@ namespace Ipfs
         ///   The <see cref="MultiBase"/> encoding of the CID.
         /// </summary>
         /// <value>
-        ///   base58btc, base64, etc.  Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
+        ///   base58btc, base32, base64, etc.  Defaults to <see cref="MultiBase.DefaultAlgorithmName"/>.
         /// </value>
         /// <remarks>
         ///    Sets <see cref="Version"/> to 1, when setting a value that
@@ -107,11 +115,11 @@ namespace Ipfs
             set
             {
                 EnsureMutable();
-                encoding = value;
                 if (Version == 0 && value != "base58btc")
                 {
                     Version = 1;
                 }
+                encoding = value;
             }
         }
 
@@ -176,28 +184,78 @@ namespace Ipfs
         }
 
         /// <summary>
-        ///   A CID that is readable by a human.
+        ///   Returns the string representation of the CID in the
+        ///   general format.
         /// </summary>
         /// <returns>
-        ///  e.g. "base58btc cidv0 dag-pb sha2-256 Qm..."
+        ///  e.g. "QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V"
         /// </returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
-            sb.Append(Encoding);
-            sb.Append(' ');
-            sb.Append("cidv");
-            sb.Append(Version);
-            sb.Append(' ');
-            sb.Append(ContentType);
-            if (Hash != null)
+            return ToString("G");
+        }
+
+        /// <summary>
+        ///   Returns a string representation of the CID
+        ///   according to the provided format specifier.
+        /// </summary>
+        /// <param name="format">
+        ///   A single format specifier that indicates how to format the value of the
+        ///   CID.  Can be "G" or "L".
+        /// </param>
+        /// <returns>
+        ///   The CID in the specified <paramref name="format"/>.
+        /// </returns>
+        /// <exception cref="FormatException">
+        ///   <paramref name="format"/> is not valid.
+        /// </exception>
+        /// <remarks>
+        /// <para>
+        ///   The "G" format specifier is the same as calling <see cref="Encode"/>.
+        /// </para>
+        /// <list type="table">  
+        /// <listheader>  
+        ///   <term>Specifier</term>  
+        ///   <description>return value</description>  
+        /// </listheader>  
+        ///  <item>  
+        ///    <term>G</term>  
+        ///    <description>QmXg9Pp2ytZ14xgmQjYEiHjVjMFXzCVVEcRTWJBmLgR39V</description>  
+        ///  </item>  
+        ///  <item>  
+        ///    <term>L</term>  
+        ///    <description>base58btc cidv0 dag-pb sha2-256 Qm...</description>  
+        ///  </item>  
+        /// </list> 
+        /// </remarks>
+        public string ToString(string format)
+        {
+            switch (format)
             {
-                sb.Append(' ');
-                sb.Append(Hash.Algorithm.Name);
-                sb.Append(' ');
-                sb.Append(MultiBase.Encode(Hash.ToArray(), Encoding).Substring(1));
+                case "G":
+                    return Encode();
+
+                case "L":
+                    var sb = new StringBuilder();
+                    sb.Append(Encoding);
+                    sb.Append(' ');
+                    sb.Append("cidv");
+                    sb.Append(Version);
+                    sb.Append(' ');
+                    sb.Append(ContentType);
+                    if (Hash != null)
+                    {
+                        sb.Append(' ');
+                        sb.Append(Hash.Algorithm.Name);
+                        sb.Append(' ');
+                        sb.Append(MultiBase.Encode(Hash.ToArray(), Encoding).Substring(1));
+                    }
+                    return sb.ToString();
+
+                default:
+                    throw new FormatException($"Invalid CID format specifier '{format}'.");
             }
-            return sb.ToString();
+        
         }
 
         /// <summary>
