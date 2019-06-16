@@ -848,32 +848,19 @@ references:
   commentId: T:Ipfs.CoreApi.BitswapLedger
   fullName: Ipfs.CoreApi.BitswapLedger
   nameWithType: BitswapLedger
-- uid: Ipfs.CoreApi.BitswapLedger.BlocksReceived
-  name: BlocksReceived
-  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksReceived
-  commentId: P:Ipfs.CoreApi.BitswapLedger.BlocksReceived
-  fullName: Ipfs.CoreApi.BitswapLedger.BlocksReceived
-  nameWithType: BitswapLedger.BlocksReceived
-- uid: Ipfs.CoreApi.BitswapLedger.BlocksReceived*
-  name: BlocksReceived
-  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksReceived_
-  commentId: Overload:Ipfs.CoreApi.BitswapLedger.BlocksReceived
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksExchanged
+  name: BlocksExchanged
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksExchanged
+  commentId: P:Ipfs.CoreApi.BitswapLedger.BlocksExchanged
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksExchanged
+  nameWithType: BitswapLedger.BlocksExchanged
+- uid: Ipfs.CoreApi.BitswapLedger.BlocksExchanged*
+  name: BlocksExchanged
+  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksExchanged_
+  commentId: Overload:Ipfs.CoreApi.BitswapLedger.BlocksExchanged
   isSpec: "True"
-  fullName: Ipfs.CoreApi.BitswapLedger.BlocksReceived
-  nameWithType: BitswapLedger.BlocksReceived
-- uid: Ipfs.CoreApi.BitswapLedger.BlocksSent
-  name: BlocksSent
-  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksSent
-  commentId: P:Ipfs.CoreApi.BitswapLedger.BlocksSent
-  fullName: Ipfs.CoreApi.BitswapLedger.BlocksSent
-  nameWithType: BitswapLedger.BlocksSent
-- uid: Ipfs.CoreApi.BitswapLedger.BlocksSent*
-  name: BlocksSent
-  href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_BlocksSent_
-  commentId: Overload:Ipfs.CoreApi.BitswapLedger.BlocksSent
-  isSpec: "True"
-  fullName: Ipfs.CoreApi.BitswapLedger.BlocksSent
-  nameWithType: BitswapLedger.BlocksSent
+  fullName: Ipfs.CoreApi.BitswapLedger.BlocksExchanged
+  nameWithType: BitswapLedger.BlocksExchanged
 - uid: Ipfs.CoreApi.BitswapLedger.DataReceived
   name: DataReceived
   href: api/Ipfs.CoreApi.BitswapLedger.html#Ipfs_CoreApi_BitswapLedger_DataReceived
