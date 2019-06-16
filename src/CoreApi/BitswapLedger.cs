@@ -19,20 +19,12 @@ namespace Ipfs.CoreApi
         public Peer Peer { get; set; }
 
         /// <summary>
-        ///   The number of blocks sent by the <see cref="Peer"/> to us.
+        ///   The number of blocks exchanged with the <see cref="Peer"/>.
         /// </summary>
         /// <value>
-        ///   The number of blocks.
+        ///   The number of blocks sent by the peer or sent by us to the peer.
         /// </value>
-        public ulong BlocksReceived { get; set; }
-
-        /// <summary>
-        ///   The number of blocks sent by us to the <see cref="Peer"/>.
-        /// </summary>
-        /// <value>
-        ///   The number of blocks.
-        /// </value>
-        public ulong BlocksSent { get; set; }
+        public ulong BlocksExchanged { get; set; }
 
         /// <summary>
         ///   The number of bytes sent by the <see cref="Peer"/> to us.
@@ -41,7 +33,6 @@ namespace Ipfs.CoreApi
         ///   The number of bytes.
         /// </value>
         public ulong DataReceived { get; set; }
-
 
         /// <summary>
         ///   The number of bytes sent by us to the <see cref="Peer"/>
