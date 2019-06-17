@@ -12,7 +12,6 @@ namespace Ipfs.CoreApi
         public void Defaults()
         {
             var ledger = new BitswapLedger();
-
             Assert.IsNull(ledger.Peer);
             Assert.AreEqual(0ul, ledger.BlocksExchanged);
             Assert.AreEqual(0ul, ledger.DataReceived);
