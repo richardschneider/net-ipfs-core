@@ -1,6 +1,6 @@
 ---
 exclude_paths:
-  - 'test/'
+  - 'test/*'
   - 'test/**/*'
-  - 'doc/'
+  - 'doc/*'
   - 'doc/**/*'
