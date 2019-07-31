@@ -336,7 +336,14 @@ namespace Ipfs
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            int code = 0;
+
+            foreach (var p in Protocols)
+            {
+                code += p.Code.GetHashCode();
+                code += p.Value.GetHashCode();
+            }
+            return code;
         }
 
         /// <inheritdoc />

@@ -370,7 +370,16 @@ namespace Ipfs
             Assert.AreEqual("/ip4/127.0.0.1/tcp/4001", ma1.WithoutPeerId());
         }
 
+        [TestMethod]
+        public void Alias_Equality()
+        {
+            var a = new MultiAddress("/ipfs/QmQusTXc1Z9C1mzxsqC9ZTFXCgSkpBRGgW4Jk2QYHxKE22");
+            var b = new MultiAddress("/p2p/QmQusTXc1Z9C1mzxsqC9ZTFXCgSkpBRGgW4Jk2QYHxKE22");
 
+            Assert.AreEqual(a, b);
+            Assert.IsTrue(a == b);
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
+        }
     }
 }
 
