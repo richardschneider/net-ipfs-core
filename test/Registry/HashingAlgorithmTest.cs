@@ -12,6 +12,26 @@ namespace Ipfs.Registry
     public class HashingAlgorithmTest
     {
         [TestMethod]
+        public void GetHasher()
+        {
+            using (var hasher = HashingAlgorithm.GetAlgorithm("sha3-256"))
+            {
+                Assert.IsNotNull(hasher);
+                var input = new byte[] { 0xe9 };
+                var expected = "f0d04dd1e6cfc29a4460d521796852f25d9ef8d28b44ee91ff5b759d72c1e6d6".ToHexBuffer();
+
+                var actual = hasher.ComputeHash(input);
+                CollectionAssert.AreEqual(expected, actual);
+            }
+        }
+
+        [TestMethod]
+        public void GetHasher_Unknown()
+        {
+            ExceptionAssert.Throws<KeyNotFoundException>(() => HashingAlgorithm.GetAlgorithm("unknown"));
+        }
+
+        [TestMethod]
         public void HashingAlgorithm_Bad_Name()
         {
             ExceptionAssert.Throws<ArgumentNullException>(() => HashingAlgorithm.Register(null, 1, 1));

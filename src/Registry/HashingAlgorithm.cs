@@ -223,5 +223,30 @@ namespace Ipfs.Registry
             get { return Names.Values; }
         }
 
+        /// <summary>
+        ///   Gets the <see cref="HashAlgorithm"/> with the specified IPFS multi-hash name.
+        /// </summary>
+        /// <param name="name">
+        ///   The name of a hashing algorithm, see <see href="https://github.com/multiformats/multicodec/blob/master/table.csv"/>
+        ///   for IPFS defined names.
+        /// </param>
+        /// <returns>
+        ///   The hashing implementation associated with the <paramref name="name"/>.
+        /// </returns>
+        /// <exception cref="KeyNotFoundException">
+        ///   When <paramref name="name"/> is not registered.
+        /// </exception>
+        public static HashAlgorithm GetAlgorithm(string name)
+        {
+            try
+            {
+                return HashingAlgorithm.Names[name].Hasher();
+            }
+            catch (KeyNotFoundException)
+            {
+                throw new KeyNotFoundException($"Hash algorithm '{name}' is not registered.");
+            }
+        }
+
     }
 }
