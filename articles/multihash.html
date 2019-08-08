@@ -133,9 +133,23 @@ for the currently defined hashing algorithms.</p>
 <p>The identity hash is also implemented; which just returns the input bytes. This is used to inline a small amount of 
 data into a <a href="cid.html">CID</a>.</p>
 <h2 id="registry">Registry</h2>
-<p>The <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html">hashing registry</a> contains the metadata on a hashing algorithm.  You can use
+<p>The <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html">hashing registry</a> contains the metadata on hashing algorithms.  You can use
 <a class="xref" href="../api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Register_">Register</a> to add a new hashing algorithm.</p>
-</article>
+<h3 id="example">Example</h3>
+<p>Using an hashing algorithm.  Note that <code>ComputeHash</code> can take a byte array or a <code>Stream</code>.</p>
+<pre><code class="lang-csharp">public void GetHasher()
+{
+    using (var hasher = HashingAlgorithm.GetAlgorithm(&quot;sha3-256&quot;))
+    {
+        Assert.IsNotNull(hasher);
+        var input = new byte[] { 0xe9 };
+        var expected = &quot;f0d04dd1e6cfc29a4460d521796852f25d9ef8d28b44ee91ff5b759d72c1e6d6&quot;.ToHexBuffer();
+
+        var actual = hasher.ComputeHash(input);
+        CollectionAssert.AreEqual(expected, actual);
+    }
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
