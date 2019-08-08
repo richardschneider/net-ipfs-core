@@ -52,5 +52,24 @@ data into a [CID](cid.md).
 
 ## Registry
 
-The [hashing registry](xref:Ipfs.Registry.HashingAlgorithm) contains the metadata on a hashing algorithm.  You can use
+The [hashing registry](xref:Ipfs.Registry.HashingAlgorithm) contains the metadata on hashing algorithms.  You can use
 [Register](xref:Ipfs.Registry.HashingAlgorithm.Register*) to add a new hashing algorithm.
+
+### Example
+
+Using an hashing algorithm.  Note that `ComputeHash` can take a byte array or a `Stream`.
+
+```csharp
+public void GetHasher()
+{
+    using (var hasher = HashingAlgorithm.GetAlgorithm("sha3-256"))
+    {
+        Assert.IsNotNull(hasher);
+        var input = new byte[] { 0xe9 };
+        var expected = "f0d04dd1e6cfc29a4460d521796852f25d9ef8d28b44ee91ff5b759d72c1e6d6".ToHexBuffer();
+
+        var actual = hasher.ComputeHash(input);
+        CollectionAssert.AreEqual(expected, actual);
+    }
+}
+```

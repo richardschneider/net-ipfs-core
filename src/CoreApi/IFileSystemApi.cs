@@ -111,7 +111,7 @@ namespace Ipfs.CoreApi
         ///   Reads an existing IPFS file.
         /// </summary>
         /// <param name="path">
-        ///   A path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
+        ///   An IPFS path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
         ///   or "QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V"
         /// </param>
         /// <param name="cancel">
@@ -130,7 +130,7 @@ namespace Ipfs.CoreApi
         ///   Reads an existing IPFS file with the specified offset and length.
         /// </summary>
         /// <param name="path">
-        ///   A path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
+        ///   Am IPFS path to an existing file, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
         ///   or "QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V"
         /// </param>
         /// <param name="offset">
@@ -173,7 +173,7 @@ namespace Ipfs.CoreApi
         ///   Download IPFS objects as a TAR archive.
         /// </summary>
         /// <param name="path">
-        ///   A path to an existing file or directory, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
+        ///   An IPFS path to an existing file or directory, such as "QmXarR6rgkQ2fDSHjSY5nM2kuCXKYGViky5nohtwgF65Ec/about"
         ///   or "QmZTR5bcpQD7cFgTorqxZDYaew1Wqgfbd2ud9QqGPAkK2V"
         /// </param>
         /// <param name="compress">
