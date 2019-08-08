@@ -34,7 +34,7 @@ environment:
 # tools we need for bulding/testing/deploying
 install:
   - choco install gitversion.portable -y
-  - npm install gh-pages -g
+  - npm install gh-pages@2.0 -g
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
   #- if defined snk_secret secure-file\tools\secure-file -decrypt src\ipfs.ci.snk.enc -secret %snk_secret% -out src\ipfs.dev.snk
