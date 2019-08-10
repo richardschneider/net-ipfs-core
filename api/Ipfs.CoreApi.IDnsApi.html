@@ -94,7 +94,7 @@ records can point to other DNS links, IPFS objects, IPNS keys, etc.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IDnsApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IDnsApi.ResolveAsync(System.String%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDnsApi.cs/#L37">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IDnsApi.cs/#L49">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IDnsApi_ResolveAsync_" data-uid="Ipfs.CoreApi.IDnsApi.ResolveAsync*"></a>
   <h4 id="Ipfs_CoreApi_IDnsApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IDnsApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)">ResolveAsync(String, Boolean, CancellationToken)</h4>
@@ -153,6 +153,18 @@ the resolved IPFS path as a <a class="xref" href="https://docs.microsoft.com/dot
       </tr>
     </tbody>
   </table>
+  <h5 id="Ipfs_CoreApi_IDnsApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A DNS TXT record with a &quot;dnslink=...&quot; entry is expected to exist.  The
+value of the &quot;dnslink&quot; is an IPFS path to another IPFS object.
+<p>
+A DNS query is generated for both <code data-dev-comment-type="paramref" class="paramref">name</code> and
+_dnslink.<code data-dev-comment-type="paramref" class="paramref">name</code>.
+</p></p>
+</div>
+  <h5 id="Ipfs_CoreApi_IDnsApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken__examples">Examples</h5>
+  <p><code>ResolveAsync(&quot;ipfs.io&quot;, recursive: false)</code> produces &quot;/ipns/website.ipfs.io&quot;. Whereas,
+<code>ResolveAsync(&quot;ipfs.io&quot;, recursive: true)</code> produces &quot;/ipfs/QmXZz6vQTMiu6UyGxVgpLB6xJdHvvUbhdWagJQNnxXAjpn&quot;.</p>
+
 </article>
           </div>
           
