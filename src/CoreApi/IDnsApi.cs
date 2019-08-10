@@ -34,6 +34,18 @@ namespace Ipfs.CoreApi
         ///   the resolved IPFS path as a <see cref="string"/>, such as 
         ///   <c>/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao</c>.
         /// </returns>
+        /// <remarks>
+        ///   A DNS TXT record with a "dnslink=..." entry is expected to exist.  The
+        ///   value of the "dnslink" is an IPFS path to another IPFS object.
+        ///   <para>
+        ///   A DNS query is generated for both <paramref name="name"/> and
+        ///   _dnslink.<paramref name="name"/>.
+        ///   </para>
+        /// </remarks>
+        /// <example>
+        ///   <c>ResolveAsync("ipfs.io", recursive: false)</c> produces "/ipns/website.ipfs.io". Whereas,
+        ///   <c>ResolveAsync("ipfs.io", recursive: true)</c> produces "/ipfs/QmXZz6vQTMiu6UyGxVgpLB6xJdHvvUbhdWagJQNnxXAjpn".
+        /// </example>
         Task<string> ResolveAsync(
             string name,
             bool recursive = false,
