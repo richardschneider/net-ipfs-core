@@ -119,15 +119,33 @@ namespace Ipfs.CoreApi
         ///   Get the links of a MerkleDAG node.
         /// </summary>
         /// <param name="id">
-        ///   The <see cref="Cid"/> id of the node.
+        ///   The unique id of the node.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value
-        ///   is a sequence of links.
+        ///   is a sequence of links to the immediate children.
         /// </returns>
+        /// <remarks>
+        ///   <b>LinksAsync</b> returns the immediate child links of the <paramref name="id"/>.
+        ///   To get all the children, this code can be used.
+        ///   <code>
+        ///   async Task&lt;List&lt;IMerkleLink>> AllLinksAsync(Cid cid)
+        ///   {
+        ///     var i = 0;
+        ///     var allLinks = new List&lt;IMerkleLink>();
+        ///     while (cid != null)
+        ///     {
+        ///        var links = await ipfs.Object.LinksAsync(cid);
+        ///        allLinks.AddRange(links);
+        ///        cid = (i &lt; allLinks.Count) ? allLinks[i++].Id : null;
+        ///     }
+        ///     return allLinks;
+        ///   }
+        ///   </code>
+        /// </remarks>
         Task<IEnumerable<IMerkleLink>> LinksAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
     }
