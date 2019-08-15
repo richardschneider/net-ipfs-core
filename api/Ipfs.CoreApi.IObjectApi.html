@@ -211,7 +211,7 @@ is a <a class="xref" href="Ipfs.DagNode.html">DagNode</a>.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IObjectApi_LinksAsync_Ipfs_Cid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IObjectApi.LinksAsync(Ipfs.Cid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IObjectApi.cs/#L131">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/CoreApi/IObjectApi.cs/#L149">View Source</a>
   </span>
   <a id="Ipfs_CoreApi_IObjectApi_LinksAsync_" data-uid="Ipfs.CoreApi.IObjectApi.LinksAsync*"></a>
   <h4 id="Ipfs_CoreApi_IObjectApi_LinksAsync_Ipfs_Cid_System_Threading_CancellationToken_" data-uid="Ipfs.CoreApi.IObjectApi.LinksAsync(Ipfs.Cid,System.Threading.CancellationToken)">LinksAsync(Cid, CancellationToken)</h4>
@@ -235,7 +235,7 @@ is a <a class="xref" href="Ipfs.DagNode.html">DagNode</a>.</p>
       <tr>
         <td><a class="xref" href="Ipfs.Cid.html">Cid</a></td>
         <td><span class="parametername">id</span></td>
-        <td><p>The <a class="xref" href="Ipfs.Cid.html">Cid</a> id of the node.</p>
+        <td><p>The unique id of the node.</p>
 </td>
       </tr>
       <tr>
@@ -258,11 +258,27 @@ is a <a class="xref" href="Ipfs.DagNode.html">DagNode</a>.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Ipfs.IMerkleLink.html">IMerkleLink</a>&gt;&gt;</td>
         <td><p>A task that represents the asynchronous operation. The task&apos;s value
-is a sequence of links.</p>
+is a sequence of links to the immediate children.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Ipfs_CoreApi_IObjectApi_LinksAsync_Ipfs_Cid_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>LinksAsync</strong> returns the immediate child links of the <code data-dev-comment-type="paramref" class="paramref">id</code>.
+To get all the children, this code can be used.</p>
+<pre><code>async Task&lt;List&lt;IMerkleLink>> AllLinksAsync(Cid cid)
+{
+  var i = 0;
+  var allLinks = new List&lt;IMerkleLink>();
+  while (cid != null)
+  {
+     var links = await ipfs.Object.LinksAsync(cid);
+     allLinks.AddRange(links);
+     cid = (i &lt; allLinks.Count) ? allLinks[i++].Id : null;
+  }
+  return allLinks;
+}</code></pre>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_CoreApi_IObjectApi_NewAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Ipfs.CoreApi.IObjectApi.NewAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
