@@ -52,7 +52,7 @@ namespace Ipfs.CoreApi
         ///   The name to resolve.
         /// </param>
         /// <param name="recursive">
-        ///   Resolve until the result is an IPFS name. Defaults to <b>false</b>.
+        ///   Resolve until the result is an IPFS name. Defaults to <b>true</b>.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -67,7 +67,7 @@ namespace Ipfs.CoreApi
         /// </remarks>
         Task<string> ResolveAsync(
             string name,
-            bool recursive = false,
+            bool recursive = true,
             CancellationToken cancel = default(CancellationToken)
             );
 
