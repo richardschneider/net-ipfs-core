@@ -32,6 +32,34 @@ namespace Ipfs.Registry
         }
 
         [TestMethod]
+        public void GetMetadata()
+        {
+            var info = HashingAlgorithm.GetAlgorithmMetadata("sha3-256");
+            Assert.IsNotNull(info);
+            Assert.AreEqual("sha3-256", info.Name);
+            Assert.AreEqual(0x16, info.Code);
+            Assert.AreEqual(256 /8, info.DigestSize);
+            Assert.IsNotNull(info.Hasher);
+        }
+
+        [TestMethod]
+        public void GetMetadata_Unknown()
+        {
+            ExceptionAssert.Throws<KeyNotFoundException>(() => HashingAlgorithm.GetAlgorithmMetadata("unknown"));
+        }
+
+        [TestMethod]
+        public void GetMetadata_Alias()
+        {
+            var info = HashingAlgorithm.GetAlgorithmMetadata("id");
+            Assert.IsNotNull(info);
+            Assert.AreEqual("identity", info.Name);
+            Assert.AreEqual(0, info.Code);
+            Assert.AreEqual(0, info.DigestSize);
+            Assert.IsNotNull(info.Hasher);
+        }
+
+        [TestMethod]
         public void HashingAlgorithm_Bad_Name()
         {
             ExceptionAssert.Throws<ArgumentNullException>(() => HashingAlgorithm.Register(null, 1, 1));
