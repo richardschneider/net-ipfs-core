@@ -4233,6 +4233,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.Registry.HashingAlgorithm.GetAlgorithm
   nameWithType: HashingAlgorithm.GetAlgorithm
+- uid: Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata(System.String)
+  name: GetAlgorithmMetadata(String)
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_GetAlgorithmMetadata_System_String_
+  commentId: M:Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata(System.String)
+  fullName: Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata(System.String)
+  nameWithType: HashingAlgorithm.GetAlgorithmMetadata(String)
+- uid: Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata*
+  name: GetAlgorithmMetadata
+  href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_GetAlgorithmMetadata_
+  commentId: Overload:Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata
+  isSpec: "True"
+  fullName: Ipfs.Registry.HashingAlgorithm.GetAlgorithmMetadata
+  nameWithType: HashingAlgorithm.GetAlgorithmMetadata
 - uid: Ipfs.Registry.HashingAlgorithm.Hasher
   name: Hasher
   href: api/Ipfs.Registry.HashingAlgorithm.html#Ipfs_Registry_HashingAlgorithm_Hasher
