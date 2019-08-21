@@ -380,6 +380,13 @@ namespace Ipfs
             Assert.IsTrue(a == b);
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
         }
+
+        [TestMethod]
+        public void GetHashCode_NullValue()
+        {
+            var a = new MultiAddress("/ip4/139.178.69.3/udp/4001/quic/p2p/QmdGQoGuK3pao6bRDqGSDvux5SFHa4kC2XNFfHFcvcbydY/p2p-circuit/ipfs/QmPJkpfUedzahgVAj6tTUa3DHKVkfTSyvUmnn1USFpiCaF");
+            var _ = a.GetHashCode();
+        }
     }
 }
 

@@ -341,7 +341,7 @@ namespace Ipfs
             foreach (var p in Protocols)
             {
                 code += p.Code.GetHashCode();
-                code += p.Value.GetHashCode();
+                code += p.Value?.GetHashCode() ?? 0;
             }
             return code;
         }
