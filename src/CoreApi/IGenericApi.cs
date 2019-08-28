@@ -71,5 +71,48 @@ namespace Ipfs.CoreApi
             CancellationToken cancel = default(CancellationToken)
             );
 
+        /// <summary>
+        ///   Send echo requests to a peer.
+        /// </summary>
+        /// <param name="peer">
+        ///   The peer ID to receive the echo requests.
+        /// </param>
+        /// <param name="count">
+        ///   The number of echo requests to send.  Defaults to 10.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   the sequence of <see cref="PingResult"/>.
+        /// </returns>
+        Task<IEnumerable<PingResult>> PingAsync(
+            MultiHash peer,
+            int count = 10,
+            CancellationToken cancel = default(CancellationToken)
+            );
+
+        /// <summary>
+        ///   Send echo requests to a peer.
+        /// </summary>
+        /// <param name="address">
+        ///   The address of a peer to receive the echo requests.
+        /// </param>
+        /// <param name="count">
+        ///   The number of echo requests to send.  Defaults to 10.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   the sequence of <see cref="PingResult"/>.
+        /// </returns>
+        Task<IEnumerable<PingResult>> PingAsync(
+            MultiAddress address,
+            int count = 10,
+            CancellationToken cancel = default(CancellationToken)
+            );
     }
 }
