@@ -1718,6 +1718,25 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IGenericApi.IdAsync
   nameWithType: IGenericApi.IdAsync
+- uid: Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  name: PingAsync(MultiAddress, Int32, CancellationToken)
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_PingAsync_Ipfs_MultiAddress_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiAddress, System.Int32, System.Threading.CancellationToken)
+  nameWithType: IGenericApi.PingAsync(MultiAddress, Int32, CancellationToken)
+- uid: Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  name: PingAsync(MultiHash, Int32, CancellationToken)
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_PingAsync_Ipfs_MultiHash_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiHash, System.Int32, System.Threading.CancellationToken)
+  nameWithType: IGenericApi.PingAsync(MultiHash, Int32, CancellationToken)
+- uid: Ipfs.CoreApi.IGenericApi.PingAsync*
+  name: PingAsync
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_PingAsync_
+  commentId: Overload:Ipfs.CoreApi.IGenericApi.PingAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IGenericApi.PingAsync
+  nameWithType: IGenericApi.PingAsync
 - uid: Ipfs.CoreApi.IGenericApi.ResolveAsync(System.String,System.Boolean,System.Threading.CancellationToken)
   name: ResolveAsync(String, Boolean, CancellationToken)
   href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_ResolveAsync_System_String_System_Boolean_System_Threading_CancellationToken_
@@ -2320,6 +2339,51 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IValueStore.TryGetAsync
   nameWithType: IValueStore.TryGetAsync
+- uid: Ipfs.CoreApi.PingResult
+  name: PingResult
+  href: api/Ipfs.CoreApi.PingResult.html
+  commentId: T:Ipfs.CoreApi.PingResult
+  fullName: Ipfs.CoreApi.PingResult
+  nameWithType: PingResult
+- uid: Ipfs.CoreApi.PingResult.Success
+  name: Success
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Success
+  commentId: P:Ipfs.CoreApi.PingResult.Success
+  fullName: Ipfs.CoreApi.PingResult.Success
+  nameWithType: PingResult.Success
+- uid: Ipfs.CoreApi.PingResult.Success*
+  name: Success
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Success_
+  commentId: Overload:Ipfs.CoreApi.PingResult.Success
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.PingResult.Success
+  nameWithType: PingResult.Success
+- uid: Ipfs.CoreApi.PingResult.Text
+  name: Text
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Text
+  commentId: P:Ipfs.CoreApi.PingResult.Text
+  fullName: Ipfs.CoreApi.PingResult.Text
+  nameWithType: PingResult.Text
+- uid: Ipfs.CoreApi.PingResult.Text*
+  name: Text
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Text_
+  commentId: Overload:Ipfs.CoreApi.PingResult.Text
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.PingResult.Text
+  nameWithType: PingResult.Text
+- uid: Ipfs.CoreApi.PingResult.Time
+  name: Time
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Time
+  commentId: P:Ipfs.CoreApi.PingResult.Time
+  fullName: Ipfs.CoreApi.PingResult.Time
+  nameWithType: PingResult.Time
+- uid: Ipfs.CoreApi.PingResult.Time*
+  name: Time
+  href: api/Ipfs.CoreApi.PingResult.html#Ipfs_CoreApi_PingResult_Time_
+  commentId: Overload:Ipfs.CoreApi.PingResult.Time
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.PingResult.Time
+  nameWithType: PingResult.Time
 - uid: Ipfs.CoreApi.RepositoryData
   name: RepositoryData
   href: api/Ipfs.CoreApi.RepositoryData.html
