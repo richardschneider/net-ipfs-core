@@ -2992,19 +2992,6 @@ references:
   commentId: T:Ipfs.IFileSystemLink
   fullName: Ipfs.IFileSystemLink
   nameWithType: IFileSystemLink
-- uid: Ipfs.IFileSystemLink.IsDirectory
-  name: IsDirectory
-  href: api/Ipfs.IFileSystemLink.html#Ipfs_IFileSystemLink_IsDirectory
-  commentId: P:Ipfs.IFileSystemLink.IsDirectory
-  fullName: Ipfs.IFileSystemLink.IsDirectory
-  nameWithType: IFileSystemLink.IsDirectory
-- uid: Ipfs.IFileSystemLink.IsDirectory*
-  name: IsDirectory
-  href: api/Ipfs.IFileSystemLink.html#Ipfs_IFileSystemLink_IsDirectory_
-  commentId: Overload:Ipfs.IFileSystemLink.IsDirectory
-  isSpec: "True"
-  fullName: Ipfs.IFileSystemLink.IsDirectory
-  nameWithType: IFileSystemLink.IsDirectory
 - uid: Ipfs.IFileSystemNode
   name: IFileSystemNode
   href: api/Ipfs.IFileSystemNode.html
