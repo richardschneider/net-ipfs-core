@@ -67,6 +67,21 @@ namespace Ipfs.CoreApi
         Task<DagNode> GetAsync(Cid id, CancellationToken cancel = default(CancellationToken));
 
         /// <summary>
+        ///   Information on a MerkleDag node.
+        /// </summary>
+        /// <param name="id">
+        ///   The <see cref="Cid"/> of the node.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///    A task that represents the asynchronous operation. The task's value
+        ///    contains the <see cref="ObjectStat"/>.
+        /// </returns>
+        Task<ObjectStat> StatAsync(Cid id, CancellationToken cancel = default(CancellationToken));
+
+        /// <summary>
         ///   Store a MerkleDAG node.
         /// </summary>
         /// <param name="data">
