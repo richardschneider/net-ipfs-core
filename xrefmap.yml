@@ -2003,6 +2003,19 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IObjectApi.PutAsync
   nameWithType: IObjectApi.PutAsync
+- uid: Ipfs.CoreApi.IObjectApi.StatAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  name: StatAsync(Cid, CancellationToken)
+  href: api/Ipfs.CoreApi.IObjectApi.html#Ipfs_CoreApi_IObjectApi_StatAsync_Ipfs_Cid_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IObjectApi.StatAsync(Ipfs.Cid,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IObjectApi.StatAsync(Ipfs.Cid, System.Threading.CancellationToken)
+  nameWithType: IObjectApi.StatAsync(Cid, CancellationToken)
+- uid: Ipfs.CoreApi.IObjectApi.StatAsync*
+  name: StatAsync
+  href: api/Ipfs.CoreApi.IObjectApi.html#Ipfs_CoreApi_IObjectApi_StatAsync_
+  commentId: Overload:Ipfs.CoreApi.IObjectApi.StatAsync
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IObjectApi.StatAsync
+  nameWithType: IObjectApi.StatAsync
 - uid: Ipfs.CoreApi.IPeerRouting
   name: IPeerRouting
   href: api/Ipfs.CoreApi.IPeerRouting.html
@@ -2339,6 +2352,77 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IValueStore.TryGetAsync
   nameWithType: IValueStore.TryGetAsync
+- uid: Ipfs.CoreApi.ObjectStat
+  name: ObjectStat
+  href: api/Ipfs.CoreApi.ObjectStat.html
+  commentId: T:Ipfs.CoreApi.ObjectStat
+  fullName: Ipfs.CoreApi.ObjectStat
+  nameWithType: ObjectStat
+- uid: Ipfs.CoreApi.ObjectStat.BlockSize
+  name: BlockSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_BlockSize
+  commentId: P:Ipfs.CoreApi.ObjectStat.BlockSize
+  fullName: Ipfs.CoreApi.ObjectStat.BlockSize
+  nameWithType: ObjectStat.BlockSize
+- uid: Ipfs.CoreApi.ObjectStat.BlockSize*
+  name: BlockSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_BlockSize_
+  commentId: Overload:Ipfs.CoreApi.ObjectStat.BlockSize
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ObjectStat.BlockSize
+  nameWithType: ObjectStat.BlockSize
+- uid: Ipfs.CoreApi.ObjectStat.CumulativeSize
+  name: CumulativeSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_CumulativeSize
+  commentId: P:Ipfs.CoreApi.ObjectStat.CumulativeSize
+  fullName: Ipfs.CoreApi.ObjectStat.CumulativeSize
+  nameWithType: ObjectStat.CumulativeSize
+- uid: Ipfs.CoreApi.ObjectStat.CumulativeSize*
+  name: CumulativeSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_CumulativeSize_
+  commentId: Overload:Ipfs.CoreApi.ObjectStat.CumulativeSize
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ObjectStat.CumulativeSize
+  nameWithType: ObjectStat.CumulativeSize
+- uid: Ipfs.CoreApi.ObjectStat.DataSize
+  name: DataSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_DataSize
+  commentId: P:Ipfs.CoreApi.ObjectStat.DataSize
+  fullName: Ipfs.CoreApi.ObjectStat.DataSize
+  nameWithType: ObjectStat.DataSize
+- uid: Ipfs.CoreApi.ObjectStat.DataSize*
+  name: DataSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_DataSize_
+  commentId: Overload:Ipfs.CoreApi.ObjectStat.DataSize
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ObjectStat.DataSize
+  nameWithType: ObjectStat.DataSize
+- uid: Ipfs.CoreApi.ObjectStat.LinkCount
+  name: LinkCount
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_LinkCount
+  commentId: P:Ipfs.CoreApi.ObjectStat.LinkCount
+  fullName: Ipfs.CoreApi.ObjectStat.LinkCount
+  nameWithType: ObjectStat.LinkCount
+- uid: Ipfs.CoreApi.ObjectStat.LinkCount*
+  name: LinkCount
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_LinkCount_
+  commentId: Overload:Ipfs.CoreApi.ObjectStat.LinkCount
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ObjectStat.LinkCount
+  nameWithType: ObjectStat.LinkCount
+- uid: Ipfs.CoreApi.ObjectStat.LinkSize
+  name: LinkSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_LinkSize
+  commentId: P:Ipfs.CoreApi.ObjectStat.LinkSize
+  fullName: Ipfs.CoreApi.ObjectStat.LinkSize
+  nameWithType: ObjectStat.LinkSize
+- uid: Ipfs.CoreApi.ObjectStat.LinkSize*
+  name: LinkSize
+  href: api/Ipfs.CoreApi.ObjectStat.html#Ipfs_CoreApi_ObjectStat_LinkSize_
+  commentId: Overload:Ipfs.CoreApi.ObjectStat.LinkSize
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.ObjectStat.LinkSize
+  nameWithType: ObjectStat.LinkSize
 - uid: Ipfs.CoreApi.PingResult
   name: PingResult
   href: api/Ipfs.CoreApi.PingResult.html
