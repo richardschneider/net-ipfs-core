@@ -43,6 +43,7 @@ namespace Ipfs
         /// </param>
         /// <returns>
         ///   The hashing implementation associated with the <paramref name="name"/>.
+        ///   After using the hashing algorithm it should be disposed.
         /// </returns>
         /// <exception cref="KeyNotFoundException">
         ///   When <paramref name="name"/> is not registered.
@@ -518,7 +519,10 @@ namespace Ipfs
         /// </returns>
         public static MultiHash ComputeHash(byte[] data, string algorithmName = DefaultAlgorithmName)
         {
-            return new MultiHash(algorithmName, GetHashAlgorithm(algorithmName).ComputeHash(data));
+            using (var alg = GetHashAlgorithm(algorithmName))
+            {
+                return new MultiHash(algorithmName, alg.ComputeHash(data));
+            }
         }
 
         /// <summary>
@@ -535,7 +539,10 @@ namespace Ipfs
         /// </returns>
         public static MultiHash ComputeHash(Stream data, string algorithmName = DefaultAlgorithmName)
         {
-            return new MultiHash(algorithmName, GetHashAlgorithm(algorithmName).ComputeHash(data));
+            using (var alg = GetHashAlgorithm(algorithmName))
+            {
+                return new MultiHash(algorithmName, alg.ComputeHash(data));
+            }
         }
 
         /// <summary>
