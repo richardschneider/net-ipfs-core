@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace Ipfs
 {
@@ -386,6 +387,26 @@ namespace Ipfs
         {
             var a = new MultiAddress("/ip4/139.178.69.3/udp/4001/quic/p2p/QmdGQoGuK3pao6bRDqGSDvux5SFHa4kC2XNFfHFcvcbydY/p2p-circuit/ipfs/QmPJkpfUedzahgVAj6tTUa3DHKVkfTSyvUmnn1USFpiCaF");
             var _ = a.GetHashCode();
+        }
+
+        [TestMethod]
+        public void FromIPAddress()
+        {
+            var ma = new MultiAddress(IPAddress.Loopback);
+            Assert.AreEqual("/ip4/127.0.0.1", ma.ToString());
+
+            ma = new MultiAddress(IPAddress.IPv6Loopback);
+            Assert.AreEqual("/ip6/::1", ma.ToString());
+        }
+
+        [TestMethod]
+        public void FromIPEndpoint()
+        {
+            var ma = new MultiAddress(new IPEndPoint(IPAddress.Loopback, 4001));
+            Assert.AreEqual("/ip4/127.0.0.1/tcp/4001", ma.ToString());
+
+            ma = new MultiAddress(new IPEndPoint(IPAddress.IPv6Loopback, 4002));
+            Assert.AreEqual("/ip6/::1/tcp/4002", ma.ToString());
         }
     }
 }

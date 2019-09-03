@@ -6,6 +6,8 @@ using System.IO;
 using Common.Logging;
 using Google.Protobuf;
 using Newtonsoft.Json;
+using System.Net;
+using System.Net.Sockets;
 
 namespace Ipfs
 {
@@ -74,6 +76,30 @@ namespace Ipfs
             : this()
         {
             Read(stream);
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="MultiAddress"/> class from the
+        ///   specified <see cref="IPAddress"/>.
+        /// </summary>
+        public MultiAddress(IPAddress ip)
+            : this()
+        {
+            var type = ip.AddressFamily == AddressFamily.InterNetwork
+                ? "ip4" : "ip6";
+            Read(new StringReader($"/{type}/{ip}"));
+        }
+
+        /// <summary>
+        ///   Creates a new instance of the <see cref="MultiAddress"/> class from the
+        ///   specified <see cref="IPEndPoint"/>.
+        /// </summary>
+        public MultiAddress(IPEndPoint endpoint)
+            : this()
+        {
+            var type = endpoint.AddressFamily == AddressFamily.InterNetwork
+                ? "ip4" : "ip6";
+            Read(new StringReader($"/{type}/{endpoint.Address}/tcp/{endpoint.Port}"));
         }
 
         /// <summary>
@@ -307,7 +333,7 @@ namespace Ipfs
         {
             if (stream.Read() != '/')
             {
-                throw new FormatException("An IFPS multiaddr must start with '/'.");
+                throw new FormatException("An IPFS multiaddr must start with '/'.");
             }
 
             var name = new StringBuilder();
