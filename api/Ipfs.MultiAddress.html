@@ -127,7 +127,7 @@ A multi address is considered immutablle and value type equality is implemented.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L35">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L37">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
   <h4 id="Ipfs_MultiAddress__ctor" data-uid="Ipfs.MultiAddress.#ctor">MultiAddress()</h4>
@@ -143,7 +143,7 @@ A multi address is considered immutablle and value type equality is implemented.
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor_System_Byte___.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L104">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L130">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
   <h4 id="Ipfs_MultiAddress__ctor_System_Byte___" data-uid="Ipfs.MultiAddress.#ctor(System.Byte[])">MultiAddress(Byte[])</h4>
@@ -186,7 +186,7 @@ The binary representation is a sequence of <a class="xref" href="Ipfs.NetworkPro
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L73">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L75">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
   <h4 id="Ipfs_MultiAddress__ctor_System_IO_Stream_" data-uid="Ipfs.MultiAddress.#ctor(System.IO.Stream)">MultiAddress(Stream)</h4>
@@ -225,10 +225,78 @@ The binary representation is a sequence of <a class="xref" href="Ipfs.NetworkPro
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L85">View Source</a>
+  </span>
+  <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
+  <h4 id="Ipfs_MultiAddress__ctor_System_Net_IPAddress_" data-uid="Ipfs.MultiAddress.#ctor(System.Net.IPAddress)">MultiAddress(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a> class from the
+specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiAddress(IPAddress ip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">ip</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor_System_Net_IPEndPoint_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor(System.Net.IPEndPoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L97">View Source</a>
+  </span>
+  <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
+  <h4 id="Ipfs_MultiAddress__ctor_System_Net_IPEndPoint_" data-uid="Ipfs.MultiAddress.#ctor(System.Net.IPEndPoint)">MultiAddress(IPEndPoint)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</a> class from the
+specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipendpoint">IPEndPoint</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiAddress(IPEndPoint endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipendpoint">IPEndPoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress__ctor_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L51">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L53">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress__ctor_" data-uid="Ipfs.MultiAddress.#ctor*"></a>
   <h4 id="Ipfs_MultiAddress__ctor_System_String_" data-uid="Ipfs.MultiAddress.#ctor(System.String)">MultiAddress(String)</h4>
@@ -264,7 +332,7 @@ The binary representation is a sequence of <a class="xref" href="Ipfs.NetworkPro
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_HasPeerId.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.HasPeerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L151">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L177">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_HasPeerId_" data-uid="Ipfs.MultiAddress.HasPeerId*"></a>
   <h4 id="Ipfs_MultiAddress_HasPeerId" data-uid="Ipfs.MultiAddress.HasPeerId">HasPeerId</h4>
@@ -300,7 +368,7 @@ is &quot;ipfs&quot; or &quot;p2p&quot;.  For example, <code>/ip4/10.1.10.10/tcp/
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_PeerId.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.PeerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L127">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L153">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_PeerId_" data-uid="Ipfs.MultiAddress.PeerId*"></a>
   <h4 id="Ipfs_MultiAddress_PeerId" data-uid="Ipfs.MultiAddress.PeerId">PeerId</h4>
@@ -353,7 +421,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Protocols.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Protocols%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L43">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L45">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Protocols_" data-uid="Ipfs.MultiAddress.Protocols*"></a>
   <h4 id="Ipfs_MultiAddress_Protocols" data-uid="Ipfs.MultiAddress.Protocols">Protocols</h4>
@@ -386,7 +454,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Clone.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L85">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L111">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Clone_" data-uid="Ipfs.MultiAddress.Clone*"></a>
   <h4 id="Ipfs_MultiAddress_Clone" data-uid="Ipfs.MultiAddress.Clone">Clone()</h4>
@@ -418,7 +486,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Equals_Ipfs_MultiAddress_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Equals(Ipfs.MultiAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L359">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L385">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Equals_" data-uid="Ipfs.MultiAddress.Equals*"></a>
   <h4 id="Ipfs_MultiAddress_Equals_Ipfs_MultiAddress_" data-uid="Ipfs.MultiAddress.Equals(Ipfs.MultiAddress)">Equals(MultiAddress)</h4>
@@ -465,7 +533,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L350">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L376">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Equals_" data-uid="Ipfs.MultiAddress.Equals*"></a>
   <h4 id="Ipfs_MultiAddress_Equals_System_Object_" data-uid="Ipfs.MultiAddress.Equals(System.Object)">Equals(Object)</h4>
@@ -514,7 +582,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_GetHashCode.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L337">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L363">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_GetHashCode_" data-uid="Ipfs.MultiAddress.GetHashCode*"></a>
   <h4 id="Ipfs_MultiAddress_GetHashCode" data-uid="Ipfs.MultiAddress.GetHashCode">GetHashCode()</h4>
@@ -546,7 +614,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_ToArray.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L419">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L445">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_ToArray_" data-uid="Ipfs.MultiAddress.ToArray*"></a>
   <h4 id="Ipfs_MultiAddress_ToArray" data-uid="Ipfs.MultiAddress.ToArray">ToArray()</h4>
@@ -581,7 +649,7 @@ is not &quot;ipfs&quot; nor &quot;p2p&quot;.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_ToString.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L401">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L427">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_ToString_" data-uid="Ipfs.MultiAddress.ToString*"></a>
   <h4 id="Ipfs_MultiAddress_ToString" data-uid="Ipfs.MultiAddress.ToString">ToString()</h4>
@@ -615,7 +683,7 @@ to a human.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_TryCreate_System_Byte___.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.TryCreate(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L470">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L496">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_TryCreate_" data-uid="Ipfs.MultiAddress.TryCreate*"></a>
   <h4 id="Ipfs_MultiAddress_TryCreate_System_Byte___" data-uid="Ipfs.MultiAddress.TryCreate(System.Byte[])">TryCreate(Byte[])</h4>
@@ -666,7 +734,7 @@ the binary encoding.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_TryCreate_System_String_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.TryCreate(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L448">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L474">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_TryCreate_" data-uid="Ipfs.MultiAddress.TryCreate*"></a>
   <h4 id="Ipfs_MultiAddress_TryCreate_System_String_" data-uid="Ipfs.MultiAddress.TryCreate(System.String)">TryCreate(String)</h4>
@@ -717,7 +785,7 @@ string.</p>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_WithoutPeerId.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.WithoutPeerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L195">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L221">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_WithoutPeerId_" data-uid="Ipfs.MultiAddress.WithoutPeerId*"></a>
   <h4 id="Ipfs_MultiAddress_WithoutPeerId" data-uid="Ipfs.MultiAddress.WithoutPeerId">WithoutPeerId()</h4>
@@ -750,7 +818,7 @@ a peer ID; or a new <a class="xref" href="Ipfs.MultiAddress.html">MultiAddress</
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_WithPeerId_Ipfs_MultiHash_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.WithPeerId(Ipfs.MultiHash)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L173">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L199">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_WithPeerId_" data-uid="Ipfs.MultiAddress.WithPeerId*"></a>
   <h4 id="Ipfs_MultiAddress_WithPeerId_Ipfs_MultiHash_" data-uid="Ipfs.MultiAddress.WithPeerId(Ipfs.MultiHash)">WithPeerId(MultiHash)</h4>
@@ -818,7 +886,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Write_Google_Protobuf_CodedOutputStream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Write(Google.Protobuf.CodedOutputStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L232">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L258">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Write_" data-uid="Ipfs.MultiAddress.Write*"></a>
   <h4 id="Ipfs_MultiAddress_Write_Google_Protobuf_CodedOutputStream_" data-uid="Ipfs.MultiAddress.Write(Google.Protobuf.CodedOutputStream)">Write(CodedOutputStream)</h4>
@@ -855,7 +923,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Write_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Write(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L216">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L242">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Write_" data-uid="Ipfs.MultiAddress.Write*"></a>
   <h4 id="Ipfs_MultiAddress_Write_System_IO_Stream_" data-uid="Ipfs.MultiAddress.Write(System.IO.Stream)">Write(Stream)</h4>
@@ -892,7 +960,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_Write_System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.Write(System.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L250">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L276">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_Write_" data-uid="Ipfs.MultiAddress.Write*"></a>
   <h4 id="Ipfs_MultiAddress_Write_System_IO_TextWriter_" data-uid="Ipfs.MultiAddress.Write(System.IO.TextWriter)">Write(TextWriter)</h4>
@@ -931,7 +999,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_op_Equality_Ipfs_MultiAddress_Ipfs_MultiAddress_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.op_Equality(Ipfs.MultiAddress%2CIpfs.MultiAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L376">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L402">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_op_Equality_" data-uid="Ipfs.MultiAddress.op_Equality*"></a>
   <h4 id="Ipfs_MultiAddress_op_Equality_Ipfs_MultiAddress_Ipfs_MultiAddress_" data-uid="Ipfs.MultiAddress.op_Equality(Ipfs.MultiAddress,Ipfs.MultiAddress)">Equality(MultiAddress, MultiAddress)</h4>
@@ -984,7 +1052,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_op_Implicit_System_String__Ipfs_MultiAddress.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.op_Implicit(System.String)~Ipfs.MultiAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L433">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L459">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_op_Implicit_" data-uid="Ipfs.MultiAddress.op_Implicit*"></a>
   <h4 id="Ipfs_MultiAddress_op_Implicit_System_String__Ipfs_MultiAddress" data-uid="Ipfs.MultiAddress.op_Implicit(System.String)~Ipfs.MultiAddress">Implicit(String to MultiAddress)</h4>
@@ -1034,7 +1102,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress_op_Inequality_Ipfs_MultiAddress_Ipfs_MultiAddress_.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress.op_Inequality(Ipfs.MultiAddress%2CIpfs.MultiAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L388">View Source</a>
+    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L414">View Source</a>
   </span>
   <a id="Ipfs_MultiAddress_op_Inequality_" data-uid="Ipfs.MultiAddress.op_Inequality*"></a>
   <h4 id="Ipfs_MultiAddress_op_Inequality_Ipfs_MultiAddress_Ipfs_MultiAddress_" data-uid="Ipfs.MultiAddress.op_Inequality(Ipfs.MultiAddress,Ipfs.MultiAddress)">Inequality(MultiAddress, MultiAddress)</h4>
@@ -1101,7 +1169,7 @@ ending the <code data-dev-comment-type="paramref" class="paramref">peerId</code>
                     <a href="https://github.com/richardschneider/net-ipfs-core/new/master/apiSpec/new?filename=Ipfs_MultiAddress.md&amp;value=---%0Auid%3A%20Ipfs.MultiAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-ipfs-core/blob/master/src/MultiAddress.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -3209,6 +3209,18 @@ references:
   commentId: M:Ipfs.MultiAddress.#ctor(System.IO.Stream)
   fullName: Ipfs.MultiAddress.MultiAddress(System.IO.Stream)
   nameWithType: MultiAddress.MultiAddress(Stream)
+- uid: Ipfs.MultiAddress.#ctor(System.Net.IPAddress)
+  name: MultiAddress(IPAddress)
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress__ctor_System_Net_IPAddress_
+  commentId: M:Ipfs.MultiAddress.#ctor(System.Net.IPAddress)
+  fullName: Ipfs.MultiAddress.MultiAddress(System.Net.IPAddress)
+  nameWithType: MultiAddress.MultiAddress(IPAddress)
+- uid: Ipfs.MultiAddress.#ctor(System.Net.IPEndPoint)
+  name: MultiAddress(IPEndPoint)
+  href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress__ctor_System_Net_IPEndPoint_
+  commentId: M:Ipfs.MultiAddress.#ctor(System.Net.IPEndPoint)
+  fullName: Ipfs.MultiAddress.MultiAddress(System.Net.IPEndPoint)
+  nameWithType: MultiAddress.MultiAddress(IPEndPoint)
 - uid: Ipfs.MultiAddress.#ctor(System.String)
   name: MultiAddress(String)
   href: api/Ipfs.MultiAddress.html#Ipfs_MultiAddress__ctor_System_String_
