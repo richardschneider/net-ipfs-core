@@ -30,7 +30,8 @@ environment:
 
 # tools we need for bulding/testing/deploying
 install:
-  - choco install gitversion.portable -y
+  # see https://help.appveyor.com/discussions/problems/24758-gitversion-5-not-working-on-visual-studio-2019-build
+  - choco install gitversion.portable -y --version 4.0.0
   - npm install gh-pages@2.0 -g
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
@@ -44,7 +45,7 @@ nuget:
 
 before_build:
 #  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
-  - gitversion /output buildserver /updateAssemblyInfo 
+  - gitversion /output buildserver /updateAssemblyInfo >gitversion
 
   - echo %GitVersion_MajorMinorPatch%
   - echo %GitVersion_NuGetVersion%

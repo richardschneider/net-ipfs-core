@@ -2,7 +2,7 @@ language: csharp
 sudo: required
 mono: none
 dist: xenial
-dotnet: 3.0
+dotnet: 3.0.100
 os:
   - linux
   - osx
