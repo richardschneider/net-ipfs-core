@@ -14,7 +14,7 @@ for:
       secure: NeX5NCOUXsCLc1UjTJjqB9F02FZ8Wq0VsxqTXC8kBdyK6zjxjebrf/9Da2sY1Kql
 
 configuration: Release
-os: Visual Studio 2017
+os: Visual Studio 2019
 
 init:
   - git config --global core.autocrlf input
@@ -23,9 +23,6 @@ init:
   - git config --global user.email "noreply@emanon.org"
   - git config --global user.name "Appveyor CI"
 
-cache:
-  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
-
 environment:
   COVERALLS_REPO_TOKEN:
     secure: j4sELCwhVRRjNXFVhjPZjdG4y2itz8jrExhlyDU/lTiLlRQ/P4brB69MGQRFBQae
@@ -33,7 +30,8 @@ environment:
 
 # tools we need for bulding/testing/deploying
 install:
-  - choco install gitversion.portable -y
+  # see https://help.appveyor.com/discussions/problems/24758-gitversion-5-not-working-on-visual-studio-2019-build
+  - choco install gitversion.portable -y --version 4.0.0
   - npm install gh-pages@2.0 -g
   # No longer signing the assembly
   #- nuget install secure-file -ExcludeVersion
@@ -46,7 +44,9 @@ nuget:
   disable_publish_on_pr: true
 
 before_build:
-  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+#  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+  - gitversion /output buildserver /updateAssemblyInfo >gitversion
+
   - echo %GitVersion_MajorMinorPatch%
   - echo %GitVersion_NuGetVersion%
 
@@ -55,8 +55,7 @@ build_script:
 
 after_build:
 # Build documentation in doc\_site
-# v2.43 is requiring VS 2019!!!
-  - cmd: choco install docfx -y --version 2.42 --force
+  - cmd: choco install docfx -y
   - cmd: builddocs.cmd
   - cmd: 7z a -tzip docs.zip doc\_site
   - cmd: appveyor PushArtifact docs.zip
@@ -67,7 +66,7 @@ test_script:
 
 after_test: 
 # Generate coverage report
-    - dotnet test -c %CONFIGURATION% -f netcoreapp2.1 --no-build --no-restore test /p:CollectCoverage=true
+    - dotnet test -c %CONFIGURATION% -f netcoreapp3.0 --no-build --no-restore test /p:CollectCoverage=true /p:Include="[Ipfs.Core]*"
     - choco install codecov -y
     - codecov -f "test/coverage.opencover.xml"
     - dotnet tool install --global coveralls.net --version 1.0.0

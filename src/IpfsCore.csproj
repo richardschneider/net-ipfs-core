@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard14;netstandard2;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard14;netstandard2;net45;netcoreapp3.0</TargetFrameworks>
     <AssemblyName>Ipfs.Core</AssemblyName>
     <RootNamespace>Ipfs</RootNamespace>
     <DebugType>portable</DebugType>
@@ -63,4 +63,9 @@
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
     <DefineConstants>NETSTANDARD14</DefineConstants>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0'">
+    <DefineConstants>ASYNCSTREAM</DefineConstants>
+  </PropertyGroup>
+
 </Project>

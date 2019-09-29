@@ -2,12 +2,12 @@ language: csharp
 sudo: required
 mono: none
 dist: xenial
-dotnet: 2.2.300
+dotnet: 3.0.100
 os:
   - linux
   - osx
 
 script:
   - dotnet restore
-  - dotnet build -c Release --no-restore --framework netstandard2 ./src
-  - dotnet test  -c Release --no-restore --framework netcoreapp2.1 ./test
+  - dotnet build -c Release --no-restore --framework netcoreapp3.0 ./src
+  - dotnet test  -c Release --no-restore --framework netcoreapp3.0 ./test

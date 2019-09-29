@@ -15,7 +15,7 @@
         }
       ],
       "properties": {
-        "TargetFramework": "net45"
+        "TargetFramework": "netcoreapp3.0"
       },
 
       "dest": "api"
