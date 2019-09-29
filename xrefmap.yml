@@ -1718,6 +1718,25 @@ references:
   isSpec: "True"
   fullName: Ipfs.CoreApi.IGenericApi.IdAsync
   nameWithType: IGenericApi.IdAsync
+- uid: Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  name: Ping(MultiAddress, Int32, CancellationToken)
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_Ping_Ipfs_MultiAddress_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiAddress, System.Int32, System.Threading.CancellationToken)
+  nameWithType: IGenericApi.Ping(MultiAddress, Int32, CancellationToken)
+- uid: Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  name: Ping(MultiHash, Int32, CancellationToken)
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_Ping_Ipfs_MultiHash_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  fullName: Ipfs.CoreApi.IGenericApi.Ping(Ipfs.MultiHash, System.Int32, System.Threading.CancellationToken)
+  nameWithType: IGenericApi.Ping(MultiHash, Int32, CancellationToken)
+- uid: Ipfs.CoreApi.IGenericApi.Ping*
+  name: Ping
+  href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_Ping_
+  commentId: Overload:Ipfs.CoreApi.IGenericApi.Ping
+  isSpec: "True"
+  fullName: Ipfs.CoreApi.IGenericApi.Ping
+  nameWithType: IGenericApi.Ping
 - uid: Ipfs.CoreApi.IGenericApi.PingAsync(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
   name: PingAsync(MultiAddress, Int32, CancellationToken)
   href: api/Ipfs.CoreApi.IGenericApi.html#Ipfs_CoreApi_IGenericApi_PingAsync_Ipfs_MultiAddress_System_Int32_System_Threading_CancellationToken_
