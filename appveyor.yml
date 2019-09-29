@@ -23,9 +23,6 @@ init:
   - git config --global user.email "noreply@emanon.org"
   - git config --global user.name "Appveyor CI"
 
-cache:
-  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
-
 environment:
   COVERALLS_REPO_TOKEN:
     secure: j4sELCwhVRRjNXFVhjPZjdG4y2itz8jrExhlyDU/lTiLlRQ/P4brB69MGQRFBQae
@@ -46,7 +43,9 @@ nuget:
   disable_publish_on_pr: true
 
 before_build:
-  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+#  - ps: gitversion /output buildserver /updateAssemblyInfo >gitversion.log
+  - gitversion /output buildserver /updateAssemblyInfo 
+
   - echo %GitVersion_MajorMinorPatch%
   - echo %GitVersion_NuGetVersion%
 

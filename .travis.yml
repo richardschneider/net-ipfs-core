@@ -9,5 +9,5 @@ os:
 
 script:
   - dotnet restore
-  - dotnet build -c Release --no-restore --framework netstandard2 ./src
-  - dotnet test  -c Release --no-restore --framework netcoreapp2.1 ./test
+  - dotnet build -c Release --no-restore --framework netcoreapp3.0 ./src
+  - dotnet test  -c Release --no-restore --framework netcoreapp3.0 ./test
