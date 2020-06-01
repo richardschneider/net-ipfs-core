@@ -59,6 +59,6 @@ namespace Ipfs.CoreApi
         /// <returns>
         ///   A task that represents the asynchronous operation.
         /// </returns>
-        Task PutAsync(byte[] key, out byte[] value, CancellationToken cancel = default(CancellationToken));
+        Task PutAsync(byte[] key, byte[] value, CancellationToken cancel = default(CancellationToken));
     }
 }
