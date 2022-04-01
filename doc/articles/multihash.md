@@ -33,7 +33,7 @@ From the above example, the following is produced
 ## Algorithms
 
 IPFS assigns a unique [Name](xref:Ipfs.Registry.HashingAlgorithm.Name) and [Code](xref:Ipfs.Registry.HashingAlgorithm.Code) 
-to a hashing algorithm. See [hashtable.csv](https://github.com/multiformats/multicodec/blob/master/table.csv") 
+to a hashing algorithm. See [hashtable.csv](https://github.com/multiformats/multicodec/blob/master/table.csv) 
 for the currently defined hashing algorithms.
 
 These algorithms are implemented:
